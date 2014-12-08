@@ -288,6 +288,13 @@ nav {
   float: left;
   font-size: 120%;
 }
+
+.contentDocenten { 
+    text-align: left;
+    width: 900px;
+    margin: 25px 0 0 0;
+    font-size: 120%;
+}
   
 .content ul { 
   margin: 2px 0 22px 0px;
