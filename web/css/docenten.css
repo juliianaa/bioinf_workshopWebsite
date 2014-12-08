@@ -1,0 +1,51 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+/*Docenten boxes*/
+
+.docenten_boxes
+{
+    float:left;
+    width: 220px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.element_to_pop_up { 
+    background-color: #fff;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 25px 5px #999;
+    color: #111;
+    display: none;
+    min-width: 800px;
+    height: 450px;
+    padding: 25px;
+}
+
+.close {
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: none;
+    font: bold 131% sans-serif;
+    padding: 0 6px 2px;
+    position: absolute;
+    right: -7px;
+    top: -7px;
+    background-color: #2b91af;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+}
+.close:hover {
+    background-color: #1e1e1e;
+}
+
+.linkedInButton {
+    background:url(../images/linkedin.png) no-repeat;
+    cursor:pointer;
+    height: 20px;
+    width: 20px;
+
+}

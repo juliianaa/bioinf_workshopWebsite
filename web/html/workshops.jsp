@@ -1,0 +1,116 @@
+<%-- 
+    Document   : workshops
+    Created on : Nov 27, 2014, 3:15:34 PM
+    Author     : jwlgoh
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <base href="${initParam.base_url}">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link href="css/workshop.css" rel="stylesheet" type="text/css"/>
+      <title>Bioinformatics Homepage</title>
+    </head>
+
+    <body>
+        <div id="main">
+            <%@include file="../includes/bodyHeader.jsp" %>
+
+
+            <div id="site_content">
+                <div id="top_border"></div>
+                
+                <ul id="images">
+                   <img src="images/banner.jpg" width="970" height="300" alt=""/>
+                </ul>
+                
+                <div id="sidebar_container">
+                    <img class="paperclip" src="images/paperclip.png" alt="paperclip" />
+                    <div class="sidebar">
+                        <h3>Latest News</h3>
+                        
+                        <h4>New Website Launched</h4>
+                        
+                        <h5>January 1st, 2013</h5>
+                        
+                        <p>2013 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
+                        
+                        <h4>20% Discount</h4>
+                        
+                        <h5>June 1st, 2013</h5>
+                        
+                        <p>We are offering a 20% discount to all new customers.<br /><a href="#">Read more</a></p>
+                    </div>
+                </div>
+                <!--End of side bar-->
+                
+                <div class="content">
+                    <h1>Workshops</h1>
+
+                    <div class="row">
+
+                        <div class="workshop_boxes">
+                            <section>
+                                <img src="images/dnatrap.jpg" alt="" class="workshop_images" />
+                                <p>Hanze Experience - havo</p>
+                                Biologisch onderzoek bestaat tegenwoordig niet alleen maar meer uit laboratoriumwerk.
+                                    Heel veel analyses worden nu op computers uitgevoerd. Het vakgebied dat zich hier mee...
+                                <a href="html/hanzeXperience_HAVO.jsp" class="button">Lees meer</a>
+                            </section>
+                        </div>
+                        <div class="workshop_boxes">
+                            <section>
+                                <img src="images/vdoornveste.jpg" alt="" class="workshop_images" />
+                                <p>Hanze Experience - MBO</p>
+                                Wij willen je van harte welkom heten op de Hanzehogeschool Groningen. De
+                                    hogeschool biedt je vele mogelijkheden om je verder te ontwikkelen...
+                                <a href="html/hanzeXperience_MBO.jsp" class="button">Lees meer</a>
+                            </section>
+                        </div>
+                        <div class="workshop_boxes">
+                            <section>
+                                <img src="images/mummy.jpg" alt="" class="workshop_images"/>
+                                <p>Masterclass - Meet the mummy</p>
+                                Als je moeder en je vader allebei blond zijn of lang of juist klein, dan is de kans groot dat jij dat ook bent.
+                                    Dat komt omdat je van allebei je ouders eigenschappen erft. Dit geldt niet...
+                                <a href="html/masterclass.jsp" class="button">Lees meer</a>
+                            </section>
+                        </div>
+                        <div class="workshop_boxes">
+                            <section>
+                                <img src="images/technasium.jpg" alt="" class="workshop_images" />
+                                <p>Technasium</p>
+                                Toen de conciërge ‘s morgens vroeg op school kwam en zijn gebruikelijke ronde maakte,
+                                    deed hij een lugubere vondst. In practicumzaal D033 lag...
+                                <a href="html/technasium.jsp" class="button">Lees meer</a>
+                            </section>
+                        </div>
+                        
+                        <div class="workshop_boxes">
+                             <section>
+                                    <img src="images/1.jpg" alt="" class="workshop_images"/>
+                                    <p>Powerpoint</p>
+                                    <a href="html/powerpoint.jsp" class="button"> Bezoek pagina</a>
+                             </section>
+                         </div>
+
+                    </div>
+
+                </div>
+                <!--End of content-->
+            </div>
+
+
+            <%@include file="../includes/bodyFooter.jsp" %>
+
+
+        </div>
+
+
+    </body>
+</html>
