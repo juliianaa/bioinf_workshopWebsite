@@ -15,7 +15,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link href="css/workshop.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="css/reveal.css"> 
-        <link rel="stylesheet" href="css/default.css"> 
+        <link href="css/beige.css" rel="stylesheet" type="text/css"/>
       <title>Bioinformatics Homepage</title>
     </head>
     <body> 

@@ -76,7 +76,7 @@
                              <section>
                                     <img src="images/1.jpg" alt="" class="workshop_images"/>
                                     <p>Powerpoint</p>
-                                    <a href="html/powerpoint.jsp" class="button"> Bezoek pagina</a>
+                                    <a href="html/powerpoint.jsp" class="button">Open powerpoint</a>
                              </section>
                          </div>
 
