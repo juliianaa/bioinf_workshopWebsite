@@ -34,7 +34,7 @@
                                 <img src="images/banner.jpg" width="970" height="300" alt=""/>
                             </ul>
 
-                            <div class="contentDocenten">
+                            <div class="content">
                                 <h1>Docenten</h1>
 
                                 <div class="docenten_boxes">

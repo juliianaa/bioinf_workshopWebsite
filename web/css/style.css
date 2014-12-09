@@ -281,7 +281,7 @@ nav {
   margin: -15px 0 -60px -40px;
 }
 
-.content { 
+.contentMain { 
   text-align: left;
   width: 670px;
   margin: 25px 0 0 0;
@@ -289,9 +289,9 @@ nav {
   font-size: 120%;
 }
 
-.contentDocenten { 
+.content { 
     text-align: left;
-    width: 900px;
+    width: 100%;
     margin: 25px 0 0 0;
     font-size: 120%;
 }

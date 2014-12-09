@@ -53,7 +53,7 @@
                 </div>
                 <!--End of side bar-->
                 
-                <div class="content">
+                <div class="contentMain">
                     <h1>Welcome to the Bioinformatics website</h1>
 
                     <p>Fruitcake sugar plum ice cream dessert chocolate bar I love bear claw jujubes. Marshmallow toffee liquorice brownie 

@@ -34,26 +34,7 @@
                                     <img src="images/banner.jpg" width="970" height="300" alt=""/>
                                 </ul>
 
-                                <div id="sidebar_container">
-                                    <img class="paperclip" src="images/paperclip.png" alt="paperclip" />
-                                    <div class="sidebar">
-                                        <h3>Latest News</h3>
-
-                                        <h4>New Website Launched</h4>
-
-                                        <h5>January 1st, 2013</h5>
-
-                                        <p>2013 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
-
-                                        <h4>20% Discount</h4>
-
-                                        <h5>June 1st, 2013</h5>
-
-                                        <p>We are offering a 20% discount to all new customers.<br /><a href="#">Read more</a></p>
-                                    </div>
-                                </div>
-                                <!--End of side bar-->
-
+                               
                                 <div class="content">
                                     <div class="introduction" id="introduction">
                                         <h1>Technasium</h1>
