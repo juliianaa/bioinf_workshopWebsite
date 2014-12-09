@@ -41,7 +41,7 @@
                                 <p>Hanze Experience - havo</p>
                                 Biologisch onderzoek bestaat tegenwoordig niet alleen maar meer uit laboratoriumwerk.
                                     Heel veel analyses worden nu op computers uitgevoerd. Het vakgebied dat zich hier mee...
-                                <a href="html/hanzeXperience_HAVO.jsp" class="button">Lees meer</a>
+                                    <p><a href="html/hanzeXperience_HAVO.jsp" class="button">Start workshop</a></p>
                             </section>
                         </div>
                         <div class="workshop_boxes">
@@ -50,7 +50,7 @@
                                 <p>Hanze Experience - MBO</p>
                                 Wij willen je van harte welkom heten op de Hanzehogeschool Groningen. De
                                     hogeschool biedt je vele mogelijkheden om je verder te ontwikkelen...
-                                <a href="html/hanzeXperience_MBO.jsp" class="button">Lees meer</a>
+                                    <p><a href="html/hanzeXperience_MBO.jsp" class="button">Start workshop</a></p>
                             </section>
                         </div>
                         <div class="workshop_boxes">
@@ -59,7 +59,7 @@
                                 <p>Masterclass - Meet the mummy</p>
                                 Als je moeder en je vader allebei blond zijn of lang of juist klein, dan is de kans groot dat jij dat ook bent.
                                     Dat komt omdat je van allebei je ouders eigenschappen erft. Dit geldt niet...
-                                <a href="html/masterclass.jsp" class="button">Lees meer</a>
+                                    <p><a href="html/masterclass.jsp" class="button">Start workshop</a></p>
                             </section>
                         </div>
                         <div class="workshop_boxes">
@@ -68,7 +68,7 @@
                                 <p>Technasium</p>
                                 Toen de conciërge ‘s morgens vroeg op school kwam en zijn gebruikelijke ronde maakte,
                                     deed hij een lugubere vondst. In practicumzaal D033 lag...
-                                <a href="html/technasium.jsp" class="button">Lees meer</a>
+                                    <p><a href="html/technasium.jsp" class="button">Start workshop</a></p>
                             </section>
                         </div>
                         
@@ -76,7 +76,7 @@
                              <section>
                                     <img src="images/1.jpg" alt="" class="workshop_images"/>
                                     <p>Powerpoint</p>
-                                    <a href="html/powerpoint.jsp" class="button"> Bezoek pagina</a>
+                                    <a href="html/powerpoint.jsp" class="button">Open powerpoint</a>
                              </section>
                          </div>
 

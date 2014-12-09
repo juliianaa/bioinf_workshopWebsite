@@ -22,6 +22,14 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link href="css/workshop.css" rel="stylesheet" type="text/css"/>
         <script src="js/hideText.js" type="text/javascript"></script>
+        <script src="js/raphael.js" type="text/javascript"></script>
+        <script src="js/visualize.js" type="text/javascript"></script>
+        <style type="text/css">
+            #canvas_container {
+                width: 500px;
+                border: 1px solid #aaa;
+            }
+        </style>
       <title>Bioinformatics Homepage</title>
     </head>
 
@@ -72,14 +80,19 @@
                         het je kan ondersteunen in je keuze of je gaat doorsturen in het hbo.</p>
 
                         <button class="button" id="hide">Start Workshop</button>
-                    
                     </div>
+                    
+                    <div id="canvas_container">
+
+                      </div>
                     
                     <div class="questions" id="questions">
                         <form action="answer.do" method="post">
                             Typ het woord "DNA" in: <input type="text" name="word"><br>
                             <input class="button" type="submit" value="Submit">
                         </form>
+                        
+                        
                     </div>
                 </div>
                 <!--End of content-->
