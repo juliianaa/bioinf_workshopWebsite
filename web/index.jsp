@@ -54,32 +54,17 @@
                 <!--End of side bar-->
                 
                 <div class="contentMain">
-                    <h1>Welcome to the Bioinformatics website</h1>
+                    <h1>Welkom op de website van bio-informatica</h1>
 
-                    <p>Fruitcake sugar plum ice cream dessert chocolate bar I love bear claw jujubes. Marshmallow toffee liquorice brownie 
-                         fruitcake croissant gummies. Oat cake jelly apple pie I love cheesecake bear claw chocolate. Tootsie roll I love 
-                         gingerbread candy icing marzipan brownie. Soufflé powder sweet roll. Tootsie roll lemon drops I love dessert oat 
-                         cake cupcake chocolate cake tart. Cupcake I love sweet roll danish I love applicake. Icing tart candy gummies 
-                         chocolate cake cotton candy carrot cake jelly fruitcake. Halvah halvah donut lollipop biscuit bear claw I love. 
-                         Croissant pie candy canes candy canes cupcake I love jelly-o croissant I love. Lollipop cheesecake pudding lollipop 
-                         brownie. Applicake I love icing bear claw tiramisu apple pie I love. Halvah chocolate brownie fruitcake I love. Carrot 
-                         cake pie I love.
+                    <p> Bio-informatica is een studie dat zich bevindt in een spectaculair vakgebied met een fascinerende verbinding tussen biologie en informatica. 
+                        Bio-informatica is een vakgebied waar veel vraag naar is en waar de ontwikkelingen erg snel gaan. Denk bijvoorbeeld aan Next-Generation DNA 
+                        sequencing methodes die in de jaren 1990 zijn ontwikkeld en tot grote doorbraken in onderzoeken hebben geleid. 
+                        Binnen bio-informatica is het erg belangrijk om analyse methodes te leren gebruiken, maken en de resultaten te analyseren, daarom is 
+                        het een praktijkgerichte opleiding. Bio-informatica is een vier jarige opleiding waarin met levensechte problemen wordt gewerkt. 
+                        Denk hierbij aan het opsporen van erfelijke ziekten en het werken aan genetische manipulatie. Soms wordt er met medestudenten en soms 
+                        individueel gekeken naar vragen of problemen uit de moleculair biologische/ biomedische praktijk. Er worden gastcolleges aangeboden van 
+                        experts uit de praktijk en er worden diverse excursies naar het buitenland aangeboden. 
 
-                         Brownie carrot cake macaroon croissant tiramisu bonbon dragée jelly beans I love. 
-                         Tootsie roll tiramisu dessert ice cream. Macaroon bonbon cupcake jujubes muffin 
-                         jelly-o caramels. Cookie chocolate bar gummies I love. Pie cupcake oat cake unerdwear.
-                         com I love jelly-o. Pastry ice cream pie. Halvah fruitcake macaroon pudding. 
-                         Brownie pastry lemon drops apple pie. Toffee pie wafer chocolate bar. Brownie 
-                         wafer powder cookie. Fruitcake jelly beans I love I love I love I love jelly beans 
-                         lollipop. Fruitcake sweet roll fruitcake gummi bears applicake donut I love.
-                         I love chocolate cake tootsie roll cake sweet. Cookie I love chocolate tootsie roll 
-                         tiramisu bonbon candy canes dragée. Bear claw tootsie roll I love sweet roll cake 
-                         gummi bears cotton candy marshmallow jelly-o. Chupa chups danish oat cake pastry. 
-                         Topping fruitcake oat cake fruitcake. Dragée I love gummies gummies chocolate bar. 
-                         Oat cake sweet toffee macaroon. Gummi bears danish soufflé gingerbread carrot cake 
-                         chupa chups lollipop marshmallow I love. Brownie jelly-o jelly cake tart biscuit. 
-                         Bonbon sugar plum bear claw. Fruitcake caramels I love wafer croissant. Toffee cupcake 
-                         I love chocolate.
                     </p>
                     
                     <video width="620" height="540" controls>

@@ -46,7 +46,7 @@
                                         <h1>Masterclass - Meet the mummy</h1>
                                         <p>
                                         <div id="mummy"><img src="images/mummy.jpg" alt="mummy" /></div>
-                                        Als je moeder en je vader allebei blond zijn of lang of juist klein, dan is de kans groot dat jij dat ook bent.
+                                        Als je moeder en je vader allebei blond, lang of juist klein zijn, dan is de kans groot dat jij dat ook bent.
                                         Dat komt omdat je van allebei je ouders <button class="my-button" data-value="http://nl.wikipedia.org/wiki/Genetica">
                                             <u>eigenschappen erft</u>
                                         </button>. Dit geldt niet alleen voor eigenschappen als je haarkleur
