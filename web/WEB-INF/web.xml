@@ -5,15 +5,15 @@
         <param-value>http://localhost:8080/Bioinformatica_website/</param-value>
     </context-param>
     <servlet>
-        <servlet-name>AssingmentTechnasium</servlet-name>
-        <servlet-class>nl.bioinf.web_servlets.AssingmentTechnasium</servlet-class>
+        <servlet-name>AssignmentTechnasium</servlet-name>
+        <servlet-class>nl.bioinf.web_servlets.AssignmentTechnasium</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AssignmentAnsweringServlet</servlet-name>
         <url-pattern>/answer.do</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>AssingmentTechnasium</servlet-name>
+        <servlet-name>AssignmentTechnasium</servlet-name>
         <url-pattern>/makeNotes.do</url-pattern>
     </servlet-mapping>
     <session-config>
