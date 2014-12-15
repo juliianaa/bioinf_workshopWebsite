@@ -11,7 +11,10 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.io.Writer;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -41,8 +44,8 @@ public class AssignmentTechnasium extends HttpServlet {
 
         notesOnSuspect = request.getParameter("notes");
         try {
-            //File fileDir = new File("/homes/mldubbelaar/Desktop/data.txt");
-            File fileDir = new File("/Users/mldubbelaar/Desktop/data.txt");
+            File fileDir = new File("/homes/mldubbelaar/Desktop/data.txt");
+            //File fileDir = new File("/Users/mldubbelaar/Desktop/data.txt");
             try (Writer output = new BufferedWriter(new OutputStreamWriter(
                     new FileOutputStream(fileDir), "UTF8"))) {
                 output.append(notesOnSuspect);
@@ -53,9 +56,9 @@ public class AssignmentTechnasium extends HttpServlet {
             System.out.println(e);
         }
 
-        RequestDispatcher view = request.getRequestDispatcher(
-                "html/technasiumWorkshop.jsp");
-        view.forward(request, response);
+        //RequestDispatcher view = request.getRequestDispatcher(
+        //        "html/technasiumWorkshop.jsp");
+        //view.forward(request, response);
 
     }
 
@@ -85,7 +88,17 @@ public class AssignmentTechnasium extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //processRequest(request, response);
+        //receives AJAX data from form that is supposed to be saved
+        String notes = request.getParameter("notes");
+        Logger.getLogger(AssignmentTechnasium.class.getName()).log(Level.INFO, "****"+notes);
+        String userName = "piet"; //request.getSession().getAttribute("user_name");
+        //SAVE IN TEMP FILE
+        boolean succes = saveAsTemp(notes, userName);
+        PrintWriter pw = response.getWriter();
+        pw.print(Boolean.toString(succes));
+        pw.flush();
+        pw.close();
     }
 
     /**
@@ -97,5 +110,9 @@ public class AssignmentTechnasium extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    private boolean saveAsTemp(String notes, String userName) {
+        return true;
+    }
 
 }
