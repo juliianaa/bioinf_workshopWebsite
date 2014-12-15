@@ -13,6 +13,12 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.Writer;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
@@ -59,7 +65,6 @@ public class AssignmentTechnasium extends HttpServlet {
         //RequestDispatcher view = request.getRequestDispatcher(
         //        "html/technasiumWorkshop.jsp");
         //view.forward(request, response);
-
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -91,14 +96,18 @@ public class AssignmentTechnasium extends HttpServlet {
         //processRequest(request, response);
         //receives AJAX data from form that is supposed to be saved
         String notes = request.getParameter("notes");
-        Logger.getLogger(AssignmentTechnasium.class.getName()).log(Level.INFO, "****"+notes);
-        String userName = "piet"; //request.getSession().getAttribute("user_name");
+        //Logger.getLogger(AssignmentTechnasium.class.getName()).log(Level.INFO, "****" + notes);
+        String userName = "piet";
+        //request.getSession().getAttribute("user_name");
+
         //SAVE IN TEMP FILE
         boolean succes = saveAsTemp(notes, userName);
-        PrintWriter pw = response.getWriter();
-        pw.print(Boolean.toString(succes));
-        pw.flush();
-        pw.close();
+        if (succes == true) {
+            try (PrintWriter pw = response.getWriter()) {
+                pw.print(Boolean.toString(succes));
+                pw.flush();
+            }
+        }
     }
 
     /**
@@ -111,8 +120,57 @@ public class AssignmentTechnasium extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    private boolean saveAsTemp(String notes, String userName) {
-        return true;
-    }
+    private boolean saveAsTemp(String notes, String userName)
+            throws IOException {
+        String prefix = userName + "_notes";
+        String suffix = ".tmp";
 
-}
+        // this temporary file remains after the jvm exits
+        try {
+            List<String> savedNotes = new ArrayList<>();
+            String[] files = new File("/commons/student/2014-2015/Thema10/bioInfWebsite/").list();
+
+            boolean fileExists = false;
+            String filename = "";
+            for (String file : files) {
+                if (file.startsWith(prefix)) {
+                    fileExists = true;
+                    filename = file;
+                }
+            }
+                if (fileExists == true) {
+                    try (Writer output = new BufferedWriter(new OutputStreamWriter(
+                    new FileOutputStream(filename), "UTF8"))) {
+                    output.append(notes);
+                    output.flush();}
+                    System.out.println("***"+notes);
+                } else {
+                    File tempFile = File.createTempFile(prefix, suffix, new File(
+                            "/commons/student/2014-2015/Thema10/bioInfWebsite/"));
+                    try (Writer output = new BufferedWriter(new OutputStreamWriter(
+                    new FileOutputStream(tempFile), "UTF8"))) {
+                output.append(notes);
+                output.flush();}
+                    System.out.println("#####" + tempFile);
+
+                }
+
+//            
+//            //File tempFile = File.createTempFile(prefix, suffix);
+//            File tempFile = File.createTempFile(prefix, suffix, new File(
+//                    "/commons/student/2014-2015/Thema10/bioInfWebsite/"));
+//            try (Writer output = new BufferedWriter(new OutputStreamWriter(
+//                    new FileOutputStream(tempFile), "UTF8"))) {
+//                output.append(notes);
+//                output.flush();
+//            }
+//            tempFile.deleteOnExit();
+                return true;
+//        } catch (IOException e) {
+//            return false;
+            }catch (IOException e) {
+            return false;
+        }
+        }
+
+    }

@@ -47,14 +47,13 @@
                                 <form  id="save_notes_form" action="#" method="post">
                                     <textarea cols="35" rows="24" name="notes">Maak hier je aantekeningen over de verdachten!</textarea>
                                     <input type="submit" value="Save"/></form>
+                                <button id="next_question_button">Volgende vraag</button>
                             </div>
                         </div>
                     </div>
                     <!--End of content-->
                 </div>
-
             </div>
-                    <button id="next_question_button">Volgende vraag</button>
             <%@include file="../includes/bodyFooter.jsp" %>
         </div>
     </body>

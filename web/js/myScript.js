@@ -11,10 +11,11 @@ function initialize() {
         var notes_data = {'notes': $("#save_notes_form textarea").val()};
         //alert(notes_data['notes']);
         $.post(url, notes_data, function(data) {
-            if (data === "true") {
-                alert("notes saved!");
+            if (data === data) {
+                alert("" + data + "\nNotes saved!");
+ 
             } else {
-                alert("notes NOT saved");
+                alert("" + data + "\nnotes NOT saved");
             }
             
             $(".result").html(data);
