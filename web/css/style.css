@@ -596,3 +596,18 @@ ul#images li {
 	margin-bottom: 9px;
 }
 
+.imageBoxes
+{
+    float:left;
+    width: 65%;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.noteBox
+{
+    float:left;
+    width: 10%;
+    margin-left:auto;
+    margin-right: auto;
+}
