@@ -16,6 +16,7 @@
         <script src="js/hideText.js" type="text/javascript"></script>
         <script src="js/myScript.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link href="css/technasiumWorkshop.css" rel="stylesheet" type="text/css"/>
         <title>Technasium</title>
     </head>
     <body>
@@ -41,7 +42,9 @@
                             Heel veel succes!! 
                         </p>
                         <div id="question_div" data-question-number="1">
-                            <div class="imageBoxes"> <img src="images/achtergrond_verhoor.jpg" alt=""/> </div>
+                            <div class="imageBoxes" id = "questionImage" data-imgNumber="1"> <img src="images/achtergrond_verhoor.jpg" alt=""/> 
+                                <div class ="up">Het verhoor begint...</div>
+                            </div>
                             <div class="noteBox">
                                 <label for="basic">Text Input:</label>
                                 <form  id="save_notes_form" action="#" method="post">
