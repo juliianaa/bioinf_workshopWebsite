@@ -1,7 +1,7 @@
 <%-- 
     Document   : hanzeXperience_MBO
     Created on : Dec 1, 2014, 1:38:28 PM
-    Author     : jwlgoh
+    Author     : nstoker
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -16,7 +16,9 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link href="css/workshop.css" rel="stylesheet" type="text/css"/>
         <script src="js/hideText.js" type="text/javascript"></script>
-      <title>Bioinformatics Homepage</title>
+
+
+
     </head>
 
     <body>
@@ -68,27 +70,13 @@
                             We hopen dat je veel plezier zult beleven aan dit driedaagse evenement en dat
                             het je kan ondersteunen in je keuze of je gaat doorsturen in het hbo.
                         </p>
-
-                        <button class="button" id="hide">Start Workshop</button>
-                    
-                    </div>
-                    
-                    <div class="questions" id="questions">
-                        <form action="answer.do" method="post">
-                            Typ het woord "DNA" in: <input type="text" name="word"><br>
-                            <input class="button" type="submit" value="Submit">
-                        </form>
-                    </div>
-                </div>
-                <!--End of content-->
+                        
+                        Start puzzel opdracht <li><a href="html/puzzel.jsp"><button> start puzzel</button></a></li>
+  
             </div>
-
-
-            <%@include file="../includes/bodyFooter.jsp" %>
-
-
+            </div>
+            </div>   
+               <%@include file="../includes/bodyFooter.jsp" %>
         </div>
-
-
     </body>
 </html>
