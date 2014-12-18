@@ -4,7 +4,8 @@
     Author     : mkslofstra
 --%>
 
-<div class="imageBoxes" id = "questionImage" data-imgNumber="2"> <img src="images/verhoorManager.jpg" alt=""/> 
+<div class="imageBoxes" id = "questionImage"> 
+    <img data-imgNumber="3" id = "image"src="images/verhoorManager.jpg" alt=""/> 
     <div class = "left">
         <p class="triangle-border top">
             U weet dat *naam slachtoffer* door is aangetroffen in het lab waar u de manager van bent. U was op dat moment aanwezig 

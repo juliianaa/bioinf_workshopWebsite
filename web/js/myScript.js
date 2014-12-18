@@ -25,18 +25,32 @@ function initialize() {
     });
 
     $("#next_question_button").click(function() {
-        var imageNr = $("#questionImage").data("imgnumber");
-        if (imageNr === 1) {
-            $("#questionImage").load("html/technasiumQuestions/slide2.jsp");
+        var imageNr = $("#image").data("imgnumber");
+        switch(imageNr){
+            case 1:
+                $("#questionImage").load("html/technasiumQuestions/slide2.jsp");
+                break;
+            case 2: 
+                $("#questionImage").load("html/technasiumQuestions/slide3.jsp");
+                break;
+            default:
+                $("#questionImage").load("html/technasiumQuestions/slide2.jsp");
         }
-        else if(imageNr === 2){
-            $("#questionImage").load("html/technasiumQuestions/slide3.jsp");
-        }
+
     });
     $("#last_question_button").click(function() {
-        var imageNr = $("#questionImage").data("imgnumber");
-        if (imageNr === 3) {
-            $("#questionImage").load("html/technasiumQuestions/slide2.jsp");
+       var imageNr = $("#image").data("imgnumber");
+        switch(imageNr){
+            case 1:
+                break;
+            case 2: 
+                $("#questionImage").load("html/technasiumQuestions/slide1.jsp");
+                break;
+            case 3: 
+                $("#questionImage").load("html/technasiumQuestions/slide2.jsp");
+                break;
+            default:
+                $("#questionImage").load("html/technasiumQuestions/slide1.jsp");
         }
     });
 }

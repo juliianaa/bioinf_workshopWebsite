@@ -42,7 +42,8 @@
                             Heel veel succes!! 
                         </p>
                         <div id="question_div" data-question-number="1">
-                            <div class="imageBoxes" id = "questionImage" data-imgNumber="1"> <img src="images/achtergrond_verhoor.jpg" alt=""/> 
+                            <div class="imageBoxes" id = "questionImage" > 
+                                <img data-imgNumber="1" id = "image" src="images/achtergrond_verhoor.jpg" alt=""/> 
                                 <div class ="up">Het verhoor begint...</div>
                             </div>
                             <div class="noteBox">
@@ -50,7 +51,8 @@
                                 <form  id="save_notes_form" action="#" method="post">
                                     <textarea cols="35" rows="24" name="notes">Maak hier je aantekeningen over de verdachten!</textarea>
                                     <input type="submit" value="Save"/></form>
-                                <button id="next_question_button">Volgende vraag</button>
+                                <button id="next_question_button">Volgende</button>
+                                <button id="last_question_button">Vorige</button>
                             </div>
                         </div>
                     </div>
