@@ -1,4 +1,4 @@
-<<%-- 
+<%-- 
     Document   : bioinfHomePage
     Created on : 18-12-2014, 18:47:44
     Author     : nstoker
@@ -9,16 +9,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <html lang="en" class="no-js">
 	<head>
+            <base href="${initParam.base_url}"></base>
                 <h1>Bioinformatica puzzel</h1>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
                 <script src="js/modernizr.custom_1.js"></script>
-		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" type="text/css" href="../css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
-		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="../css/bottom-slide.css" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/bottom-slide.css" />
 		<script type="text/javascript">
                     var _gaq = _gaq || [];
                     _gaq.push(['_setAccount', 'UA-7243260-2']);
@@ -73,8 +74,8 @@
 			</div>
 		</div>
 		<div class="drop-overlay"></div>
-		<script src="../js/draggabillity.js"></script>
-		<script src="../js/dragdrop.js"></script>
+		<script src="js/draggabillity.js"></script>
+		<script src="js/dragdrop.js"></script>
 		<script>
 			(function() {
 				var body = document.body,
