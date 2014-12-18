@@ -149,12 +149,12 @@ ol {
   margin: 20px auto;
 }
 
-#main, nav, #container, #logo, #site_content, footer { 
+#main1, nav, #container, #logo, #site_content, footer { 
   margin-left: auto; 
   margin-right: auto;
 }
 
-#main {
+#main1 {
   margin: 5px auto;
   width: 940px;
   background: transparent;

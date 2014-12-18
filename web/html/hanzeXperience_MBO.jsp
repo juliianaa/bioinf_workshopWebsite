@@ -34,7 +34,7 @@
     </head>
 
     <body>
-        <div id="main">
+        <div id="main1">
             
             <%@include file="../includes/bodyHeader.jsp" %>
 

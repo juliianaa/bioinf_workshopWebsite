@@ -3,20 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package nl.bioinf.web_servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author jwlgoh
+ * @author aroeters
  */
-public class AssignmentAnsweringServlet extends HttpServlet {
+@WebServlet(name = "Masterclass", urlPatterns = {"/masterclass.do"})
+public class Masterclass extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,10 +34,7 @@ public class AssignmentAnsweringServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-
-            out.println("<h1>Servlet AssignmentAnsweringServlet at " + request.getContextPath() + "</h1>");
-
+            
         }
     }
 
