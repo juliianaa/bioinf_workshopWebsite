@@ -13,19 +13,31 @@ function initialize() {
         $.post(url, notes_data, function(data) {
             if (data === data) {
                 alert("" + data + "\nNotes saved!");
- 
+
             } else {
                 alert("" + data + "\nnotes NOT saved");
             }
-            
+
             $(".result").html(data);
         });
         //alert("Handler for .submit() called.");
         event.preventDefault();
     });
-    
-    $("#next_question_button").click(function(){
-        //fetch new question
+
+    $("#next_question_button").click(function() {
+        var imageNr = $("#questionImage").data("imgnumber");
+        if (imageNr === 1) {
+            $("#questionImage").load("html/technasiumQuestions/slide2.jsp");
+        }
+        else if(imageNr === 2){
+            $("#questionImage").load("html/technasiumQuestions/slide3.jsp");
+        }
+    });
+    $("#last_question_button").click(function() {
+        var imageNr = $("#questionImage").data("imgnumber");
+        if (imageNr === 3) {
+            $("#questionImage").load("html/technasiumQuestions/slide2.jsp");
+        }
     });
 }
 
