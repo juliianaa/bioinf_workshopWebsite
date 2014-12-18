@@ -5,5 +5,5 @@
 --%>
 <footer>
       <p>Bioinformatics &copy; 2014 | <a href="http://www.hanze.nl">Hanze University of Applied Sciences</a> <br />
-      Developed by students of the course Bioinformatics</p>
+      Developed by students of the study Bioinformatics</p>
 </footer>

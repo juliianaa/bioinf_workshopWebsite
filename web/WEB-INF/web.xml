@@ -4,9 +4,17 @@
         <param-name>base_url</param-name>
         <param-value>http://localhost:8080/Bioinformatica_website/</param-value>
     </context-param>
+    <servlet>
+        <servlet-name>AssignmentTechnasium</servlet-name>
+        <servlet-class>nl.bioinf.web_servlets.AssignmentTechnasium</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AssignmentAnsweringServlet</servlet-name>
         <url-pattern>/answer.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AssignmentTechnasium</servlet-name>
+        <url-pattern>/makeNotes.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
