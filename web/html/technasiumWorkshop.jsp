@@ -15,6 +15,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="js/hideText.js" type="text/javascript"></script>
         <script src="js/myScript.js" type="text/javascript"></script>
+        <script src="../js/typed.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link href="css/technasiumWorkshop.css" rel="stylesheet" type="text/css"/>
         <title>Technasium</title>
@@ -44,7 +45,9 @@
                         <div id="question_div" data-question-number="1">
                             <div class="imageBoxes" id = "questionImage" > 
                                 <img data-imgNumber="1" id = "image" src="images/achtergrond_verhoor.jpg" alt=""/> 
-                                <div class ="up">Het verhoor begint...</div>
+                                <div class ="up">
+                                    <p class="css-typing">Het verhoor begint...</p>
+                                </div>
                             </div>
                             <div class="noteBox">
                                 <label for="basic">Text Input:</label>
