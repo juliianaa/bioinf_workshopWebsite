@@ -122,39 +122,64 @@ public class AssignmentTechnasium extends HttpServlet {
 
     private boolean saveAsTemp(String notes, String userName)
             throws IOException {
+        String path = "/Users/mldubbelaar/Desktop/test/";
         String prefix = userName + "_notes";
-        String suffix = ".tmp";
+        String suffix = ".txt";
 
         // this temporary file remains after the jvm exits
+//        try {
+//            List<String> savedNotes = new ArrayList<>();
+//            //String[] files = new File("/commons/student/2014-2015/Thema10/bioInfWebsite/").list();
+//            String[] files = new File("/Users/mldubbelaar/Desktop/test/").list();
+//            boolean fileExists = false;
+//            String filename = "";
+//            for (String file : files) {
+//                if (file.startsWith(prefix)) {
+//                    fileExists = true;
+//                    filename = file;
+//                }
+//            }
+//            if (fileExists == true) {
+//                try (PrintWriter writer = new PrintWriter(filename, "UTF-8")) {
+//                    writer.println(notes);
+//                    writer.close();
+//                System.out.println("222222"+filename);
+//                    File newFile =new File(filename);
+//                    System.out.println("**********"+newFile);
+//                    try (Writer output = new BufferedWriter(new OutputStreamWriter(
+//                    new FileOutputStream(newFile), "UTF8"))) {
+//                    output.append(notes);
+//                    output.flush();}
+//                    try (Writer output = new BufferedWriter(new OutputStreamWriter(
+//                    new FileOutputStream(filename), "UTF8"))) {
+//                    output.append(notes);
+//                    output.flush();}
+//                    System.out.println("***"+notes);
+//                }
+//            } else {
         try {
-            List<String> savedNotes = new ArrayList<>();
-            String[] files = new File("/commons/student/2014-2015/Thema10/bioInfWebsite/").list();
-
-            boolean fileExists = false;
-            String filename = "";
-            for (String file : files) {
-                if (file.startsWith(prefix)) {
-                    fileExists = true;
-                    filename = file;
+            
+               String tempFile = path+prefix+suffix;
+               System.out.println("$$$$$$$$$"+tempFile);
+                
+                try (PrintWriter writer = new PrintWriter(tempFile, "UTF-8")) {
+                    writer.println(notes);
+                    writer.close();
+//                    File tempFile = File.createTempFile(prefix, suffix, new File(
+//                            "/commons/student/2014-2015/Thema10/bioInfWebsite/"));
+//                File tempFile = File.createTempFile(prefix, suffix, new File("/Users/mldubbelaar/Desktop/test/"));
+//                try (Writer output = new BufferedWriter(new OutputStreamWriter(
+//                        new FileOutputStream(tempFile), "UTF8"))) {
+//                    output.append(notes);
+//                    output.flush();
                 }
+
+            } catch (Exception e) {
+                System.out.println(e);
             }
-                if (fileExists == true) {
-                    try (Writer output = new BufferedWriter(new OutputStreamWriter(
-                    new FileOutputStream(filename), "UTF8"))) {
-                    output.append(notes);
-                    output.flush();}
-                    System.out.println("***"+notes);
-                } else {
-                    File tempFile = File.createTempFile(prefix, suffix, new File(
-                            "/commons/student/2014-2015/Thema10/bioInfWebsite/"));
-                    try (Writer output = new BufferedWriter(new OutputStreamWriter(
-                    new FileOutputStream(tempFile), "UTF8"))) {
-                output.append(notes);
-                output.flush();}
-                    System.out.println("#####" + tempFile);
-
-                }
-
+        return true;
+    }
+    
 //            
 //            //File tempFile = File.createTempFile(prefix, suffix);
 //            File tempFile = File.createTempFile(prefix, suffix, new File(
@@ -165,12 +190,12 @@ public class AssignmentTechnasium extends HttpServlet {
 //                output.flush();
 //            }
 //            tempFile.deleteOnExit();
-                return true;
+//            return true;
+////        } catch (IOException e) {
+////            return false;
 //        } catch (IOException e) {
 //            return false;
-            }catch (IOException e) {
-            return false;
-        }
-        }
+//        }
+//    }
 
-    }
+}
