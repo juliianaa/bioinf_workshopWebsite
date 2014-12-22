@@ -130,7 +130,7 @@ and open the template in the editor.
 }
 .right{
     left: -20px;
-    top:-220px;
+    top:-250px;
 }
 .up{
     background-color: #000;
@@ -141,6 +141,8 @@ and open the template in the editor.
     left: 5px;
     width: 500px;
     position: relative;
+    font-family: monospace;
+    font-size: 14px;
 }
 
 .css-typing
@@ -158,4 +160,22 @@ and open the template in the editor.
 
 @-webkit-keyframes type{
     from { width: 0; }
+}
+
+.imageButton {
+    position: relative;
+    top: 10px;
+    left: -212px;
+    width: 100px;
+    background-color: #444;
+    height: 30px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: white;
+    
+}
+
+#next_question_button{
+    top: -20px;
+    left: -100px;    
 }

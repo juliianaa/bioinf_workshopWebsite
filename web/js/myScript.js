@@ -79,7 +79,7 @@ function initialize() {
 
 
             default:
-                $("#questionImage").load("html/technasiumQuestions/slide15.jsp");
+                $("#questionImage").load("html/technasiumQuestions/slide16.jsp");
         }
 
     });
@@ -131,7 +131,7 @@ function initialize() {
                 $("#questionImage").load("html/technasiumQuestions/slide14.jsp");
                 break;
             default:
-                $("#questionImage").load("html/technasiumQuestions/slide1.jsp");
+                $("#questionImage").load("html/technasiumQuestions/slide15.jsp");
         }
     });
 }

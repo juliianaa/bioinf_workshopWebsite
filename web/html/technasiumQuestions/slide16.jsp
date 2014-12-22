@@ -6,6 +6,6 @@
 
 <div class="imageBoxes" id = "questionImage"> 
     <img data-imgNumber="16" id = "image" src="images/achtergrond_verhoor.jpg" alt=""/> 
-    <div class ="up"><p class = "css-typing">Verdachte 3: </p>
+    <div class ="up"><p class = "css-typing">Verdachte 3: komt nog</p>
     </div>
 </div>
