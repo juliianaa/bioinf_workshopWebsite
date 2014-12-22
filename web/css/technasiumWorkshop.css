@@ -7,7 +7,7 @@ and open the template in the editor.
     Created on : Dec 18, 2014, 11:20:23 AM
     Author     : mkslofstra
 */
-
+/*text balloons*/
 .triangle-border {
   position:relative;
   padding:15px;
@@ -130,16 +130,16 @@ and open the template in the editor.
 }
 .right{
     left: -20px;
-    top:-520px;
+    top:-220px;
 }
 .up{
-    background-color: #fff;
-    color: #000;
+    background-color: #000;
+    color: #fff;
     border: 2px;
     padding: 5px;
     bottom: 400px;
     left: 5px;
-    width: 300px;
+    width: 500px;
     position: relative;
 }
 
