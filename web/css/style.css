@@ -152,6 +152,7 @@ ol {
 #main, nav, #container, #logo, #site_content, footer { 
   margin-left: auto; 
   margin-right: auto;
+  position: relative;
 }
 
 #main {

@@ -82,17 +82,8 @@
                         <button class="button" id="hide">Start Workshop</button>
                     </div>
                     
-                    <div id="canvas_container">
-
-                      </div>
-                    
                     <div class="questions" id="questions">
-                        <form action="answer.do" method="post">
-                            Typ het woord "DNA" in: <input type="text" name="word"><br>
-                            <input class="button" type="submit" value="Submit">
-                        </form>
-                        
-                        
+                        <a href="html/hanzeXperience_MBO/assignments.jsp">Test Draggable</a>   
                     </div>
                 </div>
                 <!--End of content-->

@@ -1,17 +1,83 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */	
-
-window.onload = function() {
-    var paper = new Raphael(document.getElementById('canvas_container'), 500, 500);
-    for(var i = 0; i < 5; i+=1) {
-    var multiplier = i*5;
-    paper.circle(250 + (2*multiplier), 100 + multiplier, 50 - multiplier);
+$(function() {
+ var outside_1 = 0;   
+ var outside_2 = 0;   
+ var outside_3 = 0;   
+ var outside_4 = 0;   
+    
+    $( "#draggable1").draggable({
+        accept      : '.draggable1',
+        out         : function(){
+            outside_1 = 1;
+        }
+    });
+    $( "#makeMeDroppable_1").droppable({
+      accept: "#draggable1",
+      drop: function(event, ui){
+        if(outside_1 === 1){
+            alert('Dropped outside!');
+        }else{
+            alert('Dropped inside!');
+        }
     }
-    var rectangle = paper.rect(50, 50, 250, 400);
-    var ellipse = paper.ellipse(200, 400, 100, 50);
-    var circ = paper.circle(180, 250, 40).attr({fill: '#000'});
-    var mood_text = paper.text(180, 250, 'Hanze\n Xperience').attr({fill: '#fff'});
-};
+    });
+    
+    $( "#draggable2").draggable({
+        accept      : '.draggable2',
+        out         : function(){
+            outside_2 = 1;
+        },
+        over        : function(){
+            outside_2 = 0;
+        }
+    });
+    $( "#makeMeDroppable_2").droppable({
+      accept: "#draggable2",
+      drop: function( event, ui ) {
+        if(outside_2 === 1){
+            alert('Dropped outside!');
+        }else{
+            alert('Dropped inside!');
+        }
+      }
+    });
+    
+    $( "#draggable3").draggable({
+        accept      : '.draggable3',
+        out         : function(){
+            outside_3 = 1;
+        },
+        over        : function(){
+            outside_3 = 0;
+        }
+    });
+    $( "#makeMeDroppable_3").droppable({
+      accept: "#draggable3",
+      drop: function( event, ui ) {
+        if(outside_3 === 1){
+            alert('Dropped outside!');
+        }else{
+            alert('Dropped inside!');
+        }
+      }
+    });
+    
+    $( "#draggable4").draggable({
+        accept      : '.draggable4',
+        out         : function(){
+            outside_4 = 1;
+        },
+        over        : function(){
+            outside_4 = 0;
+        }
+    });
+    $( "#makeMeDroppable_4").droppable({
+      accept: "#draggable4",
+      drop: function( event, ui ) {
+        if(outside_4 === 1){
+            alert('Dropped outside!');
+        }else{
+            alert('Dropped inside!');
+        }
+      }
+    });   
+  });
