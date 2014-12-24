@@ -18,12 +18,12 @@
         <base href="${initParam.base_url}">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link href="css/workshop.css" rel="stylesheet" type="text/css"/>
         <script src="js/hideText.js" type="text/javascript"></script>
         <script src="js/raphael.js" type="text/javascript"></script>
-        <script src="js/visualize.js" type="text/javascript"></script>
+        
         <style type="text/css">
             #canvas_container {
                 width: 500px;
@@ -46,12 +46,12 @@
                    <img src="images/banner.jpg" width="970" height="300" alt=""/>
                 </ul>
                 
-                <div class="content">
+                <div class="content" style = "width: 800px;">
                     <div class="introduction" id="introduction">
 
                         <h1>Hanze Xperience MBO</h1>
 
-                        <p>Welkom
+                        Welkom
                         Wij willen je van harte welkom heten op de Hanzehogeschool Groningen. De
                         hogeschool biedt je vele mogelijkheden om je verder te ontwikkelen nadat je een
                         mbo hebt gehaald. We bieden veel opleidingen aan, ook weer op diverse niveaus
@@ -77,7 +77,7 @@
                         • Je krijgt informatie over verschillende opleidingen en de beroepen die
                         daarbij horen
                         We hopen dat je veel plezier zult beleven aan dit driedaagse evenement en dat
-                        het je kan ondersteunen in je keuze of je gaat doorsturen in het hbo.</p>
+                        het je kan ondersteunen in je keuze of je gaat doorsturen in het hbo.
 
                         <button class="button" id="hide">Start Workshop</button>
                     </div>

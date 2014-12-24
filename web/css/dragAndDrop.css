@@ -1,0 +1,70 @@
+
+/* The initial pile of unsorted cards */
+ 
+#answersPile {
+  margin: 0 auto;
+  background: #ffd;
+}
+ 
+#answersPile {
+  width: 610px;
+  height: 60px;
+  padding: 20px;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+}
+ 
+/* Individual cards and slots */
+ 
+#answersPile div {
+  float: left;
+  padding: 2px;
+  width: 200px;
+  height: 20px;
+  border: 1px solid #999;
+  margin: 0 0 0 10px;
+  background: #fff;
+}
+ 
+#answersPile div:first-child {
+  margin-left: 0;
+}
+ 
+#answersSlots div {
+  height: 20px;
+  width:200px;
+  border: 1px solid #999;
+  border-style: dashed;
+  position:relative;
+}
+ 
+#answersPile div {
+  background: #666;
+  color: #fff;
+  font-size: 20px;
+  text-shadow: 0 0 3px #000;
+}
+
+/* "You did it!" message */
+#successMessage {
+  position: absolute;
+  left: 580px;
+  top: 250px;
+  width: 0;
+  height: 0;
+  z-index: 100;
+  background: #dfd;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  padding: 20px;
+}
