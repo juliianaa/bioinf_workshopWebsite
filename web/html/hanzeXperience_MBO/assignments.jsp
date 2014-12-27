@@ -60,7 +60,7 @@
                 <div class="content" style = "width: 800px;">
                     
                 <div>
-                    <p>Sleep de kaart naar het correcte vak.</p>
+                    <h2>Sleep de kaarten naar het correcte vak.</h2>
 
                     <ul>
                         <li>A: Lees DNA Sequentie Uit Bestand</li>
@@ -78,7 +78,7 @@
                     
                     <div id="successMessage">
                         <h2>You did it!</h2>
-                        <a href="html/hanzeXperience_MBO/question2.jsp" class="button">Start workshop</a>
+                        <a href="html/hanzeXperience_MBO/question2.jsp" class="button">Volgende vraag</a>
                     </div>
                 </div>
                 <!--End of content-->

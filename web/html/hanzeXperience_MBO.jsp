@@ -18,16 +18,17 @@
         <base href="${initParam.base_url}">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link href="css/workshop.css" rel="stylesheet" type="text/css"/>
-        <script src="js/hideText.js" type="text/javascript"></script>
-        <script src="js/raphael.js" type="text/javascript"></script>
-        
+        <script src="js/typed.js" type="text/javascript"></script>
+        <script src="js/typeText.js" type="text/javascript"></script>
         <style type="text/css">
-            #canvas_container {
-                width: 500px;
-                border: 1px solid #aaa;
+            #typed {
+                top:20px;
+                left:250px;
+                width: 600px;
+                position:relative;
             }
         </style>
       <title>Bioinformatics Homepage</title>
@@ -42,49 +43,18 @@
             <div id="site_content">
                 <div id="top_border"></div>
                 
-                <ul id="images">
-                   <img src="images/banner.jpg" width="970" height="300" alt=""/>
-                </ul>
-                
                 <div class="content" style = "width: 800px;">
-                    <div class="introduction" id="introduction">
+                     <img src="images/textBalloon.png" style="float:right" alt=""/>   
+                    <p id="typed"></p>
+                    <p>
+                            
+                           <img src="images/prof.png" width="210" height="400" alt=""/>
+                           <a href="html/hanzeXperience_MBO/assignments.jsp" class="button">Start</a>
+                            
+                        </p>
+                        
 
-                        <h1>Hanze Xperience MBO</h1>
-
-                        Welkom
-                        Wij willen je van harte welkom heten op de Hanzehogeschool Groningen. De
-                        hogeschool biedt je vele mogelijkheden om je verder te ontwikkelen nadat je een
-                        mbo hebt gehaald. We bieden veel opleidingen aan, ook weer op diverse niveaus
-                        en in verschillende vormen. Tijdens deze driedaagse zullen we je hierover
-                        informeren. We vertellen je over de majors en een minors. Na een vierjarige hbo-
-                        opleiding krijg je de internationaal erkende titel Bachelor. Na je bachelor kun je
-                        verder studeren aan een hogeschool of universiteit om een master te halen; dit
-                        duurt meestal één en soms twee jaar.
-                        Verder kun je bij een aantal techniekopleidingen al een BBL-route volgen, bij ons
-                        heet dat duaal (zie hiervoor bv Medisch Beeldvormende en Radiotherapeutische
-                        Technieken (MBRT)).
-                        HanzeXperience MBO Techniek & ICT
-                        Je hebt gekozen om je te oriënteren op een technische of ICT opleiding binnen de
-                        Hanzehogeschool Groningen. Gedurende deze driedaagse wordt er o.a. aandacht
-                        besteed aan de verschillende werkvormen (hoorcollege, practica en projecten).
-                        Door het contact met docenten en huidige studenten van de hogeschool wordt je
-                        in de gelegenheid gesteld om al je vragen te stellen en de sfeer te proeven.
-                        Wat houdt het evenement in?
-                        • Je kunt ervaren hoe het is om in het hbo te studeren en in het bijzonder bij
-                        de Hanzehogeschool Groningen
-                        • Je kunt beleven hoe het is om een specifieke opleiding op hbo-niveau te
-                        volgen
-                        • Je krijgt informatie over verschillende opleidingen en de beroepen die
-                        daarbij horen
-                        We hopen dat je veel plezier zult beleven aan dit driedaagse evenement en dat
-                        het je kan ondersteunen in je keuze of je gaat doorsturen in het hbo.
-
-                        <button class="button" id="hide">Start Workshop</button>
-                    </div>
-                    
-                    <div class="questions" id="questions">
-                        <a href="html/hanzeXperience_MBO/assignments.jsp">Test Draggable</a>   
-                    </div>
+      
                 </div>
                 <!--End of content-->
             </div>
