@@ -152,6 +152,7 @@ ol {
 #main, nav, #container, #logo, #site_content, footer { 
   margin-left: auto; 
   margin-right: auto;
+  
 }
 
 #main {
@@ -291,9 +292,10 @@ nav {
 
 .content { 
     text-align: left;
-    width: 100%;
+    width: 800px;
     margin-left: 5% ;
     font-size: 120%;
+    position: relative;
 }
   
 .content ul { 
@@ -304,7 +306,7 @@ nav {
 
 footer { 
   width: 940px;
-  font: 100%, arial, sans-serif;
+  font: arial, sans-serif;
   height: 30px;
   padding: 20px 0 20px 0;
   text-align: center;

@@ -1,17 +1,76 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */	
+var correctAnswers = 0;
 
-window.onload = function() {
-    var paper = new Raphael(document.getElementById('canvas_container'), 500, 500);
-    for(var i = 0; i < 5; i+=1) {
-    var multiplier = i*5;
-    paper.circle(250 + (2*multiplier), 100 + multiplier, 50 - multiplier);
-    }
-    var rectangle = paper.rect(50, 50, 250, 400);
-    var ellipse = paper.ellipse(200, 400, 100, 50);
-    var circ = paper.circle(180, 250, 40).attr({fill: '#000'});
-    var mood_text = paper.text(180, 250, 'Hanze\n Xperience').attr({fill: '#fff'});
-};
+$( init );
+ 
+function init() {     
+    
+    // Hide the success message
+  $('#successMessage').hide();
+  $('#successMessage').css( {
+    left: '580px',
+    top: '250px',
+    width: 0,
+    height: 0
+  } );
+ 
+  // Reset the game
+  correctAnswers = 0;
+ 
+    $('#answersPile').html( '' );
+  $('#answersSlots').html( '' );
+  
+  var numbers = ["A", "B", "C", "D"];
+  
+  for ( var i=0; i<4; i++ ) {
+    $('<div>' + numbers[i] + '</div>').data( 'number', i+1 ).attr( 'id', 'card'+numbers[i] ).appendTo( '#answersPile' ).draggable( {
+      containment: '#content',
+      stack: '#answersPile div',
+      cursor: 'move',
+      revert: true
+    } );
+  }
+  
+  var style = ['answer1', 'answer2', 'answer3', 'answer4'];
+  for ( var i=1; i<=4; i++ ) {
+    $('<div></div>').data( 'number', i ).attr( 'id',style[i-1] ).addClass(style[i-1]).appendTo( '#answersSlots' ).droppable( {
+      accept: '#answersPile div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+  }
+  
+  
+function handleCardDrop( event, ui ) {
+  var slotNumber = $(this).data( 'number' );
+  var cardNumber = ui.draggable.data( 'number' );
+ 
+  // If the card was dropped to the correct slot,
+  // change the card colour, position it directly
+  // on top of the slot, and prevent it being dragged
+  // again
+ 
+  if ( slotNumber === cardNumber ) {
+    ui.draggable.addClass( 'correct' );
+    ui.draggable.draggable( 'disable' );
+    $(this).droppable( 'disable' );
+    ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
+    ui.draggable.draggable( 'option', 'revert', false );
+    correctAnswers++;
+  } 
+   
+  // If all the cards have been placed correctly then display a message
+  // and reset the cards for another go
+ 
+  if ( correctAnswers === 4 ) {
+    $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '380px',
+      top: '200px',
+      width: '400px',
+      height: '100px',
+      opacity: 1
+    } );
+  }
+ 
+}  
+  }

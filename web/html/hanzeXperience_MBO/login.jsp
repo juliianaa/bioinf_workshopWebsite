@@ -1,9 +1,3 @@
-<%-- 
-    Document   : workshops
-    Created on : Nov 27, 2014, 3:15:34 PM
-    Author     : jwlgoh
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -30,20 +24,22 @@
     <body>
         <div id="main">
             
-            <%@include file="../includes/bodyHeader.jsp" %>
+            <%@include file="../../includes/bodyHeader.jsp" %>
 
 
             <div id="site_content">
                 <div id="top_border"></div>
                 
                 <div class="content" style = "width: 800px;">
-                    <span class="element" id="element" style="white-space:pre"></span>
+                    
+                    <span class="element" id="login_text" style="white-space:pre"></span>
+                    
                     <img src="images/textBalloon.png" style="float:right" alt=""/>   
                     
                     <p>
 
                         <img src="images/prof.png" width="210" height="400" alt=""/>
-                        <a href="html/hanzeXperience_MBO/login.jsp" class="button">Start</a>
+                        
 
                     </p>
                         
@@ -54,7 +50,7 @@
             </div>
 
 
-            <%@include file="../includes/bodyFooter.jsp" %>
+            <%@include file="../../includes/bodyFooter.jsp" %>
 
 
         </div>
