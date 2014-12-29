@@ -23,10 +23,21 @@ function initialize() {
         //alert("Handler for .submit() called.");
         event.preventDefault();
     });
-
+    $("#first").click(function(){
+        $("#questionImage").load("html/technasiumQuestions/tafel.jsp");
+    });
+    $("#last").click(function(){
+        $("#questionImage").load("html/technasiumQuestions/slide22.jsp");
+    });
     $("#next_question_button").click(function () {
         var imageNr = $("#image").data("imgnumber");
         switch (imageNr) {
+            case "tafel":
+                $("#questionImage").load("html/technasiumQuestions/bewijs.jsp");
+                break;
+            case "bewijs":
+                $("#questionImage").load("html/technasiumQuestions/slide1.jsp");
+                break;
             case 1:
                 $("#questionImage").load("html/technasiumQuestions/slide2.jsp");
                 break;
@@ -75,18 +86,40 @@ function initialize() {
             case 15:
                 $("#questionImage").load("html/technasiumQuestions/slide16.jsp");
                 break;
-
-
-
+            case 16:
+                $("#questionImage").load("html/technasiumQuestions/slide17.jsp");
+                break;
+            case 17:
+                $("#questionImage").load("html/technasiumQuestions/slide18.jsp");
+                break;
+            case 18:
+                $("#questionImage").load("html/technasiumQuestions/slide19.jsp");
+                break;
+            case 19:
+                $("#questionImage").load("html/technasiumQuestions/slide20.jsp");
+                break;
+            case 20:
+                $("#questionImage").load("html/technasiumQuestions/slide21.jsp");
+                break;
+            case 21:
+                $("#questionImage").load("html/technasiumQuestions/slide22.jsp");
+                break;
             default:
-                $("#questionImage").load("html/technasiumQuestions/slide16.jsp");
+                $("#questionImage").load("html/technasiumQuestions/slide22.jsp");
         }
 
     });
     $("#last_question_button").click(function () {
         var imageNr = $("#image").data("imgnumber");
         switch (imageNr) {
+            case "tafel":
+                 $("#questionImage").load("html/technasiumQuestions/tafel.jsp");
+                break;
+            case "bewijs":
+                $("#questionImage").load("html/technasiumQuestions/tafel.jsp");
+                break;
             case 1:
+                $("#questionImage").load("html/technasiumQuestions/bewijs.jsp");
                 break;
             case 2:
                 $("#questionImage").load("html/technasiumQuestions/slide1.jsp");
@@ -130,8 +163,29 @@ function initialize() {
             case 15:
                 $("#questionImage").load("html/technasiumQuestions/slide14.jsp");
                 break;
-            default:
+            case 16:
                 $("#questionImage").load("html/technasiumQuestions/slide15.jsp");
+                break;
+            case 17:
+                $("#questionImage").load("html/technasiumQuestions/slide16.jsp");
+                break;
+            case 18:
+                $("#questionImage").load("html/technasiumQuestions/slide17.jsp");
+                break;
+            case 19:
+                $("#questionImage").load("html/technasiumQuestions/slide18.jsp");
+                break;
+            case 20:
+                $("#questionImage").load("html/technasiumQuestions/slide19.jsp");
+                break;
+            case 21:
+                $("#questionImage").load("html/technasiumQuestions/slide20.jsp");
+                break;
+            case 22:
+                $("#questionImage").load("html/technasiumQuestions/slide21.jsp");
+                break;
+            default:
+                $("#questionImage").load("html/technasiumQuestions/slide1.jsp");
         }
     });
 }

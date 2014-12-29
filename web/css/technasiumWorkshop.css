@@ -144,7 +144,19 @@ and open the template in the editor.
     font-family: monospace;
     font-size: 14px;
 }
-
+.black{
+    background-color: #000;
+    color: #fff;
+    border: 2px;
+    padding: 10px;
+    bottom: 300px;
+    left: 40px;
+    width: 500px;
+    height: 200px;
+    position: relative;
+    font-family: monospace;
+    font-size: 14px;
+}
 .css-typing
 {
     width: 30em;
@@ -177,5 +189,19 @@ and open the template in the editor.
 
 #next_question_button{
     top: -20px;
-    left: -100px;    
+    left: -50px;    
 }
+#last{
+    top:-50px;
+    left:53px;
+    width: 50px;
+}
+#first{
+    top:40px;
+    left:-208px;
+    width: 50px;
+}
+#last_question_button{
+    left:-155px;
+}
+.text {width: 800px;}

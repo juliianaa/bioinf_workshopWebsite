@@ -5,7 +5,7 @@
 --%>
 
 <div class="imageBoxes" id = "questionImage"> 
-    <img data-imgNumber="16" id = "image" src="images/achtergrond_verhoor.jpg" alt=""/> 
-    <div class ="up"><p class = "css-typing">Verdachte 3: komt nog</p>
+    <img data-imgNumber="16" id = "image" src="images/verhoorMagazijnMedewerkster.jpg" alt=""/> 
+    <div class ="up"><p class = "css-typing">Verdachte 3: Magazijnmedwerkster *naam*</p>
     </div>
 </div>
