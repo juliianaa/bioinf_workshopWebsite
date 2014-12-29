@@ -15,7 +15,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="js/hideText.js" type="text/javascript"></script>
         <script src="js/myScript.js" type="text/javascript"></script>
-        <script src="../js/typed.js" type="text/javascript"></script>
+        <script src="js/typed.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link href="css/technasiumWorkshop.css" rel="stylesheet" type="text/css"/>
         <title>Technasium</title>

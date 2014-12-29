@@ -5,11 +5,12 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
     <head>
-        <base href="${initParam.base_url}">
+        <base href="${initParam.base_url}">   
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -60,13 +61,22 @@
                 <div class="content" style = "width: 800px;">
                     
                 <div>
+                    <c:choose>
+                        <c:when test="${sessionScope.user != null}">
+                            <h1>Welkom, ${sessionScope.user}</h1>
+                        </c:when>
+                        <c:otherwise>
+                            <h1>No name</h1>
+                        </c:otherwise>
+                    </c:choose>
+                    
                     <h2>Sleep de kaarten naar het correcte vak.</h2>
 
                     <ul>
                         <li>A: Lees DNA Sequentie Uit Bestand</li>
                         <li>B: Controleer Of De DNA Sequentie Ook Echt Alleen Uit De Goede Letters Bestaat</li>
                         <li>C: Print "geen startcodon gevonden"</li>
-                        <li>D: Zoek het volgende stolicodon</li>
+                        <li>D: Zoek het volgende stopcodon</li>
                     </ul>
                 </div>
                     
@@ -78,7 +88,7 @@
                     
                     <div id="successMessage">
                         <h2>You did it!</h2>
-                        <a href="html/hanzeXperience_MBO/question2.jsp" class="button">Volgende vraag</a>
+                        <a href="html/hanzeXperience_MBO/assignment2.jsp" class="button">Volgende vraag</a>
                     </div>
                 </div>
                 <!--End of content-->

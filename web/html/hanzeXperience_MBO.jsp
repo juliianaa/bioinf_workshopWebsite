@@ -1,10 +1,4 @@
 <%-- 
-    Document   : hanzeXperience_MBO
-    Created on : Dec 1, 2014, 1:38:28 PM
-    Author     : jwlgoh
---%>
-
-<%-- 
     Document   : workshops
     Created on : Nov 27, 2014, 3:15:34 PM
     Author     : jwlgoh
@@ -24,10 +18,9 @@
         <script src="js/typed.js" type="text/javascript"></script>
         <script src="js/typeText.js" type="text/javascript"></script>
         <style type="text/css">
-            #typed {
-                top:20px;
+            .element {
+                top: 80px;
                 left:250px;
-                width: 600px;
                 position:relative;
             }
         </style>
@@ -44,14 +37,15 @@
                 <div id="top_border"></div>
                 
                 <div class="content" style = "width: 800px;">
-                     <img src="images/textBalloon.png" style="float:right" alt=""/>   
-                    <p id="typed"></p>
+                    <span class="element" id="element" style="white-space:pre"></span>
+                    <img src="images/textBalloon.png" style="float:right" alt=""/>   
+                    
                     <p>
-                            
-                           <img src="images/prof.png" width="210" height="400" alt=""/>
-                           <a href="html/hanzeXperience_MBO/assignments.jsp" class="button">Start</a>
-                            
-                        </p>
+
+                        <img src="images/prof.png" width="210" height="400" alt=""/>
+                        <a href="html/hanzeXperience_MBO/login.jsp" class="button">Start</a>
+
+                    </p>
                         
 
       

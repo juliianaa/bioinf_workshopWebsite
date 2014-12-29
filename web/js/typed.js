@@ -347,16 +347,12 @@
         typeSpeed: 0,
         // time before typing starts
         startDelay: 0,
-        // backspacing speed
-        backSpeed: 0,
-        // time before backspacing
-        backDelay: 500,
         // loop
         loop: false,
         // false = infinite
         loopCount: false,
         // show cursor
-        showCursor: true,
+        showCursor: false,
         // character for cursor
         cursorChar: "|",
         // attribute to type (null == text)
