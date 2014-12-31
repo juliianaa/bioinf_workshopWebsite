@@ -18,6 +18,7 @@
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
         <script src="js/visualize.js" type="text/javascript"></script>
+        <script src="js/hideText.js" type="text/javascript"></script>
         <link href="css/dragAndDrop.css" rel="stylesheet" type="text/css"/>
         <style>
             .answer1
@@ -60,35 +61,79 @@
                 
                 <div class="content" style = "width: 800px;">
                     
-                <div>
-                    <c:choose>
-                        <c:when test="${sessionScope.user != null}">
-                            <h1>Welkom, ${sessionScope.user}</h1>
-                        </c:when>
-                        <c:otherwise>
-                            <h1>No name</h1>
-                        </c:otherwise>
-                    </c:choose>
-                    
-                    <h2>Sleep de kaarten naar het correcte vak.</h2>
+                    <div id="question1">
+                        <div>
+                            <c:choose>
+                                <c:when test="${sessionScope.user != null}">
+                                    <h1>Welkom, ${sessionScope.user}</h1>
+                                </c:when>
+                                <c:otherwise>
+                                    <h1>No name</h1>
+                                </c:otherwise>
+                            </c:choose>
+                                        
+                                    
+                            <h1>Opdracht 1a</h1>
+                            <h2>Sleep de kaarten naar het correcte vak.</h2>
 
-                    <ul>
-                        <li>A: Lees DNA Sequentie Uit Bestand</li>
-                        <li>B: Controleer Of De DNA Sequentie Ook Echt Alleen Uit De Goede Letters Bestaat</li>
-                        <li>C: Print "geen startcodon gevonden"</li>
-                        <li>D: Zoek het volgende stopcodon</li>
-                    </ul>
-                </div>
+                            <ul>
+                                <li>A: Lees DNA Sequentie Uit Bestand</li>
+                                <li>B: Controleer Of De DNA Sequentie Ook Echt Alleen Uit De Goede Letters Bestaat</li>
+                                <li>C: Print "geen startcodon gevonden"</li>
+                                <li>D: Zoek het volgende stopcodon</li>
+                            </ul>
+                        </div>
+
+                        <div id="answersPile"></div>
+
+                        <div id="answersSlots"></div>
+
+                        <img src="images/hanzeXperience_MBO/HanzeXperience(drag and drop).png" alt="" style="position:relative"/>
+
+                        <div id="successMessage">
+                            <h2>You did it!</h2>
+                            <button id="hide" class="button" type="button">Volgende Vraag</button>
+                        </div>
+                    </div>
                     
-                    <div id="answersPile"></div>
-                    
-                    <div id="answersSlots"></div>
-                    
-                    <img src="images/hanzeXperience_MBO/HanzeXperience(drag and drop).png" alt="" style="position:relative"/>
-                    
-                    <div id="successMessage">
-                        <h2>You did it!</h2>
-                        <a href="html/hanzeXperience_MBO/assignment2.jsp" class="button">Volgende vraag</a>
+                    <div id="question2">
+                        <h1>Opdracht 1b</h1>
+                        <p>
+                            Download de code van je programma hieronder. 
+                            Je ziet dat dezelfde blokjes hier in code staan die ook in het schema staan dat je net kloppend gemaakt hebt. 
+                            Zoek het hoofdprogramma <strong><i>(main)</i></strong>.  Hier moeten de losse functies  (blokjes) op dezelfde volgorde aangeroepen 
+                            worden als in je schema. Als je goed kijkt dan zie je dat ook hier een paar regels ontbreken. Vul die regels 
+                            code in en sla het aangepaste programma op in desktop.
+                            
+                            <p>
+                                 <strong><i>>>>> </i></strong><a href="scripts/zoekGen.py">zoekGen.py</a> <strong><i> <<<<</i></strong>
+                                 (Als het downloaden niet lukt, klik dan op rechte muisknop en sla het link op)
+                            </p>
+                        </p>
+                       
+                        
+                        <p>
+                            Ben je klaar?
+                            Voer het gewijzigde programma uit.<br />
+                            
+                            <ul>
+                                <li>Open een terminal</li>
+                                <img src="images/hanzeXperience_MBO/terminal.png" width='700px' height='400px' alt=""/>
+                                <li>ga naar de map waar het programma staat (met cd Desktop)</li>
+                                <img src="images/hanzeXperience_MBO/terminalToDesktop.png" width='700px' height='400px' alt=""/>
+                                <li>tik in python zoekGen.py</li>
+                                <img src="images/hanzeXperience_MBO/typeZoekGen.png" width='700px' height='400px' alt=""/>
+                                <li>volg de instructies van het programma</li>
+                                <li>sla de genen op in een tekstbestand</li>
+                            </ul>
+                        </p>
+                        
+                        <h2>Extra opdracht</h2>
+                        <p>
+                            Er wordt geen rekening gehouden met de andere streng van het DNA. Pas het programma zo aan, dat ook deze geanalyseerd wordt.
+                        </p>
+                        
+                        <a href="html/hanzeXperience_MBO/assignment2.jsp" class="button">Naar opdracht 2</a>
                     </div>
                 </div>
                 <!--End of content-->
