@@ -47,25 +47,6 @@ public class AssignmentTechnasium extends HttpServlet {
         } finally {
             out.close();
         }
-
-//        String notesOnSuspect;
-//
-//        notesOnSuspect = request.getParameter("notes");
-//        try {
-//            File fileDir = new File("/homes/mldubbelaar/Desktop/data.txt");
-//            //File fileDir = new File("/Users/mldubbelaar/Desktop/data.txt");
-//            try (Writer output = new BufferedWriter(new OutputStreamWriter(
-//                    new FileOutputStream(fileDir), "UTF8"))) {
-//                output.append(notesOnSuspect);
-//                output.flush();
-//            }
-//
-//        } catch (FileNotFoundException e) {
-//            System.out.println(e);
-//        }
-        //RequestDispatcher view = request.getRequestDispatcher(
-        //        "html/technasiumWorkshop.jsp");
-        //view.forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -136,23 +117,10 @@ public class AssignmentTechnasium extends HttpServlet {
         String prefix = userName + "_notes";
         String suffix = ".txt";
 
-        // this temporary file remains after the jvm exits
-//        try {
-//            List<String> savedNotes = new ArrayList<>();
-//            //String[] files = new File("/commons/student/2014-2015/Thema10/bioInfWebsite/").list();
-//            String[] files = new File("/Users/mldubbelaar/Desktop/test/").list();
-//            boolean fileExists = false;
-//            String filename = "";
-//            for (String file : files) {
-//                if (file.startsWith(prefix)) {
-//                    fileExists = true;
-//                    filename = file;
-//                }
-//            }
         try {
 
             String tempFile = path + prefix + suffix;
-            System.out.println("$$$$$$$$$" + tempFile);
+           // System.out.println("$$$$$$$$$" + tempFile);
 
             try (PrintWriter writer = new PrintWriter(tempFile, "UTF-8")) {
                 writer.println(notes);

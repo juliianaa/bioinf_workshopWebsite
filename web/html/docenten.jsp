@@ -19,7 +19,6 @@
                     <script src="js/jquery.bpopup-x.x.x.min.js"></script>
                     <script src="js/docenten.js"></script>
 
-                    <!--<script src="scripts/docenten.js"></script>-->
                     <title>Docenten</title>
                     </head>
 
