@@ -8,37 +8,46 @@ and open the template in the editor.
 
 .docenten_boxes
 {
-    float:left;
-    width: 235px;
-    margin-left:auto;
+    float: left;
+    width: 25%;
+    margin-left: auto;
     margin-right: auto;
 }
 
 .element_to_pop_up { 
     background-color: #fff;
+/*  The border-radius determines the curves in the corners of the pop up element. */
     border-radius: 10px 10px 10px 10px;
-    box-shadow: 0 0 25px 5px #999;
-    color: #111;
+  //  box-shadow: 0 0 25px 5px #999;
+  //  color: #111;
+/*  The display cannot be seen until the button is clicked. */
     display: none;
-    min-width: 800px;
-    height: 450px;
-    padding: 25px;
+    //min-width: 800px;
+    width: 60%;
+    //height: 450px;
+    padding: 3%;
 }
 
 .close {
+/*  The border-radius determines the curves in the corners of the close button. */
     border-radius: 7px 7px 7px 7px;
-    box-shadow: none;
+  //  box-shadow: none;
     font: bold 131% sans-serif;
-    padding: 0 6px 2px;
+    padding: 0 2%;
+/*  The position and the right and top position
+    makes sure that the close button can be found on the upper right corner. */
     position: absolute;
     right: -7px;
     top: -7px;
+/*  The background-color gives the blue color of the close button and the 
+    color determines the color of the X itself. */
     background-color: #2b91af;
     color: #fff;
-    cursor: pointer;
-    display: inline-block;
+ //   cursor: pointer;
+  //  display: inline-block;
 }
 .close:hover {
+/*  When the mouse hovers over the close button, the background color will change to black. */
     background-color: #1e1e1e;
 }
 
