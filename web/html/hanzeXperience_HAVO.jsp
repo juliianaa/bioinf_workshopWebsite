@@ -71,7 +71,7 @@
                             het je kan ondersteunen in je keuze of je gaat doorsturen in het hbo.
                         </p>
                         
-                        Start puzzel opdracht <li><a href="html/puzzel2.jsp"><button> start puzzel</button></a></li>
+                        <a href="html/puzzel.jsp" class="button">Start puzzel</a>
   
             </div>
             </div>

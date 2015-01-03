@@ -54,7 +54,7 @@
 	// gets the offset of an element relative to the document
 	function getOffset( el ) {
 		var offset = el.getBoundingClientRect();
-		return { top : offset.top + scrollY(), left : offset.left + scrollX() }
+		return { top : offset.top + scrollY(), left : offset.left + scrollX() };
 	}
 	function setTransformStyle( el, tval ) { el.style.transform = tval; }
 	function onEndTransition( el, callback ) {
@@ -85,7 +85,7 @@
 	/************************ Drag & Drop ************************/
 	/*************************************************************/
 
-	var is3d = !!getStyleProperty( 'perspective' )
+	var is3d = !!getStyleProperty( 'perspective' );
 
 	/***************/
 	/** Droppable **/
@@ -99,7 +99,7 @@
 
 	Droppable.prototype.options = {
 		onDrop : function(instance, draggableEl) { return false; }
-	}
+	};
 
 	// based on http://stackoverflow.com/a/2752387 : checks if the droppable element is ready to collect the draggable: the draggable element must intersect the droppable in half of its width or height.
 	Droppable.prototype.isDroppable = function( draggableEl ) {
@@ -110,7 +110,7 @@
 				offset2.left + width2 < offset1.left + width1/2 || 
 				offset2.top > offset1.top + height1 - height1/2 ||
 				offset2.top + height2 < offset1.top + height1/2 );
-	}
+	};
 
 	// highlight the droppable if it's ready to collect the draggable
 	Droppable.prototype.highlight = function( draggableEl ) {
@@ -118,14 +118,14 @@
 			classie.add( this.el, 'highlight' );
 		else
 			classie.remove( this.el, 'highlight' );
-	}
+	};
 
 	// accepts a draggable element...
 	Droppable.prototype.collect = function( draggableEl ) {
 		// remove highlight class from droppable element
 		classie.remove( this.el, 'highlight' );
 		this.options.onDrop( this, draggableEl );
-	}
+	};
 
 	/***************/
 	/** Draggable **/
@@ -164,13 +164,13 @@
 		onStart : function() { return false; },
 		onDrag : function() { return false; },
 		onEnd : function(wasDropped) { return false; }
-	}
+	};
 
 	Draggable.prototype.initEvents = function() {
 		this.draggie.on( 'dragStart', this.onDragStart.bind(this) );
 		this.draggie.on( 'dragMove', throttle( this.onDragMove.bind(this), 5 ) );
 		this.draggie.on( 'dragEnd', this.onDragEnd.bind(this) );
-	}
+	};
 
 	Draggable.prototype.onDragStart = function( instance, event, pointer ) {
 		//callback
@@ -186,7 +186,7 @@
 		classie.add( instance.element, 'is-active' );
 		// highlight droppable elements if draggables intersect
 		this.highlightDroppables();
-	}
+	};
 
 	Draggable.prototype.onDragMove = function( instance, event, pointer ) {
 		//callback
@@ -198,7 +198,7 @@
 		}
 		// highlight droppable elements if draggables intersect
 		this.highlightDroppables();
-	}
+	};
 
 	Draggable.prototype.onDragEnd = function( instance, event, pointer ) {
 		if( this.options.helper ) {
@@ -248,13 +248,13 @@
 
 		// move back the draggable element (with or without a transition)
 		this.moveBack( withAnimation );
-	}
+	};
 
 	Draggable.prototype.highlightDroppables = function( el ) {
 		for( var i = 0, len = this.droppables.length; i < len; ++i ) {
 			this.droppables[i].highlight( this.el );
 		}
-	}
+	};
 
 	Draggable.prototype.createHelper = function() {
 		// clone the original item (same position)
@@ -274,7 +274,7 @@
 		this.position.top = draggable.offset.top;
 
 		body.appendChild( this.el );
-	}
+	};
 
 	// move back the draggable to its original position
 	Draggable.prototype.moveBack = function( withAnimation ) {
@@ -306,7 +306,7 @@
 		else {
 			callbackFn();
 		}
-	}
+	};
 
 	// check if element is outside of the viewport. TODO: check also for right and left sides
 	Draggable.prototype.outViewport = function() {
@@ -322,7 +322,7 @@
 		else if( aboveViewport ) this.scrolldir = 'up';
 
 		return belowViewport || aboveViewport;
-	}
+	};
 
 	// force the scroll on the page when dragging..
 	Draggable.prototype.scrollPage = function() {
@@ -334,7 +334,7 @@
 			// reset this.scrollIncrement
 			this.scrollIncrement = 0;
 		}
-	}
+	};
 
 	// just considering scroll up and down
 	// this.scrollIncrement is used to accelerate the scrolling. But mainly it's used to avoid the draggable flickering due to the throttle when dragging
@@ -348,7 +348,7 @@
 		this.scrollableEl === window ? 
 			this.scrollableEl.scrollBy( 0, this.scrolldir === 'up' ? val * -1 : val ) : 
 			this.scrollableEl.scrollTop += this.scrolldir === 'up' ? val * -1 : val;
-	}
+	};
 
 	window.Droppable = Droppable;
 	window.Draggable = Draggable;

@@ -1,5 +1,5 @@
 <%-- 
-    Document   : bioinfHomePage
+    Document   : bioinfPuzzelPage
     Created on : 18-12-2014, 18:47:44
     Author     : nstoker
 --%>
@@ -10,7 +10,7 @@
 <html lang="en" class="no-js">
 	<head>
             <base href="${initParam.base_url}"></base>
-                <h1>Bioinformatica puzzel</h1>
+            <h1 align="center">Bioinformatica puzzel</h1>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,6 +20,8 @@
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/bottom-slide.css" />
+                <script src="js/draggabillity.js"></script>
+		<script src="js/dragdrop.js"></script>
 		<script type="text/javascript">
                     var _gaq = _gaq || [];
                     _gaq.push(['_setAccount', 'UA-7243260-2']);
@@ -32,6 +34,7 @@
                 </script>
 	</head>
 	<body class="skin-5">
+            
 		<div class="container">
 			<!-- Top Navigation -->
 
@@ -40,42 +43,43 @@
 			
 				</header>
 				<div id="grid" class="grid clearfix">
-					<div class="grid__item"><i class="fa fa-fw fa-code"></i></div>
-					<div class="grid__item"><i class="fa fa-fw fa-code"></i></div>
-					<div class="grid__item"><i class="fa fa-fw fa-code"></i></div>
-					<div class="grid__item"><i class="fa fa-fw fa-code"></i></div>
-					<div class="grid__item"><i class="fa fa-fw fa-code"></i></div>
-					<div class="grid__item"><i class="fa fa-fw fa-code"></i></div>
-					<div class="grid__item"><i class="fa fa-fw fa-code"></i></div>
-					<div class="grid__item"><i class="fa fa-fw fa-code"></i></div>
-					<div class="grid__item"><i class="fa fa-fw fa-code"></i></div>
-					<div class="grid__item"><i class="fa fa-fw fa-code"></i></div>
-					<div class="grid__item"><i class="fa fa-fw fa-code"></i></div>
-					<div class="grid__item"><i class="fa fa-fw fa-code"></i></div>
+                                    <div class="grid__item"><i class="fa fa-fw"></i>Mendel</div>
+					<div class="grid__item"><i class="fa fa-fw"></i>A</div>
+					<div class="grid__item"><i class="fa fa-fw"></i>T</div>
+					<div class="grid__item"><i class="fa fa-fw"></i>C</div>
+					<div class="grid__item"><i class="fa fa-fw"></i>G</div>
+					<div class="grid__item"><i class="fa fa-fw"></i>U</div>
+					<div class="grid__item"><i class="fa fa-fw"></i>triplet</div>
+					<div class="grid__item"><i class="fa fa-fw"></i>AUG</div>
+					<div class="grid__item"><i class="fa fa-fw"></i></div>
+					<div class="grid__item"><i class="fa fa-fw"></i></div>
+					<div class="grid__item"><i class="fa fa-fw"></i></div>
+					<div class="grid__item"><i class="fa fa-fw"></i></div>
 				</div>
 
 
 			</div><!-- /content -->
+                        
 		</div><!-- /container -->
 		<div id="drop-area" class="drop-area">
 			<div>
 				<div class="dummy"></div>
-				<div class="drop-area__item"><i class="fa fa-fw fa-file-text-o"></i></div>
-				<div class="drop-area__item"><i class="fa fa-fw fa-file-text-o"></i></div>
-				<div class="drop-area__item"><i class="fa fa-fw fa-file-text-o"></i></div>
-				<div class="drop-area__item"><i class="fa fa-fw fa-file-text-o"></i></div>
-				<div class="drop-area__item"><i class="fa fa-fw fa-file-text-o"></i></div>
-				<div class="drop-area__item"><i class="fa fa-fw fa-file-text-o"></i></div>
-				<div class="drop-area__item"><i class="fa fa-fw fa-file-text-o"></i></div>
-				<div class="drop-area__item"><i class="fa fa-fw fa-file-text-o"></i></div>
-				<div class="drop-area__item"><i class="fa fa-fw fa-file-text-o"></i></div>
-				<div class="drop-area__item"><i class="fa fa-fw fa-file-text-o"></i></div>
-				<div class="drop-area__item"><i class="fa fa-fw fa-file-text-o"></i></div>
+				<div class="drop-area__item"><i class="fa fa-fw"></i>Door wie is Wetenschappelijk bewezen dat genen de dragers zijn van het erfelijke materiaal?</div>
+				<div class="drop-area__item"><i class="fa fa-fw"></i>Zet de 4 bases die een DNA molecuul maken op alfabetische volgorde, wat is de 3de base?</div>
+				<div class="drop-area__item"><i class="fa fa-fw"></i>Hoe noemen we het proces van DNA afschrijven en mRNA maken?</div>
+				<div class="drop-area__item"><i class="fa fa-fw"></i>Welke base zit er in mRNA inplaats van de T?</div>
+                                <div class="drop-area__item"><i class="fa fa-fw"></i>Hoe noemen we een stukje van 3 bases in het mRNA dat codeert voor een aminozuur?	</div>
+				<div class="drop-area__item"><i class="fa fa-fw"></i>Welke base(n) coderen voor het start codon?</div>
+				<div class="drop-area__item"><i class="fa fa-fw"></i>Hoe noemen we de laatste stap waarbij mRNA wordt omgezet in een eiwit?</div>
+				<div class="drop-area__item"><i class="fa fa-fw"></i>Wat zijn de eiwit fabriekjes van de cel?</div>
+                                <div class="drop-area__item"><i class="fa fa-fw"></i>Hoeveel aminozuren kunnen er gemaakt worden met de verschillende codons?</div>
+                                <div class="drop-area__item"><i class="fa fa-fw"></i>Aan wie  is de nobel prijs uitgereikt voor het ontdekken van DNA?</div>
+                                <div class="drop-area__item"><i class="fa fa-fw"></i>Voor hoeveel procent lijkt ons DNA NIET op dat van een chimpansee?</div>
+                                <div class="drop-area__item"><i class="fa fa-fw"></i>Hoeveel duizendtallen aan genen heeft een mens ongeveer?</div>
 			</div>
 		</div>
 		<div class="drop-overlay"></div>
-		<script src="js/draggabillity.js"></script>
-		<script src="js/dragdrop.js"></script>
+		
 		<script>
 			(function() {
 				var body = document.body,
@@ -134,5 +138,8 @@
 				} );
 			})();
 		</script>
+                
+            <center><%@include file="../includes/bodyFooter.jsp"  %></center>
 	</body>
+            
 </html>
