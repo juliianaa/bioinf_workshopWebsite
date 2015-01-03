@@ -38,7 +38,7 @@
                                 <div class="content">
                                     <div class="introduction" id="introduction">
                                         <h1>Technasium</h1>
-                                        <p>
+                                        <p class = "text">
                                             Toen de conciërge ‘s morgens vroeg op school kwam en zijn gebruikelijke ronde maakte,
                                             deed hij een lugubere vondst. In practicumzaal D033 lag een lijk op de grond! Hij herkende
                                             meteen de persoon als het hoofd van de laboratoria van het Instituut voor Life Science &
@@ -47,7 +47,7 @@
                                             rode linten was afgezet. Politie- en ambulancepersoneel liep heen en weer, druk overleggend
                                             met mobiele telefonen. Er werden diverse monsters genomen ten behoeve van forensisch
                                             onderzoek op de plaats van het delict.</p>
-                                        <p><i><b>Aan jou de opdracht om te onderzoeken wie de dader is!</b></i>
+                                        <p class = "text"><i><b>Aan jou de opdracht om te onderzoeken wie de dader is!</b></i><br/><br/>
                                             Tijdens de keuzecolleges ga je in koppels het onderzoek uitvoeren dat moet leiden tot het
                                             vaststellen van de doodsoorzaak van de docent en het opsporen van de dader. Je gebruikt
                                             technieken waarmee je o.a. 
@@ -66,14 +66,14 @@
                                             </button> 
                                             kunnen de technieken ook bij allerlei ander onderzoek worden ingezet, bijvoorbeeld bij het 
                                             opsporen van ziekten.</p>
-                                        <p>
+                                        <p class = "text">
                                             Naast het uitvoeren van de experimenten leer je tijdens instructies ook van alles over de
                                             gebruikte analysetechnieken en over DNA en (giftige) eiwitten.</p>
-                                        <p>
+                                        <p class = "text">
                                             De resultaten van jouw uitgevoerde onderzoeken en de conclusies worden tijdens het laatste
                                             keuzecollege gepresenteerd via een wetenschappelijke poster. Het is dus belangrijk dat je alle
                                             resultaten van de verschillende onderzoeken nauwkeurig en overzichtelijk noteert.<br/></p>
-                                        <p>
+                                        <p class = "text">
                                             <div id="element_to_pop_up">
                                                 <button class = "b-close">X</button>
                                                 <iframe name="wiki_link" id="wiki_link" class="wiki">

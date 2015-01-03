@@ -49,7 +49,7 @@
             scrollbar: true,
             escClose: true,
             closeClass: 'close',
-            speed: 650,
+            speed: 650
         });
     }
 })
