@@ -20,6 +20,7 @@
                                     , contentContainer: '.wiki'
                                     , loadURL: $.link
                                     , speed: 1000
+                                    , position: [0, -400]
                                 });
 
                             });
