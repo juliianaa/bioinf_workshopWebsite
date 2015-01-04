@@ -25,8 +25,10 @@
                     <body>
                         <div id="main">
                             <%@include file="../includes/bodyHeader.jsp" %>
+
                             <div id="site_content">
                                 <div id="top_border"></div>
+
                                 <ul id="images">
                                     <img src="images/banner.jpg" width="970" height="300" alt=""/>
                                 </ul>
@@ -42,11 +44,7 @@
                                         <a target="_blank" href="http://nl.linkedin.com/pub/arne-poortinga/5/10b/a13?domainCountryName=Nederland&csrfToken=ajax%3A0703341547160610550&domainCountryCode=nl"><div class="linkedInButton"></div></a>
                                         <div id="element_to_pop_upArne" class = "element_to_pop_up">
                                             <button class = "close">X</button>
-                                            <!-- Please put information about the teachers here.
-                                            This information can be found within the pop up. -->
-                                            <h1>Arne Poortinga</h1>
-                                            <p>Informatie over Arne</p>
-
+                                            Arne
                                         </div>
                                         <br/>
                                     </div>   
@@ -58,10 +56,7 @@
                                         <a target="_blank" href="http://nl.linkedin.com/in/mkempenaar"><div class="linkedInButton"></div></a>
                                         <div id="element_to_pop_upMarcel" class = "element_to_pop_up">
                                             <button class = "close">X</button>
-                                            <!-- Please put information about the teachers here.
-                                            This information can be found within the pop up. -->
-                                            <h1>Marcel Kempenaar</h1>
-                                            <p>Informatie over Marcel</p>
+                                            Marcel
                                         </div>
                                         <br/>
                                     </div>       
@@ -73,10 +68,7 @@
                                         <p></p>
                                         <div id="element_to_pop_upMartijn" class = "element_to_pop_up">
                                             <button class = "close">X</button>
-                                            <!-- Please put information about the teachers here.
-                                            This information can be found within the pop up. -->
-                                            <h1>Martijn Herber</h1>
-                                            <p>Informatie over Martijn</p>
+                                            Martijn
                                         </div>
                                         <br/>
                                     </div>    
@@ -89,8 +81,6 @@
                                         <a target="_blank" href="http://nl.linkedin.com/in/michielnoback"><div class="linkedInButton"></div></a>
                                         <div id="element_to_pop_upMichiel" class = "element_to_pop_up">
                                             <button class = "close">X</button>
-                                            <!-- Please put information about the teachers here.
-                                            This information can be found within the pop up. -->
                                             <h1>Michiel Noback</h1>
                                             <p>
                                                 Michiel Noback is de hoofd docent van Bio-informatica. Om zich even voor te stellen verteld michiel over zijn meeste recente onderzoek.<br/>
@@ -129,10 +119,7 @@
                                         <a target="_blank" href="https://www.linkedin.com/pub/ronald-wedema/b/5b/403?trk=pub-pbmap"><div class="linkedInButton"></div></a>
                                         <div id="element_to_pop_upRonald" class = "element_to_pop_up">
                                             <button class = "close">X</button>
-                                            <!-- Please put information about the teachers here.
-                                            This information can be found within the pop up. -->
-                                            <h1>Ronald Wedema</h1>
-                                            <p>Informatie over Ronald</p>
+                                            Ronald
                                         </div>
                                         <br/>
                                     </div>
@@ -145,17 +132,21 @@
                                         <a target="_blank" href="http://nl.linkedin.com/in/tsjerkwassenaar"> <div class="linkedInButton"></div></a>
                                         <div id="element_to_pop_upTsjerk" class = "element_to_pop_up">
                                             <button class = "close">X</button>
-                                            <!-- Please put information about the teachers here.
-                                            This information can be found within the pop up. -->
-                                            <h1>Tsjerk Wassenaar</h1>
-                                            <p>Informatie over Tsjerk</p>
+                                            Tsjerk
                                         </div>
                                         <br/>
                                     </div> 
+
                                 </div>
                                 <!--End of content-->
                             </div>
+
+
                             <%@include file="../includes/bodyFooter.jsp" %>
+
+
                         </div>
+
+
                     </body>
                     </html>

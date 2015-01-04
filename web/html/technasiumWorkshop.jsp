@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
 <html>
@@ -19,7 +20,9 @@
         <script src="js/typed.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link href="css/technasiumWorkshop.css" rel="stylesheet" type="text/css"/>
-        <title>Technasium</title>
+        <jsp:include page="../includes/loginHtmlHeader.jsp">
+            <jsp:param name="page_title" value="Techasium" />	
+        </jsp:include>     
     </head>
     <body>
         <div id="main">
@@ -35,35 +38,16 @@
 
                 <div class="content">
                     <h1>Technasium</h1>
-                    <div id="text_case">
-                        <p class = "text">
-                            Welkom < Naam van persoon >, <br/>
-                            We hebben je hulp erg nodig, we moeten drie personen ondervragen over de moord van het hoofd van de labratoria
-                            van het Instituus voor Life Science & Technology. <br/>
-                            Je kan aantekeningen maken, over wat je van de verdachten vindt en dit kan later weer worden bekeken. 
-                            Help ons bij het vinden van de dader.<br/>
-                            Heel veel succes!! 
-                        </p>
-                        <div id="question_div" data-question-number="1">
-                            <div class="imageBoxes" id = "questionImage" > 
-                                <img data-imgNumber="tafel" id = "image" src="images/houtenTafel.jpg" alt=""/> 
-                                <div class ="black">
-                                    <p>Het hoofd van het laboratorium van ISLT is vermoord! 
-                                        <br/>Hier volgen de bewijsstukken die gevonden zijn.</p>
-                                </div>
-                            </div>
-                            <div class="noteBox">
-                                <label for="basic">Aantekeningen:</label>
-                                <form  id="save_notes_form" action="#" method="post">
-                                    <textarea cols="35" rows="24" name="notes">Maak hier je aantekeningen over de verdachten!</textarea>
-                                    <input type="submit" value="Save"/></form>
-                                <button id ="first" class = "imageButton"><<</button>
-                                <button id="last_question_button" class = "imageButton"><b>< Vorige</b></button>
-                                <button id="next_question_button" class = "imageButton"><b>> Volgende</b></button>
-                                <button id ="last" class = "imageButton">>></button>
-                            </div>
-                        </div>
-                    </div>
+                    <c:choose>
+                        <c:when test="${empty sessionScope.user}">
+                            <jsp:include page="../includes/loginForm.jsp"/>
+                        </c:when>
+                        <c:otherwise>
+                            <jsp:include page="../includes/logout.jsp"/>
+                            <jsp:include page="../includes/technasiumAssignment.jsp"/>
+                        </c:otherwise>
+                    </c:choose>
+
                     <!--End of content-->
                 </div>
             </div>
