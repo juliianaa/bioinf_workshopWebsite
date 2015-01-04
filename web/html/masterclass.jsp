@@ -85,17 +85,11 @@
                                             <iframe name="wiki_link" id="wiki_link" class="wiki">
                                             </iframe>
                                         </div>              
-
-
                                         <a href="html/masterclassWorkshop.jsp"><button class="button" id="hide">Start Workshop</button></a>
-
                                     </div>
-
                                 </div>
                                 <!--End of content-->
                             </div>
-
-
                             <%@include file="../includes/bodyFooter.jsp" %>
                         </div>
                     </body>

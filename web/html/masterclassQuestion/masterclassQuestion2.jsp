@@ -6,29 +6,32 @@
 
 <div class="questionBoxes" id ="question">
     <script src="js/navigateMasterclassQuestions.js" type="text/javascript"></script>
+    <link href="css/workshopsHanze.css" rel="stylesheet" type="text/css"/>
     <h1>Opdracht 2</h1>
     Je hebt al genen uit DNA geïsoleerd. <br/>
     In het college heb je geleerd waarom, als je genen gaat vergelijken,<br/>
     het vaak beter is om dit met de eiwitcode te doen in plaats van met de DNA-code.<br/>
-    Daarom ga je nu de gevonden genen vertalen naar eiwitten.<br/>
+    Daarom ga je nu de gevonden genen vertalen naar eiwitten.<br/><br/>
 
+<img src="images/terminal.png" alt="terminal" id="terminal"/>
     <h1>Opdracht 2A</h1>
-
     In deze opdracht is het de bedoeling dat je het vertaal programma uitvoert. <br/>
-    <a href="downloads/translateCodon.py.py" download><span>Download hier translateCodon.py</span></a><br/><br/>
-    
-- Open een terminal<br/>
+    <a href="downloads/translateCodon.py" download><span>Download hier translateCodon.py</span></a><br/>
+
+- Open een terminal, zoals hiernaast afgebeeld.<br/>
+<img src="images/cdExample.png" alt="cdExample" id="cdExample"/>
 - Ga naar de map waar je het programma hebt neergezet met het commando "cd"(change directory)<br/>
-- Typ in python translateCodon.py<br/>
+- Typ in python3 translateCodon.py<br/>
+<img src="images/python3Example.png" alt="pythonExample" id="pythonExample"/>
 - Volg de instructies van het programma<br/>
 - Sla vervolgens de eiwitten op in een tekstbestand<br/>
-
 <h1>Opdracht 2B</h1>
 Kijk of je meer informatie over de eiwitten op internet kunt vinden.<br/>
 Ga naar de website van de NCBI voor het uitvoeren van een BLASTp.<br/>
 Deze software wordt gebuikt om te kijken op welke bekende eiwitten je<br/>
-gevonden eiwit het meeste lijkt.<br/><br/>
-<a href="http://www.ncbi.nlm.nih.gov/blast/Blast.cgi?CMD=Web&PAGE_TYPE=BlastHome"><span> Open nu de BLAST webpagina van de ncbi website.</span></a> <br/><br/>
+gevonden eiwit het meeste lijkt.<br/><br/><br/>
+<img src="images/ncbiPBlast.png" alt="pBlast" id="pBlast"/>
+<a href="http://www.ncbi.nlm.nih.gov/blast/Blast.cgi?CMD=Web&PAGE_TYPE=BlastHome"><span> Open nu de BLAST webpagina van de ncbi website, zodat je het scherm als hiernaast te zien krijgt.</span></a> <br/><br/>
 - Kies op deze pagina voor 'protein blast'. <br/>
 - Nu krijg je een invulscherm met daarin een groot invulvak met als titel: 'Enter Query Sequence'. <br/>
 - Plak hier 1 van de eiwitvolgorden in en druk op de knop: BLAST<br/><br/>
