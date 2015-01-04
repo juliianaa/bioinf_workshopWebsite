@@ -20,19 +20,18 @@ $(function() {
                     itemId = basket.find("ul li[data-id='" + move.attr("data-id") + "']");
 
             if (itemId.html() != null) {
-                itemId.find("input").val(parseInt(itemId.find("input").val()) + 1);
+                itemId.find("input").val(parseInt(itemId.find("input").val()));
             }
             else {
                 addBasket(basket, move);
                 move.find("input").val(parseInt(move.find("input").val()) + 1);
 //                alert(move.attr("data-id"));
-            }
+        }
         }
     });
     function addBasket(function_container, move) {
         function_container.find("ul").append('<li data-id="' + move.attr("data-id") + '">'
                 + '<span class="name">' + move.find("h3").html() + '</span>'
-                + '<input class="count" value="1" type="text">'
                 + '<button class="delete">&#10005;</button>');
     }
     $(".function_container ul li button.delete").live("click", function() {

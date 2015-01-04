@@ -639,7 +639,6 @@ a { text-decoration: none }
 
 .function_container .head .name { float: left }
 
-.function_container .head .count { float: right }
 
 /* .head */
 
@@ -712,7 +711,7 @@ a { text-decoration: none }
 }
 .arrow-right2{
     position: absolute;
-    right: 110%;
+    right: 125%;
     font-size: 40px;
 }
 .arrow-left{
@@ -725,4 +724,10 @@ a { text-decoration: none }
     right: 125%;
     top: -100%;
     font-size: 40px;
+}
+
+button  {
+    border: none;
+    background-color: #e6e6e6;    
+    font-size: 15px;
 }

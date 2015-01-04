@@ -7,6 +7,7 @@
 <div class="questionBoxes" id="question">
     <script src="js/masterclass.js" type="text/javascript"></script>
     <script src="js/navigateMasterclassQuestions.js" type="text/javascript"></script>
+    <link href="css/workshopsHanze.css" rel="stylesheet" type="text/css"/>
     <h1>Opdracht 1 A</h1>
     <p><br/>
         Zoals je al gezien hebt, bestaat programmeren uit het op een logische manier achter elkaar zetten<br/>
@@ -19,7 +20,7 @@
         er moet in elk vak &eacute;&eacute;n functie staan. De functies die je moet gebruiken staan hieronder:<br/>
         <br/>
     </p>
-    <section id="product">
+<section id="product">
         <ul class="clear">
             <li data-id="8">
                 <h3>zijnStartCodonEnStopCodonInFrame</h3>
