@@ -5,23 +5,8 @@
  */
 package nl.bioinf.web_servlets;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
-import java.io.Writer;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -42,29 +27,26 @@ public class AssignmentTechnasium extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    @SuppressWarnings("empty-statement")
-    protected void processRequest(HttpServletRequest request,
-            HttpServletResponse response) throws ServletException, IOException {
-
-        String notesOnSuspect;
-
-        notesOnSuspect = request.getParameter("notes");
+    protected void processRequest(final HttpServletRequest request,
+            final HttpServletResponse response) throws
+            ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
         try {
-            File fileDir = new File("/homes/mldubbelaar/Desktop/data.txt");
-            //File fileDir = new File("/Users/mldubbelaar/Desktop/data.txt");
-            try (Writer output = new BufferedWriter(new OutputStreamWriter(
-                    new FileOutputStream(fileDir), "UTF8"))) {
-                output.append(notesOnSuspect);
-                output.flush();
-            }
-
-        } catch (FileNotFoundException e) {
-            System.out.println(e);
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet AssignmentAnsweringServlet</title>");
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet AssignmentAnsweringServlet at " +
+                    request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
+        } finally {
+            out.close();
         }
-
-        //RequestDispatcher view = request.getRequestDispatcher(
-        //        "html/technasiumWorkshop.jsp");
-        //view.forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -91,18 +73,19 @@ public class AssignmentTechnasium extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(final HttpServletRequest request,
+            final HttpServletResponse response)
             throws ServletException, IOException {
         //processRequest(request, response);
-        //receives AJAX data from form that is supposed to be saved
         String notes = request.getParameter("notes");
-        //Logger.getLogger(AssignmentTechnasium.class.getName()).log(Level.INFO, "****" + notes);
+        //Logger.getLogger(AssignmentTechnasium.class.getName()).log(
+        //Level.INFO, "****" + notes);
         String userName = "piet";
         //request.getSession().getAttribute("user_name");
 
         //SAVE IN TEMP FILE
         boolean succes = saveAsTemp(notes, userName);
-        if (succes == true) {
+        if (succes) {
             try (PrintWriter pw = response.getWriter()) {
                 pw.print(Boolean.toString(succes));
                 pw.flush();
@@ -120,67 +103,35 @@ public class AssignmentTechnasium extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    private boolean saveAsTemp(String notes, String userName)
+    /**
+     * saveAsTemp will be called by the doPost
+     *
+     * @param notes are the notes given
+     * @param userName is the name of the person who wants te save the notes.
+     * @return true or false
+     * @throws IOException
+     */
+    private boolean saveAsTemp(final String notes, final String userName)
             throws IOException {
         String path = "/Users/mldubbelaar/Desktop/test/";
         String prefix = userName + "_notes";
         String suffix = ".txt";
 
-        // this temporary file remains after the jvm exits
-//        try {
-//            List<String> savedNotes = new ArrayList<>();
-//            //String[] files = new File("/commons/student/2014-2015/Thema10/bioInfWebsite/").list();
-//            String[] files = new File("/Users/mldubbelaar/Desktop/test/").list();
-//            boolean fileExists = false;
-//            String filename = "";
-//            for (String file : files) {
-//                if (file.startsWith(prefix)) {
-//                    fileExists = true;
-//                    filename = file;
-//                }
-//            }
-//            if (fileExists == true) {
-//                try (PrintWriter writer = new PrintWriter(filename, "UTF-8")) {
-//                    writer.println(notes);
-//                    writer.close();
-//                System.out.println("222222"+filename);
-//                    File newFile =new File(filename);
-//                    System.out.println("**********"+newFile);
-//                    try (Writer output = new BufferedWriter(new OutputStreamWriter(
-//                    new FileOutputStream(newFile), "UTF8"))) {
-//                    output.append(notes);
-//                    output.flush();}
-//                    try (Writer output = new BufferedWriter(new OutputStreamWriter(
-//                    new FileOutputStream(filename), "UTF8"))) {
-//                    output.append(notes);
-//                    output.flush();}
-//                    System.out.println("***"+notes);
-//                }
-//            } else {
         try {
-            
-               String tempFile = path+prefix+suffix;
-               System.out.println("$$$$$$$$$"+tempFile);
-                
-                try (PrintWriter writer = new PrintWriter(tempFile, "UTF-8")) {
-                    writer.println(notes);
-                    writer.close();
-//                    File tempFile = File.createTempFile(prefix, suffix, new File(
-//                            "/commons/student/2014-2015/Thema10/bioInfWebsite/"));
-//                File tempFile = File.createTempFile(prefix, suffix, new File("/Users/mldubbelaar/Desktop/test/"));
-//                try (Writer output = new BufferedWriter(new OutputStreamWriter(
-//                        new FileOutputStream(tempFile), "UTF8"))) {
-//                    output.append(notes);
-//                    output.flush();
-                }
 
-            } catch (Exception e) {
-                System.out.println(e);
+            String tempFile = path + prefix + suffix;
+           // System.out.println("$$$$$$$$$" + tempFile);
+
+            try (PrintWriter writer = new PrintWriter(tempFile, "UTF-8")) {
+                writer.println(notes);
+                writer.close();
             }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
         return true;
     }
-    
-//            
+
 //            //File tempFile = File.createTempFile(prefix, suffix);
 //            File tempFile = File.createTempFile(prefix, suffix, new File(
 //                    "/commons/student/2014-2015/Thema10/bioInfWebsite/"));
@@ -197,5 +148,4 @@ public class AssignmentTechnasium extends HttpServlet {
 //            return false;
 //        }
 //    }
-
 }

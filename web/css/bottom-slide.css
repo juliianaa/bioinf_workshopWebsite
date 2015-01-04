@@ -24,9 +24,9 @@ and open the template in the editor.
 	background: #62b989;
 	color: #a3e0be;
 	font-size: 1.5em;
-	text-align: left;
+	text-align: center;
 }
-
+/*  box draging area
 .grid__item::after {
 	content: '';
 	position: absolute;
@@ -37,16 +37,17 @@ and open the template in the editor.
 	background: rgba(0,0,0,0.1);
 	border-radius: 4px;
 }
+*/
 
 .grid__item:hover {
 	cursor: move;
 	cursor: -webkit-grab;
-	cursor: grab;
+
 }
 
 .grid__item:active {
 	cursor: -webkit-grabbing;
-	cursor: grabbing;
+
 }
 
 .is-dragging {
@@ -60,7 +61,7 @@ and open the template in the editor.
 .is-dropped {
 	opacity: 0;
 	-webkit-transform: scale3d(0.7,0.7,1) !important;
-  transform: scale3d(0.7,0.7,1) !important;
+        transform: scale3d(0.7,0.7,1) !important;
 }
 
 .is-complete {
@@ -119,7 +120,7 @@ and open the template in the editor.
 	margin: 0.4em 0;
 	width: 100%;
 	max-width: 30em;
-	height: 3em;
+	height: 5em;
 	padding: 0.3em 0.5em;
 	background: #fff;
 	color: #919f97;
@@ -127,8 +128,6 @@ and open the template in the editor.
 	text-align: left;
 	padding: 0.9em 1em;
 	border-radius: 4px;
-	-webkit-transition: -webkit-transform 0.3s, background 0.3s, color 0.3s;
-	transition: transform 0.3s, background 0.3s, color 0.3s;
 }
 
 .drop-area__item.highlight {
@@ -137,7 +136,7 @@ and open the template in the editor.
 	-webkit-transform: scale3d(1.08,1.08,1);
 	transform: scale3d(1.08,1.08,1);
 }
-
+/*  inner box drop 
 .drop-area__item::before {
 	content: '';
 	position: absolute;
@@ -148,7 +147,7 @@ and open the template in the editor.
 	background: rgba(75,136,102,0.1);
 	border-radius: 4px;
 }
-
+*/
 .drop-area__item::after {
 	position: absolute;
 	top: 0;
@@ -206,7 +205,7 @@ and open the template in the editor.
 
 @media screen and (max-width: 50em) {
 	.grid__item {
-		font-size: 1.5em;
+		font-size: 2.5em;
 	}
 	.drop-area {
 		font-size: 0.8em;

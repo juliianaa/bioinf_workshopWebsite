@@ -149,13 +149,13 @@ ol {
   margin: 20px auto;
 }
 
-#main, nav, #container, #logo, #site_content, footer { 
+#main1, nav, #container, #logo, #site_content, footer { 
   margin-left: auto; 
   margin-right: auto;
   
 }
 
-#main {
+#main1 {
   margin: 5px auto;
   width: 940px;
   background: transparent;
@@ -292,7 +292,7 @@ nav {
 
 .content { 
     text-align: left;
-    width: 800px;
+    width: 100%;
     margin-left: 5% ;
     font-size: 120%;
     position: relative;
@@ -610,6 +610,6 @@ ul#images li {
 {
     float:left;
     width: 10%;
-    margin-left:auto;
-    margin-right: auto;
+    margin-left:5%;
+    margin-right: 5%;
 }
