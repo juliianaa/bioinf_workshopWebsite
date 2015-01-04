@@ -5,5 +5,5 @@
 --%>
 <div class="imageBoxes" id = "questionImage" > 
     <img data-imgNumber="1" id = "image" src="images/achtergrond_verhoor.jpg" alt=""/> 
-    <div class ="up">Het verhoor begint...</div>
+    <div class ="up"><p class = "css-typing">Het verhoor begint...</p></div>
 </div>
