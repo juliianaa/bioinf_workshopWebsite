@@ -22,7 +22,7 @@
     </head>
 
     <body>
-        <div id="main1">
+        <div id="main">
             
             <%@include file="../includes/bodyHeader.jsp" %>
 

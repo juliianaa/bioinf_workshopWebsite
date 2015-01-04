@@ -18,7 +18,7 @@
                     <script src="js/popUpWiki.js" type="text/javascript"></script>
                     <link href="css/workshopsHanze.css" rel="stylesheet" type="text/css"/>
                     <script src="js/jquery.bpopup-x.x.x.min.js" type="text/javascript"></script>
-                    
+
                     <title>Bioinformatics Homepage</title>
                     </head>
 
@@ -38,12 +38,12 @@
                                     <div class="introduction" id="introduction">
                                         <h1>Masterclass - Meet the mummy</h1>
                                         <p>
-                                        <div id="mummy"><img src="images/mummy.jpg" alt="mummy" /></div>
-                                        Als je moeder en je vader allebei blond, lang of juist klein zijn, dan is de kans groot dat jij dat ook bent.
-                                        Dat komt omdat je van allebei je ouders <button class="my-button" data-value="http://nl.wikipedia.org/wiki/Genetica">
-                                            <u>eigenschappen erft</u>
-                                        </button>. Dit geldt niet alleen voor eigenschappen als je haarkleur
-                                        en of je een wipneus hebt, maar ook voor erfelijke ziekten.
+                                            <div id="mummy"><img src="images/mummy.jpg" alt="mummy" /></div>
+                                            Als je moeder en je vader allebei blond, lang of juist klein zijn, dan is de kans groot dat jij dat ook bent.
+                                            Dat komt omdat je van allebei je ouders <button class="my-button" data-value="http://nl.wikipedia.org/wiki/Genetica">
+                                                <u>eigenschappen erft</u>
+                                            </button>. Dit geldt niet alleen voor eigenschappen als je haarkleur
+                                            en of je een wipneus hebt, maar ook voor erfelijke ziekten.
                                         </p>
                                         <p>
                                             Sinds halverwege vorige eeuw is bekend dat 
@@ -86,21 +86,17 @@
                                             </iframe>
                                         </div>              
 
-                                      
-                                            <a href="html/masterclassWorkshop.jsp"><button class="button" id="hide">Start Workshop</button></a>
+
+                                        <a href="html/masterclassWorkshop.jsp"><button class="button" id="hide">Start Workshop</button></a>
 
                                     </div>
 
-                                                        </div>
-                                                        <!--End of content-->
-                                                        </div>
+                                </div>
+                                <!--End of content-->
+                            </div>
 
 
-                                                        <%@include file="../includes/bodyFooter.jsp" %>
-
-
-                                                        </div>
-
-
-                                                        </body>
-                                                        </html>
+                            <%@include file="../includes/bodyFooter.jsp" %>
+                        </div>
+                    </body>
+                    </html>
