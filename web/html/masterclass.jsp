@@ -14,12 +14,12 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                     <link rel="stylesheet" type="text/css" href="css/style.css" />
                     <link href="css/workshop.css" rel="stylesheet" type="text/css"/>
+                    <link href="css/workshopsHanze.css" rel="stylesheet" type="text/css"/>
                     <script src="js/jquery-2.1.1.min.js"></script>
                     <script src="js/popUpWiki.js" type="text/javascript"></script>
-                    <link href="css/workshopsHanze.css" rel="stylesheet" type="text/css"/>
                     <script src="js/jquery.bpopup-x.x.x.min.js" type="text/javascript"></script>
 
-                    <title>Bioinformatics Homepage</title>
+                    <title>Masterclass page</title>
                     </head>
 
                     <body>
@@ -37,7 +37,7 @@
                                 <div class="content">
                                     <div class="introduction" id="introduction">
                                         <h1>Masterclass - Meet the mummy</h1>
-                                        <p>
+                                        <p class="text">
                                             <div id="mummy"><img src="images/mummy.jpg" alt="mummy" /></div>
                                             Als je moeder en je vader allebei blond, lang of juist klein zijn, dan is de kans groot dat jij dat ook bent.
                                             Dat komt omdat je van allebei je ouders <button class="my-button" data-value="http://nl.wikipedia.org/wiki/Genetica">
@@ -45,7 +45,7 @@
                                             </button>. Dit geldt niet alleen voor eigenschappen als je haarkleur
                                             en of je een wipneus hebt, maar ook voor erfelijke ziekten.
                                         </p>
-                                        <p>
+                                        <p class="text">
                                             Sinds halverwege vorige eeuw is bekend dat 
                                             <button class="my-button" data-value="http://nl.wikipedia.org/wiki/Desoxyribonucle%C3%AFnezuur">
                                                 <u>DNA</u>
@@ -59,7 +59,7 @@
                                             kunnen vertellen over een gevonden mummie. Als je aan de masterclass mee wil doen, wordt er wel van je verwacht
                                             dat je weet hoe DNA er uit ziet en hoe erfelijkheid werkt.
                                         </p>
-                                        <p>
+                                        <p class="text">
                                             Omdat DNA zo groot is, (het menselijke DNA is bijvoorbeeld ongeveer 3 miljard baseparen groot) moet er bij het bestuderen
                                             ervan gebruik gemaakt worden van computers. Dit is, naast het bestuderen van  
                                             <button class="my-button" data-value="http://nl.wikipedia.org/wiki/Prote%C3%AFne">
