@@ -16,7 +16,7 @@ function init() {
   // Reset the game
   correctAnswers = 0;
  
-    $('#answersPile').html( '' );
+   $('#answersPile').html( '' );
   $('#answersSlots').html( '' );
   
   var numbers = ["A", "B", "C", "D"];
