@@ -14,7 +14,6 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                     <link rel="stylesheet" type="text/css" href="css/style.css" />
                     <link href="css/docenten.css" rel="stylesheet" type="text/css"/>
-
                     <script src="js/jquery-2.1.1.min.js"></script>
                     <script src="js/jquery.bpopup-x.x.x.min.js"></script>
                     <script src="js/docenten.js"></script>
@@ -23,7 +22,7 @@
                     </head>
 
                     <body>
-                        <div id="main">
+                        <div id="main1">
                             <%@include file="../includes/bodyHeader.jsp" %>
 
                             <div id="site_content">
@@ -44,7 +43,9 @@
                                         <a target="_blank" href="http://nl.linkedin.com/pub/arne-poortinga/5/10b/a13?domainCountryName=Nederland&csrfToken=ajax%3A0703341547160610550&domainCountryCode=nl"><div class="linkedInButton"></div></a>
                                         <div id="element_to_pop_upArne" class = "element_to_pop_up">
                                             <button class = "close">X</button>
-                                            Arne
+                                            <!--Information about the teachers can be put into the paragraph field-->
+                                            <h1>Arne Poortinga</h1>
+                                            <p>Informatie over Arne</p>
                                         </div>
                                         <br/>
                                     </div>   
@@ -56,7 +57,9 @@
                                         <a target="_blank" href="http://nl.linkedin.com/in/mkempenaar"><div class="linkedInButton"></div></a>
                                         <div id="element_to_pop_upMarcel" class = "element_to_pop_up">
                                             <button class = "close">X</button>
-                                            Marcel
+                                            <!--Information about the teachers can be put into the paragraph field-->
+                                            <h1>Marcel Kempenaar</h1>
+                                            <p>Informatie over Marcel</p>
                                         </div>
                                         <br/>
                                     </div>       
@@ -68,7 +71,9 @@
                                         <p></p>
                                         <div id="element_to_pop_upMartijn" class = "element_to_pop_up">
                                             <button class = "close">X</button>
-                                            Martijn
+                                            <!--Information about the teachers can be put into the paragraph field-->
+                                            <h1>Martijn Herber</h1>
+                                            <p>Informatie over Martijn</p>
                                         </div>
                                         <br/>
                                     </div>    
@@ -119,7 +124,9 @@
                                         <a target="_blank" href="https://www.linkedin.com/pub/ronald-wedema/b/5b/403?trk=pub-pbmap"><div class="linkedInButton"></div></a>
                                         <div id="element_to_pop_upRonald" class = "element_to_pop_up">
                                             <button class = "close">X</button>
-                                            Ronald
+                                            <!--Information about the teachers can be put into the paragraph field-->
+                                            <h1>Ronald Wedema</h1>
+                                            <p>Informatie over Ronald</p>
                                         </div>
                                         <br/>
                                     </div>
@@ -132,21 +139,16 @@
                                         <a target="_blank" href="http://nl.linkedin.com/in/tsjerkwassenaar"> <div class="linkedInButton"></div></a>
                                         <div id="element_to_pop_upTsjerk" class = "element_to_pop_up">
                                             <button class = "close">X</button>
-                                            Tsjerk
+                                            <!--Information about the teachers can be put into the paragraph field-->
+                                            <h1>Tsjerk Wassenaar</h1>
+                                            <p>Informatie over Tsjerk</p>
                                         </div>
                                         <br/>
                                     </div> 
-
                                 </div>
                                 <!--End of content-->
                             </div>
-
-
                             <%@include file="../includes/bodyFooter.jsp" %>
-
-
                         </div>
-
-
                     </body>
                     </html>
