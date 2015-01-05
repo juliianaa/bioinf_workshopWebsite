@@ -149,9 +149,7 @@ nav {
     padding-top: 20px;} 
 
 footer { 
-    position: absolute;
-    top: 130%;
-    left: 0%;
+    position: relative;
     width: 100%;
     font: 100%, arial, sans-serif;
     height: 30px;
@@ -482,70 +480,69 @@ a { text-decoration: none }
 .container #product {
     position: relative;
     z-index: 2;
-    left: 0%;
-    width: 670px;
+    width: 24em;
 }
 
 .container #dropable1 {
     position: absolute;
     top: 0%;
-    right: 50%;
+    right: 58%;
     width: 224px;
 }
 .container #dropable2 {
     position: absolute;
     z-index: 1;
-    top: 15%;
-    right: 50%;
+    top: 12.5%;
+    right: 58%;
     width: 224px;
 }
 .container #dropable3 {
     position: absolute;
     z-index: 1;
-    top: 30%;
-    right: 50%;
+    top: 25%;
+    right: 58%;
     width: 224px;
 }
 .container #dropable4 {
     position: absolute;
     z-index: 1;
-    top: 45%;
-    right: 50%;
+    top: 37.5%;
+    right: 58%;
     width: 224px;
 }
 .container #dropable4a {
     position: absolute;
     z-index: 1;
-    top: 45%;
-    right: 20%;
+    top: 37.5%;
+    right: 34%;
     width: 224px;
 }
 .container #dropable5 {
     position: absolute;
     z-index: 1;
-    top: 60%;
-    right: 50%;
+    top: 50%;
+    right: 58%;
     width: 224px;
 }
 .container #dropable5a{
     position: absolute;
     z-index: 1;
-    top: 60%;
-    right: 20%;
+    top: 50%;
+    right: 34%;
     width: 224px;
 }
 .container #dropable6 {
     position: absolute;
     z-index: 1;
-    top: 75%;
-    right: 50%;
+    top: 62.5%;
+    right: 58%;
     width: 224px;
 }
 .container #dropable7 {
     position: absolute;
     z-index: 1;
-    top: 90%;
-    right: 50%;
+    top: 75%;
+    right: 58%;
     width: 224px;
 }
 
@@ -559,7 +556,7 @@ a { text-decoration: none }
 #product ul li {
     position: relative;
     float: left;
-    width: 50%;
+    width: 26em;
     margin: 0 0 10px 10px;
     padding: 5px;
     background-color: #fff;
@@ -611,7 +608,7 @@ a { text-decoration: none }
 }
 
 .function_container .function_list {
-    width: 36em;
+    width: 29em;
     background-color: #fff;
     border: 2px dashed transparent;
     border-radius: 4px;
@@ -659,7 +656,7 @@ a { text-decoration: none }
 .function_container ul li span.name {
     display: block;
     float: left;
-    width: 35em;
+    width: 29em;
     font-weight: bold;
     white-space: nowrap;
     overflow: hidden;
@@ -701,17 +698,17 @@ a { text-decoration: none }
 }
 .arrow-down {
     position: absolute;
-    right: 0%;
+    right: 10%;
     font-size: 40px;
 }
 .arrow-right{
     position: absolute;
-    right: -125%;
+    right: -100%;
     font-size: 40px;
 }
 .arrow-right2{
     position: absolute;
-    right: 125%;
+    right: 110%;
     font-size: 40px;
 }
 .arrow-left{

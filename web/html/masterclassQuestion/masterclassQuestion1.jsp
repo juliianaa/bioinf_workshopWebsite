@@ -20,7 +20,7 @@
         er moet in elk vak &eacute;&eacute;n functie staan. De functies die je moet gebruiken staan hieronder:<br/>
         <br/>
     </p>
-<section id="product">
+    <section id="product">
         <ul class="clear">
             <li data-id="8">
                 <h3>zijnStartCodonEnStopCodonInFrame</h3>
@@ -29,7 +29,7 @@
                 <h3>zoekHetVolgendeStopcodon</h3>
             </li>
             <li data-id="3">
-                <h3>controleerOfDeDNASequentieAlleenUitDeGoedeLettersBestaat</h3>
+                <h3>controleerHetDNAOpGoedeLetters</h3>
             </li>
             <li data-id="2">
                 <h3>leesDNASequentieUitBestand</h3>
@@ -41,13 +41,13 @@
                 <h3>printGen + einde script</h3>
             </li>
             <li data-id="5">
-                <h3>print ( "geen startcodon gevonden" ) + einde script</h3>
+                <h3>print("geen startcodon gevonden") + einde script</h3>
             </li>
             <li data-id="1">
                 <h3>vraagInWelkBestandDeDNASequentieStaat</h3>
             </li>
             <li data-id="7">
-                <h3>print ( "geen stopcodon gevonden" ) + einde script</h3>
+                <h3>print("geen stopcodon gevonden") + einde script</h3>
             </li>
         </ul>
     </section>
