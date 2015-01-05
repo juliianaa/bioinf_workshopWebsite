@@ -38,7 +38,7 @@
                         <div class="workshop_boxes">
                             <section>
                                 <img src="images/dnatrap.jpg" alt="" class="workshop_images" />
-                                <p>Hanze Experience - havo</p>
+                                <p>Hanze Experience - HAVO</p>
                                 Biologisch onderzoek bestaat tegenwoordig niet alleen maar meer uit laboratoriumwerk.
                                     Heel veel analyses worden nu op computers uitgevoerd. Het vakgebied dat zich hier mee...
                                     <p><a href="html/hanzeXperience_HAVO.jsp" class="button">Start workshop</a></p>
@@ -75,7 +75,11 @@
                         <div class="workshop_boxes">
                              <section>
                                     <img src="images/1.jpg" alt="" class="workshop_images"/>
-                                    <p>Powerpoint</p>
+                                    <p>Powerpoints</p>
+                                    In de powerpoints is alles terug te vinden dat in de workshops besproken is.
+                                    Mocht je specifiek bij een workshop de powerpoint willen bekijken, klik
+                                    dan even op de workshop, daar staat ook een link naar de bijbehorende
+                                    powerpoint
                                     <a href="html/powerpoint.jsp" class="button">Open powerpoint</a>
                              </section>
                          </div>

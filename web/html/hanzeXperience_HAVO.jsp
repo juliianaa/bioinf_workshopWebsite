@@ -38,41 +38,50 @@
                     <div class="introduction" id="introduction">
 
                         <h1>Hanze Xperience Havo</h1>
-                        
-                        <h2>Tekst moet nog veranderd worden</h2>
-                        
+                            
+                        <h2>Welkom bij de workshop van hanze Experience</h2>
                         <p>
-                            Welkom
+                           
                             Wij willen je van harte welkom heten op de Hanzehogeschool Groningen. De
-                            hogeschool biedt je vele mogelijkheden om je verder te ontwikkelen nadat je een
-                            mbo hebt gehaald. We bieden veel opleidingen aan, ook weer op diverse niveaus
-                            en in verschillende vormen. Tijdens deze driedaagse zullen we je hierover
-                            informeren. We vertellen je over de majors en een minors. Na een vierjarige hbo-
-                            opleiding krijg je de internationaal erkende titel Bachelor. Na je bachelor kun je
-                            verder studeren aan een hogeschool of universiteit om een master te halen; dit
-                            duurt meestal één en soms twee jaar.
-                            Verder kun je bij een aantal techniekopleidingen al een BBL-route volgen, bij ons
-                            heet dat duaal (zie hiervoor bv Medisch Beeldvormende en Radiotherapeutische
-                            Technieken (MBRT)).
-                            HanzeXperience MBO Techniek & ICT
-                            Je hebt gekozen om je te oriënteren op een technische of ICT opleiding binnen de
-                            Hanzehogeschool Groningen. Gedurende deze driedaagse wordt er o.a. aandacht
-                            besteed aan de verschillende werkvormen (hoorcollege, practica en projecten).
-                            Door het contact met docenten en huidige studenten van de hogeschool wordt je
-                            in de gelegenheid gesteld om al je vragen te stellen en de sfeer te proeven.
-                            Wat houdt het evenement in?
-                            • Je kunt ervaren hoe het is om in het hbo te studeren en in het bijzonder bij
-                            de Hanzehogeschool Groningen
+                            hogeschool biedt je vele mogelijkheden om je verder te ontwikkelen nadat je je
+                            havo diploma hebt gehaald. We bieden veel opleidingen aan  op diverse niveaus
+                            en in verschillende vormen. Tijdens deze workshop zullen we je vooral informeren over de
+                            inhoud van de studie bio-informatica. 
+                            Allereerst is het belangrijk om te weten dat bio-informatica een samenvoeging is van
+                            biologisch onderzoek en analyse werk via de computer. De opleiding is 
+                            een vierjarige hbo-opleiding en je krijgt na het behalen de 
+                            internationaal erkende titel Bachelor. 
+                            Na je bachelor kun je verder studeren aan een hogeschool of universiteit om een master te halen; dit
+                            duurt meestal één en soms twee jaar. Ook is het mogelijk om het 3e jaar een minor 
+                            te volgen, dit kan gewoon binnen de studie zelf maar ook op een ander instituut en zelfs
+                            in een ander land d.m.v. Erasmus.
+                            Je hebt gekozen om je te oriënteren binnen de opleiding Bio-informatica. Dit zal in de 
+                            workshop ondersteud worden door docenten die les geven binnen de studie en 
+                            met studenten, bij zowel de docenten als studenten kun je met al je vragen terecht.
+                           <br/>
+                           <br/>
+                            Wat houdt de workshop in het kort in?
+                            <br/>
+                            • Je kunt ervaren hoe het is om in het hbo te studeren bij de Hanze Hogeschool<br/>
                             • Je kunt beleven hoe het is om een specifieke opleiding op hbo-niveau te
-                            volgen
+                            volgen<br/>
                             • Je krijgt informatie over verschillende opleidingen en de beroepen die
-                            daarbij horen
-                            We hopen dat je veel plezier zult beleven aan dit driedaagse evenement en dat
-                            het je kan ondersteunen in je keuze of je gaat doorsturen in het hbo.
+                            bij deze studie horen<br/>
+                            • Je krijgt inzicht in de fanscinatie van de studie/het beroep Bio-informatica.<br/>
+                            <br/>
+                            <br/>
+
+                        
                         </p>
                         
-                        Start puzzel opdracht <li><a href="html/puzzel.jsp"><button> start puzzel</button></a></li>
-  
+                        Hieronder kun je de puzzel vinden met vragen over DNA biologische kennis.</br>
+                        <a href="html/puzzel.jsp" class="button">Start puzzel</a>
+                        <br/>
+                        <br/>
+                        Hieronder kun je powerpoint raadplegen voor informatie.</br>
+                        <a href="html/powerpoint.jsp" class="button">Start powerpoint</a>
+                        
+
             </div>
             </div>
             </div>   
