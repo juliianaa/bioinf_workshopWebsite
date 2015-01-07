@@ -41,7 +41,7 @@
                                 <p>Hanze Experience - HAVO</p>
                                 Biologisch onderzoek bestaat tegenwoordig niet alleen maar meer uit laboratoriumwerk.
                                     Heel veel analyses worden nu op computers uitgevoerd. Het vakgebied dat zich hier mee...
-                                    <p><a href="html/hanzeXperience_HAVO.jsp" class="button">Start workshop</a></p>
+                                    <p class="start"><a href="html/hanzeXperience_HAVO.jsp" class="button">Start workshop</a></p>
                             </section>
                         </div>
                         <div class="workshop_boxes">
@@ -49,8 +49,8 @@
                                 <img src="images/vdoornveste.jpg" alt="" class="workshop_images" />
                                 <p>Hanze Experience - MBO</p>
                                 Wij willen je van harte welkom heten op de Hanzehogeschool Groningen. De
-                                    hogeschool biedt je vele mogelijkheden om je verder te ontwikkelen...
-                                    <p><a href="html/hanzeXperience_MBO.jsp" class="button">Start workshop</a></p>
+                                    hogeschool biedt je vele mogelijkheden om je verder te ontwikkelen...<br/><br/>
+                                    <p class="start"><a href="html/hanzeXperience_MBO.jsp" class="button">Start workshop</a></p>
                             </section>
                         </div>
                         <div class="workshop_boxes">
@@ -59,7 +59,7 @@
                                 <p>Masterclass - Meet the mummy</p>
                                 Als je moeder en je vader allebei blond zijn of lang of juist klein, dan is de kans groot dat jij dat ook bent.
                                     Dat komt omdat je van allebei je ouders eigenschappen erft. Dit geldt niet...
-                                    <p><a href="html/masterclass.jsp" class="button">Start workshop</a></p>
+                                    <p class="start"><a href="html/masterclass.jsp" class="button">Start workshop</a></p>
                             </section>
                         </div>
                         <div class="workshop_boxes">
@@ -67,8 +67,8 @@
                                 <img src="images/technasium.jpg" alt="" class="workshop_images" />
                                 <p>Technasium</p>
                                 Toen de conciërge ‘s morgens vroeg op school kwam en zijn gebruikelijke ronde maakte,
-                                    deed hij een lugubere vondst. In practicumzaal D033 lag...
-                                    <p><a href="html/technasium.jsp" class="button">Start workshop</a></p>
+                                deed hij een lugubere vondst. In practicumzaal D033 lag...<br/><br/><br/>
+                                    <p class="start"><a href="html/technasium.jsp" class="button">Start workshop</a></p>
                             </section>
                         </div>
                         
@@ -80,7 +80,7 @@
                                     Mocht je specifiek bij een workshop de powerpoint willen bekijken, klik
                                     dan even op de workshop, daar staat ook een link naar de bijbehorende
                                     powerpoint
-                                    <a href="html/powerpoint.jsp" class="button">Open powerpoint</a>
+                                    <p class="start"><a href="html/powerpoint.jsp" class="button">Open powerpoint</a></p>
                              </section>
                          </div>
 
