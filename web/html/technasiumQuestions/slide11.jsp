@@ -4,13 +4,13 @@
     Author     : Mariska
 --%>
 
-<div class="imageBoxes" id = "questionImage"> 
-    <img data-imgNumber="11" id = "image"src="images/verhoorLabmedewerker.jpg" alt=""/> 
-    <div class ="left" >
-        <p class="triangle-border top">
 
-            Is er iemand die dit kan bevestigen? 
+<img data-imgNumber="11" id = "image"src="images/verhoorLabmedewerker.jpg" alt=""/> 
+<div class ="left" >
+    <p class="triangle-border top">
 
-        </p>
-    </div>
+        Is er iemand die dit kan bevestigen? 
+
+    </p>
 </div>
+

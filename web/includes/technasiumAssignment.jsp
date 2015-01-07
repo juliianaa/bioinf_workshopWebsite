@@ -13,7 +13,7 @@
         Help ons bij het vinden van de dader.<br/>
         Heel veel succes!! 
     </p>
-    <div id="question_div" data-question-number="1">
+    <div id="question_div" data-question-number="1" data-imgNumber="tafel" >
         <div class="imageBoxes" id = "questionImage" > 
             <img data-imgNumber="tafel" id = "image" src="images/houtenTafel.jpg" alt=""/> 
             <div class ="black">
@@ -30,6 +30,7 @@
             <button id="last_question_button" class = "imageButton"><b>< Vorige</b></button>
             <button id="next_question_button" class = "imageButton"><b>> Volgende</b></button>
             <button id ="last" class = "imageButton">>></button>
+            <button id="bewijsMateriaal"class="imageButton">Bewijs materiaal</button>
         </div>
     </div>
 </div>

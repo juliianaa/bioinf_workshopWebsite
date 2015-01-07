@@ -4,16 +4,15 @@
     Author     : Mariska
 --%>
 
-<div class="imageBoxes" id = "questionImage"> 
-    <img data-imgNumber="18" id = "image"src="images/verhoorMagazijnMedewerkster.jpg" alt=""/> 
-    <div class ="right" >
-        <p class="triangle-border right">
 
-            Ik was de afwasmachine aan het inruimen en even denken... Ik heb de administratie 
-            gecheckt, gekeken of alle leerlingen alles weer netjes hebben ingeleverd... 
-            Daarna heb ik de afwasmachine uitgeruimd en alles weer op zijn plaats gezet. 
-            Daarna ben ik naar huis gegaan. 
+<img data-imgNumber="18" id = "image"src="images/verhoorMagazijnMedewerkster.jpg" alt=""/> 
+<div class ="right" >
+    <p class="triangle-border right">
 
-        </p>
-    </div>
+        Ik was de afwasmachine aan het inruimen en even denken... Ik heb de administratie 
+        gecheckt, gekeken of alle leerlingen alles weer netjes hebben ingeleverd... 
+        Daarna heb ik de afwasmachine uitgeruimd en alles weer op zijn plaats gezet. 
+        Daarna ben ik naar huis gegaan. 
+
+    </p>
 </div>
