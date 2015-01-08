@@ -19,14 +19,14 @@ function init() {
    $('#answersPile').html( '' );
   $('#answersSlots').html( '' );
   
-  var numbers = ["A", "B", "C", "D"];
+  var numbers = ["Lees DNA Sequentie Uit Bestand", "Controleer De DNA Sequentie op goede letters ( A T C G )", "Print geen startcodon gevonden", "Zoek het volgende stopcodon"];
   
   for ( var i=0; i<4; i++ ) {
-    $('<div>' + numbers[i] + '</div>').data( 'number', i+1 ).attr( 'id', 'card'+numbers[i] ).appendTo( '#answersPile' ).draggable( {
+    $('<div>' + numbers[i] + '</div>').data( 'number', i+1 ).attr( 'id', 'card'+numbers[i] ).appendTo( '#answersPile' ).css({fontSize:11}).draggable( {
       containment: '#content',
       stack: '#answersPile div',
       cursor: 'move',
-      revert: true
+      revert: true,
     } );
   }
   

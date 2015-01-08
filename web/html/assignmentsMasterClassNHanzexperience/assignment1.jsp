@@ -49,17 +49,12 @@
 
                     <body>
                         <div id="main1">
-
                             <%@include file="../../includes/bodyHeader.jsp" %>
-
-
                             <div id="site_content">
                                 <div id="top_border"></div>
-
                                 <ul id="images">
                                     <img src="images/banner.jpg" width="970" height="300" alt=""/>
                                 </ul>
-
                                 <div class="content" id="question" style = "width: 800px;" >
                                     <div id="number_passer" data-nr="1">
                                         <div>
@@ -71,25 +66,12 @@
                                                     <h1>No name</h1>
                                                 </c:otherwise>
                                             </c:choose>
-
-
                                             <h1>Opdracht 1a</h1>
                                             <h2>Sleep de kaarten naar het correcte vak.</h2>
-
-                                            <ul>
-                                                <li>A: Lees DNA Sequentie Uit Bestand</li>
-                                                <li>B: Controleer Of De DNA Sequentie Ook Echt Alleen Uit De Goede Letters Bestaat</li>
-                                                <li>C: Print "geen startcodon gevonden"</li>
-                                                <li>D: Zoek het volgende stopcodon</li>
-                                            </ul>
                                         </div>
-
                                         <div id="answersPile"></div>
-
                                         <div id="answersSlots"></div>
-
                                         <img src="images/hanzeXperience_MBO/HanzeXperience(drag and drop).png" alt="" style="position:relative"/>
-
                                         <div id="successMessage">
                                             <h2>You did it!</h2>
                                         </div>
@@ -98,12 +80,7 @@
                                 <button id="next_question_button" class="button" type="button">Volgende vraag</button>
                                 <!--End of content-->
                             </div>
-
                             <%@include file="../../includes/bodyFooter.jsp" %>
-
-
                         </div>
-
-
                     </body>
                     </html>

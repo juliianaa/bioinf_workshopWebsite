@@ -21,8 +21,6 @@ function initialize() {
             case 4:
                 jQuery("#question").load("html/assignmentsMasterClassNHanzexperience/assignment2c.jsp");
                 break;
-
         }
-
     });
 }
