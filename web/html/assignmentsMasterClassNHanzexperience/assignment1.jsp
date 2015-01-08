@@ -48,7 +48,7 @@
                     </head>
 
                     <body>
-                        <div id="main">
+                        <div id="main1">
 
                             <%@include file="../../includes/bodyHeader.jsp" %>
 
@@ -92,10 +92,10 @@
 
                                         <div id="successMessage">
                                             <h2>You did it!</h2>
-                                            <button id="next_question_button" class="button" type="button">Volgende vraag</button>
                                         </div>
                                     </div>
                                 </div>
+                                <button id="next_question_button" class="button" type="button">Volgende vraag</button>
                                 <!--End of content-->
                             </div>
 

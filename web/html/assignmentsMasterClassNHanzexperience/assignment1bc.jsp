@@ -38,5 +38,4 @@
         Er wordt geen rekening gehouden met de andere streng van het DNA. Pas het programma zo aan, dat ook deze geanalyseerd wordt.
     </p>
 
-    <button id="next_question_button" class="button" type="button">Volgende vraag</button>
 </div>

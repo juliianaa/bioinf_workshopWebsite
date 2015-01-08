@@ -8,7 +8,7 @@
         Je hebt al genen uit DNA geïsoleerd. 
         In het college heb je geleerd waarom, als je genen gaat vergelijken het vaak beter is om dit met de eiwitcode 
         te doen in plaats van met de DNA-code. Daarom ga je nu de gevonden genen vertalen naar eiwitten.
-        <a href="scripts/translateCodon.py"> >>> Download script translateCodon.py <<<</a> en sla het op in Desktop.
+        <a href="scripts/translateCodon.py" download> >>> Download script translateCodon.py <<<</a> en sla het op in Desktop.
         (Als het downloaden niet lukt, klik dan op rechte muisknop en sla het link op)
         Voer het programma uit.
     <ul>
@@ -22,6 +22,5 @@
         <li>sla de eiwitten op in een tekstbestand</li>
     </ul>
 
-    <button id="next_question_button" class="button">Volgende vraag</button>
 </p>
 </div>
