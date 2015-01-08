@@ -43,7 +43,7 @@
                     <p>
 
                         <img src="images/prof.png" width="210" height="400" alt=""/>
-                        <a href="html/hanzeXperience_MBO/login.jsp" class="button">Start</a>
+                        <a href="html/assignmentsMasterClassNHanzexperience/login.jsp" class="button">Start</a>
 
                     </p>
                         

@@ -6,11 +6,11 @@
 $(document).ready(initialize);
 
 function initialize() {
-    $("#save_notes_form").submit(function (event) {
+    $("#save_notes_form").submit(function(event) {
         var url = "http://localhost:8080/Bioinformatica_website/makeNotes.do";
         var notes_data = {'notes': $("#save_notes_form textarea").val()};
         //alert(notes_data['notes']);
-        $.post(url, notes_data, function (data) {
+        $.post(url, notes_data, function(data) {
             if (data === data) {
                 alert("" + data + "\nNotes saved!");
 
@@ -23,13 +23,13 @@ function initialize() {
         //alert("Handler for .submit() called.");
         event.preventDefault();
     });
-    $("#first").click(function(){
+    $("#first").click(function() {
         $("#questionImage").load("html/technasiumQuestions/tafel.jsp");
     });
-    $("#last").click(function(){
+    $("#last").click(function() {
         $("#questionImage").load("html/technasiumQuestions/slide22.jsp");
     });
-    $("#next_question_button").click(function () {
+    $("#next_question_button").click(function() {
         var imageNr = $("#image").data("imgnumber");
         switch (imageNr) {
             case "tafel":
@@ -81,6 +81,12 @@ function initialize() {
                 $("#questionImage").load("html/technasiumQuestions/slide14.jsp");
                 break;
             case 14:
+                $("#questionImage").load("html/technasiumQuestions/slide14a.jsp");
+                break;
+            case "14a":
+                $("#questionImage").load("html/technasiumQuestions/slide14b.jsp");
+                break;
+            case "14b":
                 $("#questionImage").load("html/technasiumQuestions/slide15.jsp");
                 break;
             case 15:
@@ -109,11 +115,11 @@ function initialize() {
         }
 
     });
-    $("#last_question_button").click(function () {
+    $("#last_question_button").click(function() {
         var imageNr = $("#image").data("imgnumber");
         switch (imageNr) {
             case "tafel":
-                 $("#questionImage").load("html/technasiumQuestions/tafel.jsp");
+                $("#questionImage").load("html/technasiumQuestions/tafel.jsp");
                 break;
             case "bewijs":
                 $("#questionImage").load("html/technasiumQuestions/tafel.jsp");
@@ -160,8 +166,14 @@ function initialize() {
             case 14:
                 $("#questionImage").load("html/technasiumQuestions/slide13.jsp");
                 break;
-            case 15:
+             case "14a":
                 $("#questionImage").load("html/technasiumQuestions/slide14.jsp");
+                break;
+            case "14b":
+                $("#questionImage").load("html/technasiumQuestions/slide14a.jsp");
+                break;
+            case 15:
+                $("#questionImage").load("html/technasiumQuestions/slide14b.jsp");
                 break;
             case 16:
                 $("#questionImage").load("html/technasiumQuestions/slide15.jsp");

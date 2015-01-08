@@ -4,8 +4,8 @@
     Author     : Mariska
 --%>
 
-<div class="imageBoxes" id = "questionImage"> 
-    <img data-imgNumber="8" id = "image" src="images/verhoorLabmedewerker.jpg" alt=""/> 
-    <div class ="up"><p class = "css-typing">Verdachte 2: labmedewerker *naam labmedewerker*...</p>
-    </div>
+
+<img data-imgNumber="8" id = "image" src="images/verhoorLabmedewerker.jpg" alt=""/> 
+<div class ="up"><p class = "css-typing">Verdachte 2: labmedewerker *naam labmedewerker*...</p>
 </div>
+

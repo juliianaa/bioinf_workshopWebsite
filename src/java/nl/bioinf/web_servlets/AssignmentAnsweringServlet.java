@@ -43,7 +43,7 @@ public class AssignmentAnsweringServlet extends HttpServlet {
         }
         
 
-        RequestDispatcher view = request.getRequestDispatcher("html/hanzeXperience_MBO/assignment1.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("html/assignmentsMasterClassNHanzexperience/assignment1.jsp");
         view.forward(request, response);
 
 

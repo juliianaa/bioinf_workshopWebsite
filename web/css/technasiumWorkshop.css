@@ -127,10 +127,12 @@ and open the template in the editor.
 
 .left{
     left: 0px;
+    width: 250px;
 }
 .right{
-    left: -20px;
+    left: -250px;
     top:-250px;
+    width: 250px;
 }
 .up{
     background-color: #000;

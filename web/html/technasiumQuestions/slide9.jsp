@@ -4,14 +4,14 @@
     Author     : Mariska
 --%>
 
-<div class="imageBoxes" id = "questionImage"> 
-    <img data-imgNumber="9" id = "image"src="images/verhoorLabmedewerker.jpg" alt=""/> 
-    <div class ="left" >
-        <p class="triangle-border top">
 
-            Waar was u mee bezig op het moment van de moord op *naam slachtoffer*?
+<img data-imgNumber="9" id = "image"src="images/verhoorLabmedewerker.jpg" alt=""/> 
+<div class ="left" >
+    <p class="triangle-border top">
 
-        </p>
-    </div>
+        Waar was u mee bezig op het moment van de moord op *naam slachtoffer*?
+
+    </p>
+
 </div>
 
