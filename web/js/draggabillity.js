@@ -7,28 +7,28 @@
 
 !function (a) {
     function b(a) {
-        return new RegExp("(^|\\s+)" + a + "(\\s+|$)")
+        return new RegExp("(^|\\s+)" + a + "(\\s+|$)");
     }
     function c(a, b) {
         var c = d(a, b) ? f : e;
-        c(a, b)
+        c(a, b);
     }
     var d, e, f;
     "classList"in document.documentElement ? (d = function (a, b) {
-        return a.classList.contains(b)
+        return a.classList.contains(b);
     }, e = function (a, b) {
-        a.classList.add(b)
+        a.classList.add(b);
     }, f = function (a, b) {
-        a.classList.remove(b)
+        a.classList.remove(b);
     }) : (d = function (a, c) {
-        return b(c).test(a.className)
+        return b(c).test(a.className);
     }, e = function (a, b) {
-        d(a, b) || (a.className = a.className + " " + b)
+        d(a, b) || (a.className = a.className + " " + b);
     }, f = function (a, c) {
-        a.className = a.className.replace(b(c), " ")
+        a.className = a.className.replace(b(c), " ");
     });
     var g = {hasClass: d, addClass: e, removeClass: f, toggleClass: c, has: d, add: e, remove: f, toggle: c};
-    "function" == typeof define && define.amd ? define("classie/classie", g) : a.classie = g
+    "function" === typeof define && define.amd ? define("classie/classie", g) : a.classie = g
 }(window), function () {
     function a() {
     }
@@ -36,62 +36,62 @@
         for (var c = a.length; c--; )
             if (a[c].listener === b)
                 return c;
-        return-1
+        return-1;
     }
     function c(a) {
         return function () {
-            return this[a].apply(this, arguments)
-        }
+            return this[a].apply(this, arguments);
+        };
     }
     var d = a.prototype;
     d.getListeners = function (a) {
         var b, c, d = this._getEvents();
-        if ("object" == typeof a) {
+        if ("object" === typeof a) {
             b = {};
             for (c in d)
-                d.hasOwnProperty(c) && a.test(c) && (b[c] = d[c])
+                d.hasOwnProperty(c) && a.test(c) && (b[c] = d[c]);
         } else
             b = d[a] || (d[a] = []);
-        return b
+        return b;
     }, d.flattenListeners = function (a) {
         var b, c = [];
         for (b = 0; b < a.length; b += 1)
             c.push(a[b].listener);
-        return c
+        return c;
     }, d.getListenersAsObject = function (a) {
         var b, c = this.getListeners(a);
-        return c instanceof Array && (b = {}, b[a] = c), b || c
+        return c instanceof Array && (b = {}, b[a] = c), b || c;
     }, d.addListener = function (a, c) {
-        var d, e = this.getListenersAsObject(a), f = "object" == typeof c;
+        var d, e = this.getListenersAsObject(a), f = "object" === typeof c;
         for (d in e)
             e.hasOwnProperty(d) && -1 === b(e[d], c) && e[d].push(f ? c : {listener: c, once: !1});
-        return this
+        return this;
     }, d.on = c("addListener"), d.addOnceListener = function (a, b) {
-        return this.addListener(a, {listener: b, once: !0})
+        return this.addListener(a, {listener: b, once: !0});
     }, d.once = c("addOnceListener"), d.defineEvent = function (a) {
-        return this.getListeners(a), this
+        return this.getListeners(a), this;
     }, d.defineEvents = function (a) {
         for (var b = 0; b < a.length; b += 1)
             this.defineEvent(a[b]);
-        return this
+        return this;
     }, d.removeListener = function (a, c) {
         var d, e, f = this.getListenersAsObject(a);
         for (e in f)
             f.hasOwnProperty(e) && (d = b(f[e], c), -1 !== d && f[e].splice(d, 1));
-        return this
+        return this;
     }, d.off = c("removeListener"), d.addListeners = function (a, b) {
-        return this.manipulateListeners(!1, a, b)
+        return this.manipulateListeners(!1, a, b);
     }, d.removeListeners = function (a, b) {
-        return this.manipulateListeners(!0, a, b)
+        return this.manipulateListeners(!0, a, b);
     }, d.manipulateListeners = function (a, b, c) {
         var d, e, f = a ? this.removeListener : this.addListener, g = a ? this.removeListeners : this.addListeners;
-        if ("object" != typeof b || b instanceof RegExp)
+        if ("object" !== typeof b || b instanceof RegExp)
             for (d = c.length; d--; )
                 f.call(this, b, c[d]);
         else
             for (d in b)
-                b.hasOwnProperty(d) && (e = b[d]) && ("function" == typeof e ? f.call(this, d, e) : g.call(this, d, e));
-        return this
+                b.hasOwnProperty(d) && (e = b[d]) && ("function" === typeof e ? f.call(this, d, e) : g.call(this, d, e));
+        return this;
     }, d.removeEvent = function (a) {
         var b, c = typeof a, d = this._getEvents();
         if ("string" === c)
@@ -101,7 +101,7 @@
                 d.hasOwnProperty(b) && a.test(b) && delete d[b];
         else
             delete this._events;
-        return this
+        return this;
     }, d.emitEvent = function (a, b) {
         var c, d, e, f, g = this.getListenersAsObject(a);
         for (e in g)
@@ -157,7 +157,7 @@
                 return a;
             a = a.charAt(0).toUpperCase() + a.slice(1);
             for (var b, e = 0, f = c.length; f > e; e++)
-                if (b = c[e] + a, "string" === typeof d[b])
+                if (b === c[e] + a, "string" === typeof d[b])
                     return b;
         }
     }
