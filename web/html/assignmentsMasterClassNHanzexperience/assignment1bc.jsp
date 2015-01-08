@@ -17,19 +17,18 @@
         <strong><i>>>>> </i></strong><a href="scripts/zoekGen.py" download>zoekGen.py</a> <strong><i> <<<<</i></strong>
         (Als het downloaden niet lukt, klik dan op rechte muisknop en sla het link op)
     </p>
-
     <p>
         Ben je klaar?
         Voer het gewijzigde programma uit.<br />
     </p>
     <ul>
-        <li>Open een terminal</li>
-        <img src="images/hanzeXperience_MBO/terminal.png" width='700px' height='400px' alt=""/>
-        <li>ga naar de map waar het programma staat (met cd Desktop)</li>
-        <img src="images/hanzeXperience_MBO/terminalToDesktop.png" width='700px' height='400px' alt=""/>
-        <li>tik in python zoekGen.py</li>
-        <img src="images/hanzeXperience_MBO/typeZoekGen.png" width='700px' height='400px' alt=""/>
-        <li>volg de instructies van het programma</li>
+        <li>Open een terminal</li><br/>
+        <img src="images/openTerminal.png" width='700px' height='400px' alt=""/>
+        <br/><li>ga naar de map waar het programma staat (met cd Desktop)</li><br/>
+        <img src="images/cdTerminal.png" width='700px' height='200px' alt=""/>
+        <br/><li>tik in python zoekGen.py</li><br/>
+        <img src="images/zoekgenTerminal.png" width='700px' height='200px' alt=""/>
+        <br/><li>volg de instructies van het programma</li>
         <li>sla de genen op in een tekstbestand</li>
     </ul>
 
@@ -37,5 +36,4 @@
     <p>
         Er wordt geen rekening gehouden met de andere streng van het DNA. Pas het programma zo aan, dat ook deze geanalyseerd wordt.
     </p>
-
 </div>

@@ -12,15 +12,14 @@
         (Als het downloaden niet lukt, klik dan op rechte muisknop en sla het link op)
         Voer het programma uit.
     <ul>
-        <li>Open een terminal</li>
-        <img src="images/hanzeXperience_MBO/terminal.png" width='700px' height='400px' alt=""/>
-        <li>ga naar de map waar het programma staat</li>
-        <img src="images/hanzeXperience_MBO/terminalToDesktop.png" width='700px' height='400px' alt=""/>
-        <li>tik in python translateCodon.py</li>
-        <img src="images/hanzeXperience_MBO/translateCodon.png" width='700px' height='400px' alt=""/>
-        <li>volg de instructies van het programma</li>
+        <li>Open een terminal</li><br/>
+        <img src="images/openTerminal.png" width='700px' height='400px' alt=""/>
+        <br/><li>ga naar de map waar het programma staat</li><br/>
+        <img src="images/cdTerminal.png" width='700px' height='200px' alt=""/>
+        <br/><li>tik in python translateCodon.py</li><br/>
+        <img src="images/translateTerminal.png" width='700px' height='200px' alt=""/>
+        <br/><li>volg de instructies van het programma</li>
         <li>sla de eiwitten op in een tekstbestand</li>
     </ul>
-
 </p>
 </div>
