@@ -39,7 +39,7 @@ and open the template in the editor.
         .\-1u { margin-left: 8.3333333333% }
 
         .row > * {
-                padding: 40px 0 0 40px;
+                padding: 1.5em 0 0 1.5em;
                 float: left;
                 -moz-box-sizing: border-box;
                 -webkit-box-sizing: border-box;
@@ -49,11 +49,12 @@ and open the template in the editor.
         }
 
         .row + .row > * {
-                padding-top: 40px;
+                padding-top: 1.5em;
         }
 
         .row {
-                margin-left: -40px;
+                margin-left: -1.5em;
+                margin-bottom: 2em;
         }
 
 /* Rows */
@@ -174,7 +175,7 @@ and open the template in the editor.
 .workshop_boxes
 {
     float:left;
-    width: 32%;
+    width: 31%;
     height: 40%;
     margin-left:auto;
     margin-right: auto;
