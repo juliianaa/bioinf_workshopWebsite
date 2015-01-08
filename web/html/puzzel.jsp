@@ -29,7 +29,7 @@
 		<div class="container">
 			<!-- Top Navigation -->
                        
-			<div class="content">
+			<div class="content" >
                             Hieronder vindt je de bio-informatica puzzel met wat biologische/genetische vragen.<br/>
                             Je kunt kunt een antwoord oppakken en slepen naar het goede antwoord dat in beeld<br/>
                             komt op het moment dat je een antwoord op pakt met de muis. <br/>

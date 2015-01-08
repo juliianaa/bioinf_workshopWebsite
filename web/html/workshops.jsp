@@ -35,51 +35,54 @@
 
                     <div class="row">
 
-                        <div class="workshop_boxes">
+                        <div class="workshop_boxes" position="fixed">
                             <section>
                                 <img src="images/dnatrap.jpg" alt="" class="workshop_images" />
                                 <p>Hanze Experience - HAVO</p>
-                                Biologisch onderzoek bestaat tegenwoordig niet alleen maar meer uit laboratoriumwerk.
-                                    Heel veel analyses worden nu op computers uitgevoerd. Het vakgebied dat zich hier mee...
+                                Wij willen je van harte welkom heten op de Hanzehogeschool Groningen. De
+                            hogeschool biedt je vele mogelijkheden om je verder te ontwikkelen nadat je je
+                            havo diploma hebt gehaald. We bieden ...
                                     <p><a href="html/hanzeXperience_HAVO.jsp" class="button">Start workshop</a></p>
                             </section>
                         </div>
-                        <div class="workshop_boxes">
+                        <div class="workshop_boxes" position="fixed">
                             <section>
                                 <img src="images/vdoornveste.jpg" alt="" class="workshop_images" />
                                 <p>Hanze Experience - MBO</p>
-                                Wij willen je van harte welkom heten op de Hanzehogeschool Groningen. De
-                                    hogeschool biedt je vele mogelijkheden om je verder te ontwikkelen...
+                                Wij willen je van harte welkom heten op de\nHanzehogeschool Groningen.
+                                    Gedurende deze driedaagse wordt er o.a. aandacht besteed aan de verschillende 
+                                    werkvormen ...
                                     <p><a href="html/hanzeXperience_MBO.jsp" class="button">Start workshop</a></p>
                             </section>
                         </div>
-                        <div class="workshop_boxes">
+                        <div class="workshop_boxes"position="fixed">
                             <section>
                                 <img src="images/mummy.jpg" alt="" class="workshop_images"/>
                                 <p>Masterclass - Meet the mummy</p>
-                                Als je moeder en je vader allebei blond zijn of lang of juist klein, dan is de kans groot dat jij dat ook bent.
-                                    Dat komt omdat je van allebei je ouders eigenschappen erft. Dit geldt niet...
+                                Als je moeder en je vader allebei blond, lang of juist klein zijn, 
+                                dan is de kans groot dat jij dat ook bent. Dat komt omdat je van allebei 
+                                je ouders eigenschappen erft . Dit geldt ...
                                     <p><a href="html/masterclass.jsp" class="button">Start workshop</a></p>
                             </section>
                         </div>
-                        <div class="workshop_boxes">
+                        <div class="workshop_boxes" position="fixed">
                             <section>
                                 <img src="images/technasium.jpg" alt="" class="workshop_images" />
                                 <p>Technasium</p>
-                                Toen de conciërge ‘s morgens vroeg op school kwam en zijn gebruikelijke ronde maakte,
-                                    deed hij een lugubere vondst. In practicumzaal D033 lag...
+                                Toen de conciërge ‘s morgens vroeg op school kwam en zijn gebruikelijke ronde maakte, 
+                                deed hij een lugubere vondst. In practicumzaal D033 lag een lijk op de grond! 
+                                Hij herkende meteen ...
                                     <p><a href="html/technasium.jsp" class="button">Start workshop</a></p>
                             </section>
                         </div>
                         
-                        <div class="workshop_boxes">
+                        <div class="workshop_boxes" position="fixed">
                              <section>
                                     <img src="images/1.jpg" alt="" class="workshop_images"/>
                                     <p>Powerpoints</p>
-                                    In de powerpoints is alles terug te vinden dat in de workshops besproken is.
-                                    Mocht je specifiek bij een workshop de powerpoint willen bekijken, klik
-                                    dan even op de workshop, daar staat ook een link naar de bijbehorende
-                                    powerpoint
+                                    In de powerpoints is alles terug te vinden dat in de workshop besproken is.
+                                    Mocht je een workshop nog terug willen kijken, klik dan de 
+                                    desbetreffende workshop aan, daar staat de powerpoint ook.
                                     <a href="html/powerpoint.jsp" class="button">Open powerpoint</a>
                              </section>
                          </div>
