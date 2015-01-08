@@ -121,7 +121,7 @@
     }, "function" === typeof define && define.amd ? define("eventEmitter/EventEmitter", [], function () {
         return a;
         //do not change these == into ===. The == controlls draggability
-    }) : "object" == typeof module && module.exports ? module.exports = a : this.EventEmitter = a
+    }) : "object" === typeof module && module.exports ? module.exports = a : this.EventEmitter = a
 }.call(this), function (a) {
     var b = document.documentElement, c = function () {
     };
@@ -134,7 +134,7 @@
         } : function () {
             var c = a.event;
             c.target = c.target || c.srcElement, d.call(b, c);
-        }, b.attachEvent("on" + c, b[c + d]);
+        }, b.attachEvent("on" + c, b[c + d]);        
     });
     var d = function () {
     };
@@ -280,6 +280,7 @@
             this.isDragging || this.dragStart(a, a.changedTouches[0]);
         }, m.prototype.onMSPointerDown = m.prototype.onpointerdown = function (a) {
             this.isDragging || this.dragStart(a, a);
+                            
         };
         var u = {mousedown: ["mousemove", "mouseup"], touchstart: ["touchmove", "touchend", "touchcancel"], pointerdown: ["pointermove", "pointerup", "pointercancel"], MSPointerDown: ["MSPointerMove", "MSPointerUp", "MSPointerCancel"]};
         m.prototype.dragStart = function (b, c) {
@@ -297,6 +298,7 @@
                     var d = a.events[b];
                     g.unbind(a.node, d, this);
                 }
+//                alert("this is a boundevent");
                 delete this._boundEvents;
             }
         }, m.prototype.measureContainment = function () {
@@ -352,6 +354,7 @@
         } : function (a, b) {
             return"translate( " + a + "px, " + b + "px)";
         };
+        //vinkje gevonden!!!!!!!
         return m.prototype.setLeftTop = function () {
             this.element.style.left = this.position.x + "px", this.element.style.top = this.position.y + "px";
         }, m.prototype.positionDrag = q ? function () {
@@ -370,7 +373,8 @@
         return a instanceof HTMLElement;
     } : function (a) {
         return a && "object" === typeof a && 1 === a.nodeType && "string" === typeof a.nodeName;
-    }, j = 0, k = "webkit moz ms o".split(" "), l = a.requestAnimationFrame, m = a.cancelAnimationFrame, n = 0; n < k.length && (!l || !m); n++)
+    }, 
+    j = 0, k = "webkit moz ms o".split(" "), l = a.requestAnimationFrame, m = a.cancelAnimationFrame, n = 0; n < k.length && (!l || !m); n++)
         e = k[n], l = l || a[e + "RequestAnimationFrame"], m = m || a[e + "CancelAnimationFrame"] || a[e + "CancelRequestAnimationFrame"];
     l && m || (l = function (b) {
         var c = (new Date).getTime(), d = Math.max(0, 16 - (c - j)), e = a.setTimeout(function () {

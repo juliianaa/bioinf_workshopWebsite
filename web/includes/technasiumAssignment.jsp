@@ -8,7 +8,7 @@
     <p class = "text">
         Welkom ${requestScope.user.username}, <br/>
         We hebben je hulp erg nodig, we moeten drie personen ondervragen over de moord van het hoofd van de labratoria
-        van het Instituus voor Life Science & Technology. <br/>
+        van het Instituut voor Life Science & Technology. <br/>
         Je kan aantekeningen maken, over wat je van de verdachten vindt en dit kan later weer worden bekeken. 
         Help ons bij het vinden van de dader.<br/>
         Heel veel succes!! 
