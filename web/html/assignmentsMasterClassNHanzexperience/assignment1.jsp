@@ -68,13 +68,6 @@
                                             </c:choose>
                                             <h1>Opdracht 1a</h1>
                                             <h2>Sleep de kaarten naar het correcte vak.</h2>
-
-                                            <ul>
-                                                <li>A: Lees DNA Sequentie Uit Bestand</li>
-                                                <li>B: Controleer Of De DNA Sequentie Ook Echt Alleen Uit De Goede Letters Bestaat</li>
-                                                <li>C: Print "geen startcodon gevonden"</li>
-                                                <li>D: Zoek het volgende stopcodon</li>
-                                            </ul>
                                         </div>
                                         <div id="answersPile"></div>
                                         <div id="answersSlots"></div>
