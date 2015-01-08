@@ -16,8 +16,8 @@ $(function(){
             "• Je kunt beleven hoe het is om een specifieke opleiding \nop hbo-niveau te volgen",
             "• Je krijgt informatie over verschillende opleidingen en de\nberoepen die daarbij horen",
             "We hopen dat je veel plezier zult beleven aan dit driedaagse evenement en \ndat het je kan ondersteunen in je keuze of je gaat doorsturen in het hbo."],
-        typeSpeed: -10,
-        backDelay: 800,
+        typeSpeed: -30,
+        backDelay: 1500,
         loop: false,
         loopCount: false
     });
@@ -25,8 +25,8 @@ $(function(){
     $("#login_text").typed({
         strings: ["Voordat we beginnen, geef jezelf eerst een username voor dit \ndriedaagse workshop", 
             "<form action='answer.do' method='post'>username: <input type='text' name='username'></input><input class='button' type='submit' value='Submit'></input></form>"],
-        typeSpeed: -10,
-        backDelay: 800,
+        typeSpeed: -30,
+        backDelay: 1500,
         loop: false,
         loopCount: false,
         contentType: 'html'
