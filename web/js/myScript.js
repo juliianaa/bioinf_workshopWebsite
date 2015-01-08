@@ -6,19 +6,29 @@
 $(document).ready(initialize);
 
 function initialize() {
+    /*
+     * Whenever save_notes_form is called the servlet makeNotes.do is called.
+     */
     $("#save_notes_form").submit(function(event) {
         var url = "http://localhost:8080/Bioinformatica_website/makeNotes.do";
-        var notes_data = {'notes': $("#save_notes_form textarea").val()};
-        //alert(notes_data['notes']);
+        /*
+         * The input of the notes is saved as notes_data.
+         */
+        var notes_data = $("#save_notes_form textarea").val();
+        // var notes_data = {'notes': $("#save_notes_form textarea").val()};
+        /*
+         * The notes_data will be posted to the servlet (url), 
+         * if the text is saved the servlet will return true. 
+         * Within these lines also known as data.
+         * So if data === true, the text was saved succesfully
+         */
         $.post(url, notes_data, function(data) {
-            if (data === data) {
-                alert("" + data + "\nNotes saved!");
-
+            if (data === "true"){
+                alert("Notes saved!");
             } else {
-                alert("" + data + "\nnotes NOT saved");
-            }
-
-            $(".result").html(data);
+                alert("Notes NOT saved");
+            }  
+//            $(".result").html(data);
         });
         //alert("Handler for .submit() called.");
         event.preventDefault();

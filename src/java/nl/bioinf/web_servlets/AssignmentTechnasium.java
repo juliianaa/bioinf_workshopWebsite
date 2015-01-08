@@ -77,13 +77,17 @@ public class AssignmentTechnasium extends HttpServlet {
             final HttpServletResponse response)
             throws ServletException, IOException {
         //processRequest(request, response);
+        
         String notes = request.getParameter("notes");
         //Logger.getLogger(AssignmentTechnasium.class.getName()).log(
         //Level.INFO, "****" + notes);
         String userName = "piet";
         //request.getSession().getAttribute("user_name");
 
-        //SAVE IN TEMP FILE
+        /*
+        If the function saveAsTemp returns true
+        Than the true will be catched so it can be used within myScript.js as an extra check.
+        */
         boolean succes = saveAsTemp(notes, userName);
         if (succes) {
             try (PrintWriter pw = response.getWriter()) {
@@ -104,32 +108,43 @@ public class AssignmentTechnasium extends HttpServlet {
     }// </editor-fold>
 
     /**
-     * saveAsTemp will be called by the doPost
+     * saveAsTemp will be called by the doPost.
+     * This function writes the notes made by the user in its own file.
      *
-     * @param notes are the notes given
-     * @param userName is the name of the person who wants te save the notes.
-     * @return true or false
-     * @throws IOException
+     * @param notes are the notes given by the user.
+     * @param userName is the name of the user.
+     * @return only true if the notes are correctly saved within its file
+     * @throws IOException when the notes or userName cannot be found..
      */
     private boolean saveAsTemp(final String notes, final String userName)
             throws IOException {
+        /*
+        The path is where all the files will be saved
+        The file will get the name of the user with the addition of _notes.txt
+        .txt has been chosen because this type of file can be overwritten a
+        .tmp creates an new file every time a user saves.
+        */
         String path = "/Users/mldubbelaar/Desktop/test/";
         String prefix = userName + "_notes";
         String suffix = ".txt";
+        boolean fileSaved = false;
 
         try {
-
             String tempFile = path + prefix + suffix;
-           // System.out.println("$$$$$$$$$" + tempFile);
-
+            //System.out.println("$$$$$$$$$" + tempFile);
             try (PrintWriter writer = new PrintWriter(tempFile, "UTF-8")) {
+                /*
+                The notes which were added on the site are written into the user file.
+                An fileSaved will be changed into true.
+                */
                 writer.println(notes);
                 writer.close();
+                fileSaved = true;
             }
         } catch (Exception e) {
             System.out.println(e);
         }
-        return true;
+        return fileSaved;
     }
 
 //            //File tempFile = File.createTempFile(prefix, suffix);
