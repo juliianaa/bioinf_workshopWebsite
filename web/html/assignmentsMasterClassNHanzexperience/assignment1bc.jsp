@@ -31,7 +31,13 @@
         <br/><li>volg de instructies van het programma</li>
         <li>sla de genen op in een tekstbestand</li>
     </ul>
-
+    
+    <form method="post" enctype="multipart/form-data" action="uploadFile.do">
+        File to upload: <input type="file" name="upfile"><br/>
+        <br/>
+        <input type="submit" value="Submit"> to upload the file!
+     </form>
+    
     <h2>Extra opdracht</h2>
     <p>
         Er wordt geen rekening gehouden met de andere streng van het DNA. Pas het programma zo aan, dat ook deze geanalyseerd wordt.

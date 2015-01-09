@@ -8,6 +8,10 @@
         <servlet-name>AssignmentTechnasium</servlet-name>
         <servlet-class>nl.bioinf.web_servlets.AssignmentTechnasium</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>FileUploaderServlet</servlet-name>
+        <servlet-class>nl.bioinf.web_servlets.FileUploaderServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AssignmentAnsweringServlet</servlet-name>
         <url-pattern>/answer.do</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>AssignmentTechnasium</servlet-name>
         <url-pattern>/makeNotes.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FileUploaderServlet</servlet-name>
+        <url-pattern>/uploadFile.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
