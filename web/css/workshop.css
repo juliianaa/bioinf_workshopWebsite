@@ -192,3 +192,14 @@ and open the template in the editor.
     bottom: 0px;
     margin-bottom:30px;
 }
+
+.img-zoom {
+    width: 310px;
+}
+ 
+.transition {
+    transform: scale(2); 
+    z-index: 3;
+    
+    
+}

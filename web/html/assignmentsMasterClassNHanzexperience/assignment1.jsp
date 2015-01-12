@@ -56,27 +56,9 @@
                                     <img src="images/banner.jpg" width="970" height="300" alt=""/>
                                 </ul>
                                 <div class="content" id="question" style = "width: 800px;" >
-                                    <div id="number_passer" data-nr="1">
-                                        <div>
-                                            <c:choose>
-                                                <c:when test="${sessionScope.user != null}">
-                                                    <h1>Welkom, ${sessionScope.user}</h1>
-                                                </c:when>
-                                                <c:otherwise>
-                                                    <h1>No name</h1>
-                                                </c:otherwise>
-                                            </c:choose>
-                                            <h1>Opdracht 1a</h1>
-                                            <h2>Sleep de kaarten naar het correcte vak.</h2>
-                                        </div>
-                                        <div id="answersPile"></div>
-                                        <div id="answersSlots"></div>
-                                        <img src="images/hanzeXperience_MBO/HanzeXperience(drag and drop).png" alt="" style="position:relative"/>
-                                        <div id="successMessage">
-                                            <h2>You did it!</h2>
-                                        </div>
-                                    </div>
+                                    <%@include file="../../html/assignmentsMasterClassNHanzexperience/assignment1a.jsp" %>
                                 </div>
+                                <button id="previous_question_button" class="button" type="button">Vorige vraag</button>
                                 <button id="next_question_button" class="button" type="button">Volgende vraag</button>
                                 <!--End of content-->
                             </div>
