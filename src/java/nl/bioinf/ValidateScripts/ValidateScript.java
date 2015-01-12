@@ -12,6 +12,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -25,13 +26,17 @@ import java.util.regex.Pattern;
 public class ValidateScript {
     private String fileContent;
     private String ResultString;
+    private String resultContent;
     private List<String> userMain;
     private boolean isAValidMain;
     private String f;
+    private int correctAnswer;
+    private int wrongAnswer;
+    
     
     public void start(String filePath) throws IOException {
         readFile(filePath);
-        getMain(fileContent);
+        ResultString = getMain(fileContent);
         checkIfMainIsValid(ResultString);
         
     }
@@ -41,33 +46,54 @@ public class ValidateScript {
         fileContent = new String(Files.readAllBytes(Paths.get(filepath)));
     }
     
-     private void getMain(String fileContent) {
-       String pattern = "main\\(\\):\n(.*)main()";
+     private String getMain(String fileContent) {
+       String pattern = "main\\(\\):\n(.*)while not";
+       String resultString = "";
        Pattern p = Pattern.compile(pattern, Pattern.DOTALL);
        Matcher regexMatch = p.matcher(fileContent);
        if(regexMatch.find()){
-           ResultString = regexMatch.group(1);
+           resultString = regexMatch.group(1);
        }
+       return resultString;
        
        
     }
 
 
     private void checkIfMainIsValid(String mainFunction) {
+        mainFunction = mainFunction.replace("\t", "");
         userMain = new ArrayList<>(Arrays.asList(mainFunction.split("\n")));
         try {
-            f = new String(Files.readAllBytes(Paths.get("../../../../../web/scripts/zoekGen_werkend.py")));
+            f = new String(Files.readAllBytes(Paths.get("/commons/Themas/Thema10/fileSaver/uitwerking/zoekGen_werkend.py")));
+            String answerContent = getMain(f).replace("\t", "");
+            List<String> answerMain =  new ArrayList<>(Arrays.asList(answerContent.split("\n")));
             
-//        getAnswerScript
+            
+            if(userMain.size() == answerMain.size()){
+                for (int i = 0; i < answerMain.size(); i++) { 
+                    if(userMain.get(i).equals(answerMain.get(i))){
+                        correctAnswer = correctAnswer+1;
+                    }else{
+                        wrongAnswer = wrongAnswer+1;
+                    }
+                }
+            }else{
+                resultContent="Size is not the same";
+            }
+            
+            
         } catch (IOException ex) {
             Logger.getLogger(ValidateScript.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
 
-    public String getFileContent() {
-        return f;
+    public String Result(){
+       if(wrongAnswer != 0){
+       }
+       return resultContent;
     }
+    
 
    
 

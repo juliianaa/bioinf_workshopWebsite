@@ -97,11 +97,10 @@ public class FileUploaderServlet extends HttpServlet {
                 ValidateScript checkScript = new ValidateScript();
                 checkScript.start(filePath);
                 
-//                List<String> content = checkScript.getFileContent();
-                String content = checkScript.getFileContent();
+                String result = checkScript.Result();
            
                 
-                response.getWriter().println(content);
+                response.getWriter().println(result);
                 
 //                HaplotypeFinder haplotypeFinder = new HaplotypeFinder();
 //                haplotypeFinder.start(filePath, Integer.parseInt(ploidy), "percentageBased");
