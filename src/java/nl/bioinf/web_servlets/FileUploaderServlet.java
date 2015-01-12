@@ -31,8 +31,8 @@ public class FileUploaderServlet extends HttpServlet {
     // location to store file uploaded
     // constructs the directory path to store upload file
     // this path is relative to application's directory
-//    private static final String uploadPath = "/commons/Themas/Thema10/Deelopdracht5_Mar_Juul_Dyl/upload";
-    private static final String uploadPath = "C:\\Users\\Juliana\\Documents\\test";
+    private static final String uploadPath = "/commons/Themas/Thema10/fileSaver";
+//    private static final String uploadPath = "C:\\Users\\Juliana\\Documents\\test";
 
 
     /**
@@ -90,24 +90,17 @@ public class FileUploaderServlet extends HttpServlet {
                         // saves the file on disk
                         item.write(storeFile);
 
-                    }//process only form fields like text
-//                    if (item.isFormField()) {
-//                        String name = item.getFieldName();
-//                        String value = item.getString();
-//                        ploidy = value;
-//                        request.setAttribute("ploidy", ploidy);
-//                    }
+                    }
 
                 }
                 
                 ValidateScript checkScript = new ValidateScript();
                 checkScript.start(filePath);
                 
-                List<String> content = checkScript.getFileContent();
+                String result = checkScript.Result();
+           
                 
-                response.getWriter().println(content);
-                
-//                response.getWriter().println(filePath);
+                response.getWriter().println(result);
                 
 //                HaplotypeFinder haplotypeFinder = new HaplotypeFinder();
 //                haplotypeFinder.start(filePath, Integer.parseInt(ploidy), "percentageBased");
