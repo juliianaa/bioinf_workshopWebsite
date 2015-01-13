@@ -33,18 +33,22 @@ function initialize() {
         event.preventDefault();
     });
     
+    
+    
     $("#get_nodes").click(function() {
         var url = "http://localhost:8080/Bioinformatica_website/makeNotes.do";
-
-        $.get(url,  function(fileName){
-            alert(fileName);
-//            if (data === ""){
-//                alert("NOOOOOOO");
-//            } else {
-//                alert("YUSSSSHHHH!!!");
-//            }
+        $.get(url, function(textFromNotes){
+            alert(textFromNotes);
         });
+//            alert(textFromNotes);
+////            if (data === ""){
+////                alert("NOOOOOOO");
+////            } else {
+////                alert("YUSSSSHHHH!!!");
+////            }
+//        });
     });
+    
     
     $("#first").click(function() {
         $("#questionImage").load("html/technasiumQuestions/tafel.jsp");

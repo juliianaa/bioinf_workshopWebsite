@@ -73,31 +73,22 @@ public class AssignmentTechnasium extends HttpServlet {
         String userName = "piet";
         
         File file = new File("/Users/mldubbelaar/Desktop/test/"+userName+"_notes.txt");
-        String path = file.getAbsolutePath();
+//        File file = new File("/Users/mldubbelaar/Desktop/test/");
+//        String path = file.getAbsolutePath();
         String savedNotes = getSavedNotes(file);
-        System.out.println("###############" + savedNotes);
-
+        
         if (savedNotes.isEmpty()) {
-          
+            try (PrintWriter pw = response.getWriter()) {
+                pw.print("Er is iets fout gegaan met het ophalen van de notities!\n"
+                        + "Neem contact op met de docent.");
+                pw.flush();
+            }
         } else {
              try (PrintWriter pw = response.getWriter()) {
-                pw.print(Boolean.toString(succes));
+                pw.print(savedNotes);
                 pw.flush();
             }
         }
-        
-        
-//        Path path = Paths.get("/Users/mldubbelaar/Desktop/test/"+userName+"_notes.txt");
-//        System.out.println("######################"+path);
-//        File file = new File(path);
-////        Path folder = p.getParent();
-//        String savedNotes = getSavedNotes(file);
-//        System.out.println("###############" + savedNotes);
-
-//        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-//        URL resource = classLoader.getResource(userName+"_notes.txt");
-//        File file = new File(resource.getPath());
-//        System.out.println("********************"+file);
     }
 
     private String getSavedNotes(File filePath) throws FileNotFoundException, IOException {
