@@ -5,8 +5,16 @@
  */
 package nl.bioinf.web_servlets;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -61,7 +69,55 @@ public class AssignmentTechnasium extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+//        processRequest(request, response);
+        String userName = "piet";
+        
+        File file = new File("/Users/mldubbelaar/Desktop/test/"+userName+"_notes.txt");
+        String path = file.getAbsolutePath();
+        String savedNotes = getSavedNotes(file);
+        System.out.println("###############" + savedNotes);
+
+        if (savedNotes.isEmpty()) {
+          
+        } else {
+             try (PrintWriter pw = response.getWriter()) {
+                pw.print(Boolean.toString(succes));
+                pw.flush();
+            }
+        }
+        
+        
+//        Path path = Paths.get("/Users/mldubbelaar/Desktop/test/"+userName+"_notes.txt");
+//        System.out.println("######################"+path);
+//        File file = new File(path);
+////        Path folder = p.getParent();
+//        String savedNotes = getSavedNotes(file);
+//        System.out.println("###############" + savedNotes);
+
+//        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+//        URL resource = classLoader.getResource(userName+"_notes.txt");
+//        File file = new File(resource.getPath());
+//        System.out.println("********************"+file);
+    }
+
+    private String getSavedNotes(File filePath) throws FileNotFoundException, IOException {
+        FileReader fr = new FileReader(filePath);
+        BufferedReader br = new BufferedReader(fr);
+        String textFromNotes = "";
+        try {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+            while (line != null) {
+                sb.append(line);
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+            }
+            textFromNotes = sb.toString();
+        } finally {
+            br.close();
+        }
+
+        return textFromNotes;
     }
 
     /**
@@ -79,8 +135,7 @@ public class AssignmentTechnasium extends HttpServlet {
         //processRequest(request, response);
         
         String notes = request.getParameter("notes");
-        //Logger.getLogger(AssignmentTechnasium.class.getName()).log(
-        //Level.INFO, "****" + notes);
+//        Logger.getLogger(AssignmentTechnasium.class.getName()).log(Level.INFO, "****{0}", notes);
         String userName = "piet";
         //request.getSession().getAttribute("user_name");
 

@@ -30,7 +30,8 @@
             <button id="last_question_button" class = "imageButton"><b>< Vorige</b></button>
             <button id="next_question_button" class = "imageButton"><b>> Volgende</b></button>
             <button id ="last" class = "imageButton">>></button>
-            <button id="bewijsMateriaal"class="imageButton">Bewijs materiaal</button>
+            <button id="Bewijs_materiaal" class="imageButton">Bewijs materiaal</button>
+            <button id="get_nodes" class="imageButton">Aantekeningen</button>
         </div>
     </div>
 </div>

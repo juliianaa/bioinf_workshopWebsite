@@ -14,8 +14,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
-        <script src="js/hideText.js" type="text/javascript"></script>
         <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+        <script src="js/hideText.js" type="text/javascript"></script>
         <script src="js/myScript.js" type="text/javascript"></script>
         <script src="js/typed.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
