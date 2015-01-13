@@ -24,7 +24,7 @@
         <div class="noteBox">
             <label for="basic">Aantekeningen:</label>
             <form  id="save_notes_form" action="#" method="post">
-                <textarea cols="35" rows="24" name="notes">Maak hier je aantekeningen over de verdachten!</textarea>
+                <textarea cols="35" rows="24" name="notes" id = "notes">Maak hier je aantekeningen over de verdachten!</textarea>
                 <input type="submit" value="Save"/></form>
             <button id ="first" class = "imageButton"><<</button>
             <button id="last_question_button" class = "imageButton"><b>< Vorige</b></button>
