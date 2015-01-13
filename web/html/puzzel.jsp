@@ -20,6 +20,7 @@
                         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
                         <link rel="stylesheet" type="text/css" href="css/demo.css" />
                         <link rel="stylesheet" type="text/css" href="css/bottom-slide.css" />
+                        <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
                         <script src="js/draggabillity.js"></script>
                         <script src="js/dragdrop.js"></script>
                         </head>
@@ -37,22 +38,22 @@
 
                                     </header>
                                     <div id="grid" class="grid clearfix">
-                                        <div id='1cor'  class="grid__item"><i class="fa fa-fw"></i>Mendel</div>
-                                        <div id=""      class="grid__item"><i class="fa fa-fw"></i>A</div>
-                                        <div            class="grid__item"><i class="fa fa-fw"></i>T</div>
-                                        <div            class="grid__item"><i class="fa fa-fw"></i>C</div>
-                                        <div id='2cor' class="grid__item"><i class="fa fa-fw"></i>G</div>
-                                        <div id='4cor' class="grid__item"><i class="fa fa-fw"></i>U</div>
-                                        <div id='5cor' class="grid__item"><i class="fa fa-fw"></i>codon</div>
-                                        <div id='10cor' class="grid__item"><i class="fa fa-fw"></i>Watson and Crick</div>
-                                        <div id='3cor' class="grid__item"><i class="fa fa-fw"></i>Transcriptie</div>
-                                        <div id='7cor' class="grid__item"><i class="fa fa-fw"></i>Translatie</div>
-                                        <div id='9cor' class="grid__item"><i class="fa fa-fw"></i>20</div>
-                                        <div id='6cor' class="grid__item"><i class="fa fa-fw"></i>AUG</div>
-                                        <div id='11cor' class="grid__item"><i class="fa fa-fw"></i>1</div>
-                                        <div id='12cor' class="grid__item"><i class="fa fa-fw"></i>30</div>
-                                        <div            class="grid__item"><i class="fa fa-fw"></i>N</div>
-                                        <div id='8cor' class="grid__item"><i class="fa fa-fw"></i>ribosomen</div>
+                                        <div data-cor='1cor'  class="grid__item"><i class="fa fa-fw"></i>Mendel</div>
+                                        <div data-cor=""  class="grid__item"><i class="fa fa-fw"></i>A</div>
+                                        <div data-cor=""   class="grid__item"><i class="fa fa-fw"></i>T</div>
+                                        <div  data-cor=""  class="grid__item"><i class="fa fa-fw"></i>C</div>
+                                        <div data-cor='2cor' class="grid__item"><i class="fa fa-fw"></i>G</div>
+                                        <div data-cor='4cor' class="grid__item"><i class="fa fa-fw"></i>U</div>
+                                        <div data-cor='5cor' class="grid__item"><i class="fa fa-fw"></i>codon</div>
+                                        <div data-cor='10cor' class="grid__item"><i class="fa fa-fw"></i>Watson and Crick</div>
+                                        <div data-cor='3cor' class="grid__item"><i class="fa fa-fw"></i>Transcriptie</div>
+                                        <div data-cor='7cor' class="grid__item"><i class="fa fa-fw"></i>Translatie</div>
+                                        <div data-cor='9cor' class="grid__item"><i class="fa fa-fw"></i>20</div>
+                                        <div data-cor='6cor' class="grid__item"><i class="fa fa-fw"></i>AUG</div>
+                                        <div data-cor='11cor' class="grid__item"><i class="fa fa-fw"></i>1</div>
+                                        <div data-cor='12cor' class="grid__item"><i class="fa fa-fw"></i>30</div>
+                                        <div data-cor="" class="grid__item"><i class="fa fa-fw"></i>N</div>
+                                        <div data-cor='8cor' class="grid__item"><i class="fa fa-fw"></i>ribosomen</div>
                                     </div>
 
 
@@ -62,18 +63,18 @@
                             <div id="drop-area" class="drop-area">
                                 <div>
                                     <div class="dummy"></div>
-                                    <div id='1cor' class="drop-area__item"><i class="fa fa-fw"></i>Door wie is Wetenschappelijk bewezen dat genen de dragers zijn van het erfelijke materiaal?</div>
-                                    <div id='2cor' class="drop-area__item"><i class="fa fa-fw"></i>Zet de 4 bases die een DNA molecuul maken op alfabetische volgorde, wat is de 3de base?</div>
-                                    <div id='3cor' class="drop-area__item"><i class="fa fa-fw"></i>Hoe noemen we het proces van DNA afschrijven en mRNA maken?</div>
-                                    <div id='4cor' class="drop-area__item"><i class="fa fa-fw"></i>Welke base zit er in mRNA inplaats van de T?</div>
-                                    <div id='5cor' class="drop-area__item"><i class="fa fa-fw"></i>Hoe noemen we een stukje van 3 bases in het mRNA dat codeert voor een aminozuur?	</div>
-                                    <div id='6cor' class="drop-area__item"><i class="fa fa-fw"></i>Welke base(n) coderen voor het start codon?</div>
-                                    <div id='7cor'  class="drop-area__item"><i class="fa fa-fw"></i>Hoe noemen we de laatste stap waarbij mRNA wordt omgezet in een eiwit?</div>
-                                    <div id='8cor' class="drop-area__item"><i class="fa fa-fw"></i>Wat zijn de eiwit fabriekjes van de cel?</div>
-                                    <div id='9cor' class="drop-area__item"><i class="fa fa-fw"></i>Hoeveel aminozuren kunnen er gemaakt worden met de verschillende codons?</div>
-                                    <div id='10cor' class="drop-area__item"><i class="fa fa-fw"></i>Aan wie  is de nobel prijs uitgereikt voor het ontdekken van DNA?</div>
-                                    <div id='11cor' class="drop-area__item"><i class="fa fa-fw"></i>Voor hoeveel procent lijkt ons DNA NIET op dat van een chimpansee?</div>
-                                    <div id='12cor' class="drop-area__item"><i class="fa fa-fw"></i>Hoeveel duizendtallen aan genen heeft een mens ongeveer?</div>
+                                    <div data-cor='1cor' class="drop-area__item"><i class="fa fa-fw"></i>Door wie is Wetenschappelijk bewezen dat genen de dragers zijn van het erfelijke materiaal?</div>
+                                    <div data-cor='2cor' class="drop-area__item"><i class="fa fa-fw"></i>Zet de 4 bases die een DNA molecuul maken op alfabetische volgorde, wat is de 3de base?</div>
+                                    <div data-cor='3cor' class="drop-area__item"><i class="fa fa-fw"></i>Hoe noemen we het proces van DNA afschrijven en mRNA maken?</div>
+                                    <div data-cor='4cor' class="drop-area__item"><i class="fa fa-fw"></i>Welke base zit er in mRNA inplaats van de T?</div>
+                                    <div data-cor='5cor' class="drop-area__item"><i class="fa fa-fw"></i>Hoe noemen we een stukje van 3 bases in het mRNA dat codeert voor een aminozuur?	</div>
+                                    <div data-cor='6cor' class="drop-area__item"><i class="fa fa-fw"></i>Welke base(n) coderen voor het start codon?</div>
+                                    <div data-cor='7cor'  class="drop-area__item"><i class="fa fa-fw"></i>Hoe noemen we de laatste stap waarbij mRNA wordt omgezet in een eiwit?</div>
+                                    <div data-cor='8cor' class="drop-area__item"><i class="fa fa-fw"></i>Wat zijn de eiwit fabriekjes van de cel?</div>
+                                    <div data-cor='9cor' class="drop-area__item"><i class="fa fa-fw"></i>Hoeveel aminozuren kunnen er gemaakt worden met de verschillende codons?</div>
+                                    <div data-cor='10cor' class="drop-area__item"><i class="fa fa-fw"></i>Aan wie  is de nobel prijs uitgereikt voor het ontdekken van DNA?</div>
+                                    <div data-cor='11cor' class="drop-area__item"><i class="fa fa-fw"></i>Voor hoeveel procent lijkt ons DNA NIET op dat van een chimpansee?</div>
+                                    <div data-cor='12cor' class="drop-area__item"><i class="fa fa-fw"></i>Hoeveel duizendtallen aan genen heeft een mens ongeveer?</div>
                                 </div>
                             </div>
                             <div class="drop-overlay"></div>
