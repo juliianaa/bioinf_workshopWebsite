@@ -221,9 +221,21 @@ and open the template in the editor.
 #get_nodes{
     top:0;
     left:0;
+}
 
+#nextPage{
+    top: -120px;
+    width: 200px;
 }
 .text {width: 800px;}
+
+.text h1 {
+  padding: 0 15px 20px 0;
+  font: 230% 'News Cycle', arial, sans-serif;
+  text-shadow:  #FFF 1px 1px;
+  margin: 0 1px;
+  color: #444;
+}
 
 .imageBoxes{
     margin-right:-20px;

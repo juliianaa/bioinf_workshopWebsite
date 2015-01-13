@@ -5,14 +5,16 @@
 --%>
 
 <div id="text_case">
-    <p class = "text">
+    <div class = "text">
+        <h1>Technasium</h1>
         Welkom ${requestScope.user.username}, <br/>
+        <br/>
         We hebben je hulp erg nodig, we moeten drie personen ondervragen over de moord van het hoofd van de labratoria
         van het Instituut voor Life Science & Technology. <br/>
         Je kan aantekeningen maken, over wat je van de verdachten vindt en dit kan later weer worden bekeken. 
         Help ons bij het vinden van de dader.<br/>
         Heel veel succes!! 
-    </p>
+    </div>
     <div id="question_div" data-question-number="1" data-imgNumber="tafel" >
         <div class="imageBoxes" id = "questionImage" > 
             <img data-imgNumber="tafel" id = "image" src="images/houtenTafel.jpg" alt=""/> 
@@ -32,6 +34,7 @@
             <button id="next_question_button" class = "imageButton"><b>> Volgende</b></button>
             <button id ="last" class = "imageButton">>></button>
             <button id="bewijsMateriaal" class="imageButton">Bewijs materiaal</button>
+            <a href="html/technasiumWorkshop2.jsp"><button id="nextPage" class="imageButton">Volgende Pagina</button></a>
         </div>
     </div>
 </div>

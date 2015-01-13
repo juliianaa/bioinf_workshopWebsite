@@ -34,7 +34,6 @@
             <ul id="images">
                 <img src="images/banner.jpg" width="970" height="300" alt=""/>
             </ul>
-            <h1>Technasium</h1>
             <c:choose>
                 <c:when test="${empty sessionScope.user}">
                     <jsp:include page="../includes/loginForm.jsp"/>
