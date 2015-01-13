@@ -22,39 +22,20 @@
     </head>
 
     <body>
-        <div id="main">
-            
+        <div id="main1">
             <%@include file="../../includes/bodyHeader.jsp" %>
-
-
             <div id="site_content">
                 <div id="top_border"></div>
-                
                 <div class="content" style = "width: 800px;">
-                    
                     <span class="element" id="login_text" style="white-space:pre"></span>
-                    
                     <img src="images/textBalloon.png" style="float:right" alt=""/>   
-                    
                     <p>
-
                         <img src="images/prof.png" width="210" height="400" alt=""/>
-                        
-
                     </p>
-                        
-
-      
                 </div>
                 <!--End of content-->
             </div>
-
-
             <%@include file="../../includes/bodyFooter.jsp" %>
-
-
         </div>
-
-
     </body>
 </html>

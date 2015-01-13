@@ -8,5 +8,4 @@
         <p>
             Probeer alvast op een rijtje te zetten wat er volgens jou aan de hand is zodat je er morgen een website van kunt maken.
         </p>
-        <button id="next_question_button" class="button">Volgende vraag</button>
 </div>

@@ -28,7 +28,7 @@
         <div id="main1">
             <%@include file="../includes/bodyHeader.jsp" %>
 
-            <div id="site_content">
+            
                 <div id="top_border"></div>
 
                 <ul id="images">
@@ -36,7 +36,7 @@
                 </ul>
 
 
-                <div class="content">
+                
                     <h1>Technasium</h1>
                     <c:choose>
                         <c:when test="${empty sessionScope.user}">
@@ -47,10 +47,7 @@
                             <jsp:include page="../includes/technasiumAssignment.jsp"/>
                         </c:otherwise>
                     </c:choose>
-
-                    <!--End of content-->
-                </div>
-            </div>
+                    <!--End of content-->         
             <%@include file="../includes/bodyFooter.jsp" %>
         </div>
     </body>
