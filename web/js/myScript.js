@@ -200,5 +200,8 @@ function initialize() {
                 $("#questionImage").load("html/technasiumQuestions/slide1.jsp");
         }
     });
+    $("#bewijsMateriaal").click(function(){
+        $("#questionImage").load("html/technasiumQuestions/bewijs.jsp");
+    });
 }
 

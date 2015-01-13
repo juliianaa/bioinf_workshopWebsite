@@ -207,3 +207,11 @@ and open the template in the editor.
     left:-155px;
 }
 .text {width: 800px;}
+.imageButton#bewijsMateriaal{
+    width: 150px;
+    left:-608px;
+    top:-80px;
+}
+.imageBoxes{
+    margin-right:-20px;
+}
