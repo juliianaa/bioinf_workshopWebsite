@@ -137,8 +137,22 @@ and open the template in the editor.
     -webkit-transform: scale3d(1.08,1.08,1);
     transform: scale3d(1.08,1.08,1);
 }
+.dragon{
+    color: white;
+    background: grey;
+    pointer-events: none;   
+    float: left;
+    margin: 0.5%;
+    width: 49%;
+    height: 2.05em;
+    padding: 0.35em 0.5em;
+    border-radius: 4px;
+    font-size: 1em;
+    text-align: center;
+}
 .good {
-       color: green;}
+       color: green;
+       }
 .bad{
      color: red;}
 
