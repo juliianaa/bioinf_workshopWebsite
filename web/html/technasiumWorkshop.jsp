@@ -11,11 +11,11 @@
 <html>
     <head>
         <base href="${initParam.base_url}">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
-        <script src="js/hideText.js" type="text/javascript"></script>
         <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+        <script src="js/hideText.js" type="text/javascript"></script>
         <script src="js/myScript.js" type="text/javascript"></script>
         <script src="js/typed.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -28,26 +28,24 @@
         <div id="main1">
             <%@include file="../includes/bodyHeader.jsp" %>
 
-            
-                <div id="top_border"></div>
+ <div id="site_content">
+            <div id="top_border"></div>
 
-                <ul id="images">
-                    <img src="images/banner.jpg" width="970" height="300" alt=""/>
-                </ul>
-
-
-                
-                    <h1>Technasium</h1>
-                    <c:choose>
-                        <c:when test="${empty sessionScope.user}">
-                            <jsp:include page="../includes/loginForm.jsp"/>
-                        </c:when>
-                        <c:otherwise>
-                            <jsp:include page="../includes/logout.jsp"/>
-                            <jsp:include page="../includes/technasiumAssignment.jsp"/>
-                        </c:otherwise>
-                    </c:choose>
-                    <!--End of content-->         
+            <ul id="images">
+                <img src="images/banner.jpg" width="970" height="300" alt=""/>
+            </ul>
+            <h1>Technasium</h1>
+            <c:choose>
+                <c:when test="${empty sessionScope.user}">
+                    <jsp:include page="../includes/loginForm.jsp"/>
+                </c:when>
+                <c:otherwise>
+                    <jsp:include page="../includes/logout.jsp"/>
+                    <jsp:include page="../includes/technasiumAssignment.jsp"/>
+                </c:otherwise>
+            </c:choose>
+            <!--End of content-->         
+        </div>
             <%@include file="../includes/bodyFooter.jsp" %>
         </div>
     </body>

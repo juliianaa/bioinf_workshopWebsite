@@ -26,11 +26,12 @@
             <form  id="save_notes_form" action="#" method="post">
                 <textarea cols="35" rows="24" name="notes" id = "notes">Maak hier je aantekeningen over de verdachten!</textarea>
                 <input type="submit" value="Save"/></form>
+            <button id="get_nodes" class="imageButton">Aantekeningen</button>
             <button id ="first" class = "imageButton"><<</button>
             <button id="last_question_button" class = "imageButton"><b>< Vorige</b></button>
             <button id="next_question_button" class = "imageButton"><b>> Volgende</b></button>
             <button id ="last" class = "imageButton">>></button>
-            <button id="bewijsMateriaal"class="imageButton">Bewijs materiaal</button>
+            <button id="bewijsMateriaal" class="imageButton">Bewijs materiaal</button>
         </div>
     </div>
 </div>

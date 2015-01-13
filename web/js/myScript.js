@@ -14,8 +14,8 @@ function initialize() {
         /*
          * The input of the notes is saved as notes_data.
          */
-        var notes_data = $("#save_notes_form textarea").val();
-        // var notes_data = {'notes': $("#save_notes_form textarea").val()};
+//        var notes_data = $("#save_notes_form textarea").val();
+         var notes_data = {'notes': $("#save_notes_form textarea").val()};
         /*
          * The notes_data will be posted to the servlet (url), 
          * if the text is saved the servlet will return true. 
@@ -24,15 +24,32 @@ function initialize() {
          */
         $.post(url, notes_data, function(data) {
             if (data === "true"){
-                alert("Notes saved!");
+                alert("De aantekeningen zijn opgeslagen!");
             } else {
-                alert("Notes NOT saved");
+                alert("Er is iets misgegaan./nNeem contact op met de docent!");
             }  
-//            $(".result").html(data);
+            $(".result").html(data);
         });
-        //alert("Handler for .submit() called.");
         event.preventDefault();
     });
+    
+    
+    
+    $("#get_nodes").click(function() {
+        var url = "http://localhost:8080/Bioinformatica_website/makeNotes.do";
+        $.get(url, function(textFromNotes){
+            alert(textFromNotes);
+        });
+//            alert(textFromNotes);
+////            if (data === ""){
+////                alert("NOOOOOOO");
+////            } else {
+////                alert("YUSSSSHHHH!!!");
+////            }
+//        });
+    });
+    
+    
     $("#first").click(function() {
         $("#questionImage").load("html/technasiumQuestions/tafel.jsp");
     });
