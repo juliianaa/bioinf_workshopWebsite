@@ -104,6 +104,8 @@
             // if all questions are answered correctly follow trough
             if(goodQuestions === 12){
                 alert("alles goed!");
+                $("#grid").addClass("hidden");
+                $("#correctAnswered").removeClass("hidden");
             }
 
         }

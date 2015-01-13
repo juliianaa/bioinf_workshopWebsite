@@ -57,7 +57,17 @@
                                         <div id = "8" data-cor='8' class="grid__item"><i class="fa fa-fw"></i>Mitochondri&euml;n</div>
                                     </div>
 
-
+                                    <div id="correctAnswered" class = "hidden"><h2>Goed gedaan!</h2>
+                                        Je hebt de puzzel goed ingevuld! Hier zijn
+                                        de sequenties waarmee je verder kunt werken!
+                                        <p id = "fasta">Bacterie_1<br/>
+                                            TACGTAGGGTGCGAGCGTTATCCGGATTTATTGGGCGTAAAGGGCTCGTAGGCGGTTCGTCGCGTCCGGTGTGAAAGTCC<br/>
+                                            Bacterie_2<br/>
+                                            ACGTAGGTGGCAAGCGTTATCCGGATTTATTGGGCGTAAAGCGAGCGCAGGCGGTTTTTTAAGTCTGATGTGAAAGCCCT<br/>
+                                            Bacterie_3<br/>
+                                            CGGATCAGCACGCCGCGGTGAATACGTTCCCGGGCCTTGTACACACCGCCCGTCACACCACGAGAGTTTGTAACACCCGA
+                                        </p>
+                                    </div>
                                 </div><!-- /content -->
 
                             </div><!-- /container -->
