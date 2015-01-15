@@ -32,7 +32,7 @@
 
                 <div class="content" >
                     Hieronder vindt je de bio-informatica puzzel met wat biologische/genetische vragen.<br/>
-                    Je kunt kunt een antwoord oppakken en slepen naar het goede antwoord dat in beeld<br/>
+                    Je kunt kunt een antwoord oppakken en slepen naar de bijpassnde vraag die in beeld<br/>
                     komt op het moment dat je een antwoord oppakt met de muis. <br/>
 
                     <header class="codrops-header">
@@ -62,14 +62,16 @@
 
             </div><!-- /container -->
             <div id="drop-area" class="drop-area">
-                <div>
+                <div id="Default" class="contentHolder">
                     <div class="dummy"></div>
                     <div data-cor="1" class="drop-area__item"><i class="fa fa-fw"></i>Door wie is Wetenschappelijk bewezen dat genen de dragers zijn van het erfelijke materiaal?</div>
                     <div data-cor='2' class="drop-area__item"><i class="fa fa-fw"></i>Zet de 4 bases die een DNA molecuul maken op alfabetische volgorde, wat is de 3de base?</div>
                     <div data-cor='3' class="drop-area__item"><i class="fa fa-fw"></i>Hoe noemen we het proces van DNA afschrijven en mRNA maken?</div>
                     <div data-cor='4' class="drop-area__item"><i class="fa fa-fw"></i>Welke base zit er in mRNA inplaats van de T?</div>
                     <div data-cor='5' class="drop-area__item"><i class="fa fa-fw"></i>Hoe noemen we een stukje van 3 bases in het mRNA dat codeert voor een aminozuur?	</div>
-                    <div data-cor='6' class="drop-area__item"><i class="fa fa-fw"></i>Welke base(n) coderen voor het start codon?</div>
+                    <div data-cor='6' class="drop-are  Hieronder vindt je de bio-informatica puzzel met wat biologische/genetische vragen.<br/>
+                    Je kunt kunt een antwoord oppakken en slepen naar de bijpassnde vraag die in beeld<br/>
+                    komt op het moment dat je een antwoord oppakt met de muis. <br/>a__item"><i class="fa fa-fw"></i>Welke base(n) coderen voor het start codon?</div>
                     <div data-cor='7'  class="drop-area__item"><i class="fa fa-fw"></i>Hoe noemen we de laatste stap waarbij mRNA wordt omgezet in een eiwit?</div>
                     <div data-cor='8' class="drop-area__item"><i class="fa fa-fw"></i>Wat zijn de eiwit fabriekjes van de cel?</div>
                     <div data-cor='9' class="drop-area__item"><i class="fa fa-fw"></i>Hoeveel aminozuren kunnen er gemaakt worden met de verschillende codons?</div>
@@ -80,8 +82,6 @@
             </div>
             <div class="drop-overlay"></div>
             <script src="js/FinalStep.js" type="text/javascript"></script>
-
-
             <center>
                 <br/>
                 <br/>
