@@ -40,13 +40,6 @@ function initialize() {
         $.get(url, function(textFromNotes){
             alert(textFromNotes);
         });
-//            alert(textFromNotes);
-////            if (data === ""){
-////                alert("NOOOOOOO");
-////            } else {
-////                alert("YUSSSSHHHH!!!");
-////            }
-//        });
     });
     
     
@@ -229,6 +222,21 @@ function initialize() {
     });
     $("#bewijsMateriaal").click(function(){
         $("#questionImage").load("html/technasiumQuestions/bewijs.jsp");
+    });
+    $("#nextPage").click(function(){
+        $("#questionImage").load("includes/technasiumTable.jsp");
+        $("#nextPage").addClass("hidden");
+        $("#first").text("Terug");
+        $("#last").addClass("hidden");
+        $("#last_question_button").addClass("hidden");
+        $("#next_question_button").addClass("hidden");
+    });
+    $("#first").click(function(){
+        $("#first").text("<<");
+        $("#last").removeClass("hidden");
+        $("#last_question_button").removeClass("hidden");
+        $("#next_question_button").removeClass("hidden");
+        $("#nextPage").removeClass("hidden");
     });
 }
 
