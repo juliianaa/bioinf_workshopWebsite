@@ -31,7 +31,7 @@
                 <!-- Top Navigation -->
 
                 <div class="content" >
-                    Hieronder vindt je de bio-informatica puzzel met wat biologische/genetische vragen.<br/>
+                    Hieronder vind je de bio-informatica puzzel met wat biologische/genetische vragen.<br/>
                     Je kunt kunt een antwoord oppakken en slepen naar de bijpassnde vraag die in beeld<br/>
                     komt op het moment dat je een antwoord oppakt met de muis. <br/>
 
