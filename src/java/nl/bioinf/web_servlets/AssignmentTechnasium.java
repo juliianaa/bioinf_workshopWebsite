@@ -11,10 +11,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -72,8 +68,8 @@ public class AssignmentTechnasium extends HttpServlet {
 //        processRequest(request, response);
         String userName = "piet";
         
-        File file = new File("/Users/mldubbelaar/Desktop/test/"+userName+"_notes.txt");
-//        File file = new File("/Users/mldubbelaar/Desktop/test/");
+       // File file = new File("/Users/mldubbelaar/Desktop/test/"+userName+"_notes.txt");
+         File file = new File("/homes/mldubbelaar/Desktop/test/"+userName+"_notes.txt");
 //        String path = file.getAbsolutePath();
         String savedNotes = getSavedNotes(file);
         
@@ -170,7 +166,8 @@ public class AssignmentTechnasium extends HttpServlet {
         .txt has been chosen because this type of file can be overwritten a
         .tmp creates an new file every time a user saves.
         */
-        String path = "/Users/mldubbelaar/Desktop/test/";
+//        String path = "/Users/mldubbelaar/Desktop/test/";
+        String path = "/homes/mldubbelaar/Desktop/test/";
         String prefix = userName + "_notes";
         String suffix = ".txt";
         boolean fileSaved = false;
