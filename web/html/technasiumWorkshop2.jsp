@@ -35,10 +35,11 @@
                     <div class="introduction" id="introduction">
                         <h1>Voorbeeld Technasium</h1>
                         <p>Vul hier in welk voorwerp bij welk persoon hoort. </p>
+                        
                         <table>
-                            <tr><td>            </td>   <td>De Manager  </td> <td>De Labmedewerker  </td>   <td>De Magazijnmedewerkster </td></tr>
+                            <tr><td>            </td>   <td>De Manager   </td> <td>De Labmedewerker  </td>   <td>De Magazijnmedewerkster </td></tr>
                             <tr><td>VingerAfdruk</td>   <td>    X        </td> <td>                  </td>   <td>                        </td></tr>
-                            <tr><td>Haar        </td>   <td>            </td> <td>      X            </td>   <td>                        </td></tr>
+                            <tr><td>Haar        </td>   <td>             </td> <td>      X           </td>   <td>                        </td></tr>
                             <tr><td>Bloed       </td>   <td>    X        </td> <td>                  </td>   <td>                        </td></tr>
                                     
                         </table>

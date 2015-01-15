@@ -8,6 +8,16 @@ and open the template in the editor.
     Author     : nstoker
 */
 
+/*
+html body{
+    height:100%;
+}*/
+
+#filler{
+    width:1em;
+    height:30em;
+}
+
 .grid {
     margin: 0 auto;
     max-width: 50em;
