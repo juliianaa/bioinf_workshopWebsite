@@ -88,9 +88,9 @@ def zijnStartCodonEnStopCodonInFrame():
 def main():
     vraagInWelkBestandDeDNASequentieStaat()
     #hier functieaanroepen toevoegen
-    
+
     zoekHetVolgendeStartCodon()
-	#hier functieaanroepen toevoegen
+        #hier functieaanroepen toevoegen
     while not zijnStartCodonEnStopCodonInFrame():
         zoekHetVolgendeStopCodon()
     printGen()
