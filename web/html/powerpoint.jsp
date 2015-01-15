@@ -12,7 +12,7 @@
 
     <head>
         <base href="${initParam.base_url}">
-        <meta charset="utf-8">
+        <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link href="css/workshop.css" rel="stylesheet" type="text/css"/>
@@ -430,7 +430,7 @@
                         <section>
                             <h3>Structuur van DNA</h3>
                             <ul>Dubbelstrengs helix</ul>
-                            <img  width="600em" height="375em" src="images/hanzeXperience_MBO/DNA.jpg"/>
+                            <img  width="600em" height="375em" src="images/hanzeXperience_MBO/dna.jpg"/>
                         </section>
                     
                         <section>

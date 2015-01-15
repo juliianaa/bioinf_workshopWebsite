@@ -87,7 +87,7 @@
                                     In de powerpoints is alles terug te vinden dat in de workshop besproken is.
                                     Mocht je een workshop nog terug willen kijken, klik dan de 
                                     desbetreffende workshop aan, daar staat de powerpoint ook.
-                                    <a href="html/powerpoint.jsp" class="button">Open powerpoint</a>
+                                    <p><a href="html/powerpoint.jsp" class="button">Open powerpoint</a></p>
                                 
                                     
 

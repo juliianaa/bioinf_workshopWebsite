@@ -71,19 +71,24 @@ public class AssignmentTechnasium extends HttpServlet {
        // File file = new File("/Users/mldubbelaar/Desktop/test/"+userName+"_notes.txt");
          File file = new File("/homes/mldubbelaar/Desktop/test/"+userName+"_notes.txt");
 //        String path = file.getAbsolutePath();
-        String savedNotes = getSavedNotes(file);
-        
-        if (savedNotes.isEmpty()) {
-            try (PrintWriter pw = response.getWriter()) {
-                pw.print("Er is iets fout gegaan met het ophalen van de notities!\n"
-                        + "Neem contact op met de docent.");
+//        String savedNotes = getSavedNotes(file);
+//        
+         try (PrintWriter pw = response.getWriter()) {
+                pw.print(file);
                 pw.flush();
-            }
-        } else {
-             try (PrintWriter pw = response.getWriter()) {
-                pw.print(savedNotes);
-                pw.flush();
-            }
+         
+         
+//        if (savedNotes.isEmpty()) {
+//            try (PrintWriter pw = response.getWriter()) {
+//                pw.print("Er is iets fout gegaan met het ophalen van de notities!\n"
+//                        + "Neem contact op met de docent.");
+//                pw.flush();
+//            }
+//        } else {
+//             try (PrintWriter pw = response.getWriter()) {
+//                pw.print(savedNotes);
+//                pw.flush();
+//            }
         }
     }
 
