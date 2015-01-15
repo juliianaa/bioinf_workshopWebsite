@@ -34,7 +34,7 @@
             <button id="next_question_button" class = "imageButton"><b>> Volgende</b></button>
             <button id ="last" class = "imageButton">>></button>
             <button id="bewijsMateriaal" class="imageButton">Bewijs materiaal</button>
-            <a href="html/technasiumWorkshop2.jsp"><button id="nextPage" class="imageButton">Volgende Pagina</button></a>
+            <button id="nextPage" class="imageButton">Vul tabel in!</button>
         </div>
     </div>
 </div>
