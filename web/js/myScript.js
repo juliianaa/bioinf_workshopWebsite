@@ -33,13 +33,42 @@ function initialize() {
         event.preventDefault();
     });
     
+
+    // with this solution, the browser handles the download link naturally (tested in chrome and firefox)
+
+//    $("#get_nodes").click(function() {
+//        var url = "http://localhost:8080/Bioinformatica_website/makeNotes.do";
+//        $.get(url, function(fileFound){
+//  
+//    });
+//        
+//});
     
     
-    $("#get_nodes").click(function() {
+    $("#get_nodes").on("click", function () {
         var url = "http://localhost:8080/Bioinformatica_website/makeNotes.do";
-        $.get(url, function(textFromNotes){
-            alert(textFromNotes);
-        });
+        $.get(url, function(fileFound){
+           localStorage.setItem("href", fileFound);
+           
+       
+    $.fileDownload($(this).prop('href'), {
+        preparingMessageHtml: "We are preparing your report, please wait...",
+        failMessageHtml: "There was a problem generating your report, please try again."
+    });
+    return false; //this is critical to stop the click event which will trigger a normal file download! 
+    });
+});
+    
+    
+    
+//    $("#get_nodes").click(function() {
+//        var url = "http://localhost:8080/Bioinformatica_website/makeNotes.do";
+//        $.get(url, function(textFromNotes){
+//            alert(textFromNotes);
+//        });   
+//      });  
+        
+        
 //            alert(textFromNotes);
 ////            if (data === ""){
 ////                alert("NOOOOOOO");
@@ -47,7 +76,7 @@ function initialize() {
 ////                alert("YUSSSSHHHH!!!");
 ////            }
 //        });
-    });
+    
     
     
     $("#first").click(function() {
@@ -229,6 +258,21 @@ function initialize() {
     });
     $("#bewijsMateriaal").click(function(){
         $("#questionImage").load("html/technasiumQuestions/bewijs.jsp");
+    });
+    $("#nextPage").click(function(){
+        $("#questionImage").load("includes/technasiumTable.jsp");
+        $("#nextPage").addClass("hidden");
+        $("#first").text("Terug");
+        $("#last").addClass("hidden");
+        $("#last_question_button").addClass("hidden");
+        $("#next_question_button").addClass("hidden");
+    });
+    $("#first").click(function(){
+        $("#first").text("<<");
+        $("#last").removeClass("hidden");
+        $("#last_question_button").removeClass("hidden");
+        $("#next_question_button").removeClass("hidden");
+        $("#nextPage").removeClass("hidden");
     });
 }
 

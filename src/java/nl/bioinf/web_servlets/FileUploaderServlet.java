@@ -8,11 +8,13 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
+import javax.servlet.RequestDispatcher;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import nl.bioinf.ValidateScripts.ValidateScript;
 
 
@@ -94,27 +96,22 @@ public class FileUploaderServlet extends HttpServlet {
 
                 }
                 
+                HttpSession session = request.getSession();
+                
                 ValidateScript checkScript = new ValidateScript();
                 checkScript.start(filePath);
                 
-                String result = checkScript.Result();
-           
-                
-                response.getWriter().println(result);
-                
-//                HaplotypeFinder haplotypeFinder = new HaplotypeFinder();
-//                haplotypeFinder.start(filePath, Integer.parseInt(ploidy), "percentageBased");
-//
-//                ArrayList<HaplotypeBlock> haploList = haplotypeFinder.getHaplotypeList();
-//                request.setAttribute("snpMap", haploList);
+                int result = checkScript.result();
+                session.setAttribute("result", result);
+            
 
             }
         } catch (Exception ex) {
             request.setAttribute("message",
                     "There was an error: " + ex.getMessage());
         }
-        // redirects client to message page
-//        getServletContext().getRequestDispatcher("/message.jsp").forward(
-//                request, response);
+        // redirects client to page
+        RequestDispatcher view = request.getRequestDispatcher("/html/assignmentsMasterClassNHanzexperience/assignment1bc_terminal.jsp");
+        view.forward(request, response);
     }
 }

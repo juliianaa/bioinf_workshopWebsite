@@ -106,6 +106,8 @@
                 alert("alles goed!");
                 $("#grid").addClass("hidden");
                 $("#correctAnswered").removeClass("hidden");
+                alert("Gefeliciteerd!!\nJe hebt alles goed!");
+                 window.location="html/heHavoWorkshop.jsp";
             }
 
         }

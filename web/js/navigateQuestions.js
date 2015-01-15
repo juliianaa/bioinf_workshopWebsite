@@ -10,11 +10,13 @@ function initialize() {
         var pageID =$("#number_passer").data("nr");
         switch (pageID) {
             case 1:
-                $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment1bc.jsp");
+                $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment1b.jsp");
                 $("#previous_question_button").show();
+                $("#next_question_button").hide();
                 break;
             case 2:
                 $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment2a.jsp");
+                $("#previous_question_button").show();
                 break;
             case 3:
                 $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment2b.jsp");

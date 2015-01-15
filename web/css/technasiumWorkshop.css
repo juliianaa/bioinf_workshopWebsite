@@ -215,16 +215,36 @@ and open the template in the editor.
 }
 .imageButton#bewijsMateriaal{
     /*left:-84px;*/
-    width: 150px;
-    top: -130px;
+    width: 200px;
+    top: -5em;
+    left: -45em;
 }
 #get_nodes{
-    top:0;
-    left:0;
+    top:3.2em;
+    left:-45em;
+    width:200px;
+}
 
+#nextPage{
+    top: -120px;
+    width: 200px;
 }
 .text {width: 800px;}
 
+.text h1 {
+  padding: 0 15px 20px 0;
+  font: 230% 'News Cycle', arial, sans-serif;
+  text-shadow:  #FFF 1px 1px;
+  margin: 0 1px;
+  color: #444;
+}
+
 .imageBoxes{
     margin-right:-20px;
+}
+.hidden{
+    display: none;
+}
+#nextPage{
+    top:-170px;
 }

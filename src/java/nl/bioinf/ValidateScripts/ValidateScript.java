@@ -5,14 +5,12 @@
  */
 package nl.bioinf.ValidateScripts;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -28,8 +26,7 @@ public class ValidateScript {
     private String ResultString;
     private String resultContent;
     private List<String> userMain;
-    private boolean isAValidMain;
-    private String f;
+    private List<String> answerMain;
     private int correctAnswer;
     private int wrongAnswer;
     
@@ -43,7 +40,7 @@ public class ValidateScript {
 
     public void readFile(String filepath) throws FileNotFoundException, IOException {
 //        String filePath = filepath.replace("\\","\\\\");
-        fileContent = new String(Files.readAllBytes(Paths.get(filepath)));
+        fileContent = new String(Files.readAllBytes(Paths.get(filepath))).replace("\t", "");
     }
     
      private String getMain(String fileContent) {
@@ -61,12 +58,11 @@ public class ValidateScript {
 
 
     private void checkIfMainIsValid(String mainFunction) {
-        mainFunction = mainFunction.replace("\t", "");
         userMain = new ArrayList<>(Arrays.asList(mainFunction.split("\n")));
         try {
-            f = new String(Files.readAllBytes(Paths.get("/commons/Themas/Thema10/fileSaver/uitwerking/zoekGen_werkend.py")));
+            String f = new String(Files.readAllBytes(Paths.get("/commons/Themas/Thema10/fileSaver/uitwerking/zoekGen_werkend.py")));
             String answerContent = getMain(f).replace("\t", "");
-            List<String> answerMain =  new ArrayList<>(Arrays.asList(answerContent.split("\n")));
+            answerMain =  new ArrayList<>(Arrays.asList(answerContent.split("\n")));
             
             
             if(userMain.size() == answerMain.size()){
@@ -88,11 +84,10 @@ public class ValidateScript {
     }
 
 
-    public String Result(){
-       if(wrongAnswer != 0){
-       }
-       return resultContent;
+    public int result(){
+       return correctAnswer;
     }
+    
     
 
    
