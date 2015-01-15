@@ -28,14 +28,14 @@
         </tr>
         <tr>
             <td>Bloed               </td>   
-            <td>    <input type="checkbox" name="check" value="check" data-row="3" data-selected = "0" data-column = "1" id="3" class="check">                  </td>
-            <td>        <input type="checkbox" name="check" value="check" data-row="3" data-selected = "0" data-column = "2" id="4" class="check">          </td>   
-            <td>          <input type="checkbox" name="check" value="check" data-row="1" data-selected = "0" data-column = "3" id="5" class="check">              </td>
+            <td>    <input type="checkbox" name="check" value="check" data-row="3" data-selected = "0" data-column = "1" id="7" class="check">                  </td>
+            <td>        <input type="checkbox" name="check" value="check" data-row="3" data-selected = "0" data-column = "2" id="8" class="check">          </td>   
+            <td>          <input type="checkbox" name="check" value="check" data-row="1" data-selected = "0" data-column = "3" id="9" class="check">              </td>
         </tr>
         <tr><td>Speekselspoor      </td>   
-            <td>    <input type="checkbox" name="check" value="check" data-row="4" data-selected = "0" data-column = "1" id="6" class="check">          </td> 
-            <td>           <input type="checkbox" name="check" value="check" data-row="4" data-selected = "0" data-column = "2" id="7" class="check">       </td>   
-            <td>  <input type="checkbox" name="check" value="check" data-row="4" data-selected = "0" data-column = "3" id="8" class="check">                      </td>
+            <td>    <input type="checkbox" name="check" value="check" data-row="4" data-selected = "0" data-column = "1" id="10" class="check">          </td> 
+            <td>           <input type="checkbox" name="check" value="check" data-row="4" data-selected = "0" data-column = "2" id="11" class="check">       </td>   
+            <td>  <input type="checkbox" name="check" value="check" data-row="4" data-selected = "0" data-column = "3" id="12" class="check">                      </td>
         </tr>
     </table>
     <button id="saveTable">Save</button>
