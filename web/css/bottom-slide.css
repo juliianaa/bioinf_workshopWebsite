@@ -202,18 +202,4 @@ html body{
         font-size: 1em;
     }
 }
-#correctAnswered{
-    text-align: left;
-    margin-top: 5em;
-    width: 50%;
-    margin-left: 25%;
-    color: green;
-    background-color: #a3e0be;
-    padding: 2em;
-    padding-right: 1.5em;
-}
-#fasta{
-    font-family: monospace;
-    
-}
 .hidden{display: none;}

@@ -34,9 +34,17 @@
                 <div class="content">
                     <div class="introduction" id="introduction">
                         <h1>Hanze Experience</h1>
-                        <p>
-                            Verder uitleg over de opdracht....
-                        </p>
+                        <div id="correctAnswered" ><h2>Goed gedaan!</h2>
+                            Je hebt de puzzel goed ingevuld! Hier zijn
+                            de sequenties waarmee je verder kunt werken!
+                            <p id = "fasta">Bacterie_1<br/>
+                                TACGTAGGGTGCGAGCGTTATCCGGATTTATTGGGCGTAAAGGGCTCGTAGGCGGTTCGTCGCGTCCGGTGTGAAAGTCC<br/>
+                                Bacterie_2<br/>
+                                ACGTAGGTGGCAAGCGTTATCCGGATTTATTGGGCGTAAAGCGAGCGCAGGCGGTTTTTTAAGTCTGATGTGAAAGCCCT<br/>
+                                Bacterie_3<br/>
+                                CGGATCAGCACGCCGCGGTGAATACGTTCCCGGGCCTTGTACACACCGCCCGTCACACCACGAGAGTTTGTAACACCCGA
+                            </p>
+                        </div>
                     </div>
                     <!--End of content-->
                 </div>

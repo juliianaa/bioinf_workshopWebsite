@@ -247,3 +247,16 @@ button:hover {
     cursor: help;
 }
 .text {width: 850px;}
+
+#correctAnswered{
+    text-align: left;
+    margin-top: 5em;
+    width: 80%;
+    color: green;
+    background-color: #a3e0be;
+    padding: 2em;
+}
+#fasta{
+    font-family: monospace;
+    
+}
