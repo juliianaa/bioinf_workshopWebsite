@@ -33,51 +33,12 @@ function initialize() {
         event.preventDefault();
     });
     
-
-    // with this solution, the browser handles the download link naturally (tested in chrome and firefox)
-
-//    $("#get_nodes").click(function() {
-//        var url = "http://localhost:8080/Bioinformatica_website/makeNotes.do";
-//        $.get(url, function(fileFound){
-//  
-//    });
-//        
-//});
-    
-    
-    $("#get_nodes").on("click", function () {
+    $("#get_notes").click(function() {
         var url = "http://localhost:8080/Bioinformatica_website/makeNotes.do";
-        $.get(url, function(fileFound){
-           localStorage.setItem("href", fileFound);
-           
-       
-    $.fileDownload($(this).prop('href'), {
-        preparingMessageHtml: "We are preparing your report, please wait...",
-        failMessageHtml: "There was a problem generating your report, please try again."
-    });
-    return false; //this is critical to stop the click event which will trigger a normal file download! 
-    });
-});
-    
-    
-    
-//    $("#get_nodes").click(function() {
-//        var url = "http://localhost:8080/Bioinformatica_website/makeNotes.do";
-//        $.get(url, function(textFromNotes){
-//            alert(textFromNotes);
-//        });   
-//      });  
-        
-        
-//            alert(textFromNotes);
-////            if (data === ""){
-////                alert("NOOOOOOO");
-////            } else {
-////                alert("YUSSSSHHHH!!!");
-////            }
-//        });
-    
-    
+        $.get(url, function(textFromNotes){
+            alert(textFromNotes);
+        });   
+      });      
     
     $("#first").click(function() {
         $("#questionImage").load("html/technasiumQuestions/tafel.jsp");
