@@ -1,5 +1,5 @@
 /* 
- * Plugin from internet, changed by Mariska
+ * Plugin from internet, changed by mkslofstra
  */
 
 (function () {
@@ -15,7 +15,6 @@
         var dragon = $(event.target).data("cor");
         // save the correct answer in the local storage
         localStorage.setItem("dragon", dragon);
-
     });
     var body = document.body,
             dropArea = document.getElementById('drop-area'),
@@ -26,12 +25,12 @@
     [].slice.call(document.querySelectorAll('#drop-area .drop-area__item')).forEach(function (el) {
         droppableArr.push(new Droppable(el, {
             onDrop: function (instance, draggableEl) {
+                //save the correct answer of the dropped div in the localstorage by the name dropje
                 var dropje = $(instance.el).data("cor");
                 localStorage.setItem("dropje", dropje);
                 // show checkmark inside the droppabe element         
                 classie.add(instance.el, 'drop-feedback');
                 dragonCheck(instance.el);
-                //                $(instance.el).addClass(justice);
                 clearTimeout(instance.checkmarkTimeout);
                 instance.checkmarkTimeout = setTimeout(function () {
                     classie.remove(instance.el, 'drop-feedback');
@@ -76,6 +75,7 @@
             }
         });
     });
+    //Created by mkslofstra. Function which checks if the drag and drop match.  
     function dragonCheck(showCorrect) {
         // the draggable item
         var dragon = localStorage.getItem("dragon");

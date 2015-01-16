@@ -1,14 +1,9 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
     Created on : Dec 30, 2014, 3:19:50 PM
     Author     : raozinga
+Layout changed by: mkslofstra to make it fit the page (changed colors 
+and added div)
 */
-
-/* Below line is used for online Google font */
 /* Below line is used for online Google font */
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
 h2{
@@ -85,6 +80,7 @@ text-shadow: 0px 1px 0px #13506D;
 #register:hover{
     background: linear-gradient(#66ffff 5%, #00ff00 100%);
 }
+/*by mkslofstra*/
 #logout{
     float:right;
     position: relative;

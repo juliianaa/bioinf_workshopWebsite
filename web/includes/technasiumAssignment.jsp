@@ -1,9 +1,8 @@
 <%-- 
     Document   : technasiumAssignment
     Created on : 4-jan-2015, 19:11:42
-    Author     : Mariska
+    Author     : mkslofstra
 --%>
-
 <div id="text_case">
     <div class = "text">
         <h1>Technasium</h1>
@@ -15,6 +14,7 @@
         Help ons bij het vinden van de dader.<br/>
         Heel veel succes!! 
     </div>
+    <!--By mkslofstra-->
     <div id="question_div" data-question-number="1" data-imgNumber="tafel" >
         <div class="imageBoxes" id = "questionImage" > 
             <img data-imgNumber="tafel" id = "image" src="images/houtenTafel.jpg" alt=""/> 
@@ -23,6 +23,7 @@
                     <br/>Hier volgen de bewijsstukken die gevonden zijn.</p>
             </div>
         </div>
+        <!--By mldubbelaar-->
         <div class="noteBox">
             <label for="basic">Aantekeningen:</label>
             <form  id="save_notes_form" action="#" method="post">
