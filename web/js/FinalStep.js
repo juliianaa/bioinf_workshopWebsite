@@ -103,7 +103,6 @@
             localStorage.setItem("goodQuestions", goodQuestions);
             // if all questions are answered correctly follow trough
             if(goodQuestions === 12){
-                alert("Gefeliciteerd!!\nJe hebt alles goed!");
                  window.location="html/heHavoWorkshop.jsp";
             }
 

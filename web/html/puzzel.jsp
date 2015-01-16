@@ -87,9 +87,9 @@
                 <br/>
                 <br/>
                 <br/>
-              
+
                 <%@include file="../includes/bodyFooter.jsp"  %></center>
-                <div id="filler"></div>
+            <div id="filler"></div>
         </body>
 
     </html>

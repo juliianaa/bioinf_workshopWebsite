@@ -6,6 +6,8 @@
 <div class="introduction" id="introduction">
     <h1>Je bevindingen</h1>
     <p>Vul hier in welk voorwerp bij welk persoon hoort. </p>
+
+    <script src="js/jquery.cookie.js" type="text/javascript"></script>
     <script src="js/technasiumTable.js" type="text/javascript"></script>
     <table id="findings">
         <tr>
@@ -38,5 +40,6 @@
             <td>  <input type="checkbox" name="check" value="check" data-row="4" data-selected = "0" data-column = "3" id="12" class="check">                      </td>
         </tr>
     </table>
-    <button id="saveTable">Save</button>
+    <button id="saveTable">Opslaan</button>
+    <button id="getTable">Laden</button>
 </div>

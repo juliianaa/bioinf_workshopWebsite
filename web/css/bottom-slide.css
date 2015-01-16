@@ -36,18 +36,7 @@ html body{
     font-size: 1em;
     text-align: center;
 }
-/*  box draging area
-.grid__item::after {
-        content: '';
-        position: absolute;
-        top: 0.3em;
-        left: 2.25em;
-        bottom: 0.3em;
-        right: 0.3em;
-        background: rgba(0,0,0,0.1);
-        border-radius: 4px;
-}
-*/
+
 
 .grid__item:hover {
     cursor: move;
@@ -213,3 +202,4 @@ html body{
         font-size: 1em;
     }
 }
+.hidden{display: none;}
