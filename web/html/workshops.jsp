@@ -88,12 +88,20 @@
                                     Mocht je een workshop nog terug willen kijken, klik dan de 
                                     desbetreffende workshop aan, daar staat de powerpoint ook.
                                     <p><a href="html/powerpoint.jsp" class="button">Open powerpoint</a></p>
-                                
-                                    
-
                              </section>
                          </div>
-
+                        
+                        <div class="workshop_boxes" position="fixed">
+                             <section>
+                                    <img src="images/KankerWorkshop/StaOpTegenKanker.jpg" alt="" class="workshop_images"/>
+                                    <p>Een kijkje in kanker onderzoek</p>
+                                    In deze workshop wordt er uitgelegd hoe dna geanalyseerd kan worden om 
+                                    te onderzoeken of een patient mogelijk een vorm van kanker heeft. 
+                                    Dit wordt onder andere gedaan door middel van ..
+                                    <p><a href="html/kankerOnderzoekWorkshop.jsp" class="button">Start workshop</a></p>
+                             </section>
+                         </div>
+                         </div>
                     </div>
 
                 </div>
