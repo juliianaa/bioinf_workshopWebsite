@@ -1,6 +1,6 @@
 <%-- 
     Document   : technasiumWorkshop2
-    Created on : 13-jan-2015, 22:07:54
+    Created on : 13-jan-2015, 23:19:24
     Author     : mldubbelaar
 --%>
 
@@ -18,7 +18,7 @@
             <link rel="stylesheet" type="text/css" href="css/style.css" />
             <link href="css/workshop.css" rel="stylesheet" type="text/css"/>
             <link href="css/workshopsHanze.css" rel="stylesheet" type="text/css"/>
-            <title>Technasium</title>
+            <title>Hanze Experience Havo</title>
     </head>
 
     <body>
@@ -33,16 +33,18 @@
 
                 <div class="content">
                     <div class="introduction" id="introduction">
-                        <h1>Voorbeeld Technasium</h1>
-                        <p>Vul hier in welk voorwerp bij welk persoon hoort. </p>
-                        
-                        <table>
-                            <tr><td>            </td>   <td>De Manager   </td> <td>De Labmedewerker  </td>   <td>De Magazijnmedewerkster </td></tr>
-                            <tr><td>VingerAfdruk</td>   <td>    X        </td> <td>                  </td>   <td>                        </td></tr>
-                            <tr><td>Haar        </td>   <td>             </td> <td>      X           </td>   <td>                        </td></tr>
-                            <tr><td>Bloed       </td>   <td>    X        </td> <td>                  </td>   <td>                        </td></tr>
-                                    
-                        </table>
+                        <h1>Hanze Experience</h1>
+                        <div id="correctAnswered" ><h2>Goed gedaan!</h2>
+                            Je hebt de puzzel goed ingevuld! Hier zijn
+                            de sequenties waarmee je verder kunt werken!
+                            <p id = "fasta">Bacterie_1<br/>
+                                TACGTAGGGTGCGAGCGTTATCCGGATTTATTGGGCGTAAAGGGCTCGTAGGCGGTTCGTCGCGTCCGGTGTGAAAGTCC<br/>
+                                Bacterie_2<br/>
+                                ACGTAGGTGGCAAGCGTTATCCGGATTTATTGGGCGTAAAGCGAGCGCAGGCGGTTTTTTAAGTCTGATGTGAAAGCCCT<br/>
+                                Bacterie_3<br/>
+                                CGGATCAGCACGCCGCGGTGAATACGTTCCCGGGCCTTGTACACACCGCCCGTCACACCACGAGAGTTTGTAACACCCGA
+                            </p>
+                        </div>
                     </div>
                     <!--End of content-->
                 </div>

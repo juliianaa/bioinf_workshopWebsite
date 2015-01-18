@@ -1,9 +1,8 @@
 <%-- 
     Document   : technasiumAssignment
     Created on : 4-jan-2015, 19:11:42
-    Author     : Mariska
+    Author     : mkslofstra
 --%>
-
 <div id="text_case">
     <div class = "text">
         <h1>Technasium</h1>
@@ -15,6 +14,7 @@
         Help ons bij het vinden van de dader.<br/>
         Heel veel succes!! 
     </div>
+    <!--By mkslofstra-->
     <div id="question_div" data-question-number="1" data-imgNumber="tafel" >
         <div class="imageBoxes" id = "questionImage" > 
             <img data-imgNumber="tafel" id = "image" src="images/houtenTafel.jpg" alt=""/> 
@@ -23,18 +23,19 @@
                     <br/>Hier volgen de bewijsstukken die gevonden zijn.</p>
             </div>
         </div>
+        <!--By mldubbelaar-->
         <div class="noteBox">
             <label for="basic">Aantekeningen:</label>
             <form  id="save_notes_form" action="#" method="post">
                 <textarea cols="35" rows="24" name="notes" id = "notes">Maak hier je aantekeningen over de verdachten!</textarea>
                 <input type="submit" value="Save"/></form>
-            <button id="get_nodes" class="imageButton">Aantekeningen</button>
+            <button id="get_notes" class="imageButton">Aantekeningen</button>
             <button id ="first" class = "imageButton"><<</button>
             <button id="last_question_button" class = "imageButton"><b>< Vorige</b></button>
             <button id="next_question_button" class = "imageButton"><b>> Volgende</b></button>
             <button id ="last" class = "imageButton">>></button>
             <button id="bewijsMateriaal" class="imageButton">Bewijs materiaal</button>
-            <a href="html/technasiumWorkshop2.jsp"><button id="nextPage" class="imageButton">Volgende Pagina</button></a>
+            <button id="nextPage" class="imageButton">Vul tabel in!</button>
         </div>
     </div>
 </div>

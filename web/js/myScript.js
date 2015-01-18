@@ -1,7 +1,6 @@
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * By Mldubbelaar and Mkslofstra
+ * To make it possible to save notes and watch the casus on the technasium workshop page
  */
 $(document).ready(initialize);
 
@@ -33,31 +32,30 @@ function initialize() {
         event.preventDefault();
     });
     
-    
-    
-    $("#get_nodes").click(function() {
+    $("#get_notes").click(function() {
         var url = "http://localhost:8080/Bioinformatica_website/makeNotes.do";
         $.get(url, function(textFromNotes){
             alert(textFromNotes);
-        });
-//            alert(textFromNotes);
-////            if (data === ""){
-////                alert("NOOOOOOO");
-////            } else {
-////                alert("YUSSSSHHHH!!!");
-////            }
-//        });
-    });
-    
-    
+        });   
+      });      
+    //By mkslofstra
+    //When the << button is clicked, show the first page
     $("#first").click(function() {
         $("#questionImage").load("html/technasiumQuestions/tafel.jsp");
     });
+    //By mkslofstra
+    //When the >> button is clicked, show the last page of the slides
     $("#last").click(function() {
         $("#questionImage").load("html/technasiumQuestions/slide22.jsp");
     });
+    //By mkslofstra
+    //When the next next question button is clicked, for each page which is 
+    //showing at that moment, the next should be loaded.
     $("#next_question_button").click(function() {
+        //In the data element with the value data is the number of each image stored
         var imageNr = $("#image").data("imgnumber");
+        //check which imagenumber is the current number, when that number is reached, 
+        //load the next image. 
         switch (imageNr) {
             case "tafel":
                 $("#questionImage").load("html/technasiumQuestions/bewijs.jsp");
@@ -139,12 +137,17 @@ function initialize() {
                 break;
             default:
                 $("#questionImage").load("html/technasiumQuestions/slide22.jsp");
+        //yes that were a lot images... 
         }
 
     });
+    //By mkslofstra
+    //When the last question button is clicked, the last question should be loaded. 
     $("#last_question_button").click(function() {
         var imageNr = $("#image").data("imgnumber");
         switch (imageNr) {
+            //when the number of the current image number is reached, 
+            //load the next slide of it
             case "tafel":
                 $("#questionImage").load("html/technasiumQuestions/tafel.jsp");
                 break;
@@ -227,8 +230,42 @@ function initialize() {
                 $("#questionImage").load("html/technasiumQuestions/slide1.jsp");
         }
     });
+    //By mkslofstra
+    //Show the slide of the evidence. 
     $("#bewijsMateriaal").click(function(){
         $("#questionImage").load("html/technasiumQuestions/bewijs.jsp");
+    });
+    //By mkslofstra
+    //Load the next page by ajax, this is a jsp file with a table 
+    //which can be added by the user
+    $("#nextPage").click(function(){
+        $("#questionImage").load("includes/technasiumTable.jsp");
+        //hide the button of next page, because there is no next page
+        $("#nextPage").addClass("hidden");
+        //change the text of the first page to 'Terug', because adding an extra button
+        //would be work for nothing because the first page of the slides should be loaded
+        //here also. 
+        $("#first").text("Terug");
+        //hide the >> button. 
+        $("#last").addClass("hidden");
+        //hide the next and last question buttons. 
+        $("#last_question_button").addClass("hidden");
+        $("#next_question_button").addClass("hidden");
+    });
+    //By mkslofstra
+    //When first question button is clicked
+    //undo changes of the next page button. 
+    $("#first").click(function(){
+        //change the text on the button back. 
+        $("#first").text("<<");
+        //remove the class hidden of the << button, and show again
+        $("#last").removeClass("hidden");
+        //remove the class hidden of the last question button, and show again
+        $("#last_question_button").removeClass("hidden");
+        //remove the class hidden of the next question button, and show again
+        $("#next_question_button").removeClass("hidden");
+        //remove the class hidden of the next page button, and show again
+        $("#nextPage").removeClass("hidden");
     });
 }
 

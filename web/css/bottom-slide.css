@@ -1,18 +1,10 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
     Created on : Dec 18, 2014, 11:13:42 AM
     Author     : nstoker
+Changes for layout by: mkslofstra
+Filler by: mldubbelaar
 */
-
-/*
-html body{
-    height:100%;
-}*/
-
+/*added by mldubbelaar to make puzzle work on more computers*/
 #filler{
     width:1em;
     height:30em;
@@ -36,18 +28,7 @@ html body{
     font-size: 1em;
     text-align: center;
 }
-/*  box draging area
-.grid__item::after {
-        content: '';
-        position: absolute;
-        top: 0.3em;
-        left: 2.25em;
-        bottom: 0.3em;
-        right: 0.3em;
-        background: rgba(0,0,0,0.1);
-        border-radius: 4px;
-}
-*/
+
 
 .grid__item:hover {
     cursor: move;
@@ -145,6 +126,8 @@ html body{
     background: rgba(0,0,0,0.15);
     color: #fff;
 }
+/*added by mkslofstra to make a button of a good answered answer unclickable 
+and change color. */
 .dragon{
     color: white;
     background: grey;
@@ -158,11 +141,13 @@ html body{
     font-size: 1em;
     text-align: center;
 }
+/*added by mkslofstra to show a  person if the answer is good or bad*/
 .good {
-       color: green;
-       }
+    color: green;
+}
+/*added by mkslofstra to show a  person if the answer is good or bad*/
 .bad{
-     color: red;}
+    color: red;}
 
 .dummy {
     margin: 1em auto 2.5em;
@@ -213,3 +198,5 @@ html body{
         font-size: 1em;
     }
 }
+/*added by mkslofstra*/
+.hidden{display: none;}
