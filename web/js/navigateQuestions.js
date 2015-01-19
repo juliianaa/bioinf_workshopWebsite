@@ -12,7 +12,6 @@ function initialize() {
             case 1:
                 $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment1b.jsp");
                 $("#previous_question_button").show();
-                $("#next_question_button").hide();
                 break;
             case 2:
                 $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment2a.jsp");

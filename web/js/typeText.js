@@ -22,15 +22,15 @@ $(function(){
         loopCount: false
     });
     
-    $("#login_text").typed({
-        strings: ["Voordat we beginnen, geef jezelf eerst een username voor dit \ndriedaagse workshop", 
-            "<form action='answer.do' method='post'>username: <input type='text' name='username'></input><input class='button' type='submit' value='Submit'></input></form>"],
-        typeSpeed: -30,
-        backDelay: 1500,
-        loop: false,
-        loopCount: false,
-        contentType: 'html'
-    });
+//    $("#login_text").typed({
+//        strings: ["Voordat we beginnen, geef jezelf eerst een username voor dit \ndriedaagse workshop", 
+//            "<form action='answer.do' method='post'>username: <input type='text' name='username'></input><input class='button' type='submit' value='Submit'></input></form>"],
+//        typeSpeed: -30,
+//        backDelay: 1500,
+//        loop: false,
+//        loopCount: false,
+//        contentType: 'html'
+//    });
     
     
 });

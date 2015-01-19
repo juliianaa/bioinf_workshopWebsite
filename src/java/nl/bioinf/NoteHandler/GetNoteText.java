@@ -19,7 +19,13 @@ public class GetNoteText {
     
     String textFromNotes;
     
-    
+    /**
+     *
+     * @param filePath
+     * @return
+     * @throws FileNotFoundException
+     * @throws IOException
+     */
     public String getSavedNotes(File filePath) throws FileNotFoundException, IOException {
         FileReader fr = new FileReader(filePath);
         try (BufferedReader br = new BufferedReader(fr)) {

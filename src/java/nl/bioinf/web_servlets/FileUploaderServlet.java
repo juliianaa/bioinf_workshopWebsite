@@ -30,11 +30,11 @@ public class FileUploaderServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
 
-    // location to store file uploaded
     // constructs the directory path to store upload file
     // this path is relative to application's directory
-    private static final String uploadPath = "/commons/Themas/Thema10/fileSaver";
-//    private static final String uploadPath = "C:\\Users\\Juliana\\Documents\\test";
+    
+//    private static final String uploadPath = "/commons/Themas/Thema10/fileSaver"; // Path for at school
+    private static final String uploadPath = "C:\\Users\\Juliana\\Documents\\test"; //Path for windows (change to the path where the file should be written)
 
 
     /**
@@ -78,11 +78,10 @@ public class FileUploaderServlet extends HttpServlet {
             @SuppressWarnings("unchecked")
             List<FileItem> formItems = upload.parseRequest(request);
             String filePath = "";
-//            String ploidy = "";
             if (formItems != null && formItems.size() > 0) {
                 // iterates over form's fields
                 for (FileItem item : formItems) {
-                    // processes only fields that are not form fields
+                    // processes only fields that are not form fields in this case the file
                     if (!item.isFormField()) {
                         String fileName = new File(item.getName()).getName();
                         filePath = uploadPath + File.separator + fileName;
@@ -98,11 +97,17 @@ public class FileUploaderServlet extends HttpServlet {
                 
                 HttpSession session = request.getSession();
                 
+                //Calls the script that checks the file
                 ValidateScript checkScript = new ValidateScript();
                 checkScript.start(filePath);
                 
+                //gets an number back as result. The number indicates how many correct answers the program found in the user file
                 int result = checkScript.result();
-                session.setAttribute("result", result);
+                String resultContent = checkScript.resultContent();
+                session.setAttribute("resultContent", resultContent);
+                
+                
+                
             
 
             }
@@ -111,7 +116,7 @@ public class FileUploaderServlet extends HttpServlet {
                     "There was an error: " + ex.getMessage());
         }
         // redirects client to page
-        RequestDispatcher view = request.getRequestDispatcher("/html/assignmentsMasterClassNHanzexperience/assignment1bc_terminal.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("/html/assignmentsMasterClassNHanzexperience/assignment1bc.jsp");
         view.forward(request, response);
     }
 }

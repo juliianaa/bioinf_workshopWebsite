@@ -34,10 +34,10 @@
                 
                 <div class="content" style = "width: 800px;">
                     <span class="element" id="element" style="white-space:pre"></span>
-                    <img src="images/textBalloon.png" style="float:right" alt=""/>   
+                    <img src="images/hanzeXperience_MBO/textBalloon.png" style="float:right" alt=""/>   
                     <p>
-                        <img src="images/prof.png" width="210" height="400" alt=""/>
-                        <a href="html/assignmentsMasterClassNHanzexperience/login.jsp" class="button">Start</a>
+                        <img src="images/hanzeXperience_MBO/prof.png" width="210" height="400" alt=""/>
+                        <a href="html/assignmentsMasterClassNHanzexperience/assignment1.jsp" class="button">Start</a>
                     </p>
                 </div>
                 <!--End of content-->

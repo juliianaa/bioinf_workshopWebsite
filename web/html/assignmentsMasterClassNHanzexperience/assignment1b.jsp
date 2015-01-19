@@ -15,7 +15,6 @@
     </p>
     <p>
         <strong><i>>>>> </i></strong><a href="scripts/zoekGen.py" download>zoekGen.py</a> <strong><i> <<<<</i></strong>
-        (Als het downloaden niet lukt, klik dan op rechte muisknop en sla het link op)
     </p>
     <div>
 

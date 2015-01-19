@@ -6,14 +6,6 @@
 
 <div id="number_passer" data-nr="1">
     <div>
-        <c:choose>
-            <c:when test="${sessionScope.user != null}">
-                <h1>Welkom, ${sessionScope.user}</h1>
-            </c:when>
-            <c:otherwise>
-                <h1>No name</h1>
-            </c:otherwise>
-        </c:choose>
         <h1>Opdracht 1a</h1>
         <h2>Sleep de kaarten naar het correcte vak.</h2>
     </div>

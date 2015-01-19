@@ -28,9 +28,12 @@ public class ValidateScript {
     private List<String> userMain;
     private List<String> answerMain;
     private int correctAnswer;
-    private int wrongAnswer;
     
-    
+    /**
+     *
+     * @param filePath
+     * @throws IOException
+     */
     public void start(String filePath) throws IOException {
         readFile(filePath);
         ResultString = getMain(fileContent);
@@ -38,8 +41,14 @@ public class ValidateScript {
         
     }
 
+    /**
+     *
+     * @param filepath
+     * @throws FileNotFoundException
+     * @throws IOException
+     */
     public void readFile(String filepath) throws FileNotFoundException, IOException {
-//        String filePath = filepath.replace("\\","\\\\");
+        String filePath = filepath.replace("\\","\\\\"); // OFF if your not working on windows
         fileContent = new String(Files.readAllBytes(Paths.get(filepath))).replace("\t", "");
     }
     
@@ -60,20 +69,24 @@ public class ValidateScript {
     private void checkIfMainIsValid(String mainFunction) {
         userMain = new ArrayList<>(Arrays.asList(mainFunction.split("\n")));
         try {
-            String f = new String(Files.readAllBytes(Paths.get("/commons/Themas/Thema10/fileSaver/uitwerking/zoekGen_werkend.py")));
+            //Path for school
+//            String f = new String(Files.readAllBytes(Paths.get("/commons/Themas/Thema10/fileSaver/uitwerking/zoekGen_werkend.py")));
+            
+            //Path to zoekGen_werkend.py on windows
+            String f = new String(Files.readAllBytes(Paths.get("C:\\Users\\Juliana\\Documents\\Julia\\InfoWorkshops\\PR_Activiteiten\\HanzeXperience_MBO\\MBOXperience_2013\\Uitwerking\\zoekGen_werkend.py"))); 
             String answerContent = getMain(f).replace("\t", "");
             answerMain =  new ArrayList<>(Arrays.asList(answerContent.split("\n")));
             
-            
+            //Iterates of both Arralist to see if they are the same.
             if(userMain.size() == answerMain.size()){
                 for (int i = 0; i < answerMain.size(); i++) { 
+                    //if the variable of both Arraylists is the same one point will be added.
                     if(userMain.get(i).equals(answerMain.get(i))){
                         correctAnswer = correctAnswer+1;
-                    }else{
-                        wrongAnswer = wrongAnswer+1;
                     }
                 }
             }else{
+                //if the size of both Arraylist are not the same, this will be given
                 resultContent="Size is not the same";
             }
             
@@ -83,9 +96,20 @@ public class ValidateScript {
         }
     }
 
-
+    /**
+     *
+     * @return int which is a number of correct answers
+     */
     public int result(){
        return correctAnswer;
+    }
+    
+    /**
+     *
+     * @return 
+     */
+    public String resultContent(){
+       return resultContent;
     }
     
     
