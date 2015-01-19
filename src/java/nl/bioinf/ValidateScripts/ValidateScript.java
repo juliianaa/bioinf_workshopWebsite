@@ -23,10 +23,8 @@ import java.util.regex.Pattern;
  */
 public class ValidateScript {
     private String fileContent;
-    private String ResultString;
+    private String resultString;
     private String resultContent;
-    private List<String> userMain;
-    private List<String> answerMain;
     private int correctAnswer;
     
     /**
@@ -36,8 +34,8 @@ public class ValidateScript {
      */
     public void start(String filePath) throws IOException {
         readFile(filePath);
-        ResultString = getMain(fileContent);
-        checkIfMainIsValid(ResultString);
+        resultString = getMain(fileContent);
+        calculateAnswers(resultString);
         
     }
 
@@ -48,26 +46,34 @@ public class ValidateScript {
      * @throws IOException
      */
     public void readFile(String filepath) throws FileNotFoundException, IOException {
-        String filePath = filepath.replace("\\","\\\\"); // OFF if your not working on windows
+        String filePath = filepath.replace("\\","\\\\"); // Comment if your not working on windows
         fileContent = new String(Files.readAllBytes(Paths.get(filepath))).replace("\t", "");
     }
     
-     private String getMain(String fileContent) {
+    /**
+     *
+     * @param fileContent
+     * @return
+     */
+    public String getMain(String fileContent) {
        String pattern = "main\\(\\):\n(.*)while not";
-       String resultString = "";
+       String foundMain = "";
        Pattern p = Pattern.compile(pattern, Pattern.DOTALL);
        Matcher regexMatch = p.matcher(fileContent);
        if(regexMatch.find()){
-           resultString = regexMatch.group(1);
+           foundMain = regexMatch.group(1);
        }
-       return resultString;
+       return foundMain;
        
        
     }
 
-
-    private void checkIfMainIsValid(String mainFunction) {
-        userMain = new ArrayList<>(Arrays.asList(mainFunction.split("\n")));
+    /**
+     *
+     * @param foundMain
+     */
+    public void calculateAnswers(String foundMain) {
+        List<String> userMain = new ArrayList<>(Arrays.asList(foundMain.split("\n")));
         try {
             //Path for school
 //            String f = new String(Files.readAllBytes(Paths.get("/commons/Themas/Thema10/fileSaver/uitwerking/zoekGen_werkend.py")));
@@ -75,7 +81,7 @@ public class ValidateScript {
             //Path to zoekGen_werkend.py on windows
             String f = new String(Files.readAllBytes(Paths.get("C:\\Users\\Juliana\\Documents\\Julia\\InfoWorkshops\\PR_Activiteiten\\HanzeXperience_MBO\\MBOXperience_2013\\Uitwerking\\zoekGen_werkend.py"))); 
             String answerContent = getMain(f).replace("\t", "");
-            answerMain =  new ArrayList<>(Arrays.asList(answerContent.split("\n")));
+            List<String> answerMain =  new ArrayList<>(Arrays.asList(answerContent.split("\n")));
             
             //Iterates of both Arralist to see if they are the same.
             if(userMain.size() == answerMain.size()){
@@ -100,15 +106,15 @@ public class ValidateScript {
      *
      * @return int which is a number of correct answers
      */
-    public int result(){
+    public int getResult(){
        return correctAnswer;
     }
     
     /**
      *
-     * @return 
+     * @return String
      */
-    public String resultContent(){
+    public String getResultContent(){
        return resultContent;
     }
     
