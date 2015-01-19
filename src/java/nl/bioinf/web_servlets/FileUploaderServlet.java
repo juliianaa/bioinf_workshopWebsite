@@ -102,8 +102,8 @@ public class FileUploaderServlet extends HttpServlet {
                 checkScript.start(filePath);
                 
                 //gets an number back as result. The number indicates how many correct answers the program found in the user file
-                int result = checkScript.result();
-                String resultContent = checkScript.resultContent();
+                int result = checkScript.getResult();
+                String resultContent = checkScript.getResultContent();
                 session.setAttribute("resultContent", resultContent);
                 session.setAttribute("result", result);
                 

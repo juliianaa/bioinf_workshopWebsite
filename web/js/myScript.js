@@ -4,7 +4,9 @@
  */
 $(document).ready(initialize);
 
+
 function initialize() {
+    
     /*
      * Whenever save_notes_form is called the servlet makeNotes.do is called.
      */
@@ -13,7 +15,6 @@ function initialize() {
         /*
          * The input of the notes is saved as notes_data.
          */
-//        var notes_data = $("#save_notes_form textarea").val();
          var notes_data = {'notes': $("#save_notes_form textarea").val()};
         /*
          * The notes_data will be posted to the servlet (url), 
