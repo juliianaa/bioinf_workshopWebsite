@@ -3,6 +3,10 @@
     Created on : 4-jan-2015, 19:11:42
     Author     : mkslofstra
 --%>
+
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <div id="text_case">
     <div class = "text">
         <h1>Technasium</h1>
@@ -27,7 +31,15 @@
         <div class="noteBox">
             <label for="basic">Aantekeningen:</label>
             <form  id="save_notes_form" action="#" method="post">
-                <textarea cols="35" rows="24" name="notes" id = "notes">Maak hier je aantekeningen over de verdachten!</textarea>
+                <!--<textarea cols="35" rows="24" name="notes" id = "notes">Maak hier je aantekeningen over de verdachten!</textarea>-->
+                <c:choose>
+                    <c:when test="${empty sessionScope.savedNotes}">
+                        <textarea cols="35" rows="24" name="notes" id = "notes">Maak hier je aantekeningen over de verdachten!</textarea>
+                    </c:when>
+                    <c:otherwise>
+                        <textarea cols="35" rows="24" name="notes" id = "notes">${sessionScope.savedNotes}</textarea>
+                    </c:otherwise>
+                </c:choose>
                 <input type="submit" value="Save"/></form>
             <button id="get_notes" class="imageButton">Aantekeningen</button>
             <button id ="first" class = "imageButton"><<</button>

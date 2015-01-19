@@ -5,18 +5,13 @@
  */
 package nl.bioinf.web_servlets;
 
-import java.io.ByteArrayInputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import nl.bioinf.NoteHandler.GetNoteText;
 import nl.bioinf.NoteHandler.SaveAsTxt;
 
@@ -50,37 +45,9 @@ public class AssignmentTechnasium extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-          System.out.println("haalllooooo");
-//        response.setContentType("application/octet-stream");
-//        response.setHeader("Content-Disposition","attachment;filename=temp.csv");
-//        
-//        File file = new File(filePath);
-//        
-//        try (
-//            ServletOutputStream out = response.getOutputStream()) {
-//            GetNoteText getNoteText = new GetNoteText();
-//            String savedNotes = getNoteText.getSavedNotes(file);
-//            InputStream in;
-//            in = new ByteArrayInputStream(savedNotes.getBytes("UTF-8"));
-//
-//            byte[] outputByte = new byte[4096];
-//            //copy binary contect to output stream
-//            while(in.read(outputByte, 0, 4096) != -1)
-//            {
-//                out.write(outputByte, 0, 4096);
-//            }
-//            in.close();
-//            out.flush();
-//        }
-//	}
-
         File file = new File(filePath);
-        System.out.println("");
         GetNoteText getNoteText = new GetNoteText();
         String savedNotes = getNoteText.getSavedNotes(file);
-        
-        System.out.println("$$$$$$$$$$$$$$$$$$$"+savedNotes);
-
         if (savedNotes.isEmpty()) {
             try (PrintWriter pw = response.getWriter()) {
                 pw.print("Er is iets fout gegaan met het ophalen van de notities!"
