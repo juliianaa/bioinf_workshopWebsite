@@ -3,14 +3,14 @@
  
 #answersPile {
   margin: 0 auto;
-  background: #ffd;
+  background: #FF9D66;
 }
  
 #answersPile {
   width: 610px;
   height: 60px;
   padding: 20px;
-  border: 2px solid #333;
+  border: 2px solid #FFF5AD;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -42,12 +42,12 @@
   border-style: dashed;
   position:relative;
 }
- 
+
 #answersPile div {
-  background: #666;
-  color: #fff;
+  background: #707070;
+  color: #FFF;
   font-size: 20px;
-  text-shadow: 0 0 3px #000;
+  text-shadow: 0 0 1px #000;
 }
 
 /* "You did it!" message */
@@ -58,7 +58,7 @@
   width: 0;
   height: 0;
   z-index: 100;
-  background: #dfd;
+  background: #8EFF9C;
   border: 2px solid #333;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;

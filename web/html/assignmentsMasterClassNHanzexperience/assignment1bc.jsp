@@ -1,7 +1,7 @@
 <%-- 
     Document   : assignment1bc_terminal
     Created on : Jan 15, 2015, 1:17:10 PM
-    Author     : jwlgoh
+    Author     : jwlgoh/aroeters
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -35,12 +35,12 @@
                 <div class="content" id="question" style = "width: 800px;" >
                     <div>
                         <c:choose>
-                            <c:when test="${sessionScope.result == 5}">
+                            <c:when test="${sessionScope.result == 6}">
                                 <%@include file="assignment1c.jsp" %>
                             </c:when>
                             <c:otherwise>
-                                <h1>${sessionScope.resultContent}</h1>
                                 <%@include file="assignment1b.jsp" %>
+                                <h1>${sessionScope.resultContent}</h1>
                             </c:otherwise>
                         </c:choose>
                     </div>

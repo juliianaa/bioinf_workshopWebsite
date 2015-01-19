@@ -1,7 +1,7 @@
 <%-- 
     Document   : assignments
     Created on : Dec 1, 2014, 1:38:28 PM
-    Author     : jwlgoh
+    Author     : jwlgoh/aroeters
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -19,27 +19,23 @@
                     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
                     <script src="js/visualize.js" type="text/javascript"></script>
                     <script src="js/hideText.js" type="text/javascript"></script>
-                    <script src="js/navigateQuestions.js" type="text/javascript"></script>
+                    <script src="js/navigateQuestionsMBO.js" type="text/javascript"></script>
                     <link href="css/dragAndDrop.css" rel="stylesheet" type="text/css"/>
                     <style>
                         .answer1
-                        {
-                            top:232px;
+                        {   top:232px;
                             left:175px;
                         }
                         .answer2
-                        {
-                            top:277px;
+                        {   top:277px;
                             left:175px;
                         }
                         .answer3
-                        {
-                            top:320px;
+                        {   top:325px;
                             left:450px;
                         }
                         .answer4
-                        {
-                            top:443px;
+                        {   top:443px;
                             left:175px;
                         }
 
@@ -55,6 +51,14 @@
                                 <ul id="images">
                                     <img src="images/banner.jpg" width="970" height="300" alt=""/>
                                 </ul>
+                                <%--<c:choose>--%>
+                                    <%--<c:when test="${sessionScope.user != null}">--%>
+                                        <!--<h1>Welkom, ${sessionScope.user}</h1>-->
+                                    <%--</c:when>--%>
+                                    <%--<c:otherwise>--%>
+                                        <!--<h1>Geen naam opgegeven</h1>-->
+                                    <%--</c:otherwise>--%>
+                                <%--</c:choose>--%>
                                 <div class="content" id="question" style = "width: 800px;" >
                                     <%@include file="../../html/assignmentsMasterClassNHanzexperience/assignment1a.jsp" %>
                                 </div>

@@ -34,7 +34,7 @@ public class FileUploaderServlet extends HttpServlet {
     // this path is relative to application's directory
     
 //    private static final String uploadPath = "/commons/Themas/Thema10/fileSaver"; // Path for at school
-    private static final String uploadPath = "C:\\Users\\Juliana\\Documents\\test"; //Path for windows (change to the path where the file should be written)
+    private static final String uploadPath = "C:\\Users\\Arne\\Downloads\\"; //Path for windows (change to the path where the file should be written)
 
 
     /**
@@ -105,7 +105,7 @@ public class FileUploaderServlet extends HttpServlet {
                 int result = checkScript.result();
                 String resultContent = checkScript.resultContent();
                 session.setAttribute("resultContent", resultContent);
-                
+                session.setAttribute("result", result);
                 
                 
             

@@ -1,4 +1,4 @@
-<div id="number_passer" data-nr="4">
+<div id="number_passer" data-nr="5">
     <h1>Opdracht 2b</h1>
     <p>
         Kijk of je meer informatie over de eiwitten op internet kunt vinden.

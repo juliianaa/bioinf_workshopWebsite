@@ -198,8 +198,22 @@ and open the template in the editor.
 }
  
 .transition {
-    transform: scale(2); 
+   transform: scale(2);
     z-index: 3;
-    
-    
+}
+.mousePointer {
+    cursor: pointer;
+}
+
+.scaled:hover {
+    transform: scale(2);
+    z-index: 2;
+}
+
+#schema {
+    position: relative;
+}
+#schema:hover {
+    width: 874px;
+    height: 734px;
 }

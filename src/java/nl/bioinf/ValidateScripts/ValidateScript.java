@@ -22,13 +22,14 @@ import java.util.regex.Pattern;
  * @author jwlgoh
  */
 public class ValidateScript {
+
     private String fileContent;
     private String ResultString;
     private String resultContent;
     private List<String> userMain;
     private List<String> answerMain;
     private int correctAnswer;
-    
+
     /**
      *
      * @param filePath
@@ -38,7 +39,7 @@ public class ValidateScript {
         readFile(filePath);
         ResultString = getMain(fileContent);
         checkIfMainIsValid(ResultString);
-        
+
     }
 
     /**
@@ -48,49 +49,46 @@ public class ValidateScript {
      * @throws IOException
      */
     public void readFile(String filepath) throws FileNotFoundException, IOException {
-        String filePath = filepath.replace("\\","\\\\"); // OFF if your not working on windows
+        String filePath = filepath.replace("\\", "\\\\"); // OFF if your not working on windows
         fileContent = new String(Files.readAllBytes(Paths.get(filepath))).replace("\t", "");
     }
-    
-     private String getMain(String fileContent) {
-       String pattern = "main\\(\\):\n(.*)while not";
-       String resultString = "";
-       Pattern p = Pattern.compile(pattern, Pattern.DOTALL);
-       Matcher regexMatch = p.matcher(fileContent);
-       if(regexMatch.find()){
-           resultString = regexMatch.group(1);
-       }
-       return resultString;
-       
-       
-    }
 
+    private String getMain(String fileContent) {
+        String pattern = "main\\(\\):\n(.*)while not";
+        String resultString = "";
+        Pattern p = Pattern.compile(pattern, Pattern.DOTALL);
+        Matcher regexMatch = p.matcher(fileContent);
+        if (regexMatch.find()) {
+            resultString = regexMatch.group(1);
+        }
+        return resultString;
+
+    }
 
     private void checkIfMainIsValid(String mainFunction) {
         userMain = new ArrayList<>(Arrays.asList(mainFunction.split("\n")));
         try {
             //Path for school
 //            String f = new String(Files.readAllBytes(Paths.get("/commons/Themas/Thema10/fileSaver/uitwerking/zoekGen_werkend.py")));
-            
+
             //Path to zoekGen_werkend.py on windows
-            String f = new String(Files.readAllBytes(Paths.get("C:\\Users\\Juliana\\Documents\\Julia\\InfoWorkshops\\PR_Activiteiten\\HanzeXperience_MBO\\MBOXperience_2013\\Uitwerking\\zoekGen_werkend.py"))); 
+            String f = new String(Files.readAllBytes(Paths.get("C:\\Users\\Arne\\Downloads\\zoekGen_werkend.py")));
             String answerContent = getMain(f).replace("\t", "");
-            answerMain =  new ArrayList<>(Arrays.asList(answerContent.split("\n")));
-            
-            //Iterates of both Arralist to see if they are the same.
-            if(userMain.size() == answerMain.size()){
-                for (int i = 0; i < answerMain.size(); i++) { 
+            answerMain = new ArrayList<>(Arrays.asList(answerContent.split("\n")));
+
+            //Iterates of both Arraylist to see if they are the same.
+            if (userMain.size() == answerMain.size()) {
+                for (int i = 0; i < answerMain.size(); i++) {
                     //if the variable of both Arraylists is the same one point will be added.
-                    if(userMain.get(i).equals(answerMain.get(i))){
-                        correctAnswer = correctAnswer+1;
+                    if (userMain.get(i).equals(answerMain.get(i))) {
+                        correctAnswer = correctAnswer + 1;
                     }
                 }
-            }else{
+            } else {
                 //if the size of both Arraylist are not the same, this will be given
-                resultContent="Size is not the same";
+                resultContent = "Size is not the same";
             }
-            
-            
+
         } catch (IOException ex) {
             Logger.getLogger(ValidateScript.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -100,21 +98,16 @@ public class ValidateScript {
      *
      * @return int which is a number of correct answers
      */
-    public int result(){
-       return correctAnswer;
+    public int result() {
+        return correctAnswer;
     }
-    
+
     /**
      *
-     * @return 
+     * @return
      */
-    public String resultContent(){
-       return resultContent;
+    public String resultContent() {
+        return resultContent;
     }
-    
-    
 
-   
-
-    
 }
