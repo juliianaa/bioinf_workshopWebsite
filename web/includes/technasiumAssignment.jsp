@@ -10,7 +10,7 @@
 <div id="text_case">
     <div class = "text">
         <h1>Technasium</h1>
-        Welkom ${requestScope.user.username}, <br/>
+        Welkom ${sessionScope.user.username}, <br/>
         <br/>
         We hebben je hulp erg nodig, we moeten drie personen ondervragen over de moord van het hoofd van de labratoria
         van het Instituut voor Life Science & Technology. Je kan aantekeningen maken, over wat je van de verdachten vindt en dit kan later weer worden bekeken. 
@@ -40,7 +40,8 @@
         <div class="noteBox">
             <label for="basic">Aantekeningen:</label>
             <form  id="save_notes_form" action="#" method="post">
-                <textarea cols="35" rows="24" name="notes" id = "notes">Maak hier je aantekeningen over de verdachten!</textarea>
+                <div id="userData" name="userData" value="${sessionScope.user.username}">
+                    <textarea cols="35" rows="24" name="notes" id = "notes">Maak hier je aantekeningen over de verdachten!</textarea></div>
  <!--               <c:choose>
                     <c:when test="${empty requestScope.savedNotes}">
                         <textarea cols="35" rows="24" name="notes" id = "notes">Maak hier je aantekeningen over de verdachten!</textarea>

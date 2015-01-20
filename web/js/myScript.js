@@ -2,11 +2,13 @@
  * By Mldubbelaar and Mkslofstra
  * To make it possible to save notes and watch the casus on the technasium workshop page
  */
+
 $(document).ready(initialize);
 
 
 function initialize() {
-    
+
+//    var username = $('#userData').attr('value');
     /*
      * Whenever save_notes_form is called the servlet makeNotes.do is called.
      */
@@ -16,6 +18,7 @@ function initialize() {
          * The input of the notes is saved as notes_data.
          */
          var notes_data = {'notes': $("#save_notes_form textarea").val()};
+
         /*
          * The notes_data will be posted to the servlet (url), 
          * if the text is saved the servlet will return true. 
