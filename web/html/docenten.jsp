@@ -88,7 +88,7 @@
                                             <button class = "close">X</button>
                                             <h1>Michiel Noback</h1>
                                             <p>
-                                                Michiel Noback is de hoofd docent van Bio-informatica. Om zich even voor te stellen verteld michiel over zijn meeste recente onderzoek.<br/>
+                                                Om zich even voor te stellen verteld michiel over zijn meeste recente onderzoek.<br/>
                                                 Dit onderzoek heeft te maken met het onderzoeken van aardappelen en het verbeteren van de eigenschappen van dit gewas.<br/>
                                                 De wereldbevolking groeit zo explosief dat de traditionele gewasverbeteringen het niet meer kunnen bijbenen.<br/>
                                                 Aardappelonderzoek lijkt misschien minder sexy dan kankeronderzoek of onderzoek naar geneesmiddelen tegen diabetes, des ondanks dat is dit ook een belangrijk onderzoek.<br/>
