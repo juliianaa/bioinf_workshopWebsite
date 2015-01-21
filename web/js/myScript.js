@@ -7,54 +7,56 @@ $(document).ready(initialize);
 
 
 function initialize() {
+    var url = "http://localhost:8080/Bioinformatica_website/makeNotes.do";
+    var path = "/Users/mldubbelaar/Desktop/test/" + $("#userData").attr('value') + "_notes.txt";
 
-//    var username = $('#userData').attr('value');
-    /*
-     * The input of the notes is saved as notes_data.
-     */
-    var notes_data = {'notes': $("#save_notes_form textarea").val(),
-        'userPath': "/Users/mldubbelaar/Desktop/test/" + $("#userData").attr('value') + "_notes.txt"};
-     var url = "http://localhost:8080/Bioinformatica_website/makeNotes.do";
     /*
      * Whenever save_notes_form is called the servlet makeNotes.do is called.
      */
-    $("#save_notes_form").submit(function (event) {
+    $("#save_notes_form").submit(function(event) {
+        /*
+         * The input of the notes is saved as notes_data.
+         */
+         window.notes_data = {'notes': $("#save_notes_form textarea").val(),
+         'userPath': path};
         /*
          * The notes_data will be posted to the servlet (url), 
          * if the text is saved the servlet will return true. 
          * Within these lines also known as data.
          * So if data === true, the text was saved succesfully
          */
-        $.post(url, notes_data, function (data) {
-            if (data === "true") {
+        $.post(url, notes_data, function(data) {
+            if (data === "true"){
                 alert("De aantekeningen zijn opgeslagen!");
             } else {
                 alert("Er is iets misgegaan./nNeem contact op met de docent!");
-            }
+            }  
             $(".result").html(data);
         });
         event.preventDefault();
     });
-
-    $("#get_notes").click(function () {
-        $.get(url, notes_data, function (textFromNotes) {
+    
+    $("#get_notes").click(function() {
+        var path_data = {'userPath': path};
+        $.get(url, path_data, function(textFromNotes){
             alert(textFromNotes);
-        });
-    });
+        });   
+      });      
+      
     //By mkslofstra
     //When the << button is clicked, show the first page
-    $("#first").click(function () {
+    $("#first").click(function() {
         $("#questionImage").load("html/technasiumQuestions/tafel.jsp");
     });
     //By mkslofstra
     //When the >> button is clicked, show the last page of the slides
-    $("#last").click(function () {
+    $("#last").click(function() {
         $("#questionImage").load("html/technasiumQuestions/slide22.jsp");
     });
     //By mkslofstra
     //When the next next question button is clicked, for each page which is 
     //showing at that moment, the next should be loaded.
-    $("#next_question_button").click(function () {
+    $("#next_question_button").click(function() {
         //In the data element with the value data is the number of each image stored
         var imageNr = $("#image").data("imgnumber");
         //check which imagenumber is the current number, when that number is reached, 
@@ -140,13 +142,13 @@ function initialize() {
                 break;
             default:
                 $("#questionImage").load("html/technasiumQuestions/slide22.jsp");
-                //yes that were a lot images... 
+        //yes that were a lot images... 
         }
 
     });
     //By mkslofstra
     //When the last question button is clicked, the last question should be loaded. 
-    $("#last_question_button").click(function () {
+    $("#last_question_button").click(function() {
         var imageNr = $("#image").data("imgnumber");
         switch (imageNr) {
             //when the number of the current image number is reached, 
@@ -199,7 +201,7 @@ function initialize() {
             case 14:
                 $("#questionImage").load("html/technasiumQuestions/slide13.jsp");
                 break;
-            case "14a":
+             case "14a":
                 $("#questionImage").load("html/technasiumQuestions/slide14.jsp");
                 break;
             case "14b":
@@ -235,13 +237,13 @@ function initialize() {
     });
     //By mkslofstra
     //Show the slide of the evidence. 
-    $("#bewijsMateriaal").click(function () {
+    $("#bewijsMateriaal").click(function(){
         $("#questionImage").load("html/technasiumQuestions/bewijs.jsp");
     });
     //By mkslofstra
     //Load the next page by ajax, this is a jsp file with a table 
     //which can be added by the user
-    $("#nextPage").click(function () {
+    $("#nextPage").click(function(){
         $("#questionImage").load("includes/technasiumTable.jsp");
         //hide the button of next page, because there is no next page
         $("#nextPage").addClass("hidden");
@@ -258,7 +260,7 @@ function initialize() {
     //By mkslofstra
     //When first question button is clicked
     //undo changes of the next page button. 
-    $("#first").click(function () {
+    $("#first").click(function(){
         //change the text on the button back. 
         $("#first").text("<<");
         //remove the class hidden of the << button, and show again

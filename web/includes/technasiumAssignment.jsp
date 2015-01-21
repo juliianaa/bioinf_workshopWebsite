@@ -1,7 +1,7 @@
 <%-- 
     Document   : technasiumAssignment
     Created on : 4-jan-2015, 19:11:42
-    Author     : mkslofstra
+    Author     : mkslofstra en mldubbelaar
 --%>
 
 

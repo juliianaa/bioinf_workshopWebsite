@@ -12,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import nl.bioinf.NoteHandler.GetNoteText;
 import nl.bioinf.NoteHandler.SaveAsTxt;
 
@@ -20,13 +21,10 @@ import nl.bioinf.NoteHandler.SaveAsTxt;
  * @author mldubbelaar
  */
 public class AssignmentTechnasiumServlet extends HttpServlet {
-
     /**
      * filePath.
      */
-//    String filePath = "/homes/mldubbelaar/Desktop/test/"+userName+"_notes.txt";
-    String filePath;
-//    private String filePath;
+    private String filePath;
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -40,7 +38,6 @@ public class AssignmentTechnasiumServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         filePath = request.getParameter("userPath");
-        System.out.println("0000000000000"+filePath);
         File file = new File(filePath);
         GetNoteText getNoteText = new GetNoteText();
         String savedNotes = getNoteText.getSavedNotes(file);
@@ -70,11 +67,8 @@ public class AssignmentTechnasiumServlet extends HttpServlet {
     protected void doPost(final HttpServletRequest request,
             final HttpServletResponse response)
             throws ServletException, IOException {
-//        HttpSession session = request.getSession();
         String notes = request.getParameter("notes");
-        System.out.println(notes);
         filePath = request.getParameter("userPath");
-        System.out.println("..........."+filePath);
         /*
          If the function saveAsTemp returns true
          Than the true will be catched so it can be used within myScript.js 
