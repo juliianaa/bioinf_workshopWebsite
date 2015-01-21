@@ -6,7 +6,7 @@
     </context-param>
     <servlet>
         <servlet-name>AssignmentTechnasium</servlet-name>
-        <servlet-class>nl.bioinf.web_servlets.AssignmentTechnasium</servlet-class>
+        <servlet-class>nl.bioinf.web_servlets.AssignmentTechnasiumServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>FileUploaderServlet</servlet-name>
