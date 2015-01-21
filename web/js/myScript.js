@@ -7,17 +7,22 @@ $(document).ready(initialize);
 
 
 function initialize() {
-    var url = "http://localhost:8080/Bioinformatica_website/makeNotes.do";
     var path = "/Users/mldubbelaar/Desktop/test/" + $("#userData").attr('value') + "_notes.txt";
-
+    
+    var url = "http://localhost:8080/Bioinformatica_website/getNotes.do";
+        var path_data = {'userPath': path};
+        $.get(url, path_data, function(textFromNotes){
+            $("#save_notes_form textarea").text(textFromNotes);
+        }); 
     /*
      * Whenever save_notes_form is called the servlet makeNotes.do is called.
      */
     $("#save_notes_form").submit(function(event) {
+        var url = "http://localhost:8080/Bioinformatica_website/makeNotes.do";
         /*
          * The input of the notes is saved as notes_data.
          */
-         window.notes_data = {'notes': $("#save_notes_form textarea").val(),
+         notes_data = {'notes': $("#save_notes_form textarea").val(),
          'userPath': path};
         /*
          * The notes_data will be posted to the servlet (url), 
@@ -36,10 +41,11 @@ function initialize() {
         event.preventDefault();
     });
     
-    $("#get_notes").click(function() {
+    $("#save_notes_form textarea").bind(function() {
+        var url = "http://localhost:8080/Bioinformatica_website/getNotes.do";
         var path_data = {'userPath': path};
         $.get(url, path_data, function(textFromNotes){
-            alert(textFromNotes);
+               $("#save_notes_form textarea").text(textFromNotes); 
         });   
       });      
       

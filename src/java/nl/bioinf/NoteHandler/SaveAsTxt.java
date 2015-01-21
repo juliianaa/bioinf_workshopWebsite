@@ -7,12 +7,11 @@ package nl.bioinf.NoteHandler;
 
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.UnsupportedEncodingException;
 
 /**
  *
@@ -28,15 +27,12 @@ public class SaveAsTxt {
      */
     private boolean fileSaved = false;
 
-    /**
-     * saveAsTemp will be called by the doPost. This function writes the notes
-     * made by the user in its own file.
-     *
-     * @param notes are the notes given by the user.
-     * @param filePath is the path and the name of the file which will be
-     * created.
-     * @return fileSaved when the file is created or overwritten.
-     * @throws java.io.IOException returns an IOException
+    /** 
+     * 
+     * @param notes bla bla
+     * @param filePath bla
+     * @return bla
+     * @throws IOException bla 
      */
     public boolean createTxt(final String notes, final String filePath)
             throws IOException {
@@ -44,26 +40,32 @@ public class SaveAsTxt {
         if (file.exists()) {
             try {
                 String tempFile = filePath;
+                /*
+                The notes which were added on the site are written into the
+                user file and fileSaved will be changed into true.
+                 */
                 try (PrintWriter writer = new PrintWriter(tempFile, "UTF-8")) {
                     /*
-                     The notes which were added on the site are written into the
-                     user file and fileSaved will be changed into true.
-                     */
+                    The notes which were added on the site are written into the
+                    user file and fileSaved will be changed into true.
+                    */
                     writer.println(notes);
-                    writer.close();
-                    fileSaved = true;
                 }
-            } catch (Exception e) {
+                    fileSaved = true;
+            } catch (FileNotFoundException | UnsupportedEncodingException e) {
                 System.out.println(e);
             }
         } else if (!file.exists()) {
             file.createNewFile();
+            try {
             FileWriter fw = new FileWriter(file.getAbsoluteFile());
-            try (BufferedWriter bw = new BufferedWriter(fw)) {
-                bw.write(notes);
-            }
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(notes);
             fileSaved = true;
-        } 
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
         return fileSaved;
     }
 

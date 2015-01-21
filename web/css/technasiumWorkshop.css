@@ -194,35 +194,29 @@ and open the template in the editor.
 }
 
 #first{
-    left:-400px;
+    left: -352px; 
     width: 50px;
-    top:10px;
+    top:50px;
 }
 
 #last_question_button{
-    left:-346px;
-    top:-25px;
+    left: -298px;
+    top:15px;
 }
 
 #next_question_button{
-    left: -242px;  
-    top: -60px;
+    left: -194px;
+    top: -20px;
 }
 #last{
-    left:-138px;
+    left: -90px;
     width: 50px;
-    top: -95px;
+    top: -55px;
 }
 .imageButton#bewijsMateriaal{
-    /*left:-84px;*/
     width: 200px;
-    top: -5em;
-    left: -45em;
-}
-#get_notes{
-    top:3.2em;
-    left:-45em;
-    width:200px;
+    top: -90px;
+    left: 0px;
 }
 
 #nextPage{

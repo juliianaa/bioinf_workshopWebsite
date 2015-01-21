@@ -16,9 +16,9 @@ import java.io.IOException;
  * @author mldubbelaar
  */
 public class GetNoteText {
-    
+
     String textFromNotes;
-    
+
     /**
      *
      * @param filePath
@@ -26,18 +26,27 @@ public class GetNoteText {
      * @throws FileNotFoundException
      * @throws IOException
      */
-    public String getSavedNotes(File filePath) throws FileNotFoundException, IOException {
+    public String getSavedNotes(String filePath) throws FileNotFoundException, IOException {
+        try {
         FileReader fr = new FileReader(filePath);
-        try (BufferedReader br = new BufferedReader(fr)) {
-            StringBuilder sb = new StringBuilder();
-            String line = br.readLine();
-            while (line != null) {
-                sb.append(line);
-                sb.append(System.lineSeparator());
-                line = br.readLine();
-            }
-            textFromNotes = sb.toString();
+        File file = new File(filePath);
+        if (file.exists()) {
+            BufferedReader br = new BufferedReader(fr);
+                StringBuilder sb = new StringBuilder();
+                String line = br.readLine();
+                while (line != null) {
+                    sb.append(line);
+                    sb.append(System.lineSeparator());
+                    line = br.readLine();
+                }
+                textFromNotes = sb.toString();
+        } else {
+            textFromNotes = "Heb je al een file aangemaakt?";
         }
+        } catch (Exception e) {
+                System.out.println(e);
+            }
         return textFromNotes;
     }
+
 }

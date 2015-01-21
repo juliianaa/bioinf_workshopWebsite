@@ -14,18 +14,8 @@
         <br/>
         We hebben je hulp erg nodig, we moeten drie personen ondervragen over de moord van het hoofd van de labratoria
         van het Instituut voor Life Science & Technology. Je kan aantekeningen maken, over wat je van de verdachten vindt en dit kan later weer worden bekeken. 
-        Help ons bij het vinden van de dader. <br/>
-        Tijdens deze opdracht wordt er in koppels gewerkt, aan het einde van deze opdracht moet er een PowerPoint van 4 dia's worden gemaakt met de volgende punten die hieronder staan.
+        Help ons bij het vinden van de dader. Tijdens deze opdracht wordt er in koppels gewerkt, aan het einde van deze opdracht moet er een PowerPoint van 4 dia's worden gemaakt met de volgende punten die hieronder staan.
         Heel veel succes!! 
-        <br/>
-        <table>
-            <tbody>
-                <tr><td>- Inleiding/Doel</td></tr>
-                <tr><td>- Technieken</td></tr>
-                <tr><td>- Resultaten</td></tr>
-                <tr><td>- Conclusie/Discussie</td></tr>
-            </tbody>
-        </table>
     </div>
     <!--By mkslofstra-->
     <div id="question_div" data-question-number="1" data-imgNumber="tafel" >
@@ -41,17 +31,10 @@
             <label for="basic">Aantekeningen:</label>
             <form  id="save_notes_form" action="#" method="post">
                 <div id="userData" name="userData" value="${sessionScope.user.username}">
-                    <textarea cols="35" rows="24" name="notes" id = "notes">Maak hier je aantekeningen over de verdachten!</textarea></div>
- <!--               <c:choose>
-                    <c:when test="${empty requestScope.savedNotes}">
-                        <textarea cols="35" rows="24" name="notes" id = "notes">Maak hier je aantekeningen over de verdachten!</textarea>
-                    </c:when>
-                    <c:otherwise>
-                        <textarea cols="35" rows="24" name="notes" id = "notes">${sessionScope.savedNotes}</textarea>
-                    </c:otherwise>
-                </c:choose>-->
-                <input type="submit" value="Save"/></form>
-            <button id="get_notes" class="imageButton">Aantekeningen</button>
+                    <textarea cols="35" rows="24" name="notes" id = "notes"></textarea>
+                    <input type="submit" value="Save"/>
+                </div> 
+            </form>
             <button id ="first" class = "imageButton"><<</button>
             <button id="last_question_button" class = "imageButton"><b>< Vorige</b></button>
             <button id="next_question_button" class = "imageButton"><b>> Volgende</b></button>
