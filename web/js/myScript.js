@@ -8,12 +8,7 @@ $(document).ready(initialize);
 
 function initialize() {
     var path = "/Users/mldubbelaar/Desktop/test/" + $("#userData").attr('value') + "_notes.txt";
-    
-    var url = "http://localhost:8080/Bioinformatica_website/getNotes.do";
-        var path_data = {'userPath': path};
-        $.get(url, path_data, function(textFromNotes){
-            $("#save_notes_form textarea").text(textFromNotes);
-        }); 
+
     /*
      * Whenever save_notes_form is called the servlet makeNotes.do is called.
      */
@@ -41,7 +36,15 @@ function initialize() {
         event.preventDefault();
     });
     
-    $("#save_notes_form textarea").bind(function() {
+//    $("#save_notes_form textarea").bind(function() {
+//        var url = "http://localhost:8080/Bioinformatica_website/getNotes.do";
+//        var path_data = {'userPath': path};
+//        $.get(url, path_data, function(textFromNotes){
+//               $("#save_notes_form textarea").text(textFromNotes); 
+//        });   
+//      }); 
+      
+          $("#get_notes").click(function() {
         var url = "http://localhost:8080/Bioinformatica_website/getNotes.do";
         var path_data = {'userPath': path};
         $.get(url, path_data, function(textFromNotes){

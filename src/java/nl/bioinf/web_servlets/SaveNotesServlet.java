@@ -5,13 +5,13 @@
  */
 package nl.bioinf.web_servlets;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import nl.bioinf.NoteHandler.GetNoteText;
 import nl.bioinf.NoteHandler.SaveAsTxt;
 
 /**
@@ -19,12 +19,6 @@ import nl.bioinf.NoteHandler.SaveAsTxt;
  * @author mldubbelaar
  */
 public class SaveNotesServlet extends HttpServlet {
-
-    /**
-     * filePath.
-     */
-    private String filePath;
-    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -37,7 +31,7 @@ public class SaveNotesServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String notes = request.getParameter("notes");
-        filePath = request.getParameter("userPath");
+        String file = request.getParameter("userPath");
         /*
          If the function saveAsTemp returns true
          Than the true will be catched so it can be used within myScript.js 
@@ -45,7 +39,7 @@ public class SaveNotesServlet extends HttpServlet {
          */
 //        ---------------------------------------------------------------------
         SaveAsTxt saveAsText = new SaveAsTxt();
-        boolean succes = saveAsText.createTxt(notes, filePath);
+        boolean succes = saveAsText.createTxt(notes, file);
         if (succes) {
             try {
                 PrintWriter pw = response.getWriter();

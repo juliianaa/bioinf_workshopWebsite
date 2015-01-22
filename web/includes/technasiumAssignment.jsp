@@ -31,10 +31,11 @@
             <label for="basic">Aantekeningen:</label>
             <form  id="save_notes_form" action="#" method="post">
                 <div id="userData" name="userData" value="${sessionScope.user.username}">
-                    <textarea cols="35" rows="24" name="notes" id = "notes"></textarea>
+                    <textarea cols="35" rows="24" name="notes" id = "notes">Maak hier in je eigen aantekeningen</textarea>
                     <input type="submit" value="Save"/>
                 </div> 
             </form>
+            <button id ="get_notes" class = "imageButton">Aantekeningen</button>
             <button id ="first" class = "imageButton"><<</button>
             <button id="last_question_button" class = "imageButton"><b>< Vorige</b></button>
             <button id="next_question_button" class = "imageButton"><b>> Volgende</b></button>

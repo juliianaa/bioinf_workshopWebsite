@@ -27,44 +27,29 @@ public class SaveAsTxt {
      */
     private boolean fileSaved = false;
 
-    /** 
-     * 
+    /**
+     *
      * @param notes bla bla
      * @param filePath bla
      * @return bla
-     * @throws IOException bla 
+     * @throws IOException bla
      */
     public boolean createTxt(final String notes, final String filePath)
             throws IOException {
         File file = new File(filePath);
-        if (file.exists()) {
-            try {
-                String tempFile = filePath;
-                /*
-                The notes which were added on the site are written into the
-                user file and fileSaved will be changed into true.
-                 */
-                try (PrintWriter writer = new PrintWriter(tempFile, "UTF-8")) {
-                    /*
-                    The notes which were added on the site are written into the
-                    user file and fileSaved will be changed into true.
-                    */
-                    writer.println(notes);
-                }
-                    fileSaved = true;
-            } catch (FileNotFoundException | UnsupportedEncodingException e) {
-                System.out.println(e);
-            }
-        } else if (!file.exists()) {
-            file.createNewFile();
-            try {
-            FileWriter fw = new FileWriter(file.getAbsoluteFile());
-            BufferedWriter bw = new BufferedWriter(fw);
-            bw.write(notes);
+        /*
+         The notes which were added on the site are written into the
+         user file and fileSaved will be changed into true.
+         */
+        try (PrintWriter writer = new PrintWriter(file, "UTF-8")) {
+            /*
+             The notes which were added on the site are written into the
+             user file and fileSaved will be changed into true.
+             */
+            writer.println(notes);
             fileSaved = true;
-            } catch (Exception e) {
-                System.out.println(e);
-            }
+        } catch (Exception e) {
+            System.out.println(e);
         }
         return fileSaved;
     }
