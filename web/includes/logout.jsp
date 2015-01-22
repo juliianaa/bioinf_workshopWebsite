@@ -1,7 +1,7 @@
 <%-- 
     Document   : logout
     Created on : 3-jan-2015, 20:52:33
-    Author     : Mariska
+    Author     : Raozinga
 --%>
 <form class="login" action="logout.do" method="POST" action="#">
     <div class="main" id = "logout">

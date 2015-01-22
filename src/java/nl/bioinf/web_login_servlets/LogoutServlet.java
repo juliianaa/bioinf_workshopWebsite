@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Koeian
+ * @author raozinga
  */
 @WebServlet(name = "LogoutServlet", urlPatterns = {"/LogoutServlet"})
 public class LogoutServlet extends HttpServlet {
@@ -36,8 +36,13 @@ public class LogoutServlet extends HttpServlet {
         String logout = request.getParameter("logout");
         
         if (logout != null && logout.equals("Log uit")) {
-            request.getSession().invalidate();
-            RequestDispatcher view = request.getRequestDispatcher("html/technasiumWorkshop.jsp");
+            request.getSession().invalidate();         
+            String url = request.getRequestURI();
+
+//            String url = request.getParameter("url_data");
+//            String test = request.getParameter("test");
+//            System.out.println("**********************************"+url);s
+            RequestDispatcher view = request.getRequestDispatcher(url);
             view.forward(request, response);
         }
     }

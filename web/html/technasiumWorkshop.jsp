@@ -18,6 +18,7 @@
         <script src="js/hideText.js" type="text/javascript"></script>
         <script src="js/myScript.js" type="text/javascript"></script>
         <script src="js/typed.js" type="text/javascript"></script>
+        <script src="js/getPage.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link href="css/technasiumWorkshop.css" rel="stylesheet" type="text/css"/>
         <jsp:include page="../includes/loginHtmlHeader.jsp">
@@ -44,6 +45,7 @@
                         
                     </c:otherwise>
                 </c:choose>
+                <div id = "path"class= "hidden" >http://localhost:8080/Bioinformatica_website/html/technasiumWorkshop.jsp</div>
                 <!--End of content-->         
             </div>
             <%@include file="../includes/bodyFooter.jsp" %>
