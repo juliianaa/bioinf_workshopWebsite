@@ -1,15 +1,18 @@
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- *  * author: aroeters
+ *
+ * @author: aroeters/jwlgoh
+ * This javascript is used for the navigation between the different pages
+ * of the masterclass and hanzeExperienceMBO
  */
 $(document).ready(initialize);
 
 function initialize() {
     $("#next_question_button").attr("style", "display: inline;");
-    $("#next_question_button").click(function () {
+    $("#next_question_button").click(function() {
         var pageID = $("#number_passer").data("nr");
+        var workID = window.location.pathname.split("/");
+        var workIdLength = workID[workID.length - 1];
+
         switch (pageID) {
             case 1:
                 $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment1b.jsp");
@@ -24,8 +27,13 @@ function initialize() {
                 $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment2b.jsp");
                 break;
             case 5:
-                $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment2cMBO.jsp");
-                $("#next_question_button").hide();
+                if (workIdLength === "assignment1.jsp") {
+                    $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment2cMBO.jsp");
+                    $("#next_question_button").hide();
+                } else {
+                    $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment2cHavo.jsp");
+                    $("#next_question_button").hide();
+                }
                 break;
         }
     });

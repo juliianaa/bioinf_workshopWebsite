@@ -1,7 +1,7 @@
 <%-- 
     Document   : assignment1a
     Created on : Jan 7, 2015, 11:04:04 AM
-    Author     : aroeters
+    Author     : aroeters/jwlgoh
 --%>
 
 <div id="number_passer" data-nr="2">
@@ -15,7 +15,7 @@
         code in en sla het aangepaste programma op in desktop.
     </p>
     <p>
-      <a href="scripts/zoekGen.py" download>>>>>> zoekGen.py <<<<<</a>  
+      <a href="downloads/zoekGen.py" download>>>>>> zoekGen.py <<<<<</a>  
     </p>
     <div>
              <img src="images/ingevuldeSchemaZoekGen.png" width="600" height="500" alt=""/>
@@ -24,7 +24,7 @@
     <form method="post" enctype="multipart/form-data" action="uploadFile.do">
         File to upload: <input type="file" name="upfile"><br/>
         <br/>
-        <input type="submit" value="Submit" id="hoi" data-info="${sessionScope.result}"> to upload the file!
+        <input type="submit" value="Submit"> to upload the file!
      </form>
 
     </div>

@@ -2,6 +2,8 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+ * 
+ * @author: jwlgoh
  */
 
 
@@ -21,17 +23,6 @@ $(function(){
         loop: false,
         loopCount: false
     });
-    
-//    $("#login_text").typed({
-//        strings: ["Voordat we beginnen, geef jezelf eerst een username voor dit \ndriedaagse workshop", 
-//            "<form action='answer.do' method='post'>username: <input type='text' name='username'></input><input class='button' type='submit' value='Submit'></input></form>"],
-//        typeSpeed: -30,
-//        backDelay: 1500,
-//        loop: false,
-//        loopCount: false,
-//        contentType: 'html'
-//    });
-    
     
 });
 

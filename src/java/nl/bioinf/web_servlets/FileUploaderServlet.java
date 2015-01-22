@@ -1,6 +1,6 @@
 /**
  *
- * @author jwlgoh
+ * @author jwlgoh/ aroeters
  */
 package nl.bioinf.web_servlets;
 
@@ -9,15 +9,12 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import nl.bioinf.ValidateScripts.ValidateScript;
-
-
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
@@ -32,9 +29,9 @@ public class FileUploaderServlet extends HttpServlet {
 
     // constructs the directory path to store upload file
     // this path is relative to application's directory
-    
-//    private static final String uploadPath = "/commons/Themas/Thema10/fileSaver"; // Path for at school
-    private static final String uploadPath = "C:\\Users\\Arne\\Downloads\\"; //Path for windows (change to the path where the file should be written)
+
+    private static final String uploadPath = "/commons/Themas/Thema10/fileSaver"; // Path for at school
+//    private static final String uploadPath = "C:\\Users\\Arne\\Downloads\\"; //Path for windows (change to the path where the file should be written)
 
 
     /**
@@ -66,7 +63,7 @@ public class FileUploaderServlet extends HttpServlet {
 
         ServletFileUpload upload = new ServletFileUpload(factory);
 
-        
+
         // creates the directory if it does not exist
         File uploadDir = new File(uploadPath);
         if (!uploadDir.exists()) {
@@ -92,18 +89,23 @@ public class FileUploaderServlet extends HttpServlet {
                         item.write(storeFile);
                     }
                 }
-                
+
                 HttpSession session = request.getSession();
-                
+
                 //Calls the script that checks the file
                 ValidateScript checkScript = new ValidateScript();
                 checkScript.start(filePath);
-                
+
                 //gets an number back as result. The number indicates how many correct answers the program found in the user file
                 int result = checkScript.getResult();
                 String resultContent = checkScript.getResultContent();
+
+                //If size is not the same, this will then be shown in the jsp
                 session.setAttribute("resultContent", resultContent);
+                //the result
                 session.setAttribute("result", result);
+
+//                response.getWriter().println(result);
 
             }
         } catch (Exception ex) {

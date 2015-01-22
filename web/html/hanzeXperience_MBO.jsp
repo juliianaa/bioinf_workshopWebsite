@@ -1,7 +1,7 @@
 <%-- 
     Document   : workshops
     Created on : Nov 27, 2014, 3:15:34 PM
-    Author     : jwlgoh
+    Author     : jwlgoh/aroeters
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

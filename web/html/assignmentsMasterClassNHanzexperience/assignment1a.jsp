@@ -1,7 +1,7 @@
 <%-- 
     Document   : assignment1a
     Created on : Jan 12, 2015, 3:32:07 PM
-    Author     : aroeters
+    Author     : aroeters/jwlgoh
 --%>
 
 <div id="number_passer" data-nr="1">

@@ -1,5 +1,5 @@
 <%-- 
-    Document   : assignments
+    Document   : assignment1
     Created on : Dec 1, 2014, 1:38:28 PM
     Author     : jwlgoh/aroeters
 --%>
@@ -18,7 +18,6 @@
                     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
                     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
                     <script src="js/visualize.js" type="text/javascript"></script>
-                    <script src="js/hideText.js" type="text/javascript"></script>
                     <script src="js/navigateQuestionsMBO.js" type="text/javascript"></script>
                     <link href="css/dragAndDrop.css" rel="stylesheet" type="text/css"/>
                     <style>
@@ -38,7 +37,6 @@
                         {   top:443px;
                             left:175px;
                         }
-
                     </style>
                     <title>Bioinformatics Homepage</title>
                     </head>
@@ -51,17 +49,10 @@
                                 <ul id="images">
                                     <img src="images/banner.jpg" width="970" height="300" alt=""/>
                                 </ul>
-                                <%--<c:choose>--%>
-                                    <%--<c:when test="${sessionScope.user != null}">--%>
-                                        <!--<h1>Welkom, ${sessionScope.user}</h1>-->
-                                    <%--</c:when>--%>
-                                    <%--<c:otherwise>--%>
-                                        <!--<h1>Geen naam opgegeven</h1>-->
-                                    <%--</c:otherwise>--%>
-                                <%--</c:choose>--%>
                                 <div class="content" id="question" style = "width: 800px;" >
                                     <%@include file="../../html/assignmentsMasterClassNHanzexperience/assignment1a.jsp" %>
                                 </div>
+                                <!--The next question button directs the page to the next page using ajax-->
                                 <button id="next_question_button" class="button" type="button">Volgende vraag</button>
                                 <!--End of content-->
                             </div>

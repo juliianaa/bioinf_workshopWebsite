@@ -1,4 +1,8 @@
-
+<%-- 
+    Document   : assignments
+    Created on : Dec 1, 2014, 1:38:28 PM
+    Author     : jwlgoh/aroeters
+--%>
 
 
 <div id="number_passer" data-nr="4">
@@ -8,7 +12,7 @@
         Je hebt al genen uit DNA geïsoleerd. 
         In het college heb je geleerd waarom, als je genen gaat vergelijken het vaak beter is om dit met de eiwitcode 
         te doen in plaats van met de DNA-code. Daarom ga je nu de gevonden genen vertalen naar eiwitten.
-        <a href="scripts/translateCodon.py" download> >>> Download script translateCodon.py <<<</a> en sla het op in Desktop.
+        <a href="downloads/translateCodon.py" download> >>> Download script translateCodon.py <<<</a> en sla het op in Desktop.
         Voer het programma uit.
     <ul>
         <li>Open een terminal</li><br/>
