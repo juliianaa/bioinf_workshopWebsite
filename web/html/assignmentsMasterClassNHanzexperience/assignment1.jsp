@@ -1,5 +1,5 @@
 <%-- 
-    Document   : assignments
+    Document   : assignment1
     Created on : Dec 1, 2014, 1:38:28 PM
     Author     : jwlgoh/aroeters
 --%>
@@ -52,6 +52,7 @@
                                 <div class="content" id="question" style = "width: 800px;" >
                                     <%@include file="../../html/assignmentsMasterClassNHanzexperience/assignment1a.jsp" %>
                                 </div>
+                                <!--The next question button directs the page to the next page using ajax-->
                                 <button id="next_question_button" class="button" type="button">Volgende vraag</button>
                                 <!--End of content-->
                             </div>

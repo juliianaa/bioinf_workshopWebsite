@@ -22,88 +22,107 @@ import java.util.regex.Pattern;
  * @author jwlgoh/ aroeters
  */
 public class ValidateScript {
-
+    /**
+    * This string contains the content of the file.
+    **/
     private String fileContent;
+    /**
+    * Contains the main of the script that is uploaded.
+    **/
     private String resultString;
+    /**
+     * Contains the error message from when the uploaded main is not correct.
+     */
     private String resultContent;
+    /**
+     * Contains the number of correct answers.
+     */
     private int correctAnswer;
+    /**
+     * The main splitted on () so that only the functions are in the list.
+     */
     private List<String> userMain;
+    /**
+     * Contains the correct main.
+     */
     private List<String> answerMain;
 
     /**
      *
-     * @param filePath
-     * @throws IOException
+     * @param filePath should contain the pah to the uploaded file
+     * @throws IOException when something goes wrong with the uploading the file
      */
-    public void start(String filePath) throws IOException {
+    public final void start(final String filePath) throws IOException {
         readFile(filePath);
         resultString = getMain(fileContent);
         calculateAnswers(resultString);
-
     }
 
     /**
      *
-     * @param filepath
-     * @throws FileNotFoundException
-     * @throws IOException
+     * @param filepath should contain the pah to the uploaded file
+     * @throws FileNotFoundException when the file is not found
+     * @throws IOException when something goes wrong with reading the file
      */
-    public void readFile(String filepath) throws FileNotFoundException, IOException {
-//        String filePath = filepath.replace("\\","\\\\"); // Comment if your not working on windows
+    public final void readFile(final String filepath) throws
+            FileNotFoundException, IOException {
+        // Comment if your not working on windows
+//        String filePath = filepath.replace("\\","\\\\");
         fileContent = new String(Files.readAllBytes(Paths.get(filepath)));
 
     }
 
     /**
      *
-     * @param fileContent
-     * @return
+     * @param fileContent is the content of the whole file
+     * @return the main that is found in the uploaded file
      */
-    public String getMain(String fileContent) {
+    public final String getMain(final String fileContent) {
        String pattern = "main\\(\\):\n(.*)while not";
        String foundMain = "";
        Pattern p = Pattern.compile(pattern, Pattern.DOTALL);
        Matcher regexMatch = p.matcher(fileContent);
-       if(regexMatch.find()){
+       if (regexMatch.find()) {
            String main = regexMatch.group(1);
            foundMain = main.replaceAll("\\s", "");
        }
        return foundMain;
-
-
     }
-
     /**
      *
-     * @param foundMain
+     * @param foundMain should contain the main from the uploaded file
      */
-    public void calculateAnswers(String foundMain) {
+    public final void calculateAnswers(final String foundMain) {
         userMain = new ArrayList<>(Arrays.asList(foundMain.split("\\(\\)")));
         try {
             //Path for school
-            String f = new String(Files.readAllBytes(Paths.get("/commons/Themas/Thema10/fileSaver/uitwerking/zoekGen_werkend.py")));
+            String f = new String(Files.readAllBytes(Paths.get("/commons/+"
+                    + "Themas/Thema10/fileSaver/uitwerking/+"
+                    + "zoekGen_werkend.py")));
 
-            //Path to zoekGen_werkend.py on windows
-//            String f = new String(Files.readAllBytes(Paths.get("C:\\Users\\Arne\\Downloads\\zoekGen_werkend.py")));
             String answerContent = getMain(f);
 
-            answerMain =  new ArrayList<>(Arrays.asList(answerContent.split("\\(\\)")));
+            answerMain =  new ArrayList<>(Arrays.asList(answerContent
+                    .split("\\(\\)")));
 
             //Iterates of both Arralist to see if they are the same.
-            if(userMain.size() == answerMain.size()){
+            if (userMain.size() == answerMain.size()) {
                 for (int i = 0; i < answerMain.size(); i++) {
-                    //if the variable of both Arraylists is the same one point will be added.
+                    //if the variable of both Arraylists is the same
+                    //one point will be added.
                     if (userMain.get(i).equals(answerMain.get(i))) {
                         correctAnswer = correctAnswer + 1;
                     }
                 }
             } else {
-                //if the size of both Arraylist are not the same, this will be given
+                //if the size of both Arraylist are not the same,
+                //this will be given
                 resultContent = "Size is not the same";
             }
 
         } catch (IOException ex) {
-            Logger.getLogger(ValidateScript.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ValidateScript.class.getName())
+                    .log(Level.SEVERE, null, ex);
         }
     }
 
@@ -111,15 +130,15 @@ public class ValidateScript {
      *
      * @return int which is a number of correct answers
      */
-    public final int getResult(){
+    public final int getResult() {
        return correctAnswer;
     }
 
     /**
      *
-     * @return String
+     * @return String resultContent
      */
-    public final String getResultContent(){
+    public final String getResultContent() {
        return resultContent;
     }
 
