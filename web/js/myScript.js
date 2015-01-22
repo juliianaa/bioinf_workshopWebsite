@@ -2,11 +2,13 @@
  * By Mldubbelaar and Mkslofstra
  * To make it possible to save notes and watch the casus on the technasium workshop page
  */
+
 $(document).ready(initialize);
 
 
 function initialize() {
-    
+    var path = "/Users/mldubbelaar/Desktop/test/" + $("#userData").attr('value') + "_notes.txt";
+
     /*
      * Whenever save_notes_form is called the servlet makeNotes.do is called.
      */
@@ -15,7 +17,8 @@ function initialize() {
         /*
          * The input of the notes is saved as notes_data.
          */
-         var notes_data = {'notes': $("#save_notes_form textarea").val()};
+         notes_data = {'notes': $("#save_notes_form textarea").val(),
+         'userPath': path};
         /*
          * The notes_data will be posted to the servlet (url), 
          * if the text is saved the servlet will return true. 
@@ -33,12 +36,22 @@ function initialize() {
         event.preventDefault();
     });
     
-    $("#get_notes").click(function() {
-        var url = "http://localhost:8080/Bioinformatica_website/makeNotes.do";
-        $.get(url, function(textFromNotes){
-            alert(textFromNotes);
+//    $("#save_notes_form textarea").bind(function() {
+//        var url = "http://localhost:8080/Bioinformatica_website/getNotes.do";
+//        var path_data = {'userPath': path};
+//        $.get(url, path_data, function(textFromNotes){
+//               $("#save_notes_form textarea").text(textFromNotes); 
+//        });   
+//      }); 
+      
+          $("#get_notes").click(function() {
+        var url = "http://localhost:8080/Bioinformatica_website/getNotes.do";
+        var path_data = {'userPath': path};
+        $.get(url, path_data, function(textFromNotes){
+               $("#save_notes_form textarea").text(textFromNotes); 
         });   
       });      
+      
     //By mkslofstra
     //When the << button is clicked, show the first page
     $("#first").click(function() {

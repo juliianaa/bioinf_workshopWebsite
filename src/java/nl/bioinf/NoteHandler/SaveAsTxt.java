@@ -5,49 +5,53 @@
  */
 package nl.bioinf.NoteHandler;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 
 /**
  *
  * @author mldubbelaar
  */
 public class SaveAsTxt {
+
     /**
-        The path is where all the files will be saved.
-        The file will get the name of the user with the addition of _notes.txt
-        .txt has been chosen because this type of file can be overwritten a
-        .tmp creates an new file every time a user saves.
-        */
-    private boolean fileSaved = false;
-    /**
-     * saveAsTemp will be called by the doPost.
-     * This function writes the notes made by the user in its own file.
-     *
-     * @param notes are the notes given by the user.
-     * @param filePath is the path and the name of the file which will be
-     * created.
-     * @return only true if the notes are correctly saved within its file
+     * The path is where all the files will be saved. The file will get the name
+     * of the user with the addition of _notes.txt .txt has been chosen because
+     * this type of file can be overwritten a .tmp creates an new file every
+     * time a user saves.
      */
-    public boolean createTxt(final String notes, final String filePath) {
-        
+    private boolean fileSaved = false;
+
+    /**
+     *
+     * @param notes bla bla
+     * @param filePath bla
+     * @return bla
+     * @throws IOException bla
+     */
+    public boolean createTxt(final String notes, final String filePath)
+            throws IOException {
         File file = new File(filePath);
-        if (file.exists()){
-            try {
-            String tempFile = filePath;
-            try (PrintWriter writer = new PrintWriter(tempFile, "UTF-8")) {
-                /*
-                The notes which were added on the site are written into the
-                user file and fileSaved will be changed into true.
-                */
-                writer.println(notes);
-                writer.close();
-                fileSaved = true;
-            }
+        /*
+         The notes which were added on the site are written into the
+         user file and fileSaved will be changed into true.
+         */
+        try (PrintWriter writer = new PrintWriter(file, "UTF-8")) {
+            /*
+             The notes which were added on the site are written into the
+             user file and fileSaved will be changed into true.
+             */
+            writer.println(notes);
+            fileSaved = true;
         } catch (Exception e) {
             System.out.println(e);
         }
-        }        
         return fileSaved;
     }
+
 }

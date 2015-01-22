@@ -6,11 +6,15 @@
     </context-param>
     <servlet>
         <servlet-name>AssignmentTechnasium</servlet-name>
-        <servlet-class>nl.bioinf.web_servlets.AssignmentTechnasium</servlet-class>
+        <servlet-class>nl.bioinf.web_servlets.SaveNotesServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>FileUploaderServlet</servlet-name>
         <servlet-class>nl.bioinf.web_servlets.FileUploaderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetNotesServlet</servlet-name>
+        <servlet-class>nl.bioinf.web_servlets.GetNotesServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AssignmentAnsweringServlet</servlet-name>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>FileUploaderServlet</servlet-name>
         <url-pattern>/uploadFile.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetNotesServlet</servlet-name>
+        <url-pattern>/getNotes.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
