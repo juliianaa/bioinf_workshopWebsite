@@ -1,3 +1,9 @@
+<%-- 
+    Document   : bodyFooter
+    Created on : 23-nov-2014, 19:52:05
+    Author     : jwlgoh
+--%>
+
 <header>
     
     <div id="logo">

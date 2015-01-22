@@ -1,7 +1,7 @@
 <%-- 
     Document   : assignment1bc_terminal
     Created on : Jan 15, 2015, 1:17:10 PM
-    Author     : jwlgoh
+    Author     : aroeters/jwlgoh
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -18,7 +18,6 @@
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
         <script src="js/visualize.js" type="text/javascript"></script>
-        <script src="js/hideText.js" type="text/javascript"></script>
         <script src="js/navigateQuestionsMBO.js" type="text/javascript"></script>
         <title>Workshop</title>
     </head>
@@ -34,7 +33,7 @@
                 <div class="content" id="question" style = "width: 800px;" >
                     <div>
                         <c:choose>
-                            <c:when test="${sessionScope.result == 6}">
+                            <c:when test="${sessionScope.result == 5}">
                                 <%@include file="assignment1c.jsp" %>
                             </c:when>
                             <c:otherwise>

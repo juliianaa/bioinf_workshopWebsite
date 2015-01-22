@@ -1,7 +1,7 @@
 <%-- 
     Document   : assignment2cHavo
     Created on : Jan 15, 2015, 3:47:36 PM
-    Author     : aroeters
+    Author     : aroeters/jwlgoh
 --%>
 
 <div id="number_passer" data-nr="6">

@@ -1,7 +1,7 @@
 <%-- 
     Document   : assignment2c
     Created on : Jan 7, 2015, 11:13:00 AM
-    Author     : aroeters
+    Author     : aroeters/jwlgoh
 --%>
 <div id="number_passer" data-nr="6">
     <h1>Opdracht2c</h1>
