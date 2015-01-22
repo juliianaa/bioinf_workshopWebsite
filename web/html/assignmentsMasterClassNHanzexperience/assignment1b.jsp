@@ -18,14 +18,15 @@
       <a href="scripts/zoekGen.py" download>>>>>> zoekGen.py <<<<<</a>  
     </p>
     <div>
-        <img src="images/ingevuldeSchemaZoekGen.png" class=".scaled" width="442px" height="367px" alt=""/>
+             <img src="images/ingevuldeSchemaZoekGen.png" width="600" height="500" alt=""/>
 
     <p>Lever je script in</p>
     <form method="post" enctype="multipart/form-data" action="uploadFile.do">
         File to upload: <input type="file" name="upfile"><br/>
         <br/>
-        <input type="submit" value="Submit"> to upload the file!
+        <input type="submit" value="Submit" id="hoi" data-info="${sessionScope.result}"> to upload the file!
      </form>
 
     </div>
 </div>
+

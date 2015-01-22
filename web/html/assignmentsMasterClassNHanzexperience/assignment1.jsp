@@ -62,7 +62,6 @@
                                 <div class="content" id="question" style = "width: 800px;" >
                                     <%@include file="../../html/assignmentsMasterClassNHanzexperience/assignment1a.jsp" %>
                                 </div>
-                                <button id="previous_question_button" class="button" type="button">Vorige vraag</button>
                                 <button id="next_question_button" class="button" type="button">Volgende vraag</button>
                                 <!--End of content-->
                             </div>

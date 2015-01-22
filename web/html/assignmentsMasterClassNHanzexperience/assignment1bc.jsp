@@ -1,7 +1,7 @@
 <%-- 
     Document   : assignment1bc_terminal
     Created on : Jan 15, 2015, 1:17:10 PM
-    Author     : jwlgoh/aroeters
+    Author     : jwlgoh
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -19,9 +19,8 @@
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
         <script src="js/visualize.js" type="text/javascript"></script>
         <script src="js/hideText.js" type="text/javascript"></script>
-        <script src="js/navigateQuestions.js" type="text/javascript"></script>
-
-        <title>Bioinformatics Homepage</title>
+        <script src="js/navigateQuestionsMBO.js" type="text/javascript"></script>
+        <title>Workshop</title>
     </head>
 
     <body>
@@ -39,14 +38,13 @@
                                 <%@include file="assignment1c.jsp" %>
                             </c:when>
                             <c:otherwise>
-                                <%@include file="assignment1b.jsp" %>
                                 <h1>${sessionScope.resultContent}</h1>
+                                <%@include file="assignment1b.jsp" %>
                             </c:otherwise>
                         </c:choose>
                     </div>
 
                 </div>
-                <button id="previous_question_button" class="button" type="button">Vorige vraag</button>
                 <button id="next_question_button" class="button" type="button">Volgende vraag</button>
                 <!--End of content-->
             </div>

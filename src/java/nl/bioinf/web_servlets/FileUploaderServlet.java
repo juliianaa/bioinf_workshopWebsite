@@ -90,9 +90,7 @@ public class FileUploaderServlet extends HttpServlet {
 
                         // saves the file on disk
                         item.write(storeFile);
-
                     }
-
                 }
                 
                 HttpSession session = request.getSession();
@@ -106,9 +104,6 @@ public class FileUploaderServlet extends HttpServlet {
                 String resultContent = checkScript.getResultContent();
                 session.setAttribute("resultContent", resultContent);
                 session.setAttribute("result", result);
-                
-                
-            
 
             }
         } catch (Exception ex) {

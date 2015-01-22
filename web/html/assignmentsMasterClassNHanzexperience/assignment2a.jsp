@@ -12,11 +12,11 @@
         Voer het programma uit.
     <ul>
         <li>Open een terminal</li><br/>
-        <img src="images/hanzeXperience_MBO/openTerminal.png" width='700px' height='400px' alt=""/>
+        <img src="images/openTerminal.png" width='350px' height='200px' class="scaled" alt=""/>
         <br/><li>ga naar de map waar het programma staat</li><br/>
-        <img src="images/hanzeXperience_MBO/cdTerminal.png" width='700px' height='200px' alt=""/>
+        <img src="images/cdTerminal.png" width='350px' height='100px'class="scaled" alt=""/>
         <br/><li>tik in python translateCodon.py</li><br/>
-        <img src="images/hanzeXperience_MBO/translateTerminal.png" width='700px' height='200px' alt=""/>
+        <img src="images/translateTerminal.png" width='350px' height='100px' class="scaled" alt=""/>
         <br/><li>volg de instructies van het programma</li>
         <li>sla de eiwitten op in een tekstbestand</li>
     </ul>
