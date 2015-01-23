@@ -40,12 +40,14 @@
                         <jsp:include page="../includes/loginForm.jsp"/>
                     </c:when>
                     <c:otherwise>
-                        <jsp:include page="../includes/logout.jsp"/>
-                        <jsp:include page="../includes/technasiumAssignment.jsp"/>
+                        <jsp:include page="../includes/logout.jsp">
+                            <jsp:param name="url" value="http://localhost:8080/Bioinformatica_website/html/technasiumWorkshop.jsp" />
+                        </jsp:include>
+                        <jsp:include page="../includes/technasiumAssignment.jsp"/>                
                         
                     </c:otherwise>
                 </c:choose>
-                <div id = "path"class= "hidden" >http://localhost:8080/Bioinformatica_website/html/technasiumWorkshop.jsp</div>
+                <div id = "path" class= "hidden" >http://localhost:8080/Bioinformatica_website/html/technasiumWorkshop.jsp</div>
                 <!--End of content-->         
             </div>
             <%@include file="../includes/bodyFooter.jsp" %>

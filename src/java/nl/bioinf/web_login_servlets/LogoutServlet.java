@@ -37,9 +37,9 @@ public class LogoutServlet extends HttpServlet {
         
         if (logout != null && logout.equals("Log uit")) {
             request.getSession().invalidate();         
-            String url = request.getRequestURI();
+//            String url = request.getRequestURI();
 
-//            String url = request.getParameter("url_data");
+            String url = request.getParameter("url");
 //            String test = request.getParameter("test");
 //            System.out.println("**********************************"+url);s
             RequestDispatcher view = request.getRequestDispatcher(url);
