@@ -38,14 +38,7 @@ public class ValidateScript {
      * Contains the number of correct answers.
      */
     private int correctAnswer;
-    /**
-     * The main splitted on () so that only the functions are in the list.
-     */
-    private List<String> userMain;
-    /**
-     * Contains the correct main.
-     */
-    private List<String> answerMain;
+
 
     /**
      *
@@ -67,7 +60,7 @@ public class ValidateScript {
     public final void readFile(final String filepath) throws
             FileNotFoundException, IOException {
         // Comment if your not working on windows
-//        String filePath = filepath.replace("\\","\\\\");
+        String filePath = filepath.replace("\\","\\\\");
         fileContent = new String(Files.readAllBytes(Paths.get(filepath)));
 
     }
@@ -93,16 +86,22 @@ public class ValidateScript {
      * @param foundMain should contain the main from the uploaded file
      */
     public final void calculateAnswers(final String foundMain) {
-        userMain = new ArrayList<>(Arrays.asList(foundMain.split("\\(\\)")));
+        //The main splitted on () so that only the functions are in the list.
+        List<String> userMain = new ArrayList<>(Arrays.asList(foundMain.split("\\(\\)")));
         try {
             //Path for school
-            String f = new String(Files.readAllBytes(Paths.get("/commons/+"
-                    + "Themas/Thema10/fileSaver/uitwerking/+"
-                    + "zoekGen_werkend.py")));
+//            String f = new String(Files.readAllBytes(Paths.get("/commons/"
+//                    + "Themas/Thema10/fileSaver/uitwerking/+"
+//                    + "zoekGen_werkend.py")));
+            String f = new String(Files.readAllBytes(Paths.get("C:\\Users\\" 
+                    + "Juliana\\Documents\\Julia\\InfoWorkshops\\"
+            + "PR_Activiteiten\\HanzeXperience_MBO\\MBOXperience_2013\\"  
+            + "Uitwerking\\zoekGen_werkend.py")));
 
             String answerContent = getMain(f);
-
-            answerMain =  new ArrayList<>(Arrays.asList(answerContent
+            
+            // Contains the correct main.
+            List<String> answerMain =  new ArrayList<>(Arrays.asList(answerContent
                     .split("\\(\\)")));
 
             //Iterates of both Arralist to see if they are the same.

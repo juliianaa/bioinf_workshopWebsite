@@ -9,11 +9,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import nl.bioinf.ValidateScripts.ValidateScript;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -30,8 +30,10 @@ public class FileUploaderServlet extends HttpServlet {
     // constructs the directory path to store upload file
     // this path is relative to application's directory
 
-    private static final String uploadPath = "/commons/Themas/Thema10/fileSaver"; // Path for at school
-//    private static final String uploadPath = "C:\\Users\\Arne\\Downloads\\"; //Path for windows (change to the path where the file should be written)
+//    private static final String uploadPath = "/commons/Themas/Thema10/fileSaver"; // Path for at school
+    private static final String uploadPath = "C:\\Users\\Juliana\\Downloads\\"; //Path for windows (change to the path where the file should be written)
+    private String filePath;
+    private File storeFile;
 
 
     /**
@@ -57,11 +59,23 @@ public class FileUploaderServlet extends HttpServlet {
 
         // configures upload settings
         DiskFileItemFactory factory = new DiskFileItemFactory();
+        
+        
+        // Configure a repository (to ensure a secure temp location is used)
+        ServletContext servletContext = this.getServletConfig().getServletContext();
+        File repository = (File) servletContext.getAttribute("javax.servlet.context.tempdir");
+        factory.setRepository(repository);
+        
+
+        // Create a new file upload handler
+        ServletFileUpload upload = new ServletFileUpload(factory);
+        
+        
 
         // sets temporary location to store files
-        factory.setRepository(new File(System.getProperty("java.io.tmpdir")));
+//        factory.setRepository(new File(System.getProperty("java.io.tmpdir")));
 
-        ServletFileUpload upload = new ServletFileUpload(factory);
+//        ServletFileUpload upload = new ServletFileUpload(factory);
 
 
         // creates the directory if it does not exist
@@ -74,23 +88,22 @@ public class FileUploaderServlet extends HttpServlet {
             // parses the request's content to extract file data
             @SuppressWarnings("unchecked")
             List<FileItem> formItems = upload.parseRequest(request);
-            String filePath = "";
             if (formItems != null && formItems.size() > 0) {
                 // iterates over form's fields
                 for (FileItem item : formItems) {
                     // processes only fields that are not form fields in this case the file
                     if (!item.isFormField()) {
                         String fileName = new File(item.getName()).getName();
-                        filePath = uploadPath + File.separator + fileName;
+                        long millis = System.currentTimeMillis();
+                        
+                        filePath = uploadPath + File.separator + millis + fileName;
 
-                        File storeFile = new File(filePath);
+                        storeFile = new File(filePath);
 
                         // saves the file on disk
                         item.write(storeFile);
                     }
                 }
-
-                HttpSession session = request.getSession();
 
                 //Calls the script that checks the file
                 ValidateScript checkScript = new ValidateScript();
@@ -101,19 +114,27 @@ public class FileUploaderServlet extends HttpServlet {
                 String resultContent = checkScript.getResultContent();
 
                 //If size is not the same, this will then be shown in the jsp
-                session.setAttribute("resultContent", resultContent);
+                request.setAttribute("message", resultContent);
                 //the result
-                session.setAttribute("result", result);
+                request.setAttribute("result", result);
 
-//                response.getWriter().println(result);
 
             }
         } catch (Exception ex) {
             request.setAttribute("message",
                     "There was an error: " + ex.getMessage());
         }
-        // redirects client to page
-        RequestDispatcher view = request.getRequestDispatcher("/html/assignmentsMasterClassNHanzexperience/assignment1bc.jsp");
-        view.forward(request, response);
+        
+        //delete file afterwards
+        if(!storeFile.delete()){
+            request.setAttribute("message",
+                    "There was an error: file could not be deleted");
+        } else {
+            // redirects client to page
+            RequestDispatcher view = request.getRequestDispatcher("/html/assignmentsMasterClassNHanzexperience/assignment1bc.jsp");
+            view.forward(request, response);
+        }
+         
     }
+
 }
