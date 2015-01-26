@@ -11,10 +11,16 @@ function initialize() {
     // var path = "/Users/mldubbelaar/Desktop/test/" + $("#userData").attr('value') + "_notes.txt";
     // Path for school
     // var path = "/commons/Themas/Thema10/savedNotes/" + $("#userData").attr('value') + "_notes.txt";
-var path = "/commons/Themas/Thema10/savedNotes/Harry_notes.txt";
+    // Hardcoded path for school -- Do not use unless in case of emergency
+    // var path = "/commons/Themas/Thema10/savedNotes/Harry_notes.txt";
 
     var url = "http://localhost:8080/Bioinformatica_website/getNotes.do";
         var path_data = {'userPath': path};
+        /*
+         * The path is used to get the text.
+         * Whenever the text == null, because the file is empty.
+         * The if is used.
+         */
         $.get(url, path_data, function(textFromNotes){
                $("#save_notes_form textarea").text(textFromNotes); 
                if (textFromNotes === "null") {
