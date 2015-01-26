@@ -45,7 +45,7 @@ public class SaveNotesServlet extends HttpServlet {
                 PrintWriter pw = response.getWriter();
                 pw.print(Boolean.toString(succes));
                 pw.flush();
-            } catch (Exception e) {
+            } catch (IOException e) {
                 System.out.println(e);
             }
         }

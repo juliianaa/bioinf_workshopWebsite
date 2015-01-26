@@ -35,7 +35,6 @@
                     <input type="submit" value="Save"/>
                 </div> 
             </form>
-            <button id ="get_notes" class = "imageButton">Aantekeningen</button>
             <button id ="first" class = "imageButton"><<</button>
             <button id="last_question_button" class = "imageButton"><b>< Vorige</b></button>
             <button id="next_question_button" class = "imageButton"><b>> Volgende</b></button>
