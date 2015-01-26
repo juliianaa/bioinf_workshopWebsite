@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import nl.bioinf.NoteHandler.SaveAsTxt;
 
 /**
- * SaveNotesServlets makes sure that the notes on the techansium page are saved.
+ * SaveNotesServlets makes sure that the notes on the technasium page are saved.
  * The SaveNotesServlet asks for the parameters of notes and userPath. These
  * parameters will be used when the function createTxt is called. With the use
  * of a boolean there will be a check if the items are saved.
@@ -54,12 +54,13 @@ public class SaveNotesServlet extends HttpServlet {
          In this case within the js file.
          */
         if (succes) {
+            PrintWriter pw = response.getWriter();
             try {
-                PrintWriter pw = response.getWriter();
                 pw.print(Boolean.toString(succes));
                 pw.flush();
             } catch (Exception e) {
-                System.out.println(e);
+                pw.print(e);
+                pw.flush();
             }
         }
     }

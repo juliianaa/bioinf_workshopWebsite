@@ -10,7 +10,7 @@ function initialize() {
     // Path at home
     // var path = "/Users/mldubbelaar/Desktop/test/" + $("#userData").attr('value') + "_notes.txt";
     // Path for school
-    // var path = "/commons/Themas/Thema10/savedNotes/" + $("#userData").attr('value') + "_notes.txt";
+     var path = "/commons/Themas/Thema10/savedNotes/" + $("#userData").attr('value') + "_notes.txt";
     // Hardcoded path for school -- Do not use unless in case of emergency
     // var path = "/commons/Themas/Thema10/savedNotes/Harry_notes.txt";
 
@@ -47,7 +47,7 @@ function initialize() {
             if (data === "true"){
                 alert("De aantekeningen zijn opgeslagen!");
             } else {
-                alert("Er is iets misgegaan./nNeem contact op met de docent!");
+                alert("Er is iets misgegaan.");
             }  
             $(".result").html(data);
         });

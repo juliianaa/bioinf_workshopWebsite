@@ -16,7 +16,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
         <script src="js/hideText.js" type="text/javascript"></script>
-        <script src="js/NoteHandler.js" type="text/javascript"></script>
+        <script src="js/noteHandler.js" type="text/javascript"></script>
         <script src="js/typed.js" type="text/javascript"></script>
         <script src="js/getPage.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
