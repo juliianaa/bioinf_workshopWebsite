@@ -22,26 +22,26 @@
                     <script src="js/navigateQuestionsMBO.js" type="text/javascript"></script>
                     </head>
 
-                    <body>
-                        <div id="main1">
-                            <%@include file="../../includes/bodyHeader.jsp" %>
-                            <div id="site_content">
-                                <div id="top_border"></div>
-                                <ul id="images">
-                                    <img src="images/banner.jpg" width="970" height="300" alt=""/>
-                                </ul>
-                                <div class="content" id="question" style = "width: 800px;" >
-                                    <div>
-                                        <c:choose>
-                                            <c:when test="${requestScope.result == 5}">
-                                                <%@include file="assignment1c.jsp" %>
-                                            </c:when>
-                                            <c:otherwise>
-                                                <%@include file="assignment1b.jsp" %>
-                                                <h1>${requestScope.message}</h1>
-                                            </c:otherwise>
-                                        </c:choose>
-                                    </div>
+    <body>
+        <div id="main1">
+            <%@include file="../../includes/bodyHeader.jsp" %>
+            <div id="site_content">
+                <div id="top_border"></div>
+                <ul id="images">
+                    <img src="images/banner.jpg" width="970" height="300" alt=""/>
+                </ul>
+                <div class="content" id="question" style = "width: 800px;" >
+                    <div>
+                        <c:choose>
+                            <c:when test="${requestScope.result == 5}">
+                                <%@include file="assignment1c.jsp" %>
+                            </c:when>
+                            <c:otherwise>
+                                <h1>${requestScope.resultMessage}</h1>
+                                <%@include file="assignment1b.jsp" %>
+                            </c:otherwise>
+                        </c:choose>
+                    </div>
 
                                 </div>
                                 <button id="previous_question_button" class="button" type="button">Vorige vraag</button>

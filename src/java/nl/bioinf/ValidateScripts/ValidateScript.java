@@ -97,7 +97,7 @@ public class ValidateScript {
                     + "zoekGen_werkend.py")));
 
             String answerContent = getMain(f);
-
+            
             // Contains the correct main.
             List<String> answerMain =  new ArrayList<>(Arrays.asList(answerContent
                     .split("\\(\\)")));
@@ -118,8 +118,7 @@ public class ValidateScript {
             } else {
                 //if the size of both Arraylist are not the same,
                 //this will be given
-                resultContent = "Het gekozen bestand is niet goed aangepast."
-                        + "<br/>Pas de main() opnieuw aan en probeer opnieuw.";
+                resultContent = "Size is not the same";
             }
       
 
