@@ -59,8 +59,6 @@ public class ValidateScript {
      */
     public final void readFile(final String filepath) throws
             FileNotFoundException, IOException {
-        // Comment if your not working on windows
-        String filePath = filepath.replace("\\","\\\\");
         fileContent = new String(Files.readAllBytes(Paths.get(filepath)));
 
     }
@@ -87,23 +85,23 @@ public class ValidateScript {
      */
     public final void calculateAnswers(final String foundMain) {
         //The main splitted on () so that only the functions are in the list.
-        List<String> userMain = new ArrayList<>(Arrays.asList(foundMain.split("\\(\\)")));
+        List<String> userMain = new ArrayList<>(Arrays.asList(foundMain
+                .split("\\(\\)")));
+        
+        
+        
         try {
-            //Path for school
-//            String f = new String(Files.readAllBytes(Paths.get("/commons/"
-//                    + "Themas/Thema10/fileSaver/uitwerking/+"
-//                    + "zoekGen_werkend.py")));
-            String f = new String(Files.readAllBytes(Paths.get("C:\\Users\\" 
-                    + "Juliana\\Documents\\Julia\\InfoWorkshops\\"
-            + "PR_Activiteiten\\HanzeXperience_MBO\\MBOXperience_2013\\"  
-            + "Uitwerking\\zoekGen_werkend.py")));
+            //Path where the correct script can be found
+            String f = new String(Files.readAllBytes(Paths.get("/commons/"
+                    + "Themas/Thema10/fileSaver/uitwerking/"
+                    + "zoekGen_werkend.py")));
 
             String answerContent = getMain(f);
             
             // Contains the correct main.
             List<String> answerMain =  new ArrayList<>(Arrays.asList(answerContent
                     .split("\\(\\)")));
-
+            
             //Iterates of both Arralist to see if they are the same.
             if (userMain.size() == answerMain.size()) {
                 for (int i = 0; i < answerMain.size(); i++) {
@@ -111,6 +109,10 @@ public class ValidateScript {
                     //one point will be added.
                     if (userMain.get(i).equals(answerMain.get(i))) {
                         correctAnswer = correctAnswer + 1;
+                        if(correctAnswer <= 5){
+                            resultContent = "Er zijn " + correctAnswer +
+                                    " goede antwoorden, probeer nog een keer.";
+                        }
                     }
                 }
             } else {
@@ -118,13 +120,13 @@ public class ValidateScript {
                 //this will be given
                 resultContent = "Size is not the same";
             }
+      
 
         } catch (IOException ex) {
             Logger.getLogger(ValidateScript.class.getName())
                     .log(Level.SEVERE, null, ex);
         }
     }
-
     /**
      *
      * @return int which is a number of correct answers
@@ -140,6 +142,8 @@ public class ValidateScript {
     public final String getResultContent() {
        return resultContent;
     }
+
+    
 
 
 }
