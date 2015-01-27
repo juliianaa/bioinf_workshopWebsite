@@ -11,44 +11,45 @@
 
     <head>
         <base href="${initParam.base_url}">   
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link href="css/workshop.css" rel="stylesheet" type="text/css"/>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
-        <script src="js/visualize.js" type="text/javascript"></script>
-        <script src="js/navigateQuestionsMBO.js" type="text/javascript"></script>
-        <title>Workshop</title>
-    </head>
+            <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <link rel="stylesheet" type="text/css" href="css/style.css" />
+                    <link href="css/workshop.css" rel="stylesheet" type="text/css"/>
+                    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+                    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+                    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+                    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+                    <script src="js/navigateQuestionsMBO.js" type="text/javascript"></script>
+                    </head>
 
-    <body>
-        <div id="main1">
-            <%@include file="../../includes/bodyHeader.jsp" %>
-            <div id="site_content">
-                <div id="top_border"></div>
-                <ul id="images">
-                    <img src="images/banner.jpg" width="970" height="300" alt=""/>
-                </ul>
-                <div class="content" id="question" style = "width: 800px;" >
-                    <div>
-                        <c:choose>
-                            <c:when test="${requestScope.result == 5}">
-                                <%@include file="assignment1c.jsp" %>
-                            </c:when>
-                            <c:otherwise>
-                                <h1>${requestScope.message}</h1>
-                                <%@include file="assignment1b.jsp" %>
-                            </c:otherwise>
-                        </c:choose>
-                    </div>
+                    <body>
+                        <div id="main1">
+                            <%@include file="../../includes/bodyHeader.jsp" %>
+                            <div id="site_content">
+                                <div id="top_border"></div>
+                                <ul id="images">
+                                    <img src="images/banner.jpg" width="970" height="300" alt=""/>
+                                </ul>
+                                <div class="content" id="question" style = "width: 800px;" >
+                                    <div>
+                                        <c:choose>
+                                            <c:when test="${requestScope.result == 5}">
+                                                <%@include file="assignment1c.jsp" %>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <h1>${requestScope.message}</h1>
+                                                <%@include file="assignment1b.jsp" %>
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </div>
 
-                </div>
-                <button id="next_question_button" class="button" type="button">Volgende vraag</button>
-                <!--End of content-->
-            </div>
-            <%@include file="../../includes/bodyFooter.jsp" %>
-        </div>
-    </body>
-</html>
+                                </div>
+                                <button id="previous_question_button" class="button" type="button">Vorige vraag</button>
+                                <button id="next_question_button" class="button" type="button">Volgende vraag</button>
+                                <!--End of content-->
+                            </div>
+                            <%@include file="../../includes/bodyFooter.jsp" %>
+                        </div>
+                    </body>
+                    </html>
 

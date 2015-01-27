@@ -30,8 +30,8 @@ public class FileUploaderServlet extends HttpServlet {
     // constructs the directory path to store upload file
     // this path is relative to application's directory
 
-//    private static final String uploadPath = "/commons/Themas/Thema10/fileSaver"; // Path for at school
-    private static final String uploadPath = "C:\\Users\\Juliana\\Downloads\\"; //Path for windows (change to the path where the file should be written)
+    private static final String uploadPath = "/commons/Themas/Thema10/fileSaver"; // Path for at school
+//    private static final String uploadPath = "C:\\Users\\Juliana\\Downloads\\"; //Path for windows (change to the path where the file should be written)
     private String filePath;
     private File storeFile;
 
@@ -59,18 +59,18 @@ public class FileUploaderServlet extends HttpServlet {
 
         // configures upload settings
         DiskFileItemFactory factory = new DiskFileItemFactory();
-        
-        
+
+
         // Configure a repository (to ensure a secure temp location is used)
         ServletContext servletContext = this.getServletConfig().getServletContext();
         File repository = (File) servletContext.getAttribute("javax.servlet.context.tempdir");
         factory.setRepository(repository);
-        
+
 
         // Create a new file upload handler
         ServletFileUpload upload = new ServletFileUpload(factory);
-        
-        
+
+
 
         // sets temporary location to store files
 //        factory.setRepository(new File(System.getProperty("java.io.tmpdir")));
@@ -95,7 +95,7 @@ public class FileUploaderServlet extends HttpServlet {
                     if (!item.isFormField()) {
                         String fileName = new File(item.getName()).getName();
                         long millis = System.currentTimeMillis();
-                        
+
                         filePath = uploadPath + File.separator + millis + fileName;
 
                         storeFile = new File(filePath);
@@ -124,7 +124,7 @@ public class FileUploaderServlet extends HttpServlet {
             request.setAttribute("message",
                     "There was an error: " + ex.getMessage());
         }
-        
+
         //delete file afterwards
         if(!storeFile.delete()){
             request.setAttribute("message",
@@ -134,7 +134,7 @@ public class FileUploaderServlet extends HttpServlet {
             RequestDispatcher view = request.getRequestDispatcher("/html/assignmentsMasterClassNHanzexperience/assignment1bc.jsp");
             view.forward(request, response);
         }
-         
+
     }
 
 }

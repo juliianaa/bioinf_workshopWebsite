@@ -39,7 +39,7 @@
                         }
 
                     </style>
-                    <title>Bioinformatics Homepage</title>
+                    <title>Masterclass</title>
                     </head>
 
                     <body>

@@ -4,7 +4,13 @@
     Author     : aroeters/jwlgoh
 --%>
 <div id="number_passer" data-nr="6">
+    <script src="js/accordion.js" type="text/javascript"></script>
     <h1>Opdracht2c</h1>
+
+    Klik hieronder op de workshop die je volgt om je laatste opdracht te zien:
+    <div id="accordion">
+  <h2 class='button exp' >HanzeXperience-MBO</h2>
+  <div>
     <pre>
 Maak nu een webpagina vanalles wat je nu weet over de mummie.
 Hieronder staan een paar basic commando's om iets in html te maken:
@@ -33,5 +39,20 @@ Plaatst een afbeelding op de site:              img src="filenaam" title="titel"
 <hr>
 Maakt een hyperlink:                             a href="webpagina link"
 <hr>
+</pre>
+  </div>
+  <h2 class="button exp">Masterclass-havo</h2>
+  <div>
+      <pre>
+    Maak nu een presentatie van alles wat je weet over de mummie.
+Je kunt een presentatie maken in impress.
+Dit kun je openen door:
+
+- Applications menu
+- Office
+- LibreOfice Impress         
+
     </pre>
+  </div>
+  </div>
 </div>

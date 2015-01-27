@@ -90,16 +90,16 @@ public class ValidateScript {
         List<String> userMain = new ArrayList<>(Arrays.asList(foundMain.split("\\(\\)")));
         try {
             //Path for school
-//            String f = new String(Files.readAllBytes(Paths.get("/commons/"
-//                    + "Themas/Thema10/fileSaver/uitwerking/+"
-//                    + "zoekGen_werkend.py")));
-            String f = new String(Files.readAllBytes(Paths.get("C:\\Users\\" 
-                    + "Juliana\\Documents\\Julia\\InfoWorkshops\\"
-            + "PR_Activiteiten\\HanzeXperience_MBO\\MBOXperience_2013\\"  
-            + "Uitwerking\\zoekGen_werkend.py")));
+            String f = new String(Files.readAllBytes(Paths.get("/commons/"
+                    + "Themas/Thema10/fileSaver/uitwerking/"
+                    + "zoekGen_werkend.py")));
+//            String f = new String(Files.readAllBytes(Paths.get("C:\\Users\\"
+//                    + "Juliana\\Documents\\Julia\\InfoWorkshops\\"
+//            + "PR_Activiteiten\\HanzeXperience_MBO\\MBOXperience_2013\\"
+//            + "Uitwerking\\zoekGen_werkend.py")));
 
             String answerContent = getMain(f);
-            
+
             // Contains the correct main.
             List<String> answerMain =  new ArrayList<>(Arrays.asList(answerContent
                     .split("\\(\\)")));

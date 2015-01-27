@@ -10,8 +10,6 @@ function initialize() {
     $("#next_question_button").attr("style", "display: inline;");
     $("#next_question_button").click(function() {
         var pageID = $("#number_passer").data("nr");
-        var workID = window.location.pathname.split("/");
-        var workIdLength = workID[workID.length - 1];
 
         switch (pageID) {
             case 1:
@@ -27,14 +25,25 @@ function initialize() {
                 $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment2b.jsp");
                 break;
             case 5:
-                if (workIdLength === "assignment1.jsp") {
-                    $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment2cMBO.jsp");
-                    $("#next_question_button").hide();
-                } else {
-                    $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment2cHavo.jsp");
-                    $("#next_question_button").hide();
-                }
+                $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment2cMBO.jsp");
+
                 break;
         }
     });
+    $("#previous_question_button").attr("style", "display: inline;");
+    $("#previous_question_button").click(function() {
+        var pageID = $("#number_passer").data("nr");
+        switch (pageID) {
+            case 3:
+                $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment1b.jsp");
+                break;
+            case 4:
+                $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment1c.jsp");
+                break;
+            case 5:
+                $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment2a.jsp");
+                break;
+        }
+    });
+    
 }

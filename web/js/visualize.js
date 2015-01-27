@@ -9,9 +9,7 @@
 var correctAnswers = 0;
 $(init);
 function init() {
-    // Hide the success message and the next_question_button
-    $("#previous_question_button").hide();
-    $('#next_question_button').hide();
+    // Hide the success message
     $('#successMessage').hide();
     $('#successMessage').css({
         left: '580px',
@@ -55,7 +53,7 @@ function init() {
     function handleCardDrop(event, ui) {
         var slotNumber = $(this).data('number');
         var cardNumber = ui.draggable.data('number');
-       
+
         // 
         // If the card was dropped to the correct slot,
         // change the card colour, position it directly
@@ -68,7 +66,7 @@ function init() {
             $(this).droppable('disable');
             ui.draggable.position({of: $(this), my: 'left top', at: 'left top'});
             ui.draggable.draggable('option', 'revert', false);
-            
+
             correctAnswers++;
         }
 
