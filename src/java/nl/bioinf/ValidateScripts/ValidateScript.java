@@ -116,7 +116,8 @@ public class ValidateScript {
             } else {
                 //if the size of both Arraylist are not the same,
                 //this will be given
-                resultContent = "Size is not the same";
+                resultContent = "Het gekozen bestand is niet goed aangepast."
+                        + "<br/>Pas de main() opnieuw aan en probeer opnieuw.";
             }
 
         } catch (IOException ex) {

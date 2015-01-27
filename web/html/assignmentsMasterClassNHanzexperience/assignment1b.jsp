@@ -22,9 +22,9 @@
 
     <p>Lever je script in</p>
     <form method="post" enctype="multipart/form-data" action="uploadFile.do">
-        File to upload: <input type="file" name="upfile"><br/>
+        File uploaden: <input type="file" name="upfile"><br/>
         <br/>
-        <input type="submit" value="Submit"> to upload the file!
+        <input type="submit" value="Submit"> upload de file!
      </form>
 
     </div>
