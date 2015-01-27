@@ -58,18 +58,18 @@ public class FileUploaderServlet extends HttpServlet {
 
         // configures upload settings
         DiskFileItemFactory factory = new DiskFileItemFactory();
-        
-        
+
+
         // Configure a repository (to ensure a secure temp location is used)
         ServletContext servletContext = this.getServletConfig().getServletContext();
         File repository = (File) servletContext.getAttribute("javax.servlet.context.tempdir");
         factory.setRepository(repository);
-        
+
 
         // Create a new file upload handler
         ServletFileUpload upload = new ServletFileUpload(factory);
-        
-        
+
+
 
         // sets temporary location to store files
 //        factory.setRepository(new File(System.getProperty("java.io.tmpdir")));
@@ -94,7 +94,7 @@ public class FileUploaderServlet extends HttpServlet {
                     if (!item.isFormField()) {
                         String fileName = new File(item.getName()).getName();
                         long millis = System.currentTimeMillis();
-                        
+
                         filePath = uploadPath + File.separator + millis + fileName;
 
                         storeFile = new File(filePath);
@@ -133,10 +133,17 @@ public class FileUploaderServlet extends HttpServlet {
             request.setAttribute("message",
                     "There was an error: " + ex.getMessage());
         }
-        
-//        
-//            
-         
+
+        //delete file afterwards
+        if(!storeFile.delete()){
+            request.setAttribute("message",
+                    "There was an error: file could not be deleted");
+        } else {
+            // redirects client to page
+            RequestDispatcher view = request.getRequestDispatcher("/html/assignmentsMasterClassNHanzexperience/assignment1bc.jsp");
+            view.forward(request, response);
+        }
+
     }
 
 }
