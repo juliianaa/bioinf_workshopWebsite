@@ -5,7 +5,6 @@
  */
 package nl.bioinf.web_servlets;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -15,10 +14,15 @@ import javax.servlet.http.HttpServletResponse;
 import nl.bioinf.NoteHandler.SaveAsTxt;
 
 /**
+ * SaveNotesServlets makes sure that the notes on the technasium page are saved.
+ * The SaveNotesServlet asks for the parameters of notes and userPath. These
+ * parameters will be used when the function createTxt is called. With the use
+ * of a boolean there will be a check if the items are saved.
  *
  * @author mldubbelaar
  */
 public class SaveNotesServlet extends HttpServlet {
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -28,25 +32,35 @@ public class SaveNotesServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    protected void processRequest(final HttpServletRequest request,
+            final HttpServletResponse response)
             throws ServletException, IOException {
+        /*
+         The parameters from notes and userPath will be saved.
+         */
         String notes = request.getParameter("notes");
         String file = request.getParameter("userPath");
         /*
          If the function saveAsTemp returns true
-         Than the true will be catched so it can be used within myScript.js 
+         Than the true will be catched so it can be used within myScript.js
          as an extra check.
          */
 //        ---------------------------------------------------------------------
         SaveAsTxt saveAsText = new SaveAsTxt();
         boolean succes = saveAsText.createTxt(notes, file);
+        /*
+         If the boolean is true the printwriter will be used.
+         The true will be transformed into a string and can be used further.
+         In this case within the js file.
+         */
         if (succes) {
+            PrintWriter pw = response.getWriter();
             try {
-                PrintWriter pw = response.getWriter();
                 pw.print(Boolean.toString(succes));
                 pw.flush();
             } catch (Exception e) {
-                System.out.println(e);
+                pw.print(e);
+                pw.flush();
             }
         }
     }

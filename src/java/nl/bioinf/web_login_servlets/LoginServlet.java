@@ -22,7 +22,7 @@ import nl.bioinf.dbConnector.User;
 /**
  * Servlet for registering a new user
  *
- * @author Rutger Ozinga
+ * @author Rutger Ozinga (redirect to last page by mkslofstra)
  */
 @WebServlet(name = "loginServlet", urlPatterns = {"/loginServlet"})
 public class LoginServlet extends HttpServlet {
@@ -45,11 +45,12 @@ public class LoginServlet extends HttpServlet {
         HttpServletRequest httpReq = (HttpServletRequest) request;
         HttpServletResponse httpResp = (HttpServletResponse) response;
         //if there is no username or password given: view the login page 
-        //change index.jsp to httpResp.sendRedirect(httpReq.getRequestURI());
         if (username == null || username.length() == 0 || password == null
                 || password.length() == 0) {
             //load login page
-            RequestDispatcher view = request.getRequestDispatcher("index.jsp");
+            String location = request.getParameter("location");
+            //make a requestdispatcher element which communicates with the user
+            RequestDispatcher view = request.getRequestDispatcher(location);
             view.forward(request, response);
         } else {
             //set values for the database so they can be filled
@@ -66,17 +67,17 @@ public class LoginServlet extends HttpServlet {
                 dbPass = getServletContext().getInitParameter("mysql_pass");
                 //make it possible to connect with the mysql database
                 UserDAOmysqlImpl dbconnect = new UserDAOmysqlImpl();
-               
+
                 try {
                     //make the actual connection with mysql database                    
                     dbconnect.connect(dbUrl, dbUser, dbPass);
-                    
+
                     try {
                         //try to make a user given the username and password provided by the user
-                        User user = dbconnect.loginUser(username, password); 
+                        User user = dbconnect.loginUser(username, password);
                         //disconnect from database
                         dbconnect.disconnect();
-                        
+
                         //get the current session
                         HttpSession session = request.getSession();
                         //make the session valid for the given number of seconds (now 10)
@@ -88,15 +89,20 @@ public class LoginServlet extends HttpServlet {
                         }
                         //save the name of the user for the request
                         request.setAttribute("user", user);
+                        //get the location of the current page
+                        String location = request.getParameter("location");
                         //make a requestdispatcher element which communicates with the user
-                        RequestDispatcher view = request.getRequestDispatcher("index.jsp");
+                        RequestDispatcher view = request.getRequestDispatcher(location);
                         //view the page asked by the servlet
                         view.forward(request, response);
-                    //if something is going wrong, catch exception    
+                        //if something is going wrong, catch exception    
                     } catch (IllegalArgumentException ex) {
                         String LoginError = ex.getMessage();
                         request.setAttribute("login_error", LoginError);
-                        RequestDispatcher view = request.getRequestDispatcher("index.jsp");
+                        //get the location of the current page
+                        String location = request.getParameter("location");
+                        //make a requestdispatcher element which communicates with the user
+                        RequestDispatcher view = request.getRequestDispatcher(location);
                         view.forward(request, response);
                     }
 

@@ -30,8 +30,7 @@ public class FileUploaderServlet extends HttpServlet {
     // constructs the directory path to store upload file
     // this path is relative to application's directory
 
-    private static final String uploadPath = "/commons/Themas/Thema10/fileSaver"; // Path for at school
-//    private static final String uploadPath = "C:\\Users\\Juliana\\Downloads\\"; //Path for windows (change to the path where the file should be written)
+    private static final String uploadPath = "/commons/Themas/Thema10/fileSaver/"; // Path to temporary files
     private String filePath;
     private File storeFile;
 
@@ -111,12 +110,22 @@ public class FileUploaderServlet extends HttpServlet {
 
                 //gets an number back as result. The number indicates how many correct answers the program found in the user file
                 int result = checkScript.getResult();
-                String resultContent = checkScript.getResultContent();
-
-                //If size is not the same, this will then be shown in the jsp
-                request.setAttribute("message", resultContent);
-                //the result
-                request.setAttribute("result", result);
+                String resultMessage = checkScript.getResultContent();
+                
+                //delete file afterwards
+                if(!storeFile.delete()){
+                    request.setAttribute("message",
+                            "There was an error: file could not be deleted");
+                } else {
+                
+                    //If size is not the same, this will then be shown in the jsp
+                    request.setAttribute("resultMessage", resultMessage);
+                    //the result
+                    request.setAttribute("result", result);
+                    // redirects client to page
+                    RequestDispatcher view = request.getRequestDispatcher("/html/assignmentsMasterClassNHanzexperience/assignment1bc.jsp");
+                    view.forward(request, response);
+                }
 
 
             }

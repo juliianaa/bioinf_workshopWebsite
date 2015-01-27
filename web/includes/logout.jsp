@@ -4,6 +4,7 @@
     Author     : Raozinga
 --%>
 <form class="login" action="logout.do" method="POST" action="#">
+    <input type="hidden" name="location" value="${param.location}">
     <div class="main" id = "logout">
         <label> Hallo, ${sessionScope.user.username}</label><br/>
         <table>

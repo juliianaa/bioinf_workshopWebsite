@@ -1,58 +1,13 @@
 /* 
- * By Mldubbelaar and Mkslofstra
- * To make it possible to save notes and watch the casus on the technasium workshop page
+ * By Mkslofstra
+ * watch the casus on the technasium workshop page
  */
 
 $(document).ready(initialize);
 
 
 function initialize() {
-    var path = "/Users/mldubbelaar/Desktop/test/" + $("#userData").attr('value') + "_notes.txt";
-
-    /*
-     * Whenever save_notes_form is called the servlet makeNotes.do is called.
-     */
-    $("#save_notes_form").submit(function(event) {
-        var url = "http://localhost:8080/Bioinformatica_website/makeNotes.do";
-        /*
-         * The input of the notes is saved as notes_data.
-         */
-         notes_data = {'notes': $("#save_notes_form textarea").val(),
-         'userPath': path};
-        /*
-         * The notes_data will be posted to the servlet (url), 
-         * if the text is saved the servlet will return true. 
-         * Within these lines also known as data.
-         * So if data === true, the text was saved succesfully
-         */
-        $.post(url, notes_data, function(data) {
-            if (data === "true"){
-                alert("De aantekeningen zijn opgeslagen!");
-            } else {
-                alert("Er is iets misgegaan./nNeem contact op met de docent!");
-            }  
-            $(".result").html(data);
-        });
-        event.preventDefault();
-    });
-    
-//    $("#save_notes_form textarea").bind(function() {
-//        var url = "http://localhost:8080/Bioinformatica_website/getNotes.do";
-//        var path_data = {'userPath': path};
-//        $.get(url, path_data, function(textFromNotes){
-//               $("#save_notes_form textarea").text(textFromNotes); 
-//        });   
-//      }); 
-      
-          $("#get_notes").click(function() {
-        var url = "http://localhost:8080/Bioinformatica_website/getNotes.do";
-        var path_data = {'userPath': path};
-        $.get(url, path_data, function(textFromNotes){
-               $("#save_notes_form textarea").text(textFromNotes); 
-        });   
-      });      
-      
-    //By mkslofstra
+       //By mkslofstra
     //When the << button is clicked, show the first page
     $("#first").click(function() {
         $("#questionImage").load("html/technasiumQuestions/tafel.jsp");
@@ -248,6 +203,8 @@ function initialize() {
     //Show the slide of the evidence. 
     $("#bewijsMateriaal").click(function(){
         $("#questionImage").load("html/technasiumQuestions/bewijs.jsp");
+         //remove the class hidden of the next page button, and show again
+        $("#nextPage").removeClass("hidden");
     });
     //By mkslofstra
     //Load the next page by ajax, this is a jsp file with a table 
@@ -260,6 +217,8 @@ function initialize() {
         //would be work for nothing because the first page of the slides should be loaded
         //here also. 
         $("#first").text("Terug");
+        //move the first and "terug" button
+        $("#first").addClass("move");
         //hide the >> button. 
         $("#last").addClass("hidden");
         //hide the next and last question buttons. 
@@ -274,6 +233,7 @@ function initialize() {
         $("#first").text("<<");
         //remove the class hidden of the << button, and show again
         $("#last").removeClass("hidden");
+        $("#first").removeClass("move");
         //remove the class hidden of the last question button, and show again
         $("#last_question_button").removeClass("hidden");
         //remove the class hidden of the next question button, and show again

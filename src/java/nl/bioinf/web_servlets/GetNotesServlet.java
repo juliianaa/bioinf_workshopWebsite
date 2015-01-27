@@ -7,7 +7,6 @@ package nl.bioinf.web_servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,7 +14,9 @@ import javax.servlet.http.HttpServletResponse;
 import nl.bioinf.NoteHandler.GetNoteText;
 
 /**
- *
+ * GetNotesServlet returns the notes which where saved within the userFile.
+ * The text which is found within the userfile is returned by the function
+ * getSavedNotes.
  * @author mldubbelaar
  */
 public class GetNotesServlet extends HttpServlet {
@@ -31,28 +32,24 @@ public class GetNotesServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        response.setContentType("text/html;charset=UTF-8");
-//        try (PrintWriter out = response.getWriter()) {
-//            /* TODO output your page here. You may use following sample code. */
-//            out.println("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">");
-//            out.println("<html>");
-//            out.println("<head>");
-//            out.println("<title>Servlet GetNotesServlet</title>");            
-//            out.println("</head>");
-//            out.println("<body>");
-//            out.println("<h1>Servlet GetNotesServlet at " + request.getContextPath() + "</h1>");
-//            out.println("</body>");
-//            out.println("</html>");
-//        }
+
+        /*
+        The parameter of userPath is saved as filePath.
+        */
         String filePath = request.getParameter("userPath");
         if (!filePath.isEmpty()) {
+            /*
+            The function getSavedNotes will be used if the file exists.
+            The text found can be used further.
+            In this case the text is used within the js file.
+            */
             GetNoteText getNoteText = new GetNoteText();
             String savedNotes = getNoteText.getSavedNotes(filePath);
             try (PrintWriter pw = response.getWriter()) {
                 pw.print(savedNotes);
                 pw.flush();
             }
-        } else if (filePath.isEmpty()) {
+        } else {
             try (PrintWriter pw = response.getWriter()) {
                 pw.print("Maak hier je aantekeningen over de verdachten!");
                 pw.flush();

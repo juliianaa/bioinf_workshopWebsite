@@ -56,5 +56,27 @@ and open the template in the editor.
     cursor:pointer;
     height: 20px;
     width: 20px;
+}
 
+.teacher{
+   width: 150px; 
+}
+
+div#arne{
+    content:url(../images/arne.jpg);
+}
+div#martijn{
+    content:url(../images/martijn.jpg);
+}
+div#marcel{
+    content:url(../images/marcel.jpg);
+}
+div#michiel{
+    content:url(../images/michiel.jpg);
+}
+div#ronald{
+    content:url(../images/ronald.jpg);
+}
+div#tsjerk{
+    content:url(../images/tsjerk.jpg);
 }

@@ -10,6 +10,7 @@
 
         <form class="login" action="login.do" method="POST" action="#">
 
+            <input type="hidden" name="location" value="${param.location}">
             <h2><b> Log in </b></h2>
             <span class="error_message"> ${requestScope.login_error} </span><br/><br/>
             <span class="error_message"> ${requestScope.register_error} </span><br /><br />

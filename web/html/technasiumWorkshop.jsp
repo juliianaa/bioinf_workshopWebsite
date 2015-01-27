@@ -15,10 +15,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
-        <script src="js/hideText.js" type="text/javascript"></script>
-        <script src="js/myScript.js" type="text/javascript"></script>
+        <script src="js/NoteHandler.js" type="text/javascript"></script>
         <script src="js/typed.js" type="text/javascript"></script>
-        <script src="js/getPage.js" type="text/javascript"></script>
+        <script src="js/loadTechnasiumSlides.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link href="css/technasiumWorkshop.css" rel="stylesheet" type="text/css"/>
         <jsp:include page="../includes/loginHtmlHeader.jsp">
@@ -37,17 +36,18 @@
                 </ul>
                 <c:choose>
                     <c:when test="${empty sessionScope.user}">
-                        <jsp:include page="../includes/loginForm.jsp"/>
+                        <jsp:include page="../includes/loginForm.jsp">
+                            <jsp:param name="location" value="html/technasiumWorkshop.jsp" />
+                        </jsp:include>
                     </c:when>
                     <c:otherwise>
                         <jsp:include page="../includes/logout.jsp">
-                            <jsp:param name="url" value="http://localhost:8080/Bioinformatica_website/html/technasiumWorkshop.jsp" />
+                            <jsp:param name="location" value="html/technasiumWorkshop.jsp" />
                         </jsp:include>
                         <jsp:include page="../includes/technasiumAssignment.jsp"/>                
-                        
+
                     </c:otherwise>
                 </c:choose>
-                <div id = "path" class= "hidden" >http://localhost:8080/Bioinformatica_website/html/technasiumWorkshop.jsp</div>
                 <!--End of content-->         
             </div>
             <%@include file="../includes/bodyFooter.jsp" %>
