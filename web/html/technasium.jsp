@@ -17,7 +17,6 @@
             <script src="js/jquery.bpopup-x.x.x.min.js" type="text/javascript"></script>
             <link rel="stylesheet" type="text/css" href="css/style.css" />
             <link href="css/workshop.css" rel="stylesheet" type="text/css"/>
-            <script src="js/hideText.js" type="text/javascript"></script>
             <link href="css/workshopsHanze.css" rel="stylesheet" type="text/css"/>
             <title>Technasium</title>
     </head>
