@@ -37,7 +37,7 @@
                                 <%@include file="assignment1c.jsp" %>
                             </c:when>
                             <c:otherwise>
-                                <h1>${requestScope.message}</h1>
+                                <h1>${requestScope.resultMessage}</h1>
                                 <%@include file="assignment1b.jsp" %>
                             </c:otherwise>
                         </c:choose>
