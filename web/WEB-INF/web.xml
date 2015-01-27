@@ -4,7 +4,7 @@
         <param-name>base_url</param-name>
         <param-value>http://localhost:8080/Bioinformatica_website/</param-value>
     </context-param>
-     <context-param>
+    <context-param>
         <param-name>mysql_url</param-name>
         <param-value>jdbc:mysql://mysql.bin/Thjkral</param-value>
     </context-param>

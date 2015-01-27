@@ -15,7 +15,7 @@
         We hebben je hulp erg nodig, we moeten drie personen ondervragen over de moord van het hoofd van de labratoria
         van het Instituut voor Life Science & Technology. Je kan aantekeningen maken, over wat je van de verdachten vindt en dit kan later weer worden bekeken. 
         Help ons bij het vinden van de dader. Tijdens deze opdracht wordt er in koppels gewerkt, aan het einde van deze opdracht moet er een PowerPoint van 4 dia's worden gemaakt met de volgende punten die hieronder staan.
-        Heel veel succes!! 
+        Heel veel succes!! <br/><br/><br/>
     </div>
     <!--By mkslofstra-->
     <div id="question_div" data-question-number="1" data-imgNumber="tafel" >

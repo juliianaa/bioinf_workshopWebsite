@@ -215,7 +215,7 @@ and open the template in the editor.
 }
 .imageButton#bewijsMateriaal{
     width: 200px;
-    top: -90px;
+    top: 0px;
     left: 0px;
 }
 
@@ -240,5 +240,10 @@ and open the template in the editor.
     display: none;
 }
 #nextPage{
-    top:-170px;
+    top:-70px;
+}
+.move{
+    margin-top: 0em;
+    margin-bottom: 5em;
+    margin-left:25.3em;
 }
