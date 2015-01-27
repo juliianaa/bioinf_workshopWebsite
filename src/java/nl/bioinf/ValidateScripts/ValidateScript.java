@@ -127,17 +127,6 @@ public class ValidateScript {
                     .log(Level.SEVERE, null, ex);
         }
     }
-    
-//    public final File deleteTempFile(File storeFile) {
-//        //delete file afterwards
-//        if(!storeFile.delete()){
-//            String message = "There was an error: file could not be deleted";
-//            return message;
-//                    
-//                    
-//        }
-//    }
-
     /**
      *
      * @return int which is a number of correct answers
