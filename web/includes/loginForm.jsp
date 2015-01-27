@@ -52,7 +52,7 @@
                             </tr>
                             <tr>
                                 <td></td>
-                                <td><input type="submit" value="register" /></td>
+                                <td><input type="submit" value="Registreer" /></td>
                                 <td><a href="index.jsp">Heb je al een account?</a></td>
                             </tr>
 
