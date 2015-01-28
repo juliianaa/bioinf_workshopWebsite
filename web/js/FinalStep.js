@@ -1,5 +1,5 @@
 /* 
- * Plugin from internet, changed by mkslofstra
+ * Plugin from internet, changed by mkslofstra to make the check for correct answers possible. 
  */
 
 (function () {

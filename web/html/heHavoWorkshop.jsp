@@ -44,6 +44,11 @@
                                 Bacterie_3<br/>
                                 CGGATCAGCACGCCGCGGTGAATACGTTCCCGGGCCTTGTACACACCGCCCGTCACACCACGAGAGTTTGTAACACCCGA
                             </p>
+                            <div id ="instruction">
+                                Vul deze sequenties in op <a href http://www.bioinf.nl/~rwedema/HanzeXperience/">deze</a> website bij de speciale tool. 
+                                K lik op Zoek in database naar gelijkenis. Als er een match is dan zul je deze zien in de resultaat
+                                box.
+                            </div>
                         </div>
                     </div>
                     <!--End of content-->
