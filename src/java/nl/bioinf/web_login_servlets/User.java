@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package nl.bioinf.web_login_servlets;
 
 /**
@@ -13,12 +9,12 @@ public class User {
     private String username;
     private String password;
     private Boolean loggedin;
-    
+
     public User(String username, String password) {
         this.username = username;
         this.password = password;
         this.loggedin = false;
-    
+
     }
 
     public String getUsername() {
@@ -45,4 +41,3 @@ public class User {
         this.loggedin = loggedin;
     }
 }
-    

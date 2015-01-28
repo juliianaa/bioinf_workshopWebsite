@@ -1,11 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package nl.bioinf.dbConnector;
 
 /**
+ * Re-usable class that forms the user.
  *
  * @author Tom Kral
  */
@@ -16,13 +13,22 @@ public class User {
     private String lastName;
     private String emailAdress;
 
-
+    /**
+     * COnstructor of the class.
+     * @param username
+     * @param firstName
+     * @param lastName
+     * @param emailAdress
+     */
     public User(String username, String firstName, String lastName, String emailAdress) {
         this.username = username;
         this.firstName = firstName;
         this.emailAdress = emailAdress;
     }
 
+    /**
+     * Getters and setters for the variables of User.
+     */
     public String getUsername() {
         return username;
     }
