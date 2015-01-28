@@ -5,6 +5,8 @@
 --%>
 
 <div id="number_passer" data-nr="1">
+    <link href="css/dragAndDrop.css" rel="stylesheet" type="text/css"/>
+    <script src="js/visualize.js" type="text/javascript"></script>
     <div>
         <h1>Opdracht 1a</h1>
         <h2>Sleep de kaarten naar het correcte vak.</h2>

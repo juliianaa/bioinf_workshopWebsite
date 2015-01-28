@@ -10,7 +10,6 @@ function initialize() {
     $("#next_question_button").attr("style", "display: inline;");
     $("#next_question_button").click(function() {
         var pageID = $("#number_passer").data("nr");
-
         switch (pageID) {
             case 1:
                 $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment1b.jsp");
@@ -25,8 +24,13 @@ function initialize() {
                 $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment2b.jsp");
                 break;
             case 5:
-                $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment2cMBO.jsp");
-
+                $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment2cMBO.jsp", function() {
+                    $("#accordion").accordion({
+                        collapsible: true,
+                        active: false
+                    }).collapse("hide");
+                });
+                $("#next_question_button").hide();
                 break;
         }
     });
@@ -34,6 +38,9 @@ function initialize() {
     $("#previous_question_button").click(function() {
         var pageID = $("#number_passer").data("nr");
         switch (pageID) {
+            case 2:
+                $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment1a.jsp");
+                break;
             case 3:
                 $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment1b.jsp");
                 break;
@@ -43,7 +50,11 @@ function initialize() {
             case 5:
                 $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment2a.jsp");
                 break;
+             case 6:
+                $("#question").load("html/assignmentsMasterClassNHanzexperience/assignment2b.jsp");
+                $("#next_question_button").show();
+                break;
         }
     });
-    
+
 }

@@ -4,7 +4,6 @@
     Author     : aroeters/jwlgoh
 --%>
 <div id="number_passer" data-nr="6">
-    <script src="js/accordion.js" type="text/javascript"></script>
     <h1>Opdracht2c</h1>
 
     Klik hieronder op de workshop die je volgt om je laatste opdracht te zien:

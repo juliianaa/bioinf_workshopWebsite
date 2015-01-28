@@ -6,8 +6,8 @@
  * @author: jwlgoh/aroeters
  */
 
+$(document).ready($(init));
 var correctAnswers = 0;
-$(init);
 function init() {
     // Hide the success message
     $('#successMessage').hide();
