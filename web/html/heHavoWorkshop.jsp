@@ -13,10 +13,10 @@
             <meta charset="utf-8"/>
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-            <script src="js/popUpWiki.js" type="text/javascript"></script>
-            <script src="js/jquery.bpopup-x.x.x.min.js" type="text/javascript"></script>
             <link rel="stylesheet" type="text/css" href="css/style.css" />
+            <!--workshop page layout-->
             <link href="css/workshop.css" rel="stylesheet" type="text/css"/>
+            <!--layout for specific workshops-->
             <link href="css/workshopsHanze.css" rel="stylesheet" type="text/css"/>
             <title>Hanze Experience Havo</title>
     </head>
@@ -45,8 +45,8 @@
                                 CGGATCAGCACGCCGCGGTGAATACGTTCCCGGGCCTTGTACACACCGCCCGTCACACCACGAGAGTTTGTAACACCCGA
                             </p>
                             <div id ="instruction">
-                                Vul deze sequenties in op <a href http://www.bioinf.nl/~rwedema/HanzeXperience/">deze</a> website bij de speciale tool. 
-                                K lik op Zoek in database naar gelijkenis. Als er een match is dan zul je deze zien in de resultaat
+                                Vul deze sequenties in op <a  target = "_blank"href = "http://www.bioinf.nl/~rwedema/HanzeXperience/">deze</a> website bij de speciale tool. 
+                                Klik op Zoek in database naar gelijkenis. Als er een match is dan zul je deze zien in de resultaat
                                 box.
                             </div>
                         </div>
