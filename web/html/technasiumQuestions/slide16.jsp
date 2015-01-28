@@ -6,6 +6,6 @@
 
 
 <img data-imgNumber="16" id = "image" src="images/verhoorMagazijnMedewerkster.jpg" alt=""/> 
-<div class ="up"><p class = "css-typing">Verdachte 3: Magazijnmedwerkster *naam*</p>
+<div class ="up"><p class = "css-typing">Verdachte 3: Magazijnmedwerkster, Anna Nas.</p>
 </div>
 

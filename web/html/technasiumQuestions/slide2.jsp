@@ -4,7 +4,7 @@
     Author     : mkslofstra
 --%>
 <img data-imgNumber="2" id = "image" src="images/verhoorManager.jpg" alt=""/> 
-<div class ="up"><p class = "css-typing">Verdachte 1: de manager van het instituut...</p>
+<div class ="up"><p class = "css-typing">Verdachte 1: de manager van het instituut, Benny Wies.</p>
 </div>
 
 

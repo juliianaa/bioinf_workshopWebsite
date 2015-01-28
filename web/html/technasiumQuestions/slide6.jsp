@@ -9,8 +9,8 @@
 <div class ="right" >
     <p class="triangle-border right">
         Al een hele tijd probeer ik een conflict op te lossen tussen labmedewerker 
-        *naam labmederwerker* en *naam slachtoffer*. Ik heb er werkelijk slapeloze 
+        Harry Otter en Connie Verder. Ik heb er werkelijk slapeloze 
         nachten over. Ik weet niet of het er iets mee te maken heeft, maar misschien
-        zou het een goed idee zijn om *naam labmedewerker* te bevragen...
+        zou het een goed idee zijn om Harry Otter te bevragen...
     </p>
 </div>
