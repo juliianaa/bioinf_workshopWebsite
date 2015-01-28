@@ -8,7 +8,7 @@
 <div class ="right" >
     <p class="triangle-border right">
 
-        Ik heb er niks mee te maken! Ik mocht *naam slachtoffer* niet maar dat is
+        Ik heb er niks mee te maken! Ik mocht Connie niet maar dat is
         natuurlijk geen reden om haar van kant te brengen, ik zou nooit zoiets doen. ...
         
 

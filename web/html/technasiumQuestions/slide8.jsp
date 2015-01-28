@@ -6,6 +6,6 @@
 
 
 <img data-imgNumber="8" id = "image" src="images/verhoorLabmedewerker.jpg" alt=""/> 
-<div class ="up"><p class = "css-typing">Verdachte 2: labmedewerker *naam labmedewerker*...</p>
+<div class ="up"><p class = "css-typing">Verdachte 2: labmedewerker, Harry Otter...</p>
 </div>
 

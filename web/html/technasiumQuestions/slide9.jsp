@@ -9,7 +9,7 @@
 <div class ="left" >
     <p class="triangle-border top">
 
-        Waar was u mee bezig op het moment van de moord op *naam slachtoffer*?
+        Waar was u mee bezig op het moment van de moord op Connie Verder?
 
     </p>
 

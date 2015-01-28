@@ -8,9 +8,9 @@
 <div class ="right" >
     <p class="triangle-border right">
         Wat ik wel gehoord heb... Een magazijnmedewerkster... Hoe heet ze ook alweer?
-        ... Oh ja *naam magazijnmedewerkster*... Ik hoorde haar met iemand praten 
-        over dat *naam slachtoffer* een relatie met haar man zou hebben! Daarnaast heb 
-        ik geruchten gehoord dat *naam slachtoffer* zwanger zou zijn! 
+        ... Oh ja Anna Nas... Ik hoorde haar met iemand praten 
+        over dat Connie Verder een relatie met haar man zou hebben! Daarnaast heb 
+        ik geruchten gehoord dat Connie zwanger zou zijn! 
 
     </p>
 </div>

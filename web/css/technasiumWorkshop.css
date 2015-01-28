@@ -5,7 +5,7 @@ and open the template in the editor.
 */
 /* 
     Created on : Dec 18, 2014, 11:20:23 AM
-    Author     : mkslofstra
+    Author     : mkslofstra, text balloons and css typing from internet. 
 */
 /*text balloons*/
 .triangle-border {
@@ -141,7 +141,7 @@ and open the template in the editor.
     padding: 5px;
     bottom: 400px;
     left: 5px;
-    width: 500px;
+    width: 40em;
     position: relative;
     font-family: monospace;
     font-size: 14px;
@@ -159,9 +159,10 @@ and open the template in the editor.
     font-family: monospace;
     font-size: 14px;
 }
+/*from internet*/
 .css-typing
 {
-    width: 30em;
+    width: 40em;
     white-space:nowrap;
     overflow:hidden;
     -webkit-animation: type 5s steps(50, end);
@@ -246,4 +247,7 @@ and open the template in the editor.
     margin-top: -3em;
     margin-bottom: 5em;
     margin-left:19em;
+}
+.naam{
+    color: #1b91ff;
 }

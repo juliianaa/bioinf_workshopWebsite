@@ -7,7 +7,7 @@ $(document).ready(initialize);
 
 
 function initialize() {
-       //By mkslofstra
+    //By mkslofstra
     //When the << button is clicked, show the first page
     $("#first").click(function() {
         $("#questionImage").load("html/technasiumQuestions/tafel.jsp");
@@ -99,14 +99,17 @@ function initialize() {
                 $("#questionImage").load("html/technasiumQuestions/slide20.jsp");
                 break;
             case 20:
-                $("#questionImage").load("html/technasiumQuestions/slide21.jsp");
+                $("#questionImage").load("html/technasiumQuestions/slide20a.jsp");
                 break;
+            case "20a":
+                $("#questionImage").load("html/technasiumQuestions/slide21.jsp");
+                break;            
             case 21:
                 $("#questionImage").load("html/technasiumQuestions/slide22.jsp");
                 break;
             default:
                 $("#questionImage").load("html/technasiumQuestions/slide22.jsp");
-        //yes that were a lot images... 
+                //yes that were a lot images... 
         }
 
     });
@@ -165,7 +168,7 @@ function initialize() {
             case 14:
                 $("#questionImage").load("html/technasiumQuestions/slide13.jsp");
                 break;
-             case "14a":
+            case "14a":
                 $("#questionImage").load("html/technasiumQuestions/slide14.jsp");
                 break;
             case "14b":
@@ -188,6 +191,9 @@ function initialize() {
                 break;
             case 20:
                 $("#questionImage").load("html/technasiumQuestions/slide19.jsp");
+            case "20a":
+                $("#questionImage").load("html/technasiumQuestions/slide20.jsp");
+                break;
                 break;
             case 21:
                 $("#questionImage").load("html/technasiumQuestions/slide20.jsp");
@@ -201,15 +207,15 @@ function initialize() {
     });
     //By mkslofstra
     //Show the slide of the evidence. 
-    $("#bewijsMateriaal").click(function(){
+    $("#bewijsMateriaal").click(function() {
         $("#questionImage").load("html/technasiumQuestions/bewijs.jsp");
-         //remove the class hidden of the next page button, and show again
+        //remove the class hidden of the next page button, and show again
         $("#nextPage").removeClass("hidden");
     });
     //By mkslofstra
     //Load the next page by ajax, this is a jsp file with a table 
     //which can be added by the user
-    $("#nextPage").click(function(){
+    $("#nextPage").click(function() {
         $("#questionImage").load("includes/technasiumTable.jsp");
         //hide the button of next page, because there is no next page
         $("#nextPage").addClass("hidden");
@@ -228,7 +234,7 @@ function initialize() {
     //By mkslofstra
     //When first question button is clicked
     //undo changes of the next page button. 
-    $("#first").click(function(){
+    $("#first").click(function() {
         //change the text on the button back. 
         $("#first").text("<<");
         //remove the class hidden of the << button, and show again
