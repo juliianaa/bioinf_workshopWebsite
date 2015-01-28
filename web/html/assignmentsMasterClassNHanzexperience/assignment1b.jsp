@@ -6,7 +6,6 @@
 
 <div id="number_passer" data-nr="2">
     <h1>Opdracht 1b</h1>
-    
     <p>
         Download de code van je programma hieronder. 
         Je ziet dat dezelfde blokjes hier in code staan die ook in het schema staan dat je net kloppend gemaakt hebt. 
@@ -15,12 +14,14 @@
         code in en sla het aangepaste programma op in desktop.
     </p>
     <p>
+        <!--contains the download for this assignment to fill in zoekgen.py correctly-->
       <a href="downloads/zoekGen.py" download>>>>>> zoekGen.py <<<<<</a>  
     </p>
     <div>
              <img src="images/ingevuldeSchemaZoekGen.png" width="600" height="500" alt=""/>
 
     <p>Lever je script in</p>
+    <!--this is the form where the zoekgen.py should be uploaded-->
     <form method="post" enctype="multipart/form-data" action="uploadFile.do">
         File uploaden: <input type="file" name="upfile"><br/>
         <br/>

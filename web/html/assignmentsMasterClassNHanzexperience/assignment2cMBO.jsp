@@ -7,6 +7,7 @@
     <h1>Opdracht2c</h1>
 
     Klik hieronder op de workshop die je volgt om je laatste opdracht te zien:
+    <!--this div uses the navigateQuestionsMBO.js to form a accordion-->
     <div id="accordion">
   <h2 class='button exp' >HanzeXperience-MBO</h2>
   <div>

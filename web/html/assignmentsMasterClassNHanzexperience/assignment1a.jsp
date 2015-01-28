@@ -5,13 +5,17 @@
 --%>
 
 <div id="number_passer" data-nr="1">
+    <!--contains the css style for the drag and drop scheme-->
     <link href="css/dragAndDrop.css" rel="stylesheet" type="text/css"/>
+    <!--contains the functionality of the drag and drop scheme-->
     <script src="js/visualize.js" type="text/javascript"></script>
     <div>
         <h1>Opdracht 1a</h1>
         <h2>Sleep de kaarten naar het correcte vak.</h2>
     </div>
+    <!--contains the dragable items of the drag and drop scheme-->
     <div id="answersPile"></div>
+    <!--these contain the rop slots of the drag and drop scheme-->
     <div id="answersSlots"></div>
     <img src="images/hanzeXperience_MBO/HanzeXperience(drag and drop).png" alt="" style="position:relative"/>
     <div id="successMessage">
