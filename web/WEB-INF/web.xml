@@ -57,6 +57,10 @@
         <servlet-name>loginServlet</servlet-name>
         <servlet-class>nl.bioinf.web_login_servlets.LoginServlet</servlet-class>
     </servlet>
+       <servlet>
+        <servlet-name>registerServlet</servlet-name>
+        <servlet-class>nl.bioinf.web_login_servlets.RegisterServlet</servlet-class>
+    </servlet>
     <servlet>
         <servlet-name>logoutServlet</servlet-name>
         <servlet-class>nl.bioinf.web_login_servlets.LogoutServlet</servlet-class>
@@ -68,5 +72,9 @@
     <servlet-mapping>
         <servlet-name>logoutServlet</servlet-name>
         <url-pattern>/logout.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>registerServlet</servlet-name>
+        <url-pattern>/register.do</url-pattern>
     </servlet-mapping>
 </web-app>
