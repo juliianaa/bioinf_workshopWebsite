@@ -36,8 +36,8 @@
                 <div class="content" id="question" style = "width: 800px;" >
                     <div>
                         <c:choose>
-                            <!--gets the attribute result out of the requestScope and compares it to know which page to load-->
                             <c:when test="${requestScope.result == 5}">
+                                <!--gets the attribute result out of the requestScope and compares it to know which page to load-->
                                 <%@include file="assignment1c.jsp" %>
                             </c:when>
                             <c:otherwise>
