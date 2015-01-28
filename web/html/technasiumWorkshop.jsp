@@ -13,7 +13,6 @@
         <base href="${initParam.base_url}">
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
         <!--javascript for saving and loading notes-->
         <script src="js/NoteHandler.js" type="text/javascript"></script>

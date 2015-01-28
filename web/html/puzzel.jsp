@@ -17,12 +17,19 @@
             <script src="js/modernizr.custom_1.js"></script>
             <link rel="shortcut icon" href="favicon.ico">
                 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+                <!--Css for the font of the page-->
                 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+                <!--css for the styling of the puzzle page-->
                 <link rel="stylesheet" type="text/css" href="css/demo.css" />
+                <!--Css for the puzzle-->
                 <link rel="stylesheet" type="text/css" href="css/bottom-slide.css" />
+                <!--jQuery-->
                 <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+                <!--jQuery ui-->
                 <script src="js/jquery-ui-1.9.0.custom.min.js" type="text/javascript"></script>
+                <!--The draggable part of the puzzle, this is from a website and a minimized script-->
                 <script src="js/draggabillity.js"></script>
+                <!--Script to make the puzzle draqgable-->
                 <script src="js/dragdrop.js"></script>
         </head>
         <body class="skin-5">
@@ -79,6 +86,7 @@
                 </div>
             </div>
             <div class="drop-overlay"></div>
+            <!--The final step of the puzzle. Also the check for correct answers is in here.-->
             <script src="js/FinalStep.js" type="text/javascript"></script>
             <center>
                 <br/>
