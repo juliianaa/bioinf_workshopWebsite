@@ -25,30 +25,31 @@
             </table>
         </form>
         <div id="dialog" title="Registreer">
-            <form name="register_form" action="register.do" method="POST">
+            <form id="register_form" name="register_form" action="register.do" method="POST">
+                <input type="hidden" name="location" value="${param.location}">
                 <div id="dialog" title="Basic dialog">
                     <form name="register_form" action="register.do" method="POST">
                         
                         <table>
                             <tr>
                                 <td>Gebruikersnaam</td>
-                                <td><input name="userName" type="text" /></td>
+                                <td><input id="userName" name="userName" type="text" /></td>
                             </tr>
                             <tr>
                                 <td>Wachtwoord</td>
-                                <td><input name="password" type="password" /></td>
+                                <td><input id="passWord" name="passWord" type="passWord" /></td>
                             </tr>
                             <tr>
                                 <td>Voornaam</td>
-                                <td><input name="firstName" type="text" /></td>
+                                <td><input id="firstName" name="firstName" type="text" /></td>
                             </tr>
                             <tr>
                                 <td>Achternaam</td>
-                                <td><input name="lastName" type="text" /></td>
+                                <td><input id="lastName" name="lastName" type="text" /></td>
                             </tr>
                             <tr>
                                 <td>E-mail</td>
-                                <td><input name="email" type="text" /></td>
+                                <td><input id="email" name="email" type="text" /></td>
                             </tr>
                             <tr>
                                 <td></td>
