@@ -17,31 +17,9 @@
                     <link href="css/workshop.css" rel="stylesheet" type="text/css"/>
                     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
                     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
-                    <script src="js/visualize.js" type="text/javascript"></script>
                     <script src="js/navigateQuestionsMBO.js" type="text/javascript"></script>
-                    <link href="css/dragAndDrop.css" rel="stylesheet" type="text/css"/>
-                    <style>
-                        .answer1
-                        {   top:232px;
-                            left:175px;
-                        }
-                        .answer2
-                        {   top:277px;
-                            left:175px;
-                        }
-                        .answer3
-                        {   top:325px;
-                            left:450px;
-                        }
-                        .answer4
-                        {   top:443px;
-                            left:175px;
-                        }
-
-                    </style>
                     <title>Masterclass</title>
                     </head>
-
                     <body>
                         <div id="main1">
                             <%@include file="../../includes/bodyHeader.jsp" %>
@@ -55,6 +33,7 @@
                                     <%@include file="../../html/assignmentsMasterClassNHanzexperience/assignment1a.jsp" %>
                                 </div>
                                 <button id="next_question_button" class="button" type="button">Volgende vraag</button>
+                                <button id="previous_question_button" class="button" type="button">Vorige vraag</button>
                                 <!--End of content-->
                             </div>
                             <%@include file="../../includes/bodyFooter.jsp" %>
