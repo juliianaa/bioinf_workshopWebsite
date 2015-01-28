@@ -9,16 +9,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
     <head>
-        <base href="${initParam.base_url}">
-            <meta charset="utf-8"/>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            <link rel="stylesheet" type="text/css" href="css/style.css" />
-            <link href="css/docenten.css" rel="stylesheet" type="text/css"/>
-            <script src="js/jquery-2.1.1.min.js"></script>
-            <script src="js/jquery.bpopup-x.x.x.min.js"></script>
-            <script src="js/docenten.js"></script>
+        <base href="${initParam.base_url}"/>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link href="css/docenten.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/jquery.bpopup-x.x.x.min.js"></script>
+        <script src="js/docenten.js"></script>
 
-            <title>Docenten</title>
+        <title>Docenten</title>
     </head>
 
     <body>

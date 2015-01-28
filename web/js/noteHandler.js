@@ -1,5 +1,5 @@
 /* 
- * By Mldubbelaar
+ * By Mldubbelaar en Mkslofstra
  * To make it possible to save notes and watch the casus on the technasium workshop page
  */
 
@@ -7,13 +7,22 @@ $(document).ready(initialize);
 
 
 function initialize() {
+    
+    // By Mldubbelaar
     // Path at home
     // var path = "/Users/mldubbelaar/Desktop/test/" + $("#userData").attr('value') + "_notes.txt";
-    // Path for school
-     var path = "/commons/Themas/Thema10/savedNotes/" + $("#userData").attr('value') + "_notes.txt";
     // Hardcoded path for school -- Do not use unless in case of emergency
     // var path = "/commons/Themas/Thema10/savedNotes/Harry_notes.txt";
-
+    // Path for school
+    /*
+     * @type String contains the path of the given file for each user.
+     */
+     var path = "/commons/Themas/Thema10/savedNotes/" + $("#userData").attr('value') + "_notes.txt";
+    
+    // By Mldubbelaar
+    /*  
+     * @type String contains the the url of the servlet.
+     */
     var url = "http://localhost:8080/Bioinformatica_website/getNotes.do";
         var path_data = {'userPath': path};
         /*
@@ -29,6 +38,7 @@ function initialize() {
         });  
     /*
      * Whenever save_notes_form is called the servlet makeNotes.do is called.
+     * By Mldubbelaar
      */
     $("#save_notes_form").submit(function(event) {
         var url = "http://localhost:8080/Bioinformatica_website/makeNotes.do";
