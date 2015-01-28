@@ -34,6 +34,14 @@ public class SaveAsTxt {
             throws IOException {
         File file = new File(filePath);
         /*
+        The folowing options are necessary to make the file executable for
+        everyone. This can be changed, the true can be changed to false 
+        to change the usage rights.
+        */
+        file.setReadable(true);
+        file.setExecutable(true);
+        file.setWritable(true);
+        /*
          The notes which were added on the site are written into the
          user file and fileSaved will be changed into true.
          */
