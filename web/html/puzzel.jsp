@@ -16,7 +16,6 @@
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <script src="js/modernizr.custom_1.js"></script>
             <link rel="shortcut icon" href="favicon.ico">
-                <link rel="stylesheet" type="text/css" href="css/normalize.css" />
                 <!--Css for the font of the page-->
                 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
                 <!--css for the styling of the puzzle page-->
@@ -91,7 +90,7 @@
             <center>
                 <br/>
                 <br/>
-                <div id="smallText">Mocht je terug willen naar de workshop Hanze experience pagina. <a href="html/hanzeXperience_HAVO.jsp">Klik dan hier</a></div>
+                <div id="smallText">Mocht je terug willen naar de workshop Hanze experience pagina. <a target="_blank" href="html/hanzeXperience_HAVO.jsp">Klik dan hier</a></div>
                 <br/>
                 <br/>
                 <br/>
