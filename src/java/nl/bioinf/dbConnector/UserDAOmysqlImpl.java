@@ -1,4 +1,8 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package nl.bioinf.dbConnector;
 
 import java.io.IOException;
@@ -121,7 +125,7 @@ public final class UserDAOmysqlImpl implements UserDAO {
             psi.setString(5, emailAdress);
             psi.executeUpdate();
             System.out.println("user registerd");
-            return new User(username, firstName, lastName, emailAdress);
+            return new User(username, firstName, lastName, emailAdress);            
 
         } catch (SQLException ex) {
             Logger.getLogger(UserDAOmysqlImpl.class.getName()).log(Level.SEVERE, null, ex);
@@ -192,7 +196,28 @@ public final class UserDAOmysqlImpl implements UserDAO {
         return emailExists;
 
     }
-
-
+    
+//    public static void main(String[] args) {
+//        
+//        UserDAOmysqlImpl test = new UserDAOmysqlImpl();
+//        
+//        String dbUrl = "jdbc:mysql://mysql.bin/Thjkral";
+//        String dbUser = "thjkral";
+//        String dbPass = "eikenboom";
+//        
+//        String username = "Tommy";
+//        String firstname = "Tom";
+//        String lastname = "Kral";
+//        String password = "jemoeder";
+//        String email = "yomomma@gmail.com";
+//        
+//        try {
+//            test.connect(dbUrl, dbUser, dbPass);
+//            test.registerUser(username, firstname, lastname, password, email);
+//        } catch (IOException ex) {
+//            Logger.getLogger(UserDAOmysqlImpl.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        
+//    }
 
 }

@@ -1,4 +1,8 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package nl.bioinf.web_login_servlets;
 
 import java.io.IOException;
@@ -40,7 +44,7 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
         HttpServletRequest httpReq = (HttpServletRequest) request;
         HttpServletResponse httpResp = (HttpServletResponse) response;
-        //if there is no username or password given: view the login page
+        //if there is no username or password given: view the login page 
         if (username == null || username.length() == 0 || password == null
                 || password.length() == 0) {
             //load login page
@@ -65,7 +69,7 @@ public class LoginServlet extends HttpServlet {
                 UserDAOmysqlImpl dbconnect = new UserDAOmysqlImpl();
 
                 try {
-                    //make the actual connection with mysql database
+                    //make the actual connection with mysql database                    
                     dbconnect.connect(dbUrl, dbUser, dbPass);
 
                     try {
@@ -78,7 +82,7 @@ public class LoginServlet extends HttpServlet {
                         HttpSession session = request.getSession();
                         //make the session valid for the given number of seconds (now 30)
                         session.setMaxInactiveInterval(30);
-                        //if the name of the user is null (so its empty)
+                        //if the name of the user is null (so its empty)                        
                         if (session.getAttribute("user") == null) {
                             //save the name of the user for the session
                             session.setAttribute("user", user);
@@ -91,7 +95,7 @@ public class LoginServlet extends HttpServlet {
                         RequestDispatcher view = request.getRequestDispatcher(location);
                         //view the page asked by the servlet
                         view.forward(request, response);
-                        //if something is going wrong, catch exception
+                        //if something is going wrong, catch exception    
                     } catch (IllegalArgumentException ex) {
                         String LoginError = ex.getMessage();
                         request.setAttribute("login_error", LoginError);
