@@ -80,8 +80,8 @@ public class LoginServlet extends HttpServlet {
 
                         //get the current session
                         HttpSession session = request.getSession();
-                        //make the session valid for the given number of seconds (now 10)
-                        session.setMaxInactiveInterval(10);
+                        //make the session valid for the given number of seconds (now 30)
+                        session.setMaxInactiveInterval(30);
                         //if the name of the user is null (so its empty)                        
                         if (session.getAttribute("user") == null) {
                             //save the name of the user for the session

@@ -15,7 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
         <!--javascript for saving and loading notes-->
-        <script src="js/NoteHandler.js" type="text/javascript"></script>
+        <script src="js/noteHandler.js" type="text/javascript"></script>
         <!--javascript for saving and loading slides of the assignment by ajax-->
         <script src="js/loadTechnasiumSlides.js" type="text/javascript"></script>
         <!--general styling used at most pages-->

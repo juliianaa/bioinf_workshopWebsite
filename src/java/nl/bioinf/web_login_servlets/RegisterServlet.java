@@ -37,13 +37,14 @@ public class RegisterServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String errormessage = "";
+        String errormessage;
 
         String username = request.getParameter("userName");
         String password = request.getParameter("password");
         String firstname = request.getParameter("firstName");
         String lastname = request.getParameter("lastName");
         String email = request.getParameter("email");
+        String location = request.getParameter("location");
 
         if (username == null || username.length() == 0
                 || password == null || password.length() == 0
@@ -51,9 +52,10 @@ public class RegisterServlet extends HttpServlet {
                 || lastname == null || lastname.length() == 0
                 || email == null || email.length() == 0) { //check if fields are made and filled
 
-            errormessage = "Vul aub ale velden in";
+            errormessage = "Vul aub alle velden in";
             request.setAttribute("register_error", errormessage);
-            RequestDispatcher view = request.getRequestDispatcher("index.jsp");
+            //make a requestdispatcher element which communicates with the user
+            RequestDispatcher view = request.getRequestDispatcher(location);
             view.forward(request, response);
 
         } else {//if fields are OK
@@ -66,7 +68,8 @@ public class RegisterServlet extends HttpServlet {
                 while (!m.find()) {
                     errormessage = "Het emailadres is niet valide";
                     request.setAttribute("register_error", errormessage);
-                    RequestDispatcher view = request.getRequestDispatcher("index.jsp");
+                    //make a requestdispatcher element which communicates with the user
+                    RequestDispatcher view = request.getRequestDispatcher(location);
                     view.forward(request, response);
                 }
 
@@ -91,16 +94,18 @@ public class RegisterServlet extends HttpServlet {
                         if (userExists == true) { //check if username exists in database
                             errormessage = "Deze username bestaat al";
                             request.setAttribute("register_error", errormessage);
-                            RequestDispatcher view = request.getRequestDispatcher("index.jsp");
+                            //make a requestdispatcher element which communicates with the user
+                            RequestDispatcher view = request.getRequestDispatcher(location);
                             view.forward(request, response);
                             dbconnect.disconnect();
                         } else {
-                                                                
+
                             if (emailExists == true) { //check if username exists in database
                                 errormessage = "Dit emailadres bestaat al";
                                 request.setAttribute("register_error", errormessage);
-                                RequestDispatcher view = request.getRequestDispatcher("index.jsp");
-                                view.forward(request, response);                                
+                                //make a requestdispatcher element which communicates with the user
+                                RequestDispatcher view = request.getRequestDispatcher(location);
+                                view.forward(request, response);
                             } else {
 
                                 //register new user with valid credentials
@@ -109,16 +114,18 @@ public class RegisterServlet extends HttpServlet {
                                 if (user != null) {//when registering user was a succes
                                     errormessage = "Registratie succesvol";
                                     request.setAttribute("register_error", errormessage);
-                                    RequestDispatcher view = request.getRequestDispatcher("index.jsp");
+                                    //make a requestdispatcher element which communicates with the user
+                                    RequestDispatcher view = request.getRequestDispatcher(location);
                                     view.forward(request, response);
                                     dbconnect.disconnect();
                                 } else {
                                     errormessage = "Er kon geen nieuwe gebruiker aangemaakt worden";
                                     request.setAttribute("register_error", errormessage);
-                                    RequestDispatcher view = request.getRequestDispatcher("index.jsp");
+                                    //make a requestdispatcher element which communicates with the user
+                                    RequestDispatcher view = request.getRequestDispatcher(location);
                                     view.forward(request, response);
-                                    dbconnect.disconnect();                                    
-                                    
+                                    dbconnect.disconnect();
+
                                 }
                             }
                         }
@@ -126,21 +133,22 @@ public class RegisterServlet extends HttpServlet {
                     } catch (Exception ex) {
                         String errorMessage = "User could not be registered: " + ex.getMessage();
                         request.setAttribute("error", errorMessage);
-                        RequestDispatcher view = request.getRequestDispatcher("error.jsp");
+                        RequestDispatcher view = request.getRequestDispatcher("html/error.jsp");
                         view.forward(request, response);
                     }
 
                 } catch (Exception ex) {
                     String errorMessage = "Could not connect to database: " + ex.getMessage();
                     request.setAttribute("error", errorMessage);
-                    RequestDispatcher view = request.getRequestDispatcher("error.jsp");
+                    RequestDispatcher view = request.getRequestDispatcher("html/error.jsp");
                     view.forward(request, response);
                 }
 
             } else {//if username and password are too short
                 errormessage = "Username moet meer dan 3 karakters bevatten en het wachtword moet langer dan 5 tekens zijn";
                 request.setAttribute("register_error", errormessage);
-                RequestDispatcher view = request.getRequestDispatcher("index.jsp");
+                //make a requestdispatcher element which communicates with the user
+                RequestDispatcher view = request.getRequestDispatcher(location);
                 view.forward(request, response);
             }
 
