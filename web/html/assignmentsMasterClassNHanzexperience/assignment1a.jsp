@@ -11,7 +11,11 @@
     <script src="js/visualize.js" type="text/javascript"></script>
     <div>
         <h1>Opdracht 1a</h1>
-        <h2>Sleep de kaarten naar het correcte vak.</h2>
+        <p>
+            Je ziet een schematische weergave hieronder van de stappen die het programma moet doorlopen 
+            om een gen uit een DNA-sequentie in een bestand te halen. Ook zie je dat het nog 
+            niet compleet is. Sleep de kaarten naar het correcte vak.
+        </p>
     </div>
     <!--contains the dragable items of the drag and drop scheme-->
     <div id="answersPile"></div>
