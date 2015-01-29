@@ -15,27 +15,31 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+        
+        <!-- Used css for the make-up of the powerpoint -->
         <link href="css/workshop.css" rel="stylesheet" type="text/css"/>
         <link  href="css/reveal.css" rel="stylesheet"> 
         <link href="css/default.css" rel="stylesheet" type="text/css"/>
-      <title>Bioinformatics Homepage</title>
+      
+        <title>Bioinformatics Homepage</title>
+    
     </head>
+        
     <body> 
         <div class="reveal"> 
             <div class="slides"> 
+                <!-- First introduction slides (horizontal) -->
                 <section> 
                     <h1>Bio informatica</h1> 
                     <h3>Hanze hogeschool Groningen</h3> 
                 </section> 
+                
                 <section> 
                     <h3>Wat doet een bio-informaticus?</h3> 
                     <ul>
                         <img src="images/info.png" width="250%" height="200%" />
-                    </ul>
-                    <ul> 
-
-                    </ul> 
                 </section> 
+                
                 <section> 
                     <h3>Structuur van DNA</h3>
                     <h5>Watson & Crick 1953</h5>
@@ -48,6 +52,7 @@
                         </ul> 
                 </section>
 
+                <!-- Slides masterclass workshop (vertically) -->
                 <section>
                         <section>
                                 <h3>Masterclass</h3>
@@ -381,12 +386,15 @@
                         </section>
                         
                 </section>
+                
+                <!-- Slides Hanze Experience Havo workshop -->
                  <section>
                         <section>
                                 <h3>Hanze Xperience HAVO</h3>
                         </section>
                 </section>
                 
+                <!-- Slides Hanze Experience MBO -->
                 <section>
                         <section>
                              <h3>Hanze Xperience MBO</h3>
@@ -564,6 +572,8 @@
                             ATAAACGGCCCATTAATGGGCCGTTTATAA
                         </section>
                 </section>
+                
+                <!-- Slides Hanze Experience MBO worshop, making of own website -->
                 <section>
                         <section>
                                 <h3>Hanze Xperience MBO</h3>
@@ -576,6 +586,8 @@
                                 
                         </section>
                 </section>
+                
+                <!-- Slides Technasium workshop -->
                 <section>
                         <section>
                                 <h3>Technasium</h3>
@@ -593,20 +605,8 @@
                 </section>
             </div> 
         </div> 
+        <!-- java scripts loaded here -->
         <script src="js/head.min.js"></script> 
         <script src="js/reveal.js"></script> 
-        <script> Reveal.initialize({ 
-                    center: true, 
-                    controls: true, 
-                    mouseWheel: true, 
-                    transition: 'concave', 
-                    dependencies:[ 
-                        { 
-                            src: 'js/zoom.js', 
-                            async: true 
-                        } 
-                    ] 
-                }); 
-        </script> 
     </body> 
 </html>

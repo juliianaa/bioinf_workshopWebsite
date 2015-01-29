@@ -42,7 +42,7 @@
                     komt op het moment dat je een antwoord oppakt met de muis. <br/>
 
                     <header class="codrops-header">
-
+                        <!-- All the possible answers that need to be dropped, sorted randomly-->
                     </header>
                     <div id="grid" class="grid clearfix">
                         <div id = "1" data-cor="1"  class="grid__item"><i class="fa fa-fw"></i>Mendel</div>
@@ -66,7 +66,7 @@
 
                 </div><!-- /content -->
 
-            </div><!-- /container -->
+            </div><!-- /container, all the possible questions in a droppable area-->
             <div id="drop-area" class="drop-area">
                 <div id="Default" class="contentHolder">
                     <div class="dummy"></div>

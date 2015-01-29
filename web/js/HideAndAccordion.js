@@ -3,6 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+ $(function() {
+   $( "#accordion" ).accordion({
+     heightStyle: "content",
+     collapsible: true
+   });
+ });
+
 $(function() {
     $( "#accordion" ).accordion();
   });

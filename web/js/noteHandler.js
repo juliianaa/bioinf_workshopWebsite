@@ -21,7 +21,7 @@ function initialize() {
     /*  
      * @type String contains the the url of the servlet.
      */
-    var url = "http://localhost:8080/Bioinformatica_website/getNotes.do";
+    var url = "getNotes.do";
     var path_data = {'userPath': path};
     /*
      * The path is used to get the text.
@@ -39,7 +39,7 @@ function initialize() {
      * By Mldubbelaar
      */
     $("#save_notes_form").submit(function (event) {
-        var url = "http://localhost:8080/Bioinformatica_website/makeNotes.do";
+        var url = "makeNotes.do";
         /*
          * The input of the notes is saved as notes_data.
          */

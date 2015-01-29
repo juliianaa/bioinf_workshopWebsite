@@ -15,7 +15,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link href="css/workshop.css" rel="stylesheet" type="text/css"/>
         
-        
+        <!-- All the used java scripts and css for the accordion and hide and show -->
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
@@ -26,12 +26,7 @@
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
         <link rel="stylesheet" href="/resources/demos/style.css">
-        <style>
-        .toggler { width: 850px; height: 1015px; }
-        #button { padding: .5em 1em; text-decoration: none; }
-        #effect { width: 850px; height: 1015px; padding: 0.4em; position: relative; }
-        #effect h3 { margin: 0; padding: 0.4em; text-align: center; }
-        </style>
+            
     </head>
 
     <body>
@@ -48,6 +43,7 @@
                 </ul>
                 
                 <div class="content">
+                    <!-- Introduction text -->
                     <div class="introduction" id="introduction">
                         <h1>Workshop kankeronderzoek</h1>
                         Welkom bij de workshop kankeronderzoek. <br/> 
@@ -63,7 +59,8 @@
                         onderzoek gedaan en hebben wij een opdracht<br/> voor jullie gemaakt om uit te zoeken welke 
                         patient borstkanker heeft zoals een echte bio-informaticus dat ook zou kunnen doen. <br/><br/></br>
                        
-            
+                        <!-- The accordion with the explanation of the assignment -->
+                        <p><a id="button" class="ui-state-default ui-corner-all">Start workshop</a></p>
                         <div class="toggler">
                             <div id="effect" class="ui-widget-content ui-corner-all">
                                 <div id="accordion">
@@ -118,13 +115,19 @@
                                     <h3>Resutaat GUI</h3>
                                     <div>
                                       <p><h5>
-
+                                      Kijkend naar onderstaande afbeelding kun je aan het bandjes patroon zien welke 
+                                      patient kanker heeft. Het bandjes patroon is afhankelijk van welke restrictie enzymen die je
+                                      kiest. Elk restrictie enzym heeft zijn eigen 'knip locatie' in het genoom van de patient. 
+                                      Belangrijk om te weten is dat je bij deze analyze alleen kunt zeggen dat de persoon borstkanker heeft of niet.
+                                      Je kunt dus niets zeggen over andere soorten kanker andere soorten ziektes. 
+                                      <br/><br/>
+                                      <img src="images/KankerWorkshop/mogelijkResutaatGUI.png" width="525" height="300" aling="center"/>
                                       </h5></p>
                                     </div>
                                 </div>
                             </div>
     
-                        <p><a id="button" class="ui-state-default ui-corner-all">Start workshop</a></p>
+                        
                           </div>
                         </div>
                     </div>

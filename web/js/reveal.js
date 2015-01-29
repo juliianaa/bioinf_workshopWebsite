@@ -5,6 +5,8 @@
  *
  * Copyright (C) 2014 Hakim El Hattab, http://hakim.se
  */
+
+
 var Reveal = (function(){
 
 	'use strict';
@@ -3380,3 +3382,15 @@ var Reveal = (function(){
 	};
 
 })();
+Reveal.initialize({ 
+                    center: true, 
+                    controls: true, 
+                    mouseWheel: true, 
+                    transition: 'concave', 
+                    dependencies:[ 
+                        { 
+                            src: 'js/zoom.js', 
+                            async: true 
+                        } 
+                    ] 
+                }); 
