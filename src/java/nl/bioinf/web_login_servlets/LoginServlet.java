@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.swing.JOptionPane;
 import nl.bioinf.dbConnector.User;
 import nl.bioinf.dbConnector.UserDAOmysqlImpl;
 
@@ -17,7 +16,7 @@ import nl.bioinf.dbConnector.UserDAOmysqlImpl;
  *
  * @author Rutger Ozinga (redirect to last page by mkslofstra)
  */
-@WebServlet(name = "loginServlet", urlPatterns = {"/loginServlet" })
+@WebServlet(name = "loginServlet", urlPatterns = {"/loginServlet"})
 public class LoginServlet extends HttpServlet {
 
     /**
@@ -113,7 +112,7 @@ public class LoginServlet extends HttpServlet {
                     //get the location of the error page.
                     RequestDispatcher view = request.
                             getRequestDispatcher("html/error.jsp");
-                    // forwards the request and sends the 
+                    // forwards the request and sends the
                     //response to the client.
                     view.forward(request, response);
                 }
@@ -144,9 +143,12 @@ public class LoginServlet extends HttpServlet {
     protected final void doGet(final HttpServletRequest request,
             final HttpServletResponse response)
             throws ServletException, IOException {
+        // This is added to prevent that the doGet method is used to log in
         RequestDispatcher view = request.
                 getRequestDispatcher("index.jsp");
         view.forward(request, response);
+        //Make a requestdispatcher element which
+        //communicates with the user
         processRequest(request, response);
     }
 
