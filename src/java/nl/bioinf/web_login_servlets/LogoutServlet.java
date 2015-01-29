@@ -1,4 +1,3 @@
-
 package nl.bioinf.web_login_servlets;
 
 import java.io.IOException;
@@ -13,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author raozinga
  */
-@WebServlet(name = "LogoutServlet", urlPatterns = {"/LogoutServlet" })
+@WebServlet(name = "LogoutServlet", urlPatterns = {"/LogoutServlet"})
 public class LogoutServlet extends HttpServlet {
 
     /**
@@ -30,10 +29,14 @@ public class LogoutServlet extends HttpServlet {
             throws ServletException, IOException {
         String logout = request.getParameter("logout");
 
-        if (logout != null && logout.equals("Log_uit")) {
+        if (logout != null && logout.equals("Log uit")) {
             request.getSession().invalidate();
             //get the location of the current page.
             String location = request.getParameter("location");
+            if (location == null) {
+                RequestDispatcher view = request.getRequestDispatcher("index.jsp");
+                view.forward(request, response);
+            }
             //make a requestdispatcher element which communicates with the user
             RequestDispatcher view = request.getRequestDispatcher(location);
             view.forward(request, response);
@@ -58,7 +61,7 @@ public class LogoutServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-         // This is added to prevent that the doGet method is used to log in
+        // This is added to prevent that the doGet method is used to log in
         RequestDispatcher view = request.
                 getRequestDispatcher("index.jsp");
         view.forward(request, response);
