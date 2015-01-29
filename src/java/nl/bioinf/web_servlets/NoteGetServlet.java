@@ -11,16 +11,16 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import nl.bioinf.NoteHandler.GetNoteText;
+import nl.bioinf.note_handler.NoteGetter;
 
 /**
- * GetNotesServlet returns the notes which where saved within the userFile.
- * The text which is found within the user file is returned by the function
+ * NoteGetServlet returns the notes which where saved within the userFile. The
+ * text which is found within the user file is returned by the function
  * getSavedNotes.
- * 
+ *
  * @author mldubbelaar
  */
-public class GetNotesServlet extends HttpServlet {
+public class NoteGetServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,23 +31,29 @@ public class GetNotesServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    protected final void processRequest(final HttpServletRequest request,
+            final HttpServletResponse response)
             throws ServletException, IOException {
 
         /*
-        The parameter of userPath is saved as filePath.
-        */
+         The parameter of userPath is saved as filePath.
+         */
         String filePath = request.getParameter("userPath");
         if (!filePath.isEmpty()) {
             /*
-            The function getSavedNotes will be used if the file exists.
-            The text found can be used further.
-            In this case the text is used within the js file.
-            */
-            GetNoteText getNoteText = new GetNoteText();
+             The function getSavedNotes will be used if the file exists.
+             The text found can be used further.
+             In this case the text is used within the js file.
+             */
+            NoteGetter getNoteText = new NoteGetter();
             String savedNotes = getNoteText.getSavedNotes(filePath);
             try (PrintWriter pw = response.getWriter()) {
                 pw.print(savedNotes);
+                pw.flush();
+            }
+        } else {
+            try (PrintWriter pw = response.getWriter()) {
+                pw.print("null");
                 pw.flush();
             }
         }

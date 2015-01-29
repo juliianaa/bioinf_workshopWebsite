@@ -11,17 +11,17 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import nl.bioinf.NoteHandler.SaveAsTxt;
+import nl.bioinf.note_handler.NoteSaver;
 
 /**
  * SaveNotesServlets makes sure that the notes on the technasium page are saved.
- * The SaveNotesServlet asks for the parameters of notes and userPath. These
- * parameters will be used when the function createTxt is called. With the use
- * of a boolean there will be a check if the items are saved.
+ * The NoteSaveServlet asks for the parameters of notes and userPath. These
+ parameters will be used when the function createTxt is called. With the use
+ of a boolean there will be a check if the items are saved.
  *
  * @author mldubbelaar
  */
-public class SaveNotesServlet extends HttpServlet {
+public class NoteSaveServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,7 +32,7 @@ public class SaveNotesServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(final HttpServletRequest request,
+    protected final void processRequest(final HttpServletRequest request,
             final HttpServletResponse response)
             throws ServletException, IOException {
         /*
@@ -40,12 +40,22 @@ public class SaveNotesServlet extends HttpServlet {
          */
         String notes = request.getParameter("notes");
         String file = request.getParameter("userPath");
+        if (notes.isEmpty() || file.isEmpty()) {
+            PrintWriter pw = response.getWriter();
+            try {
+                pw.print("false");
+                pw.flush();
+            } catch (Exception e) {
+                pw.print(e);
+                pw.flush();
+            }
+        }
         /*
          If the function saveAsTemp returns true
          Than the true will be catched so it can be used within myScript.js
          as an extra check.
          */
-        SaveAsTxt saveAsText = new SaveAsTxt();
+        NoteSaver saveAsText = new NoteSaver();
         boolean succes = saveAsText.createTxt(notes, file);
         /*
          If the boolean is true the printwriter will be used.

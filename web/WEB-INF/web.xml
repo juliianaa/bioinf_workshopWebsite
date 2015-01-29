@@ -18,7 +18,7 @@
     </context-param>
     <servlet>
         <servlet-name>AssignmentTechnasium</servlet-name>
-        <servlet-class>nl.bioinf.web_servlets.SaveNotesServlet</servlet-class>
+        <servlet-class>nl.bioinf.web_servlets.NoteSaveServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>FileUploaderServlet</servlet-name>
@@ -26,7 +26,7 @@
     </servlet>
     <servlet>
         <servlet-name>GetNotesServlet</servlet-name>
-        <servlet-class>nl.bioinf.web_servlets.GetNotesServlet</servlet-class>
+        <servlet-class>nl.bioinf.web_servlets.NoteGetServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AssignmentAnsweringServlet</servlet-name>
@@ -57,7 +57,7 @@
         <servlet-name>loginServlet</servlet-name>
         <servlet-class>nl.bioinf.web_login_servlets.LoginServlet</servlet-class>
     </servlet>
-       <servlet>
+    <servlet>
         <servlet-name>registerServlet</servlet-name>
         <servlet-class>nl.bioinf.web_login_servlets.RegisterServlet</servlet-class>
     </servlet>

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package nl.bioinf.NoteHandler;
+package nl.bioinf.note_handler;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -11,12 +11,12 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * GetNoteText reads the data of the txt file. This data will be converted to a
+ * NoteGetter reads the data of the txt file. This data will be converted to a
  * string which can be used further.
  *
  * @author mldubbelaar
  */
-public class GetNoteText {
+public class NoteGetter {
 
     /**
      * textFromNotes should contain the text from the user file in the end.

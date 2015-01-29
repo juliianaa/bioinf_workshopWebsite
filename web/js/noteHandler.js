@@ -55,7 +55,7 @@ function initialize() {
             if (data === "true"){
                 alert("De aantekeningen zijn opgeslagen!");
             } else {
-                alert("Er is iets misgegaan./nNeem contact op met de docent!");
+                alert("Er is iets misgegaan. Neem contact op met de docent!");
             }  
             $(".result").html(data);
         });
