@@ -28,35 +28,64 @@ public class User {
 
     /**
      * Getters and setters for the variables of User.
+     * @return 
      */
     public String getUsername() {
         return username;
     }
 
+    /**
+     *
+     * @param username
+     */
     public void setUsername(String username) {
         this.username = username;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getFirstName() {
         return firstName;
     }
 
+    /**
+     *
+     * @param firstName
+     */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getLastName() {
         return lastName;
     }
 
+    /**
+     *
+     * @param lastName
+     */
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getEmailAdress() {
         return emailAdress;
     }
 
+    /**
+     *
+     * @param emailAdress
+     */
     public void setEmailAdress(String emailAdress) {
         this.emailAdress = emailAdress;
     }

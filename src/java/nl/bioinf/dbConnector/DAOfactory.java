@@ -13,6 +13,15 @@ import java.util.logging.Logger;
  */
 public class DAOfactory {
 
+    /**
+     *
+     * @param dbType
+     * @param dbUser
+     * @param dbPass
+     * @param dbUrl
+     * @return
+     * @throws IOException
+     */
     public static UserDAO getLoginDAO(String dbType, String dbUser, String dbPass, String dbUrl) throws IOException {
         if (dbType.equalsIgnoreCase("MySQL")) {
             return createMysqlDAO(dbType, dbUser, dbPass, dbUrl);
