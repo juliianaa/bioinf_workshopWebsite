@@ -29,7 +29,7 @@
                 <input type="hidden" name="location" value="${param.location}">
                 <div id="dialog" title="Basic dialog">
                     <form name="register_form" action="register.do" method="POST">
-                        
+
                         <table>
                             <tr>
                                 <td>Gebruikersnaam</td>

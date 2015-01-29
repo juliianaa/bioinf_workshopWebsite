@@ -10,9 +10,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * SavedText saves the text within a file.
- * The text from the textbox on the website will be written into the user
- * specific file.
+ * SavedText saves the text within a file. The text from the textbox on the
+ * website will be written into the user specific file.
  *
  * @author mldubbelaar
  */
@@ -38,10 +37,10 @@ public class NoteSaver {
             throws IOException {
         File file = new File(filePath);
         /*
-        The folowing options are necessary to make the file executable for
-        everyone. This can be changed, the true can be changed to false
-        to change the usage rights.
-        */
+         The folowing options are necessary to make the file executable for
+         everyone. This can be changed, the true can be changed to false
+         to change the usage rights.
+         */
         file.setReadable(true);
         file.setExecutable(true);
         file.setWritable(true);

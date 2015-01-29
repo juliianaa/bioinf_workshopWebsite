@@ -16,8 +16,8 @@ import nl.bioinf.note_handler.NoteSaver;
 /**
  * SaveNotesServlets makes sure that the notes on the technasium page are saved.
  * The NoteSaveServlet asks for the parameters of notes and userPath. These
- parameters will be used when the function createTxt is called. With the use
- of a boolean there will be a check if the items are saved.
+ * parameters will be used when the function createTxt is called. With the use
+ * of a boolean there will be a check if the items are saved.
  *
  * @author mldubbelaar
  */

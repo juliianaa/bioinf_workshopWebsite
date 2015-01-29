@@ -146,7 +146,7 @@
                     </div>
 
                     <div class="docenten_boxes">
-                        
+
                         <div id="tsjerk" class="teacher"></div>
                         <!--This div contains the pictures of the teachers-->
                         <p>Tsjerk Wassenaar</p>
