@@ -52,10 +52,8 @@ public class GetNoteText {
                  The stringbuilder will be converted into a string
                  */
                 textFromNotes = sb.toString();
-            } else {
-                textFromNotes = "Heb je al een file aangemaakt?";
             }
-        } catch (Exception e) {
+        } catch (IOException e) {
             System.out.println(e);
         }
         /*

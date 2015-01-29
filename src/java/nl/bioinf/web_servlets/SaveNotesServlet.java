@@ -45,7 +45,6 @@ public class SaveNotesServlet extends HttpServlet {
          Than the true will be catched so it can be used within myScript.js
          as an extra check.
          */
-//        ---------------------------------------------------------------------
         SaveAsTxt saveAsText = new SaveAsTxt();
         boolean succes = saveAsText.createTxt(notes, file);
         /*

@@ -81,12 +81,6 @@
                             <a href="html/technasiumWorkshop.jsp"><button class="button">Start Workshop</button></a>
                     </div>
                     </p>
-                    <!--                                    <div class="questions" id="questions">
-                                                            <form action="answer.do" method="post">
-                                                                Typ het woord "Technasium" in: <input type="text" name="word"><br/>
-                                                                        <input class="button" type="submit" value="Submit">
-                                                                            </form>
-                                                                            </div>-->
                 </div>
                 <!--End of content-->
             </div>

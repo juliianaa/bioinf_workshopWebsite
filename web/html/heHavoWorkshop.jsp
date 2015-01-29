@@ -1,7 +1,7 @@
 <%-- 
     Document   : technasiumWorkshop2
     Created on : 13-jan-2015, 23:19:24
-    Author     : mldubbelaar
+    Author     : mkslofstra
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

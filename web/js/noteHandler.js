@@ -1,5 +1,5 @@
 /* 
- * By Mldubbelaar en Mkslofstra
+ * By Mldubbelaar
  * To make it possible to save notes and watch the casus on the technasium workshop page
  */
 
@@ -9,9 +9,7 @@ $(document).ready(initialize);
 function initialize() {
     
     // By Mldubbelaar
-    // Path at home
-    // var path = "/Users/mldubbelaar/Desktop/test/" + $("#userData").attr('value') + "_notes.txt";
-    // Hardcoded path for school -- Do not use unless in case of emergency
+    // Hardcoded path for school -- Do not use unless in case of emergency -- Test path
     // var path = "/commons/Themas/Thema10/savedNotes/Harry_notes.txt";
     // Path for school
     /*

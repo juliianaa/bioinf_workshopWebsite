@@ -9,6 +9,7 @@
 
 <div id="text_case">
     <div class = "text">
+        <!--mldubbelaar-->
         <h1>Technasium</h1>
         Welkom ${sessionScope.user.username}, <br/>
         <br/>
@@ -35,6 +36,7 @@
                     <input type="submit" value="Save"/>
                 </div> 
             </form>
+            <!--By mkslofstra-->
             <button id ="first" class = "imageButton"><<</button>
             <button id="last_question_button" class = "imageButton"><b>< Vorige</b></button>
             <button id="next_question_button" class = "imageButton"><b>> Volgende</b></button>

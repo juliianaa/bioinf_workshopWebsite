@@ -1,20 +1,27 @@
      /*
       * By mldubbelaar
-      * Checks if the email adress is indeed an email adress
+      * Checks if the email adress is indeed an email adress.
       */
      
 $(document).ready(validator);
 
 function validator() {
+    // Whenever the register_form is submitted this function will be used.
      $("#register_form").submit(function(event) {
         var re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        
+
+      //The values of all the data will be saved within its own value.
         var data_username = $("#userName").val();
         var data_password = $("#passWord").val();
         var data_firstName = $("#firstName").val();
         var data_lastName = $("#lastName").val(); 
         var data_email = $("#email").val();
         
+        /*
+         * An alert will be given Whenever the different values are empty.
+         * A check will be used for the email to determine if the email contains 
+         * a @ and a dot. 
+         */
         if (data_username === "" || data_username===null){
             alert("Check je gegevens, de username is niet aanwezig");
             event.preventDefault();

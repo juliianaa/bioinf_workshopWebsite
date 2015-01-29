@@ -15,8 +15,9 @@ import nl.bioinf.NoteHandler.GetNoteText;
 
 /**
  * GetNotesServlet returns the notes which where saved within the userFile.
- * The text which is found within the userfile is returned by the function
+ * The text which is found within the user file is returned by the function
  * getSavedNotes.
+ * 
  * @author mldubbelaar
  */
 public class GetNotesServlet extends HttpServlet {
@@ -47,11 +48,6 @@ public class GetNotesServlet extends HttpServlet {
             String savedNotes = getNoteText.getSavedNotes(filePath);
             try (PrintWriter pw = response.getWriter()) {
                 pw.print(savedNotes);
-                pw.flush();
-            }
-        } else {
-            try (PrintWriter pw = response.getWriter()) {
-                pw.print("Maak hier je aantekeningen over de verdachten!");
                 pw.flush();
             }
         }

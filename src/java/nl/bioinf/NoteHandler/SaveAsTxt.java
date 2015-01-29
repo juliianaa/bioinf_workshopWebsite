@@ -10,7 +10,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- *
+ * SavedText saves the text within a file.
+ * The text from the textbox on the website will be written into the user
+ * specific file.
+ * 
  * @author mldubbelaar
  */
 public class SaveAsTxt {
@@ -25,10 +28,11 @@ public class SaveAsTxt {
 
     /**
      *
-     * @param notes bla bla
-     * @param filePath bla
-     * @return bla
-     * @throws IOException bla
+     * @param notes are the notes from the user file.
+     * @param filePath is the path to the user file
+     * @return true when the data is saved or overwritten, false id the data 
+     * cannot be saved.
+     * @throws IOException IOException
      */
     public final boolean createTxt(final String notes, final String filePath)
             throws IOException {
