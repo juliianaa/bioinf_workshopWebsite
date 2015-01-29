@@ -1,4 +1,3 @@
-
 package nl.bioinf.web_login_servlets;
 
 import java.io.IOException;
@@ -54,7 +53,7 @@ public class RegisterServlet extends HttpServlet {
             //make a requestdispatcher element which communicates with the user
             RequestDispatcher view = request.getRequestDispatcher(location);
             view.forward(request, response);
-          //if fields are OK
+            //if fields are OK
         } else {
             //username must be 3 characters or longer, password 5 or longer
             if (username.length() > 3 || password.length() > 5) {
@@ -149,17 +148,24 @@ public class RegisterServlet extends HttpServlet {
                         String errorMessage = "User could not be registered: "
                                 + ex.getMessage();
                         request.setAttribute("error", errorMessage);
+                        //get the location of the error page.
                         RequestDispatcher view = request.
                                 getRequestDispatcher("html/error.jsp");
+                        // forwards the request and sends the 
+                        //response to the client.
                         view.forward(request, response);
                     }
 
                 } catch (ServletException | IOException ex) {
                     String errorMessage = "Could not connect to database: "
                             + ex.getMessage();
+
                     request.setAttribute("error", errorMessage);
+                    //get the location of the error page.
                     RequestDispatcher view = request.
                             getRequestDispatcher("html/error.jsp");
+                    // forwards the request and sends the 
+                    //response to the client.
                     view.forward(request, response);
                 }
 
@@ -170,6 +176,8 @@ public class RegisterServlet extends HttpServlet {
                 //make a requestdispatcher element which communicates
                 //with the user
                 RequestDispatcher view = request.getRequestDispatcher(location);
+                // forwards the request and sends the 
+                //response to the client.
                 view.forward(request, response);
             }
 

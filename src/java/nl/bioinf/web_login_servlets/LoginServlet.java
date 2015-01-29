@@ -1,4 +1,3 @@
-
 package nl.bioinf.web_login_servlets;
 
 import java.io.IOException;
@@ -9,8 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import nl.bioinf.dbConnector.UserDAOmysqlImpl;
+import javax.swing.JOptionPane;
 import nl.bioinf.dbConnector.User;
+import nl.bioinf.dbConnector.UserDAOmysqlImpl;
 
 /**
  * Servlet for registering a new user.
@@ -110,8 +110,11 @@ public class LoginServlet extends HttpServlet {
                     String errorMessage = "User could not be logged in: "
                             + ex.getMessage();
                     request.setAttribute("error", errorMessage);
+                    //get the location of the error page.
                     RequestDispatcher view = request.
                             getRequestDispatcher("html/error.jsp");
+                    // forwards the request and sends the 
+                    //response to the client.
                     view.forward(request, response);
                 }
 
@@ -138,9 +141,12 @@ public class LoginServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected final void doGet(final HttpServletRequest  request,
+    protected final void doGet(final HttpServletRequest request,
             final HttpServletResponse response)
             throws ServletException, IOException {
+        RequestDispatcher view = request.
+                getRequestDispatcher("index.jsp");
+        view.forward(request, response);
         processRequest(request, response);
     }
 
@@ -156,8 +162,6 @@ public class LoginServlet extends HttpServlet {
     protected final void doPost(final HttpServletRequest request,
             final HttpServletResponse response)
             throws ServletException, IOException {
-        response.sendRedirect("http://localhost:8080/Bioinformatica_website"
-                + "/html/technasiumWorkshop.jsp");
         processRequest(request, response);
     }
 
