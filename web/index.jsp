@@ -35,8 +35,9 @@
 
                                 <div id="sidebar_container">
                                     <img class="paperclip" src="images/paperclip.png" alt="paperclip" />
-                                    <div class="sidebar">
+                                    <div class="sidebar">                                        
                                         <h3>Laatste nieuws</h3>
+                                        <!--by mkslofstra-->
                                         <%
                                             //This scriptlet gets the date
                                             java.util.Date date = new java.util.Date();
