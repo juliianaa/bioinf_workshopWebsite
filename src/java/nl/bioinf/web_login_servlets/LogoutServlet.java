@@ -58,6 +58,13 @@ public class LogoutServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+         // This is added to prevent that the doGet method is used to log in
+        RequestDispatcher view = request.
+                getRequestDispatcher("index.jsp");
+        view.forward(request, response);
+        //Make a requestdispatcher element which
+        //communicates with the user
+        processRequest(request, response);
     }
 
     /**
