@@ -36,11 +36,14 @@
                     <h1>Docenten</h1>
 
                     <div class="docenten_boxes">
+                        <!--This div contains the pictures of the teachers-->
                         <div id="arne" class="teacher"></div>
                         <p>Arne Poortinga</p>
                         <button class="arneButton">Over arne</button>
                         <a target="_blank" href="http://bioinf.nl/~arne/"><button>Hanze Site</button></a>
                         <a target="_blank" href="http://nl.linkedin.com/pub/arne-poortinga/5/10b/a13?domainCountryName=Nederland&csrfToken=ajax%3A0703341547160610550&domainCountryCode=nl"><div class="linkedInButton"></div></a>
+                        <!--With the use of this div teachers can write their own introduction
+                        The introduction will not be specific or can be placed by the wrong teacher when this div is not used-->
                         <div id="element_to_pop_upArne" class = "element_to_pop_up">
                             <button class = "close">X</button>
                             <!--Information about the teachers can be put into the paragraph field-->
@@ -51,10 +54,13 @@
                     </div>   
 
                     <div class="docenten_boxes">
+                        <!--This div contains the pictures of the teachers-->
                         <div id="marcel" class="teacher"></div>
                         <p>Marcel Kempenaar</p>
                         <button class="marcelButton">Over Marcel</button>
                         <a target="_blank" href="http://nl.linkedin.com/in/mkempenaar"><div class="linkedInButton"></div></a>
+                        <!--With the use of this div teachers can write their own introduction
+                        The introduction will not be specific or can be placed by the wrong teacher when this div is not used-->
                         <div id="element_to_pop_upMarcel" class = "element_to_pop_up">
                             <button class = "close">X</button>
                             <!--Information about the teachers can be put into the paragraph field-->
@@ -65,10 +71,13 @@
                     </div>       
 
                     <div class="docenten_boxes">
+                        <!--This div contains the pictures of the teachers-->
                         <div id="martijn" class="teacher"></div>
                         <p>Martijn Herber</p>
                         <button class="martijnButton">Over Martijn</button>
-                        <p></p>
+                        <p>Informatie over Martijn</p>
+                        <!--With the use of this div teachers can write their own introduction
+                        The introduction will not be specific or can be placed by the wrong teacher when this div is not used-->
                         <div id="element_to_pop_upMartijn" class = "element_to_pop_up">
                             <button class = "close">X</button>
                             <!--Information about the teachers can be put into the paragraph field-->
@@ -79,11 +88,14 @@
                     </div>    
 
                     <div class="docenten_boxes">
+                        <!--This div contains the pictures of the teachers-->
                         <div id="michiel" class="teacher"></div>
                         <p>Michiel Noback</p>
                         <button class="michielButton">Over Michiel</button>
                         <a target="_blank" href="http://bioinf.nl/~michiel/"><button>Hanze Site</button></a>
                         <a target="_blank" href="http://nl.linkedin.com/in/michielnoback"><div class="linkedInButton"></div></a>
+                        <!--With the use of this div teachers can write their own introduction
+                        The introduction will not be specific or can be placed by the wrong teacher when this div is not used-->
                         <div id="element_to_pop_upMichiel" class = "element_to_pop_up">
                             <button class = "close">X</button>
                             <h1>Michiel Noback</h1>
@@ -118,10 +130,13 @@
                     </div>
 
                     <div class="docenten_boxes">
+                        <!--This div contains the pictures of the teachers-->
                         <div id="ronald" class="teacher"></div>
                         <p>Ronald Wedema</p>
                         <button class="ronaldButton">Over Ronald</button>
                         <a target="_blank" href="https://www.linkedin.com/pub/ronald-wedema/b/5b/403?trk=pub-pbmap"><div class="linkedInButton"></div></a>
+                        <!--With the use of this div teachers can write their own introduction
+                        The introduction will not be specific or can be placed by the wrong teacher when this div is not used-->
                         <div id="element_to_pop_upRonald" class = "element_to_pop_up">
                             <button class = "close">X</button>
                             <!--Information about the teachers can be put into the paragraph field-->
@@ -132,11 +147,15 @@
                     </div>
 
                     <div class="docenten_boxes">
+                        
                         <div id="tsjerk" class="teacher"></div>
+                        <!--This div contains the pictures of the teachers-->
                         <p>Tsjerk Wassenaar</p>
                         <button class="tsjerkButton">Over Tsjerk</button>
                         <a target="_blank" href="http://bioinf.nl/~tsjerk/"><button>Hanze Site</button></a>
                         <a target="_blank" href="http://nl.linkedin.com/in/tsjerkwassenaar"> <div class="linkedInButton"></div></a>
+                        <!--With the use of this div teachers can write their own introduction
+                        The introduction will not be specific or can be placed by the wrong teacher when this div is not used-->
                         <div id="element_to_pop_upTsjerk" class = "element_to_pop_up">
                             <button class = "close">X</button>
                             <!--Information about the teachers can be put into the paragraph field-->
