@@ -86,13 +86,13 @@ text-shadow: 0px 1px 0px #13506D;
     padding: 5px;
     top: -8em;
     right:1em;
-    height: 10em;
-    width: 13em;
+    height: 13em;
+    width: 15em;
     text-align: center;
    padding-top:1.5em;
 }
 /*by mkslofstra*/
 .logoutButton{
     margin-left:1em;
-    margin-top:5em;
+    margin-top:2em;
 }
