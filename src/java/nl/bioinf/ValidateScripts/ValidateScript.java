@@ -18,7 +18,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * This Java class is used to check if the answers that the user has given in the python script is correct 
+ * This Java class is used to check if the answer that the user has given in
+ * the python script is correct.
  *
  * @author jwlgoh/ aroeters
  */
@@ -42,7 +43,7 @@ public class ValidateScript {
 
 
     /**
-     * Start the validateScript program
+     * Start the validateScript program.
      *
      * @param filePath should contain the pah to the uploaded file
      * @throws IOException when something goes wrong with the uploading the file
@@ -54,7 +55,7 @@ public class ValidateScript {
     }
 
     /**
-     * Reads the file and set it to String
+     * Reads the file and set it to String.
      *
      * @param filepath should contain the pah to the uploaded file
      * @throws FileNotFoundException when the file is not found
@@ -67,7 +68,7 @@ public class ValidateScript {
     }
 
     /**
-     * Gets the main function of the script content that is given
+     * Gets the main function of the script content that is given.
      *
      * @param fileContent is the content of the whole file
      * @return the main that is found in the uploaded file
@@ -84,7 +85,8 @@ public class ValidateScript {
        return foundMain;
     }
     /**
-     * Calculates the correct answers that is found in the script. If there are 5 correct answers this means that 
+     * Calculates the correct answers that is found in the script.
+     * If there are 5 correct answers this means that
      * the script is correct and can be called.
      *
      * @param foundMain should contain the main from the uploaded file
@@ -93,8 +95,8 @@ public class ValidateScript {
         //The main splitted on () so that only the functions are in the list.
         List<String> userMain = new ArrayList<>(Arrays.asList(foundMain
                 .split("\\(\\)")));
-        
-        
+
+
         try {
             //Path where the correct script can be found
             String f = new String(Files.readAllBytes(Paths.get("/commons/"
@@ -102,11 +104,12 @@ public class ValidateScript {
                     + "zoekGen_werkend.py")));
 
             String answerContent = getMain(f);
-            
+
             // Contains the correct main.
-            List<String> answerMain =  new ArrayList<>(Arrays.asList(answerContent
+            List<String> answerMain =  new ArrayList<>(Arrays
+                    .asList(answerContent
                     .split("\\(\\)")));
-            
+
             //Iterates of both Arralist to see if they are the same.
             if (userMain.size() == answerMain.size()) {
                 for (int i = 0; i < answerMain.size(); i++) {
@@ -114,9 +117,10 @@ public class ValidateScript {
                     //one point will be added.
                     if (userMain.get(i).equals(answerMain.get(i))) {
                         correctAnswer = correctAnswer + 1;
-                        if(correctAnswer <= 5){
-                            resultContent = "Er zijn " + (5-correctAnswer) +
-                                    " foute antwoord(en), probeer het nog een keer.";
+                        if (correctAnswer <= 5) {
+                            resultContent = "Er zijn " + (5 - correctAnswer)
+                                    + "foute antwoord(en),"
+                                   + "probeer het nog een keer.";
                         }
                     }
                 }
@@ -125,7 +129,7 @@ public class ValidateScript {
                 //this will be given
                 resultContent = "Niet alle antwoorden zijn gegeven.";
             }
-      
+
 
         } catch (IOException ex) {
             Logger.getLogger(ValidateScript.class.getName())
@@ -148,7 +152,7 @@ public class ValidateScript {
        return resultContent;
     }
 
-    
+
 
 
 }

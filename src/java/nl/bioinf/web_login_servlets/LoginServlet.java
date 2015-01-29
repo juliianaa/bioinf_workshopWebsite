@@ -2,9 +2,6 @@
 package nl.bioinf.web_login_servlets;
 
 import java.io.IOException;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,11 +13,11 @@ import nl.bioinf.dbConnector.UserDAOmysqlImpl;
 import nl.bioinf.dbConnector.User;
 
 /**
- * Servlet for registering a new user
+ * Servlet for registering a new user.
  *
  * @author Rutger Ozinga (redirect to last page by mkslofstra)
  */
-@WebServlet(name = "loginServlet", urlPatterns = {"/loginServlet"})
+@WebServlet(name = "loginServlet", urlPatterns = {"/loginServlet" })
 public class LoginServlet extends HttpServlet {
 
     /**
@@ -32,7 +29,8 @@ public class LoginServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    protected final void processRequest(final HttpServletRequest request,
+            final HttpServletResponse response)
             throws ServletException, IOException {
         // get the parameter username from the login form
         String username = request.getParameter("username");
@@ -69,14 +67,16 @@ public class LoginServlet extends HttpServlet {
                     dbconnect.connect(dbUrl, dbUser, dbPass);
 
                     try {
-                        //try to make a user given the username and password provided by the user
+                        //try to make a user given the username and password
+                        //provided by the user
                         User user = dbconnect.loginUser(username, password);
                         //disconnect from database
                         dbconnect.disconnect();
 
                         //get the current session
                         HttpSession session = request.getSession();
-                        //make the session valid for the given number of seconds (now 30)
+                        //make the session valid for the given number of
+                        //seconds (now 30)
                         session.setMaxInactiveInterval(30);
                         //if the name of the user is null (so its empty)
                         if (session.getAttribute("user") == null) {
@@ -87,8 +87,10 @@ public class LoginServlet extends HttpServlet {
                         request.setAttribute("user", user);
                         //get the location of the current page
                         String location = request.getParameter("location");
-                        //make a requestdispatcher element which communicates with the user
-                        RequestDispatcher view = request.getRequestDispatcher(location);
+                        //make a requestdispatcher element which
+                        //communicates with the user
+                        RequestDispatcher view = request.
+                                getRequestDispatcher(location);
                         //view the page asked by the servlet
                         view.forward(request, response);
                         //if something is going wrong, catch exception
@@ -97,29 +99,36 @@ public class LoginServlet extends HttpServlet {
                         request.setAttribute("login_error", LoginError);
                         //get the location of the current page
                         String location = request.getParameter("location");
-                        //make a requestdispatcher element which communicates with the user
-                        RequestDispatcher view = request.getRequestDispatcher(location);
+                        //make a requestdispatcher element which
+                        //communicates with the user
+                        RequestDispatcher view = request.
+                                getRequestDispatcher(location);
                         view.forward(request, response);
                     }
 
                 } catch (ServletException | IOException ex) {
-                    String errorMessage = "User could not be logged in: " + ex.getMessage();
+                    String errorMessage = "User could not be logged in: "
+                            + ex.getMessage();
                     request.setAttribute("error", errorMessage);
-                    RequestDispatcher view = request.getRequestDispatcher("html/error.jsp");
+                    RequestDispatcher view = request.
+                            getRequestDispatcher("html/error.jsp");
                     view.forward(request, response);
                 }
 
             } catch (IOException ex) {
-                String errorMessage = "Could not connect to database: " + ex.getMessage();
+                String errorMessage = "Could not connect to database: "
+                        + ex.getMessage();
                 request.setAttribute("error", errorMessage);
-                RequestDispatcher view = request.getRequestDispatcher("html/error.jsp");
+                RequestDispatcher view = request.
+                        getRequestDispatcher("html/error.jsp");
                 view.forward(request, response);
             }
 
         }
     }
 
-// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+// <editor-fold defaultstate="collapsed" desc="HttpServlet methods.
+    //Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -129,7 +138,8 @@ public class LoginServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected final void doGet(final HttpServletRequest  request,
+            final HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
@@ -143,8 +153,11 @@ public class LoginServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected final void doPost(final HttpServletRequest request,
+            final HttpServletResponse response)
             throws ServletException, IOException {
+        response.sendRedirect("http://localhost:8080/Bioinformatica_website"
+                + "/html/technasiumWorkshop.jsp");
         processRequest(request, response);
     }
 
@@ -154,8 +167,8 @@ public class LoginServlet extends HttpServlet {
      * @return a String containing servlet description
      */
     @Override
-    public String getServletInfo() {
+    public final String getServletInfo() {
         return "Short description";
-    }// </editor-fold>
+    } // </editor-fold>
 
 }

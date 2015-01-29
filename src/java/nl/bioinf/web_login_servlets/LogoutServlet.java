@@ -2,20 +2,18 @@
 package nl.bioinf.web_login_servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author raozinga
  */
-@WebServlet(name = "LogoutServlet", urlPatterns = {"/LogoutServlet"})
+@WebServlet(name = "LogoutServlet", urlPatterns = {"/LogoutServlet" })
 public class LogoutServlet extends HttpServlet {
 
     /**
@@ -27,16 +25,22 @@ public class LogoutServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    protected final void processRequest(final HttpServletRequest request,
+            final HttpServletResponse response)
             throws ServletException, IOException {
         String logout = request.getParameter("logout");
 
-        if (logout != null && logout.equals("Log uit")) {
+        if (logout != null && logout.equals("Log_uit")) {
             request.getSession().invalidate();
-            //get the location of the current page
+            //get the location of the current page.
             String location = request.getParameter("location");
             //make a requestdispatcher element which communicates with the user
             RequestDispatcher view = request.getRequestDispatcher(location);
+            view.forward(request, response);
+        } else {
+            //when the page is entered in the addressbar the user is redirected
+            //to the index.
+            RequestDispatcher view = request.getRequestDispatcher("index.jsp");
             view.forward(request, response);
         }
     }

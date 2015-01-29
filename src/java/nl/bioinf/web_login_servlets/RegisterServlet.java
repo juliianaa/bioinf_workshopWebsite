@@ -2,7 +2,6 @@
 package nl.bioinf.web_login_servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.servlet.RequestDispatcher;
@@ -14,7 +13,7 @@ import nl.bioinf.dbConnector.UserDAOmysqlImpl;
 import nl.bioinf.dbConnector.User;
 
 /**
- * Servlet for logging in an user
+ * Servlet for logging in an user.
  *
  * @author Rutger Ozinga
  * @author Tom Kral
@@ -30,13 +29,14 @@ public class RegisterServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    protected final void processRequest(final HttpServletRequest request,
+            final HttpServletResponse response)
             throws ServletException, IOException {
 
         String errormessage;
 
         String username = request.getParameter("userName");
-        String password = request.getParameter("password");
+        String password = request.getParameter("passWord");
         String firstname = request.getParameter("firstName");
         String lastname = request.getParameter("lastName");
         String email = request.getParameter("email");
@@ -46,17 +46,18 @@ public class RegisterServlet extends HttpServlet {
                 || password == null || password.length() == 0
                 || firstname == null || firstname.length() == 0
                 || lastname == null || lastname.length() == 0
-                || email == null || email.length() == 0) { //check if fields are made and filled
+                || email == null || email.length() == 0) { //check if fields
+            //are made and filled
 
             errormessage = "Vul aub alle velden in";
             request.setAttribute("register_error", errormessage);
             //make a requestdispatcher element which communicates with the user
             RequestDispatcher view = request.getRequestDispatcher(location);
             view.forward(request, response);
-
-        } else {//if fields are OK
-
-            if (username.length() > 3 || password.length() > 5) {//username must be 3 characters or longer, password 5 or longer
+          //if fields are OK
+        } else {
+            //username must be 3 characters or longer, password 5 or longer
+            if (username.length() > 3 || password.length() > 5) {
 
                 String validEmail = "[\\w]+@[\\w]+\\.[\\w]+";
                 Pattern pat = Pattern.compile(validEmail);
@@ -64,8 +65,10 @@ public class RegisterServlet extends HttpServlet {
                 while (!m.find()) {
                     errormessage = "Het emailadres is niet valide";
                     request.setAttribute("register_error", errormessage);
-                    //make a requestdispatcher element which communicates with the user
-                    RequestDispatcher view = request.getRequestDispatcher(location);
+                    //make a requestdispatcher element which communicates with
+                    //the user
+                    RequestDispatcher view = request.
+                            getRequestDispatcher(location);
                     view.forward(request, response);
                 }
 
@@ -86,39 +89,55 @@ public class RegisterServlet extends HttpServlet {
 
                         boolean userExists = dbconnect.checkUsername(username);
                         boolean emailExists = dbconnect.checkUsername(email);
-
-                        if (userExists == true) { //check if username exists in database
+                        //check if username exists in database
+                        if (userExists) {
                             errormessage = "Deze username bestaat al";
-                            request.setAttribute("register_error", errormessage);
-                            //make a requestdispatcher element which communicates with the user
-                            RequestDispatcher view = request.getRequestDispatcher(location);
+                            request.setAttribute("register_error",
+                                    errormessage);
+                            //make a requestdispatcher element which
+                            //communicates with the user
+                            RequestDispatcher view = request.
+                                    getRequestDispatcher(location);
                             view.forward(request, response);
                             dbconnect.disconnect();
                         } else {
 
-                            if (emailExists == true) { //check if username exists in database
+                            if (emailExists) { //check if username
+                                //exists in database
                                 errormessage = "Dit emailadres bestaat al";
-                                request.setAttribute("register_error", errormessage);
-                                //make a requestdispatcher element which communicates with the user
-                                RequestDispatcher view = request.getRequestDispatcher(location);
+                                request.setAttribute("register_error",
+                                        errormessage);
+                                //make a requestdispatcher element which
+                                //communicates with the user
+                                RequestDispatcher view = request.
+                                        getRequestDispatcher(location);
                                 view.forward(request, response);
                             } else {
 
                                 //register new user with valid credentials
-                                User user = dbconnect.registerUser(username, firstname, lastname, email, password);
+                                User user = dbconnect.registerUser(username,
+                                        firstname, lastname, email, password);
 
-                                if (user != null) {//when registering user was a succes
+                                if (user != null) { //when registering user
+                                    //was a succes
                                     errormessage = "Registratie succesvol";
-                                    request.setAttribute("register_error", errormessage);
-                                    //make a requestdispatcher element which communicates with the user
-                                    RequestDispatcher view = request.getRequestDispatcher(location);
+                                    request.setAttribute("register_error",
+                                            errormessage);
+                                    //make a requestdispatcher element which
+                                    //communicates with the user
+                                    RequestDispatcher view = request.
+                                            getRequestDispatcher(location);
                                     view.forward(request, response);
                                     dbconnect.disconnect();
                                 } else {
-                                    errormessage = "Er kon geen nieuwe gebruiker aangemaakt worden";
-                                    request.setAttribute("register_error", errormessage);
-                                    //make a requestdispatcher element which communicates with the user
-                                    RequestDispatcher view = request.getRequestDispatcher(location);
+                                    errormessage = "Er kon geen nieuwe "
+                                            + "gebruiker aangemaakt worden";
+                                    request.setAttribute("register_error",
+                                            errormessage);
+                                    //make a requestdispatcher element which
+                                    //communicates with the user
+                                    RequestDispatcher view = request.
+                                            getRequestDispatcher(location);
                                     view.forward(request, response);
                                     dbconnect.disconnect();
 
@@ -126,24 +145,30 @@ public class RegisterServlet extends HttpServlet {
                             }
                         }
 
-                    } catch (Exception ex) {
-                        String errorMessage = "User could not be registered: " + ex.getMessage();
+                    } catch (IOException | ServletException ex) {
+                        String errorMessage = "User could not be registered: "
+                                + ex.getMessage();
                         request.setAttribute("error", errorMessage);
-                        RequestDispatcher view = request.getRequestDispatcher("html/error.jsp");
+                        RequestDispatcher view = request.
+                                getRequestDispatcher("html/error.jsp");
                         view.forward(request, response);
                     }
 
-                } catch (Exception ex) {
-                    String errorMessage = "Could not connect to database: " + ex.getMessage();
+                } catch (ServletException | IOException ex) {
+                    String errorMessage = "Could not connect to database: "
+                            + ex.getMessage();
                     request.setAttribute("error", errorMessage);
-                    RequestDispatcher view = request.getRequestDispatcher("html/error.jsp");
+                    RequestDispatcher view = request.
+                            getRequestDispatcher("html/error.jsp");
                     view.forward(request, response);
                 }
 
-            } else {//if username and password are too short
-                errormessage = "Username moet meer dan 3 karakters bevatten en het wachtword moet langer dan 5 tekens zijn";
+            } else { //if username and password are too short
+                errormessage = "Username moet meer dan 3 karakters bevatten "
+                        + "en het wachtword moet langer dan 5 tekens zijn";
                 request.setAttribute("register_error", errormessage);
-                //make a requestdispatcher element which communicates with the user
+                //make a requestdispatcher element which communicates
+                //with the user
                 RequestDispatcher view = request.getRequestDispatcher(location);
                 view.forward(request, response);
             }
@@ -152,7 +177,8 @@ public class RegisterServlet extends HttpServlet {
 
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods.
+    //Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -162,7 +188,8 @@ public class RegisterServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected final void doGet(final HttpServletRequest request,
+            final HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
@@ -176,7 +203,8 @@ public class RegisterServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected final void doPost(final HttpServletRequest request,
+            final HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
@@ -187,8 +215,8 @@ public class RegisterServlet extends HttpServlet {
      * @return a String containing servlet description
      */
     @Override
-    public String getServletInfo() {
+    public final String getServletInfo() {
         return "Short description";
-    }// </editor-fold>
+    } // </editor-fold>
 
 }
