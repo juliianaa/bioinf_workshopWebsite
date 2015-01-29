@@ -14,79 +14,83 @@ public class User {
     private String emailAdress;
 
     /**
-     * COnstructor of the class.
+     * Constructor of the class.
      * @param username
      * @param firstName
      * @param lastName
      * @param emailAdress
      */
-    public User(String username, String firstName, String lastName, String emailAdress) {
+    public User(final String username,
+	    final String firstName,
+	    final String lastName,
+	    final String emailAdress) {
         this.username = username;
         this.firstName = firstName;
+	this.lastName = lastName;
         this.emailAdress = emailAdress;
     }
 
     /**
-     * Getters and setters for the variables of User.
-     * @return 
+     * Getter for username.
+     * @return username
      */
-    public String getUsername() {
+    final public String getUsername() {
         return username;
     }
 
     /**
-     *
+     * Setter for username.
      * @param username
      */
-    public void setUsername(String username) {
+    final public void setUsername(String username) {
         this.username = username;
     }
 
     /**
-     *
-     * @return
+     * Getter for firstname.
+     * @return firstName
      */
-    public String getFirstName() {
+    final public String getFirstName() {
         return firstName;
     }
 
     /**
-     *
+     * Setter for firstname.
      * @param firstName
      */
-    public void setFirstName(String firstName) {
+    final public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
     /**
-     *
-     * @return
+     * Getter for lastname.
+     * @return lastName
      */
-    public String getLastName() {
+    final public String getLastName() {
         return lastName;
     }
 
     /**
-     *
+     * Setter for lastname.
      * @param lastName
      */
-    public void setLastName(String lastName) {
+    final public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
     /**
-     *
+     * Getter for emailadress.
      * @return
      */
-    public String getEmailAdress() {
+    final public String getEmailAdress() {
         return emailAdress;
     }
 
     /**
-     *
+     * Setter for emailadress.
      * @param emailAdress
      */
-    public void setEmailAdress(String emailAdress) {
+    final public void setEmailAdress(String emailAdress) {
         this.emailAdress = emailAdress;
     }
 

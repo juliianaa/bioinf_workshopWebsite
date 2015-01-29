@@ -29,10 +29,6 @@
         <servlet-class>nl.bioinf.web_servlets.NoteGetServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>AssignmentAnsweringServlet</servlet-name>
-        <url-pattern>/answer.do</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>AssignmentTechnasium</servlet-name>
         <url-pattern>/makeNotes.do</url-pattern>
     </servlet-mapping>
@@ -49,10 +45,6 @@
             30
         </session-timeout>
     </session-config>
-    <servlet>
-        <servlet-name>AssignmentAnsweringServlet</servlet-name>
-        <servlet-class>nl.bioinf.web_servlets.AssignmentAnsweringServlet</servlet-class>
-    </servlet>
     <servlet>
         <servlet-name>loginServlet</servlet-name>
         <servlet-class>nl.bioinf.web_login_servlets.LoginServlet</servlet-class>
