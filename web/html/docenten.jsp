@@ -75,7 +75,6 @@
                         <div id="martijn" class="teacher"></div>
                         <p>Martijn Herber</p>
                         <button class="martijnButton">Over Martijn</button>
-                        <p>Informatie over Martijn</p>
                         <!--With the use of this div teachers can write their own introduction
                         The introduction will not be specific or can be placed by the wrong teacher when this div is not used-->
                         <div id="element_to_pop_upMartijn" class = "element_to_pop_up">
